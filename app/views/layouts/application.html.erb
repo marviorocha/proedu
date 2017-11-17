@@ -27,7 +27,7 @@
                 <!-- /. ROW  -->
 
             <% if current_page?('/') %>
-                         
+
               <%= render "layouts/dash" %>
 
             <% end %>
@@ -45,6 +45,11 @@
     </div>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script>
+              $(document).ready(function () {
+                  $('#dataTables-example').dataTable();
+              });
+      </script>
 
   </body>
 </html>
