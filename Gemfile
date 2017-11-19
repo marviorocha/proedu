@@ -12,14 +12,11 @@ gem 'devise'
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
 
-# Twitter Bootstrap
- 
 # Jquery
 gem 'jquery-rails'
 
 # Fontaswesome
 gem 'font-awesome-rails'
-
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
