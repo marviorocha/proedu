@@ -13,10 +13,12 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 
 # Twitter Bootstrap
-gem 'twitter-bootstrap-rails'
-
+ 
 # Jquery
 gem 'jquery-rails'
+
+# Fontaswesome
+gem 'font-awesome-rails'
 
 
 
