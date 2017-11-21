@@ -5,11 +5,12 @@ class ApplicationController < ActionController::Base
   private
 
   def layout_by_resource
-     if devise_controller?
+     if user_signed_in? == false
        "login"
      else
        "application"
      end
+   
    end
 
 

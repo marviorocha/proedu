@@ -7,23 +7,21 @@
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-        <a class="nav-link" href="index.html">
-          <i class="fa fa-fw fa-dashboard"></i>
 
-          <span class="nav-link-text">Dashboard</span>
-        </a>
+      <%= link_to '<i class="fa fa-fw fa-dashboard"></i><span class="nav-link-text"> Painel Principal</span>'.html_safe, root_path, class: 'nav-link' %>
+
       </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-        <a class="nav-link" href="charts.html">
-          <i class="fa fa-fw fa-area-chart"></i>
-          <span class="nav-link-text">Charts</span>
-        </a>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Meu(s) Curso(s)">
+           <%= link_to '<i class="fa fa-fw fa-graduation-cap"></i><span class="nav-link-text"> Meu Treinamento</span>'.html_safe, root_path, class: 'nav-link' %>
+      </li>
+
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <%= link_to '<i class="fa fa-fw fa-list-alt "></i><span class="nav-link-text"> Conteúdo</span>'.html_safe, root_path, class: 'nav-link' %>
+
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-        <a class="nav-link" href="tables.html">
-          <i class="fa fa-fw fa-table"></i>
-          <span class="nav-link-text">Tables</span>
-        </a>
+        <%= link_to '<i class="fa fa-fw fa-certificate"></i><span class="nav-link-text"> Certificado</span>'.html_safe, root_path, class: 'nav-link' %>
+
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
@@ -61,12 +59,12 @@
       </li>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
-          <i class="fa fa-fw fa-sitemap"></i>
-          <span class="nav-link-text">Menu Levels</span>
+          <i class="fa fa-fw fa-user"></i>
+          <span class="nav-link-text">Meu Perfil</span>
         </a>
         <ul class="sidenav-second-level collapse" id="collapseMulti">
           <li>
-            <a href="#">Second Level Item</a>
+            <%= link_to 'Editar', edit_user_registration_path %>
           </li>
           <li>
             <a href="#">Second Level Item</a>

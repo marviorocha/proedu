@@ -42,11 +42,12 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
-      <%= render 'layouts/brandcrub' %>
+
       <!-- Icon Cards-->
       <%= devise_notification! %>
-
+      <%= render 'layouts/brandcrub' %>
       <%= yield %>
+
       <!-- /.container-fluid-->
       <!-- /.content-wrapper-->
       <%= render 'layouts/footer' %>
