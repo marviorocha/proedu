@@ -44,6 +44,11 @@
       <!-- Breadcrumbs-->
 
       <!-- Icon Cards-->
+
+
+<% if current_user.superadmin_role? || current_user.teacher_role? %>
+	<p>Visible only for superadmins and teacher! </p>
+<% end %>
       <%= devise_notification! %>
       <%= render 'layouts/brandcrub' %>
       <%= yield %>
