@@ -11,8 +11,8 @@
       <%= link_to '<i class="fa fa-fw fa-dashboard"></i><span class="nav-link-text"> Painel Principal</span>'.html_safe, root_path, class: 'nav-link' %>
 
       </li>
-      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Meu(s) Curso(s)">
-           <%= link_to '<i class="fa fa-fw fa-graduation-cap"></i><span class="nav-link-text"> Meu Treinamento</span>'.html_safe, root_path, class: 'nav-link' %>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gerenciar Usuário">
+           <%= link_to '<i class="fa fa-fw fa-user"></i><span class="nav-link-text"> Gerenciar Usuário</span>'.html_safe, users_path, class: 'nav-link' %>
       </li>
 
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
@@ -137,7 +137,7 @@
           <a class="dropdown-item small" href="#">View all messages</a>
         </div>
       </li>
-      <li class="nav-item dropdown">
+    <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa fa-fw fa-bell"></i>
           <span class="d-lg-none">Alerts
@@ -180,10 +180,10 @@
           <a class="dropdown-item small" href="#">View all alerts</a>
         </div>
       </li>
-   
+   -->
       <li class="nav-item">
         <a class="nav-link">
-         <%= image_tag(gravatar(current_user.email), class: 'img-fluid rounded') %> Marvio Rocha</a>
+         <%= image_tag(gravatar(current_user.email, 28), class: 'img-fluid rounded') %> Marvio Rocha</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal">

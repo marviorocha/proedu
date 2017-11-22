@@ -1,0 +1,47 @@
+<h3><i class="fa fa-user"></i> Lista de Alunos</h3>
+  <%= render 'layouts/brandcrub' %>
+
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Sobre Nome</th>
+            <th>E-mail</th>
+            <th>Função</th>
+            <th>Criado em:</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+          </tr>
+        </tfoot>
+        <tbody>
+
+        <% @user.each do |u| %>
+          <tr>
+            <td><%=  image_tag(gravatar(u.email, 60)) %></td>
+            <td>Name</td>
+            <td>Sobre Nome</td>
+            <td><%= u.email %></td>
+            <td>EEEEEEE</td>
+            <td><%= u.created_at.strftime("%d/%m/%Y") %></td>
+            <td><%= link_to '<i class="fa fa-plus"></i>'.html_safe, new_user_registration_path  %> |
+                <%= link_to '<i class="fa fa-eye"></i>'.html_safe  %> |
+                <%= link_to '<i class="fa  fa-pencil"></i>'.html_safe   %> |
+                <%= link_to '<i class="fa  fa-trash-o"></i>'.html_safe  %> </td>
+          </tr>
+         <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -10,6 +10,7 @@ gem 'devise'
 
 gem 'cancancan'
 
+gem 'simple_form'
 
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
