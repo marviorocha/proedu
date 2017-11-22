@@ -1,0 +1,348 @@
+--- !ruby/object:ActiveRecord::ConnectionAdapters::SchemaCache
+columns:
+  schema_migrations:
+  - &1 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: version
+    table_name: schema_migrations
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  ar_internal_metadata:
+  - &2 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: key
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &3 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: value
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &4 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &5 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  users:
+  - &6 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: id
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: INTEGER
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &7 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: email
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: ''
+    default_function: 
+    collation: 
+    comment: 
+  - &8 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: encrypted_password
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: ''
+    default_function: 
+    collation: 
+    comment: 
+  - &9 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: reset_password_token
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &10 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: reset_password_sent_at
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &11 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: remember_created_at
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &12 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: sign_in_count
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  - &13 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: current_sign_in_at
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &14 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: last_sign_in_at
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &15 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: current_sign_in_ip
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &16 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: last_sign_in_ip
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &17 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &18 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &19 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: admin
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: boolean
+      type: :boolean
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &20 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: superadmin_role
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: boolean
+      type: :boolean
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: f
+    default_function: 
+    collation: 
+    comment: 
+  - &21 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: teacher_role
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: boolean
+      type: :boolean
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: f
+    default_function: 
+    collation: 
+    comment: 
+  - &22 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: studant_role
+    table_name: users
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: boolean
+      type: :boolean
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: t
+    default_function: 
+    collation: 
+    comment: 
+columns_hash:
+  schema_migrations:
+    version: *1
+  ar_internal_metadata:
+    key: *2
+    value: *3
+    created_at: *4
+    updated_at: *5
+  users:
+    id: *6
+    email: *7
+    encrypted_password: *8
+    reset_password_token: *9
+    reset_password_sent_at: *10
+    remember_created_at: *11
+    sign_in_count: *12
+    current_sign_in_at: *13
+    last_sign_in_at: *14
+    current_sign_in_ip: *15
+    last_sign_in_ip: *16
+    created_at: *17
+    updated_at: *18
+    admin: *19
+    superadmin_role: *20
+    teacher_role: *21
+    studant_role: *22
+primary_keys:
+  schema_migrations: version
+  ar_internal_metadata: key
+  users: id
+data_sources:
+  schema_migrations: true
+  ar_internal_metadata: true
+  users: true
+version: 20171122022905

@@ -38,17 +38,18 @@
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-  <%= render 'layouts/navtop' %>
+  <% if current_user.superadmin_role? %>
+  <%= render 'layouts/navtop_admin' %>
+  <% end %>
+  <% if current_user.studant_role? || current_user.teacher_role? %>
+  <%= render 'layouts/navtop_user' %>
+  <% end %>
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
 
       <!-- Icon Cards-->
 
-
-<% if current_user.superadmin_role? || current_user.teacher_role? %>
-	<p>Visible only for superadmins and teacher! </p>
-<% end %>
       <%= devise_notification! %>
       <%= render 'layouts/brandcrub' %>
       <%= yield %>
