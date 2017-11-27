@@ -2,9 +2,10 @@
 
 <div class="panel-body ">
 <div class="col col-md-6 col-md-pull-6">
-  <%= simple_form_for @user, class: 'form-inline' do |f|  %>
+  <%= simple_form_for @adminuser, class: 'form-inline' do |f|  %>
   <%= f.input :email %>
   <%= f.input :password %>
+  <%= f.input :password_confirmation %>
    <%= f.input :password_confirmation %>
    <%= f.button :submit, class: 'btn btn-primary' %>
  <% end %>

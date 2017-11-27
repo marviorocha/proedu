@@ -1,17 +1,18 @@
-class UsersController < ApplicationController
+class AdminUsersController < ApplicationController
 
 def index
 
-@user = User.all
+  @adminuser = User.all
 
 end
 
 def new
-  @user = User.new
+  @adminuser = User.new
 end
 
 def create
-  if User.create(users_params)
+ 
+  if @adminuser
     flash['notice'] = "Usuário criado com sucesso"
     redirect_to users_path
   end

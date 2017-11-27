@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 root to: 'page#index'
 
 # admin routes
-resources :users
+resources :admin_users
 
 end

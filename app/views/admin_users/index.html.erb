@@ -27,7 +27,7 @@
         </tfoot>
         <tbody>
 
-        <% @user.each do |u| %>
+        <% @adminuser.each do |u| %>
           <tr>
             <td><%=  image_tag(gravatar(u.email, 60)) %></td>
             <td>Name</td>
@@ -35,7 +35,7 @@
             <td><%= u.email %></td>
             <td>EEEEEEE</td>
             <td><%= u.created_at.strftime("%d/%m/%Y") %></td>
-            <td><%= link_to '<i class="fa fa-plus"></i>'.html_safe, new_user_registration_path  %> |
+            <td><%= link_to '<i class="fa fa-plus"></i>'.html_safe, new_admin_user_path  %> |
                 <%= link_to '<i class="fa fa-eye"></i>'.html_safe  %> |
                 <%= link_to '<i class="fa  fa-pencil"></i>'.html_safe   %> |
                 <%= link_to '<i class="fa  fa-trash-o"></i>'.html_safe  %> </td>
