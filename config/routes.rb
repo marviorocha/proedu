@@ -12,4 +12,7 @@ root to: 'page#index'
 # admin routes
 resources :admin_users
 
+#messager resources
+resources :messager
+
 end

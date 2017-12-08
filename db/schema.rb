@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171122022905) do
+ActiveRecord::Schema.define(version: 20171207123624) do
+
+  create_table "contents", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.string "doc"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_contents_on_user_id"
+  end
+
+  create_table "messagers", force: :cascade do |t|
+    t.string "subject"
+    t.text "body"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_messagers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,6 +47,8 @@ ActiveRecord::Schema.define(version: 20171122022905) do
     t.boolean "superadmin_role", default: false
     t.boolean "teacher_role", default: false
     t.boolean "studant_role", default: true
+    t.string "name"
+    t.string "lastname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

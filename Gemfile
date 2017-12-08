@@ -15,6 +15,12 @@ gem 'simple_form'
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
 
+# Boorstrap
+
+gem 'bootstrap-sass', '~> 3.3.7'
+ 
+
+
 # Jquery
 gem 'jquery-rails'
 
@@ -68,7 +74,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.21.0'
   gem 'rails_12factor'
 end
 
