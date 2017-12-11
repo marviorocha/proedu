@@ -392,14 +392,11 @@
         </a>
       </li>
       <li>
-        <a href="pages/mailbox/mailbox.html">
-          <i class="fa fa-envelope"></i> <span>Mailbox</span>
-          <span class="pull-right-container">
-            <small class="label pull-right bg-yellow">12</small>
-            <small class="label pull-right bg-green">16</small>
-            <small class="label pull-right bg-red">5</small>
-          </span>
-        </a>
+  <%= link_to "<i class='fa fa-envelope'></i> <span>Inbox</span><span class='pull-right-container'>
+      <small class='label pull-right bg-red'> #{messager_count} </small>
+ </span>".html_safe,
+      messager_index_path %>
+
       </li>
       <li class="treeview">
         <a href="#">

@@ -3,8 +3,8 @@
  * ----------
  */
 .turbolinks-progress-bar {
-  height: 10px;
-  background-color: green;
+  height: 5px;
+  background-color:#00C0EF;
 }
 .skin-blue .main-header .navbar {
   background-color: #3c8dbc;
