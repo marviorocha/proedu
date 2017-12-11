@@ -3,7 +3,7 @@ class MessagerController < ApplicationController
   def index
 
 
-  @messager = Messager.all
+  @messager = current_user.messager
 
   end
 

@@ -15,11 +15,7 @@ gem 'simple_form'
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
 
-# Boorstrap
-
-gem 'bootstrap-sass', '~> 3.3.7'
- 
-
+gem 'twitter-bootstrap-rails'
 
 # Jquery
 gem 'jquery-rails'
@@ -27,6 +23,11 @@ gem 'jquery-rails'
 # Fontaswesome
 gem 'font-awesome-rails'
 
+# Theme admin dependenciaes
+
+gem 'popper_js'
+gem 'chart-js-rails'
+gem 'perfect-scrollbar-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
