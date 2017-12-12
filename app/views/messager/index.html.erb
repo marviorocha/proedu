@@ -1,37 +1,39 @@
+<%= title "Minhas Mensagens" %>
 
+<div class="col-lg-12">
+<div class="card">
+<div class="card-body">
+  <h5 class="card-title mb-4">Minhas Mensagens</h5>
+  <div class="table-responsive">
+    <table class="table center-aligned-table">
+      <thead>
+        <tr class="text-primary">
+          <th>ID</th>
+          <th>Assunto</th>
+          <th>Data / Hora</th>
 
-<div class="col-sm-9 col-md-10">
-<!-- Nav tabs -->
-<ul class="nav nav-tabs">
-<li class="active"><a href="#home" data-toggle="tab"><span class="glyphicon glyphicon-inbox">
-</span>Primary</a></li>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @messager.each do |msg| %>
+        <tr class="">
+          <td><%= msg.id %></td>
+          <td><%= msg.subject %></td>
+          <td><label class="badge badge-secondary">
+            <%= msg.created_at.strftime("%d-%m-%Y  às %H:%M:%S %p") %></label></td>
 
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-<div class="tab-pane fade in active" id="home">
-  <% @messager.each do |msg| %>
-  <div class="list-group">
-
-
-    <a href="#" class="list-group-item">
-
-
-   <span class="name" style="min-width: 120px;
-      display: inline-block;"><%= msg.subject %> </span>
-
-      <span class="text-muted" style="font-size: 12px;"> <%= msg.body %> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
-       <span class="badge"><%= msg.created_at.strftime("%d/%m/%Y %H:%M:%S %p") %></span> <span class="pull-right">
-      </span></span></a>
-
+            <td><%= link_to fa_icon('commenting-o', text: 'Ler Mais'), msg %></td>
+            <td><%= link_to fa_icon('trash', text: 'Remover'),  msg,
+            data: { confirm: 'Deseja deletar essa mensagem?' }, method: :delete, class: "btn btn-danger btn-sm"  %>
+            </td>
+          </tr>
           <% end %>
-        </div>
-      </div>
 
-
-
+        </tbody>
+      </table>
     </div>
-    <!-- Ad -->
-
   </div>
-  </di
+</div>
+</div>

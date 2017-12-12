@@ -1,0 +1,10 @@
+
+
+<%= form_for @messager, url:{}, class: 'form-inline' do |f|  %>
+
+
+<%= select_tag(:user_id, '<option value="1">Lisbon</option>...') %>
+
+<%= f.text_field :subject, class: "form-control" %>
+<%= f.text_field :body, class: "form-control" %>
+<% end %>

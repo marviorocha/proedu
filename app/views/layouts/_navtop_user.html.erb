@@ -25,7 +25,7 @@
         </li>
         <li class="nav-item">
          <%= link_to "#{fa_icon("sign-out", text: "Logout")}".html_safe,
-         edit_user_registration_path, class: "nav-link" %>
+        destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       </ul>
       <button class="navbar-toggler navbar-dark navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
@@ -51,7 +51,7 @@
   <ul class="nav">
     <li class="nav-item active">
       <a class="nav-link" href="index.html">
-        <i class="fa fa-dashboard fa-lg"></i>
+          <%= image_tag('icons/1.png') %>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
