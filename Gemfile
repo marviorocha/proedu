@@ -12,6 +12,8 @@ gem 'cancancan'
 
 gem 'simple_form'
 
+gem 'onesignal'
+
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
 

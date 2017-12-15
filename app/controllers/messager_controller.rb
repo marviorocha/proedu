@@ -1,6 +1,6 @@
 class MessagerController < ApplicationController
 
-  before_action :set_messager, :messager_params, only: [:show, :edit, :update, :destroy]
+  before_action :set_messager, only: [:show, :edit, :update, :destroy]
 
   def index
 
@@ -12,11 +12,24 @@ class MessagerController < ApplicationController
     @messager = Messager.new
   end
 
+  def create
+    @messager =  Messager.new(messager_params)
+    respond_to do |format|
+      if @messager.save
+        format.html { redirect_to @messager, notice: 'Mensagem enviado com sucesso!' }
+        format.json { render :show, status: :created, location: @messager }
+      else
+        format.html { render :new }
+        format.json { render json: @messager.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def show
     #code
   end
 
-  def show
+  def edit
     #code
   end
 
@@ -28,7 +41,7 @@ class MessagerController < ApplicationController
 
     @messager.destroy
     respond_to do |format|
-      format.html {redirect_to mensager_index_path, notice: "A mensagem foi apagado com sucesso!"}
+      format.html {redirect_to messager_path, notice: "A mensagem foi apagado com sucesso!"}
       format.json { head :no_content  }
     end
 
@@ -37,7 +50,7 @@ class MessagerController < ApplicationController
   private
 
   def set_messager
-    @messager = current_user.messager.find(params[:id])
+    @messager = Messager.find_by(params[:id])
   end
 
   def messager_params

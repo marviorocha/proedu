@@ -1,10 +1,19 @@
 
 
-<%= form_for @messager, url:{}, class: 'form-inline' do |f|  %>
 
+<%=
 
-<%= select_tag(:user_id, '<option value="1">Lisbon</option>...') %>
+form_for @messager, url: {action: "create"}, html: {class: "simple_form"} do |f| %>
+ <div class="form-group">
+ <label for="">Selecione o usuário</label>
+ <%= f.collection_select(:user_id, User.all, :id, :name , prompt: true) %>
+ </div>
 
+<%= f.label :subject %>
 <%= f.text_field :subject, class: "form-control" %>
-<%= f.text_field :body, class: "form-control" %>
+<br>
+<%= f.label :body %>
+<%= f.text_area_tag(:body,'Digite sua mensagem', size:'60x12', class: "form-control p-input") %>
+<br>
+<p><%= f.submit %></p>
 <% end %>

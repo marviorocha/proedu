@@ -114,6 +114,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    onesignal (0.3.0)
     orm_adapter (0.5.0)
     perfect-scrollbar-rails (0.6.15)
       railties (>= 3.2, < 6.0)
@@ -234,6 +235,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  onesignal
   perfect-scrollbar-rails
   pg (~> 0.21.0)
   popper_js
