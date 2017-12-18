@@ -26,8 +26,7 @@ gem 'font-awesome-rails'
 
 # Theme admin dependenciaes
 
-gem 'popper_js'
-gem 'chart-js-rails'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
