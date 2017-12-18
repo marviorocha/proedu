@@ -32,8 +32,7 @@ gem 'chart-js-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-source "https://rubygems.org"
-ruby "2.4.1"
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
