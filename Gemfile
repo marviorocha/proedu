@@ -25,7 +25,7 @@ gem 'devise-bootstrap-views'
 gem 'font-awesome-rails'
 
 # Theme admin dependenciaes
-
+# - not working gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

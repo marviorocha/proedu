@@ -9,13 +9,8 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *= require css/fontastic
- *= require css/style.blue
- *= require css/custom
- *= require css/bootstrap/bootstrap-reboot
- *= require css/bootstrap/bootstrap-grid
- *= require css/bootstrap/bootstrap.min
  *= require_self
+ *= require_tree .
  */
 
 @import "font-awesome";
