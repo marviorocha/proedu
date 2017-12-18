@@ -1,6 +1,21 @@
-<h1>Editing Content</h1>
+
+<%= title "Editar - #{ @content.title }" %>
+
+<!-- Page Header-->
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom"  > Editar <%= @content.title %></h2>
+  </div>
+</header>
+
+<%= render "layouts/brandcrumb" %>
+
+<p></p>
+<div class="container-fluid">
+
 
 <%= render 'form', content: @content %>
 
-<%= link_to 'Show', @content %> |
-<%= link_to 'Back', contents_path %>
+ 
+
+</div>

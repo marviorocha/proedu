@@ -1,6 +1,16 @@
-<%= link_to fa_icon('back', text:'Voltar'), contents_path, class: 'float-right btn btn-outline-primary' %>
 
-<h1>New Content</h1>
+<%= title "Criar nova lição" %>
+
+<!-- Page Header-->
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Nova Lição</h2>
+  </div>
+</header>
+
+<%= render "layouts/brandcrumb" %>
+
+<p></p>
 
 
 <%= render 'form', content: @content %>

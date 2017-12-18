@@ -1,73 +1,58 @@
 <%= title "Minhas Lições" %>
 
-
 <!-- Page Header-->
 <header class="page-header">
   <div class="container-fluid">
     <h2 class="no-margin-bottom">Lições</h2>
   </div>
 </header>
+
 <%= render "layouts/brandcrumb" %>
+<p></p>
+<div class="container-fluid">
 
-<section class="tables">
-  <div class="container-fluid">
+    <div class="card">
 
-    <div class="col-lg-12">
-      <div class="card">
-        <div class="card-close">
-          <!-- <div class="dropdown">
-          <button type="button" id="closeCard2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-          <div aria-labelledby="closeCard2" class="dropdown-menu dropdown-menu-right has-shadow" style="display: none; position: absolute; transform: translate3d(15px, 26px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom-end"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-        </div> -->
-      </div>
-      <div class="card-header d-flex align-items-center">
-        <h3 class="h4">Lições</h3>
-      </div>
+      <h4 class="card-header d-flex align-items-center">Lições</h4>
       <div class="card-body">
 
+        <p>    <%= link_to fa_icon('plus', text: 'Criar Novo'), new_content_path, class: 'float-right btn btn-primary' %>
 
-        <div class="col-lg-12">
-          <p id="notice"><%= notice %></p>
-          <div class="card">
-            <div class="card-body">
-              <%= link_to fa_icon('plus', text: 'Criar Novo'), new_content_path, class: 'float-right btn btn-primary' %>
-
-              <h5 class="card-title mb-4">Lições</h5>
-
-              <div class="table-responsive">
-
-                <table class="table center-aligned-table">
+        <div class="table-responsive">
+<p></p>
+          <table class="table center-aligned-table">
 
 
-                  <thead>
+            <thead>
 
-                    <tr>
-                      <th>Titulo</th>
-                      <th>Conteúdo</th>
-                      <th>Doc</th>
-                      <th colspan="3"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <% @contents.each do |content| %>
-                    <tr>
-                      <td><%= content.title %></td>
-                      <td><%= truncate(content.body, length:80 ,omission: '... (mais)') %></td>
-                      <td><%= content.doc %></td>
-                      <td><%= link_to fa_icon('eye', text:'Visualizar'), content, class: 'btn btn-outline-primary btn-sm' %>
-                        <%= link_to fa_icon('pencil', text:'Editar'), edit_content_path(content), class: 'btn btn-outline-info btn-sm' %>
-                        <%= link_to fa_icon('trash', text: 'Apagar'), content,class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                      </tr>
-                      <% end %>
-                    </tbody>
-                  </table>
-                </table>
-              </div>
-            </div>
-            </div>
-            </div>
-
-
-            </div>
-            </div>
-            </section>
+              <tr>
+                <th>Titulo</th>
+                <th>Conteúdo</th>
+                <th>Doc</th>
+                <th colspan="5"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @contents.each do |content| %>
+              <tr>
+                <td><%= content.title %></td>
+                <td><%= truncate(content.body, length:80 ,omission: '... (mais)') %></td>
+                <td><%= content.doc %></td>
+                <td>
+                  <%= link_to fa_icon('eye', text:'Visualizar'), content, class: 'btn btn-outline-primary btn-sm' %>
+                </td>
+                <td>
+                  <%= link_to fa_icon('pencil', text:'Editar'), edit_content_path(content), class: 'btn btn-outline-info btn-sm' %>
+                </td>
+                <td>
+               <%= link_to fa_icon('trash', text: 'Apagar'), content,class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

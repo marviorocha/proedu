@@ -1,4 +1,23 @@
-<p id="notice"><%= notice %></p>
+
+<%= title "Lição - #{ @content.title }" %>
+
+<!-- Page Header-->
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom"><%= @content.title %></h2>
+  </div>
+</header>
+
+<%= render "layouts/brandcrumb" %>
+
+<p></p>
+<div class="container-fluid">
+
+    <div class="card">
+
+
+      <div class="card-body">
+        <h4 class="card-title"><%= @content.title %></h4>
 
 <p>
   <strong>Title:</strong>
@@ -15,5 +34,11 @@
   <%= @content.doc %>
 </p>
 
-<%= link_to 'Edit', edit_content_path(@content) %> |
-<%= link_to 'Back', contents_path %>
+<div class="btn-group" role="group" aria-label="Basic example">
+<%= link_to fa_icon('pencil', text: 'Editar'), edit_content_path(@content), class:"btn btn-sm btn-outline-secondary" %>
+ <%= link_to fa_icon('chevron-left', text: 'Voltar'), contents_path, class:"btn btn-sm btn-outline-secondary" %>
+</div>
+
+</div>
+</div>
+</div>
