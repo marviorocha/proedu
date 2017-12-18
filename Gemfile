@@ -14,13 +14,14 @@ gem 'simple_form'
 
 gem 'onesignal'
 
+# Jquery
+ 
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
 
-gem 'twitter-bootstrap-rails'
 
-# Jquery
-gem 'jquery-rails'
+
+
 
 # Fontaswesome
 gem 'font-awesome-rails'
@@ -29,7 +30,7 @@ gem 'font-awesome-rails'
 
 gem 'popper_js'
 gem 'chart-js-rails'
-gem 'perfect-scrollbar-rails'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

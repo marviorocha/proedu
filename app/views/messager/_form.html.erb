@@ -1,19 +1,25 @@
 
+<div class="col-lg-12">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title mb-4">Mensagem</h5>
+      <div class="table-responsive">
 
+      <%=
 
-<%=
+      form_for @messager, url: {action: "create"}, html: {class: "simple_form"} do |f| %>
+      <div class="form-group">
+        <label for="">Selecione o usuário</label>
+        <%= f.collection_select(:user_id, User.all, :id, :name , prompt: true) %>
+      </div>
 
-form_for @messager, url: {action: "create"}, html: {class: "simple_form"} do |f| %>
- <div class="form-group">
- <label for="">Selecione o usuário</label>
- <%= f.collection_select(:user_id, User.all, :id, :name , prompt: true) %>
- </div>
+      <%= f.label :subject %>
+      <%= f.text_field :subject, class: "form-control" %>
+      <br>
+      <%= f.label :body %>
+      <%= f.text_area_tag(:body,'Digite sua mensagem', size:'60x12', class: "form-control p-input") %>
+      <br>
+      <p><%= f.submit %></p>
+      <% end %>
 
-<%= f.label :subject %>
-<%= f.text_field :subject, class: "form-control" %>
-<br>
-<%= f.label :body %>
-<%= f.text_area_tag(:body,'Digite sua mensagem', size:'60x12', class: "form-control p-input") %>
-<br>
-<p><%= f.submit %></p>
-<% end %>
+    </div></div></div></div>

@@ -116,8 +116,6 @@ GEM
       mini_portile2 (~> 2.3.0)
     onesignal (0.3.0)
     orm_adapter (0.5.0)
-    perfect-scrollbar-rails (0.6.15)
-      railties (>= 3.2, < 6.0)
     pg (0.21.0)
     popper_js (1.12.5)
     public_suffix (3.0.1)
@@ -236,7 +234,6 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   onesignal
-  perfect-scrollbar-rails
   pg (~> 0.21.0)
   popper_js
   puma (~> 3.7)
