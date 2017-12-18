@@ -14,6 +14,7 @@ class MessagerController < ApplicationController
 
   def create
     @messager =  Messager.new(messager_params)
+    
     respond_to do |format|
       if @messager.save
         format.html { redirect_to @messager, notice: 'Mensagem enviado com sucesso!' }
