@@ -95,7 +95,16 @@
       </div>
       <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
       <ul class="list-unstyled">
-        <li class="active"><a href="index.html"> <i class="icon-home"></i>Home </a></li>
+        <li class="active"> <%= link_to '<i class="icon-home"></i>Home </a>'.html_safe , root_path %> </li>
+        <li><a href="#cursosdropdownDropdown" aria-expanded="false" data-toggle="collapse">
+           <i class="icon-interface-windows"></i> Cursos </a>
+          <ul id="cursosdropdownDropdown" class="collapse list-unstyled ">
+            <li> <%= link_to fa_icon('plus-square-o', text: 'Criar Curso'), new_curse_path %></li>
+            <li> <%= link_to fa_icon('folder-open-o', text: 'Lição(es)'), contents_path %></li>
+            <li><a href="#">Page</a></li>
+            <li><a href="#">Page</a></li>
+          </ul>
+        </li>
         <li> <%= link_to fa_icon('folder-open-o', text: 'Lição'), contents_path %></li>
         <li> <%= link_to fa_icon('envelope', text: 'Mensagem'), messager_index_path %></li>
         <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>

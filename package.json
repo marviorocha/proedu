@@ -1,5 +1,8 @@
 {
   "name": "proedu",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "alloyeditor": "^1.5.1",
+    "gulp": "^3.9.1"
+  }
 }

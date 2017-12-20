@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   resources :comments
   devise_for :users, controllers: {
       sessions: 'users/sessions',
@@ -18,5 +19,8 @@ resources :messager
 
 #content resources
 resources :contents
+
+#content curse
+resources :curse
 
 end

@@ -14,6 +14,8 @@ gem 'simple_form'
 
 gem 'onesignal'
 
+gem 'trumbowyg_rails'
+
 # Jquery
 
 # Devise Boorstrap

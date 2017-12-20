@@ -20,13 +20,13 @@
         <h4 class="card-title"><%= @content.title %></h4>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Titulo:</strong>
   <%= @content.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @content.body %>
+  <strong>Conteúdo:</strong>
+  <%= @content.body.html_safe %>
 </p>
 
 <p>

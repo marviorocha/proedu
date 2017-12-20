@@ -10,6 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require vendor/jquery/jquery.min
+//= require trumbowyg/trumbowyg
+//= require trumbowyg/plugins/insertaudio/insertaudio
+//= require trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste
+//= require trumbowyg/plugins/noembed/noembed
 //= require vendor/popper.js/umd/popper.min
 //= require vendor/bootstrap/bootstrap.min
 //= require vendor/jquery.cookie/jquery.cookie
@@ -19,3 +23,28 @@
 //= require front
 //= require rails-ujs
 //= require turbolinks
+
+document.addEventListener("turbolinks:load", function() {
+  $.trumbowyg.svgPath = '/assets/icons/icons.svg'
+
+  $('#editor')
+  .trumbowyg({
+    btns: [ ['viewHTML'],
+        ['undo', 'redo'], // Only supported in Blink browsers
+        ['formatting'],
+        ['strong', 'em', 'del'],
+        ['superscript', 'subscript'],
+        ['link'],
+        ['insertImage'],
+        ['noembed'],
+        ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+        ['unorderedList', 'orderedList'],
+        ['horizontalRule'],
+        ['removeformat'],
+        ['insertAudio'],
+        ['fullscreen']],
+   removeformatPasted: true,
+    autogrow: true
+  });
+
+})
