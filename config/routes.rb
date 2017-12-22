@@ -20,7 +20,9 @@ resources :messager
 #content resources
 resources :contents
 
+get '/contents/:id/duplicate', to: 'contents#duplicate', as: 'content_clone'
+
 #content curse
-resources :curse
+resources :curses
 
 end

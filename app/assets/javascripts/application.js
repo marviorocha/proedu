@@ -14,8 +14,10 @@
 //= require trumbowyg/plugins/insertaudio/insertaudio
 //= require trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste
 //= require trumbowyg/plugins/noembed/noembed
+//= require trombowyg
 //= require vendor/popper.js/umd/popper.min
 //= require vendor/bootstrap/bootstrap.min
+//= require datatables.min
 //= require vendor/jquery.cookie/jquery.cookie
 //= require vendor/chart.js/Chart.min
 //= require vendor/jquery-validation/jquery.validate.min
@@ -24,27 +26,10 @@
 //= require rails-ujs
 //= require turbolinks
 
-document.addEventListener("turbolinks:load", function() {
-  $.trumbowyg.svgPath = '/assets/icons/icons.svg'
 
-  $('#editor')
-  .trumbowyg({
-    btns: [ ['viewHTML'],
-        ['undo', 'redo'], // Only supported in Blink browsers
-        ['formatting'],
-        ['strong', 'em', 'del'],
-        ['superscript', 'subscript'],
-        ['link'],
-        ['insertImage'],
-        ['noembed'],
-        ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
-        ['unorderedList', 'orderedList'],
-        ['horizontalRule'],
-        ['removeformat'],
-        ['insertAudio'],
-        ['fullscreen']],
-   removeformatPasted: true,
-    autogrow: true
-  });
+document.addEventListener("turbolinks:load", function() {
+
+      $('#datatable').DataTable();
+
 
 })

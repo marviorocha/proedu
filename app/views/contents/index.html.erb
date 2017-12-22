@@ -11,48 +11,56 @@
 <p></p>
 <div class="container-fluid">
 
-    <div class="card">
 
-      <h4 class="card-header d-flex align-items-center">Lições</h4>
-      <div class="card-body">
+  <div class="card">
 
-        <p>    <%= link_to fa_icon('plus', text: 'Criar Novo'), new_content_path, class: 'float-right btn btn-primary' %>
+    <h4 class="card-header d-flex align-items-center">Lições</h4>
+    <div class="card-body">
+
+      <p><%= link_to fa_icon('plus', text: 'Criar Novo'), new_content_path, class: 'float-right btn btn-primary' %>
 
         <div class="table-responsive">
-<p></p>
-          <table class="table center-aligned-table">
+          <p></p>
+          <table id="datatable" class="display table" cellspacing="0" >
 
 
             <thead>
 
               <tr>
-                <th>Titulo</th>
-                <th>Conteúdo</th>
-                <th>Doc</th>
-                <th colspan="5"></th>
+                <th>#</th>
+                <th>Titulo:</th>
+                <th>Conteúdo:</th>
+                <th cellspacing='5'></th>
               </tr>
             </thead>
+            <tfoot>
+            <tr>
+              <th>#</th>
+              <th>Titulo</th>
+              <th>Conteúdo</th>
+              <th></th>
+            </tr>
+        </tfoot>
             <tbody>
               <% @contents.each do |content| %>
               <tr>
+                <td><%= content.id %></td>
                 <td><%= content.title %></td>
                 <td><%= truncate(content.body, length:80 ,omission: '... (mais)') %></td>
-                <td><%= content.doc %></td>
+
                 <td>
-                  <%= link_to fa_icon('eye', text:'Visualizar'), content, class: 'btn btn-outline-primary btn-sm' %>
-                </td>
-                <td>
+                  <%= link_to fa_icon('eye', text:''), content, class: 'btn btn-outline-primary btn-sm' %>
                   <%= link_to fa_icon('pencil', text:'Editar'), edit_content_path(content), class: 'btn btn-outline-info btn-sm' %>
+                  <%= link_to fa_icon('trash', text: ''), content,class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
                 </td>
-                <td>
-               <%= link_to fa_icon('trash', text: 'Apagar'), content,class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </td>
+
+
               </tr>
               <% end %>
             </tbody>
           </table>
-          </div>
+        </div>
       </div>
     </div>
   </div>
- 

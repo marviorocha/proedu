@@ -5,23 +5,23 @@
       <%= link_to fa_icon('chevron-left', text:'Voltar'), contents_path, class: 'float-right btn btn-sm btn-outline-secondary' %>
     </div>
     <div class="card-header d-flex align-items-center">
-      <h3 class="h4">Basic Form</h3>
+      <h3 class="h4"><%= content_for(:title) %></h3>
     </div>
     <div class="card-body">
 
-      <%= form_for @content do |f| %>
+      <%= form_for @curse do |f| %>
       <%#= render "shared/errors", object: @content %>
       <div class="form-group">
         <label class="form-control-label"><%= f.label :title %></label>
-        <%= f.text_field :title, placeholder: 'Digite sua lição', class: 'form-control' %>
+        <%= f.text_field :title, placeholder: 'Digite o nome de seu curso', class: 'form-control' %>
       </div>
       <div class="form-group">
-        <label class="form-control-label"><%= f.label :body %></label>
-        <%= f.text_area :body, id: "editor", class: 'form-control' %>
+        <label class="form-control-label"><%= f.label :descricao %></label>
+        <%= f.text_area :descricao, class: 'form-control' %>
       </div>
       <div class="form-group">
-        <label class="form-control-label"><%= f.label :doc %></label>
-        <%= f.text_field :doc, class: 'form-control' %>
+        <label class="form-control-label"><%= f.label :picture %></label>
+        <%= f.text_field :picture, class: 'form-control' %>
       </div>
       <div class="form-group">
         <%= f.submit content_for(:title), class: 'btn btn-primary'%>

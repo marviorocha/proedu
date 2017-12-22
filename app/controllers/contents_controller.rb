@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-  before_action :set_content, only: [:show, :edit, :update, :destroy]
+  before_action :set_content, only: [:show, :edit, :update, :destroy, :duplicate]
 
   # GET /contents
   # GET /contents.json
@@ -19,6 +19,25 @@ class ContentsController < ApplicationController
 
   # GET /contents/1/edit
   def edit
+  end
+
+  # GET /contents/1/deplicate
+  def duplicate
+   @duplicate = Content.find(params[:id])
+
+   @new_content = @duplicate.dup
+
+   @new_content.title = "Copy #{ @duplicate.title }"
+
+   respond_to do |format|
+   if @new_content.save
+     format.html {redirect_to contents_path, notice: 'Content was successfully duplicate'}
+     format.json { render :index, status: :created, location: @content  }
+   else
+      format.html {render :index}
+      format.json {render json: @new_content.errors, status: :unprocessable_entity}
+   end
+ end
   end
 
   # POST /contents

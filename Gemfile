@@ -17,7 +17,7 @@ gem 'onesignal'
 gem 'trumbowyg_rails'
 
 # Jquery
-
+ 
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
 
