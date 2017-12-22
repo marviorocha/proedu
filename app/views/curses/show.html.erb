@@ -26,7 +26,7 @@
 
 <p>
   <strong>Descrição:</strong>
-  <%= @curse.descrição.html_safe %>
+  <%= @curse.descricao.html_safe %>
 </p>
 
 <p>
@@ -35,9 +35,9 @@
 </p>
 
 <div class="btn-group" role="group" aria-label="Basic example">
-<%= link_to fa_icon('pencil', text: 'Editar'), edit_curse_path(@content), class:"btn btn-sm btn-outline-secondary" %>
+<%= link_to fa_icon('pencil', text: 'Editar'), edit_curse_path(@curse), class:"btn btn-sm btn-outline-secondary" %>
 <%= link_to fa_icon('chevron-left', text: 'Voltar'), curses_path, class:"btn btn-sm btn-outline-secondary" %>
- 
+
 
 </div>
 

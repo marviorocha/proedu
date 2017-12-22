@@ -16,8 +16,11 @@ gem 'onesignal'
 
 gem 'trumbowyg_rails'
 
+gem 'carrierwave'
+
+gem 'mini_magick'
 # Jquery
- 
+
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
 

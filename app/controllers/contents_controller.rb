@@ -17,6 +17,25 @@ class ContentsController < ApplicationController
     @content = Content.new
   end
 
+  # POST /contents
+  # POST /contents.json
+  def create
+    @content = Content.new(content_params)
+    @curse_content = ContentCurse.new(content_id: params[:curse_id])
+    @curse_content.save
+    respond_to do |format|
+      if @content.save
+        format.html { redirect_to @content, notice: 'Content was successfully created.' }
+        format.json { render :show, status: :created, location: @content }
+      else
+        format.html { render :new }
+        format.json { render json: @content.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
+
   # GET /contents/1/edit
   def edit
   end
@@ -40,21 +59,6 @@ class ContentsController < ApplicationController
  end
   end
 
-  # POST /contents
-  # POST /contents.json
-  def create
-    @content = Content.new(content_params)
-
-    respond_to do |format|
-      if @content.save
-        format.html { redirect_to @content, notice: 'Content was successfully created.' }
-        format.json { render :show, status: :created, location: @content }
-      else
-        format.html { render :new }
-        format.json { render json: @content.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # PATCH/PUT /contents/1
   # PATCH/PUT /contents/1.json
