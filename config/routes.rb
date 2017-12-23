@@ -22,7 +22,10 @@ resources :contents
 
 get '/contents/:id/duplicate', to: 'contents#duplicate', as: 'content_clone'
 
-#content curse
+#categories Category
 resources :curses
+
+#content curse
+resources :categories
 
 end

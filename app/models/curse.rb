@@ -1,5 +1,5 @@
 class Curse < ApplicationRecord
 
-has_many :content 
+validates :title, :descricao, presence: true
 mount_uploader :picture, PictureUploader
 end

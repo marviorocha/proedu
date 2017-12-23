@@ -5,6 +5,7 @@ class ContentsController < ApplicationController
   # GET /contents.json
   def index
     @contents = Content.all
+
   end
 
   # GET /contents/1
@@ -21,8 +22,7 @@ class ContentsController < ApplicationController
   # POST /contents.json
   def create
     @content = Content.new(content_params)
-    @curse_content = ContentCurse.new(content_id: params[:curse_id])
-    @curse_content.save
+
     respond_to do |format|
       if @content.save
         format.html { redirect_to @content, notice: 'Content was successfully created.' }
@@ -92,6 +92,6 @@ class ContentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def content_params
-      params.require(:content).permit(:title, :body, :doc)
+      params.require(:content).permit(:title, :body, :doc, :curse_id)
     end
 end

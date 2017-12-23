@@ -28,6 +28,7 @@
 
               <tr>
                 <th>#</th>
+               
                 <th>Titulo:</th>
                 <th>Conteúdo:</th>
                 <th cellspacing='5'></th>
@@ -36,6 +37,7 @@
             <tfoot>
             <tr>
               <th>#</th>
+
               <th>Titulo</th>
               <th>Conteúdo</th>
               <th></th>
@@ -45,6 +47,7 @@
               <% @contents.each do |content| %>
               <tr>
                 <td><%= content.id %></td>
+
                 <td><%= content.title %></td>
                 <td><%= truncate(content.body, length:80 ,omission: '... (mais)') %></td>
 
