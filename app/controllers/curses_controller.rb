@@ -26,7 +26,7 @@ def create
   respond_to do |format|
     if @curse.save
     @curse.picture.url # => '/url/to/file.png'
- 
+
     format.html { redirect_to curses_path, notice: 'Curse foi criado com sucesso!'}
     format.json { render :index, status: :created, location: @curse }
   else
@@ -60,11 +60,11 @@ end
 private
 
 def set_curse
-  @curse = Curse.find(params[:id])
+  @curse = Curse.find_by(params[:id])
 end
 
 def set_params
-  params.require(:curse).permit(:title, :descricao, :picture)
+  params.require(:curse).permit(:title, :descricao, :picture, :curse_ids)
 end
 
 

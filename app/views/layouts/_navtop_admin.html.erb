@@ -24,104 +24,121 @@
 <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
 <!-- Notifications-->
 <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
-  <ul aria-labelledby="notifications" class="dropdown-menu">
+<ul aria-labelledby="notifications" class="dropdown-menu">
+<li><a rel="nofollow" href="#" class="dropdown-item">
+  <div class="notification">
+    <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+    <div class="notification-time"><small>4 minutes ago</small></div>
+  </div></a></li>
+  <li><a rel="nofollow" href="#" class="dropdown-item">
+    <div class="notification">
+      <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+      <div class="notification-time"><small>4 minutes ago</small></div>
+    </div></a></li>
     <li><a rel="nofollow" href="#" class="dropdown-item">
       <div class="notification">
-        <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+        <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
         <div class="notification-time"><small>4 minutes ago</small></div>
       </div></a></li>
       <li><a rel="nofollow" href="#" class="dropdown-item">
         <div class="notification">
           <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-          <div class="notification-time"><small>4 minutes ago</small></div>
+          <div class="notification-time"><small>10 minutes ago</small></div>
         </div></a></li>
-        <li><a rel="nofollow" href="#" class="dropdown-item">
-          <div class="notification">
-            <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
-            <div class="notification-time"><small>4 minutes ago</small></div>
-          </div></a></li>
-          <li><a rel="nofollow" href="#" class="dropdown-item">
-            <div class="notification">
-              <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
-              <div class="notification-time"><small>10 minutes ago</small></div>
-            </div></a></li>
-            <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
-          </ul>
-        </li>
-        <!-- Messages                        -->
-        <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
-          <ul aria-labelledby="notifications" class="dropdown-menu">
-            <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-              <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-              <div class="msg-body">
-                <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
-              </div></a></li>
-              <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                <div class="msg-body">
-                  <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
-                </div></a></li>
-                <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                  <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                  <div class="msg-body">
-                    <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
-                  </div></a></li>
-                  <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>
-                </ul>
-              </li>
-              <!-- Logout    -->
-              <li class="nav-item">
-
-              <%= link_to "Logout<i class='fa fa-sign-out'></i>".html_safe, destroy_user_session_path, method: :delete, class: 'nav-link logout'  %>
-
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <div class="page-content d-flex align-items-stretch">
-    <!-- Side Navbar -->
-    <nav class="side-navbar">
-      <!-- Sidebar Header-->
-      <div class="sidebar-header d-flex align-items-center">
-        <div class="avatar">
-<%= image_tag(gravatar(current_user.email,'65'), class: 'img-fluid rounded-circle') %>
-</div>
-        <div class="title">
-          <h1 class="h4"><%= current_user.name.capitalize + ' ' + current_user.lastname.capitalize %></h1>
-          <p>Administração</p>
-        </div>
-      </div>
-      <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
-      <ul class="list-unstyled">
-        <li class="active"> <%= link_to '<i class="icon-home"></i>Home </a>'.html_safe , root_path %> </li>
-        <li><a href="#cursosdropdownDropdown" aria-expanded="false" data-toggle="collapse">
-           <i class="icon-interface-windows"></i> Cursos </a>
-          <ul id="cursosdropdownDropdown" class="collapse list-unstyled ">
-            <li> <%= link_to fa_icon('plus-square-o', text: 'Criar Curso'), curses_path %></li>
-            <li> <%= link_to fa_icon('list-alt', text: 'Categoria'), categories_path %></li>
-            <li> <%= link_to fa_icon('folder-open-o', text: 'Criar Lição(es)'), new_content_path %></li>
-
-          </ul>
-        </li>
-        <li> <%= link_to fa_icon('folder-open-o', text: 'Lição'), contents_path %></li>
-        <li> <%= link_to fa_icon('envelope', text: 'Mensagem'), messager_index_path %></li>
-        <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-        <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
-        <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
-          <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-            <li><a href="#">Page</a></li>
-            <li><a href="#">Page</a></li>
-            <li><a href="#">Page</a></li>
-          </ul>
-        </li>
-        <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
-      </ul><span class="heading">Extras</span>
-      <ul class="list-unstyled">
-        <li> <a href="#"> <i class="icon-flask"></i>Demo </a></li>
-        <li> <a href="#"> <i class="icon-screen"></i>Demo </a></li>
-        <li> <a href="#"> <i class="icon-mail"></i>Demo </a></li>
-        <li> <a href="#"> <i class="icon-picture"></i>Demo </a></li>
+        <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
       </ul>
-    </nav>
+    </li>
+    <!-- Messages                        -->
+    <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
+      <ul aria-labelledby="notifications" class="dropdown-menu">
+        <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+          <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+          <div class="msg-body">
+            <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
+          </div></a></li>
+          <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+            <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            <div class="msg-body">
+              <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
+            </div></a></li>
+            <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+              <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+              <div class="msg-body">
+                <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
+              </div></a></li>
+              <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>
+            </ul>
+          </li>
+          <!-- Logout    -->
+          <li class="nav-item">
+
+            <%= link_to "Logout<i class='fa fa-sign-out'></i>".html_safe, destroy_user_session_path, method: :delete, class: 'nav-link logout'  %>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="page-content d-flex align-items-stretch">
+  <!-- Side Navbar -->
+  <nav class="side-navbar">
+    <!-- Sidebar Header-->
+    <div class="sidebar-header d-flex align-items-center">
+      <div class="avatar">
+      <%= image_tag(gravatar(current_user.email,'65'), class: 'img-fluid rounded-circle') %>
+    </div>
+    <div class="title">
+      <h1 class="h4"><%= current_user.name.capitalize + ' ' + current_user.lastname.capitalize %></h1>
+      <p>Administração</p>
+    </div>
+  </div>
+  <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+  <ul class="list-unstyled">
+    <li class="<%= active_for(path: "/") %>" > <%= link_to '<i class="icon-home"></i>Home </a>'.html_safe , root_path %> </li>
+
+    <li class="<%= active_for(controller: "curses") %>" ><a href="#cursosdropdownDropdown" aria-expanded="false" data-toggle="collapse">
+      <i class="icon-interface-windows"></i> Cursos </a>
+      <ul id="cursosdropdownDropdown" class="collapse list-unstyled ">
+        <li> <%= link_to fa_icon('plus-square-o', text: 'Criar Curso'), new_curse_path %></li>
+        <li> <%= link_to fa_icon('list-alt', text: 'Gerenciar Curso(s)'), curses_path %></li>
+      </ul>
+    </li>
+
+    <li class="<%= active_for(controller: "contents") %>" ><a href="#licaodropdownDropdown" aria-expanded="false" data-toggle="collapse">
+      <%= fa_icon('folder-open-o', text: 'Lição') %> </a>
+      <ul id="licaodropdownDropdown" class="collapse list-unstyled ">
+        <li> <%= link_to fa_icon('plus-square-o', text: 'Criar Lição'), new_content_path %></li>
+        <li> <%= link_to fa_icon('list-alt', text: 'Gerenciar Lição(es)'), contents_path %></li>
+      </ul>
+    </li>
+
+    <li class="<%= active_for(controller: "categories") %>" ><a href="#categoriadropdownDropdown" aria-expanded="false" data-toggle="collapse">
+    <i class="icon-list-1"></i> Categoria </a> </a>
+      <ul id="categoriadropdownDropdown" class="collapse list-unstyled ">
+        <li> <%= link_to fa_icon('plus-square-o', text: 'Criar Categoria'), new_category_path %></li>
+        <li> <%= link_to fa_icon('list-alt', text: 'Lista Categoria(s)'), categories_path %></li>
+      </ul>
+    </li>
+
+
+    <li> <%= link_to fa_icon('folder-open-o', text: 'Lição'), contents_path %></li>
+    <li> <%= link_to fa_icon('envelope', text: 'Mensagem'), messager_index_path %></li>
+    <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
+    <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
+    <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
+      <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+        <li><a href="#">Page</a></li>
+        <li><a href="#">Page</a></li>
+        <li><a href="#">Page</a></li>
+      </ul>
+    </li>
+    <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
+  </ul><span class="heading">Extras</span>
+  <ul class="list-unstyled">
+    <li> <a href="#"> <i class="icon-flask"></i>Demo </a></li>
+    <li> <a href="#"> <i class="icon-screen"></i>Demo </a></li>
+    <li> <a href="#"> <i class="icon-mail"></i>Demo </a></li>
+    <li> <a href="#"> <i class="icon-picture"></i>Demo </a></li>
+  </ul>
+</nav>
