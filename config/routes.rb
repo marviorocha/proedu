@@ -15,7 +15,7 @@ root to: 'page#index'
 resources :admin_users
 
 #messager resources
-resources :messager
+resources :messagers
 
 #content resources
 resources :contents

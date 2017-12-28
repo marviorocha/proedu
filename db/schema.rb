@@ -10,22 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171224133433) do
+ActiveRecord::Schema.define(version: 20171225230330) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index [nil], name: "index_categories_on_curse_id"
-  end
-
-  create_table "content_curses", force: :cascade do |t|
-    t.integer "curse_id"
-    t.integer "content_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["content_id"], name: "index_content_curses_on_content_id"
-    t.index ["curse_id"], name: "index_content_curses_on_curse_id"
   end
 
   create_table "contents", force: :cascade do |t|
@@ -44,12 +34,8 @@ ActiveRecord::Schema.define(version: 20171224133433) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "destroys", force: :cascade do |t|
-    t.string "contrntcurses"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_curses_on_category_id"
   end
 
   create_table "messagers", force: :cascade do |t|

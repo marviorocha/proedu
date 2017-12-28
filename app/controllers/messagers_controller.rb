@@ -1,4 +1,4 @@
-class MessagerController < ApplicationController
+class MessagersController < ApplicationController
 
   before_action :set_messager, only: [:show, :edit, :update, :destroy]
 
@@ -14,7 +14,7 @@ class MessagerController < ApplicationController
 
   def create
     @messager =  Messager.new(messager_params)
-    
+
     respond_to do |format|
       if @messager.save
         format.html { redirect_to @messager, notice: 'Mensagem enviado com sucesso!' }
@@ -51,7 +51,7 @@ class MessagerController < ApplicationController
   private
 
   def set_messager
-    @messager = Messager.find_by(params[:id])
+    @messager = Messager.find(params[:id])
   end
 
   def messager_params

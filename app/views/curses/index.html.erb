@@ -45,6 +45,7 @@
         </tfoot>
             <tbody>
               <% @curses.each do |curses| %>
+
               <tr>
                 <td><%= curses.id %></td>
                 <td><%= image_tag(curses.picture_url(:thumb)) if curses.picture? %></td>

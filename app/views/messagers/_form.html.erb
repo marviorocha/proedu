@@ -1,0 +1,35 @@
+
+<div class="col-lg-12">
+  <div class="card">
+    <div class="card-close">
+      <%= link_to fa_icon('chevron-left', text:'Voltar'), messagers_path, class: 'float-right btn btn-sm btn-outline-secondary' %>
+    </div>
+    <div class="card-header d-flex align-items-center">
+      <h3 class="h4"> <%= content_for(:title) %></h3>
+    </div>
+    <div class="card-body">
+
+      <%= form_for @messager do |f| %>
+      <%#= render "shared/errors", object: @content %>
+      <div class="form-group">
+        <label class="form-control-label"><%= f.label :subject %></label>
+        <%= collection_select(:messager, :user_id, User.all, :id, :name_with_initial, prompt: true,  multiple: true) %>
+      </div>
+      <div class="form-group">
+        <label class="form-control-label"><%= f.label :subject %></label>
+        <%= f.text_field :subject, placeholder: 'Digite o assunto', class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <label class="form-control-label"><%= f.label :body %></label>
+        <%= f.text_area :body, id: "editor", class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit content_for(:title), class: 'btn btn-primary'%>
+
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

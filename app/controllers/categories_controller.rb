@@ -36,7 +36,7 @@ before_action :set_category, only: [:edit, :destroy, :show, :update]
 
     @category.destroy
    respond_to do |format|
-     format.html { redirect_to categories_path, notice: 'A categoria foi deletado com sucesso!'}
+     format.html { redirect_to categories_path, notice: 'A categoria foi deletadado com sucesso!'}
      format.json { render :show, status: :created, location: @curse }
    end
 

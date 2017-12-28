@@ -60,11 +60,11 @@ end
 private
 
 def set_curse
-  @curse = Curse.find_by(params[:id])
+  @curse = Curse.find(params[:id])
 end
 
 def set_params
-  params.require(:curse).permit(:title, :descricao, :picture, :curse_ids)
+  params.require(:curse).permit(:title, :descricao, :picture, :category_id)
 end
 
 

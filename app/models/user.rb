@@ -6,5 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+ def name_with_initial
+         "#{name.first}. #{lastname}"
+  end
 
 end

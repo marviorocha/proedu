@@ -1,4 +1,4 @@
-class AddCurseToContents < ActiveRecord::Migration[5.1]
+class AddForeignKeyFromCursesToContent < ActiveRecord::Migration[5.1]
   def change
     add_reference :contents, :curse, foreign_key: true
   end
