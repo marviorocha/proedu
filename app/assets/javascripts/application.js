@@ -9,27 +9,34 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//= require vendor/jquery/jquery.min
+//= require jquery3
+
 //= require trumbowyg/trumbowyg
 //= require trumbowyg/plugins/insertaudio/insertaudio
 //= require trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste
 //= require trumbowyg/plugins/noembed/noembed
 //= require trombowyg
 //= require vendor/popper.js/umd/popper.min
-//= require vendor/bootstrap/bootstrap.min
 //= require datatables.min
 //= require vendor/jquery.cookie/jquery.cookie
 //= require vendor/chart.js/Chart.min
 //= require vendor/jquery-validation/jquery.validate.min
 //= require charts-home
 //= require front
+//= require jquery.turbolinks
 //= require rails-ujs
+//= require popper
+//= require bootstrap-sprockets
 //= require turbolinks
 
 
+$(document).addEventListener("page:change", function() {
+   $(".collapse .dropdown").hover((function() {
+       $(this).find(".dropdown-menu").first().stop(true, true).delay(150).slideDown();
+  }), function() {
+       $(this).find(".dropdown-menu").first().stop(true, true).delay(50).slideUp();
+  });
+});
 document.addEventListener("turbolinks:load", function() {
-
       $('#datatable').DataTable();
-
-
 })

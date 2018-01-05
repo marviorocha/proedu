@@ -3,4 +3,5 @@ module MessagerHelper
     @msg = current_user.messager_ids
     @msg.count
   end
+ 
 end

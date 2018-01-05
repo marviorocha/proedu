@@ -21,9 +21,14 @@ gem 'carrierwave'
 gem 'mini_magick'
 # Jquery
 
+gem 'jquery-turbolinks'
+gem 'jquery-rails'
+
+gem 'popper_js'
+
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
-
+gem 'bootstrap', '~> 4.0.0.beta3'
 
 
 # Fontaswesome

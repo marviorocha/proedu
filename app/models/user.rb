@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
  def name_with_initial
-         "#{name.first}. #{lastname}"
+         "#{name} #{lastname.first}."
   end
 
 end

@@ -42,7 +42,7 @@ class MessagersController < ApplicationController
 
     @messager.destroy
     respond_to do |format|
-      format.html {redirect_to messager_path, notice: "A mensagem foi apagado com sucesso!"}
+      format.html {redirect_to messagers_path, notice: "A mensagem foi apagado com sucesso!"}
       format.json { head :no_content  }
     end
 

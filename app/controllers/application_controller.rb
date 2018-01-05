@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   client = OneSignal::Client.new(auth_token: 'YmFmNjdlM2QtY2RjNS00MjlhLWIxYTItYTkxMTYxYWJhNTIy', app_id: 'f25ce7ac-9737-4b46-af9a-42c20444cf12')
   client.players.all
 
+
+ 
+
   protected
 
   def configure_permitted_parameters
