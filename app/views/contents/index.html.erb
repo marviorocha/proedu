@@ -48,8 +48,13 @@
             <tbody>
               <% @contents.each do |content| %>
               <tr>
-                <td><%= content.curse.picture %></td>
-                <td><%#= content %></td>
+                <td><%#Content= content.curse.picture %></td>
+                <td>
+
+                  <%= image_tag(content.curse.picture.thumb) %>
+
+                </td>
+
 
                 <td><%= content.title %></td>
                 <td><%= truncate(content.body, length:80 ,omission: '... (mais)') %></td>
