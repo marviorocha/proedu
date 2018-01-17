@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171225230330) do
+ActiveRecord::Schema.define(version: 20180115203237) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(version: 20171225230330) do
     t.index ["category_id"], name: "index_curses_on_category_id"
   end
 
+  create_table "curses_users", id: false, force: :cascade do |t|
+    t.integer "curse_id", null: false
+    t.integer "user_id", null: false
+    t.index ["curse_id", "user_id"], name: "index_curses_users_on_curse_id_and_user_id"
+    t.index ["user_id", "curse_id"], name: "index_curses_users_on_user_id_and_curse_id"
+  end
+
   create_table "messagers", force: :cascade do |t|
     t.string "subject"
     t.text "body"
@@ -45,6 +52,15 @@ ActiveRecord::Schema.define(version: 20171225230330) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_messagers_on_user_id"
+  end
+
+  create_table "user_curses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "curse_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["curse_id"], name: "index_user_curses_on_curse_id"
+    t.index ["user_id"], name: "index_user_curses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

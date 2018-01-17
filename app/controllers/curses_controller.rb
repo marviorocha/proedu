@@ -1,6 +1,6 @@
 class CursesController < ApplicationController
 
-before_action :set_curse, only: [:destroy, :show, :edit, :update ]
+before_action :set_curse, only: [:destroy, :show, :edit, :update, :list ]
 
 def index
 @curses = Curse.all
@@ -14,14 +14,16 @@ end
 def show
 end
 
+def list
+
+end
+
 def edit
 
 end
 
 def create
   @curse = Curse.new(set_params)
-
-
 
   respond_to do |format|
     if @curse.save
