@@ -23,11 +23,19 @@
           <!-- Search-->
           <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
           <!-- Notifications-->
+          <li class="nav-link ">
+            <%= link_to "<i class='fa fa-user'></i> Editar Perfil".html_safe, edit_user_registration_path,
+                class: ''  %>
+          </li>
+
 
           <!-- Messages                        -->
 
           <li class="nav-item dropdown">
-            <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-red"><%= messager_count %></span></a>
+            <a id="messages" rel="nofollow" data-target="#" href="#"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-red">
+              <%= messager_count %></span></a>
             <ul aria-labelledby="notifications" class="dropdown-menu">
               <% if @messager == nil %>
               <% else %>
@@ -50,7 +58,8 @@
           <!-- Logout    -->
           <li class="nav-item">
 
-            <%= link_to "Logout<i class='fa fa-sign-out'></i>".html_safe, destroy_user_session_path, method: :delete, class: 'nav-link logout'  %>
+            <%= link_to "Logout<i class='fa fa-sign-out'></i>".html_safe, destroy_user_session_path,
+ method: :delete, class: 'nav-link logout'  %>
 
           </li>
         </ul>
@@ -80,7 +89,7 @@
     <li class="<%= active_for(controller: "curses") %>" >
      <%= link_to '<i class="fa fa-book"></i>Cursos </a>'.html_safe, curse_list_path(current_user) %> </li>
 
- 
+
 
 
       <li> <%= link_to fa_icon('envelope', text: 'Mensagens'), messagers_path %></li>

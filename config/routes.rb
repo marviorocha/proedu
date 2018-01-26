@@ -2,12 +2,9 @@ Rails.application.routes.draw do
 
 
 
-  devise_for :users, controllers: {
-      sessions: 'users/sessions',
-      passwords: 'users/passwords',
-      registrations: 'users/registrations'
-    }
+devise_for :users
 
+get '/users/sign_up/:id', to: 'users#new', as: 'user_signup'
 
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

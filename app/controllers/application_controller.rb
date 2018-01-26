@@ -21,15 +21,6 @@ class ApplicationController < ActionController::Base
   private
 
 
-## Create Admin Default
-
-  def create_admin_user
-    u = User.new(:name => "Admin", :email => "admin@example.com", :password => "admin", :superadmin_role => "true")
-    u.save!(:validate => false)
-    session[:guest_user_id] = u.id
-    u
-  end
-
 
   def layout_by_resource
      if user_signed_in? == false

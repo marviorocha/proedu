@@ -1,70 +1,90 @@
-<%= bootstrap_devise_error_messages! %>
 
-<div class="box box-primary">
-  <div class="box-header with-border">
-    <h3 class="box-title"><%= t('.title', resource: resource_class.model_name.human , default: "Edit #{resource_name.to_s.humanize}") %></h3>
+<%= title "Cadastrar Usuário" %>
+
+<!-- Page Header-->
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom"><%= content_for(@title) %></h2>
   </div>
-  <!-- /.box-header -->
-  <!-- form start -->
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), role:"form", html: { method: :put }) do |f| %>
+</header>
 
-  <div class="box-body">
-
-
- <div class="row">
-
- <div class="col-xs-6">
-   <%= f.label :name %>
-   <%= f.text_field :name, class: 'form-control', placeholder: 'Digite seu nome' %>
-
-  </div>
-  <div class="col-xs-6">
-
- <%= f.label :lastname %>
- <%= f.text_field :lastname, class: 'form-control', placeholder: 'Digite seu email' %>
-</div>
-  </div>
-<p></p>
-    <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', default: "leave blank if you don't want to change it") %>)</i>
-      <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, class: 'form-control'  %>
-    </div>
-    <div class="form-group">
-      <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', default: 'we need your current password to confirm your changes') %>)</i>
-      <%= f.password_field :current_password, class: 'form-control' %>
-    </div>
-
-
-  </div>
-  <!-- /.box-body -->
-
-  <div class="box-footer">
-    <%= f.submit t('.update', default: 'Update'), class: 'btn btn-primary' %>
-<span class="pull-right">
-  <%= t('.unhappy', default: 'Unhappy') %>?
-    <%= link_to t('.cancel_my_account', default: 'Cancel my account'),
-    registration_path(resource_name), data: { confirm: t('.are_you_sure', default: "Você realmente deseja deletar sua conta?") },
-    method: :delete %>.
-</span>
-
-
-  </div>
-  <% end %>
-</div>
+<%= render "layouts/brandcrumb" %>
 
 <p></p>
+<div class="container-fluid">
+
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title"><%= content_for(@title) %></h4>
 
 
 
+      <%= bootstrap_devise_error_messages! %>
+
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title"><%= t('.title', resource: resource_class.model_name.human , default: "Editar #{resource_name.to_s.humanize}") %></h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), role:"form", html: { method: :put }) do |f| %>
+
+        <div class="box-body">
+
+        <%= collection_check_boxes(:curse, :curses_ids, Curse.all, :id, :title) do |b| %>
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <%= f.label :name %>
+                <%= f.text_field :name, class: 'form-control', placeholder: 'Digite seu nome' %>
+              </div>
+              <div class="col">
+                <%= f.label :lastname %>
+                <%= f.text_field :lastname, class: 'form-control', placeholder: 'Digite seu email' %>
+              </div>
+            </div>
+
+          </div>
+      <p></p>
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', default: "leave blank if you don't want to change it") %>)</i>
+            <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, class: 'form-control'  %>
+          </div>
+          <div class="form-group">
+            <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', default: 'we need your current password to confirm your changes') %>)</i>
+            <%= f.password_field :current_password, class: 'form-control' %>
+          </div>
 
 
+        </div>
+        <!-- /.box-body -->
 
-  <%= link_to t('.back', default: 'Back'), :back %>
+        <div class="box-footer">
+          <%= f.submit t('.update', default: 'Update'), class: 'btn btn-primary' %>
+      <span class="pull-right">
+        <%= t('.unhappy', default: 'Unhappy') %>?
+          <%= link_to t('.cancel_my_account', default: 'Cancel my account'),
+          registration_path(resource_name), data: { confirm: t('.are_you_sure', default: "Você realmente deseja deletar sua conta?") },
+          method: :delete %>.
+      </span>
+
+
+        </div>
+        <% end %>
+      </div>
+
+      <p></p>
+    <%= link_to t('.back', default: 'Back'), :back %>
+
+
+    </div>
+  </div>
+</div>
