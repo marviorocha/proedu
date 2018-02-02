@@ -31,7 +31,22 @@
 
         <div class="box-body">
 
-        <%= collection_check_boxes(:curse, :curses_ids, Curse.all, :id, :title) do |b| %>
+
+          <div class="form-group row">
+            <label class="col-sm-3 form-control-label"><%= f.label :curse %> <br>
+            </label>
+            <div class="col-sm-9">
+              <%= collection_check_boxes(:curse, :curses_ids, Curse.all, :id, :title) do |b| %>
+              <div>
+                <%= b.check_box %>
+                <%= b.label %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+
+
+
           <div class="form-group">
             <div class="row">
               <div class="col">

@@ -53,6 +53,9 @@
                 <td><%= truncate(curses.descricao, length:50 ,omission: '... (mais)') %></td>
 
                 <td>
+
+
+
                   <%= link_to fa_icon('eye', text:''), curses , class: 'btn btn-outline-primary btn-sm' %>
                   <%= link_to fa_icon('pencil', text:'Editar'), edit_curse_path(curses), class: 'btn btn-outline-info btn-sm' %>
                   <%= link_to fa_icon('trash', text: ''), curses ,class: 'btn btn-outline-danger btn-sm',
