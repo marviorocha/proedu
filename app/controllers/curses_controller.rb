@@ -16,6 +16,7 @@ end
 
 def list
 
+@curses = current_user.curse
 end
 
 def edit

@@ -24,14 +24,14 @@ resources :contents
 get '/contents/:id/duplicate', to: 'contents#duplicate', as: 'content_clone'
 
 #categories Category
-resources :curses
-
-#content curse
 resources :categories
 
-#studant curse
-get '/curses/:id/list', to: 'curses#list', as: 'curse_list'
+#content curse
+resources :curses
 
+#studant curse
+get '/:id/list', to: 'curses#list', as: 'curse_list'
+get '/:id/home', to: 'curses#home', as: 'curse_home'
 
 
 end
