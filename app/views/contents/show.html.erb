@@ -19,10 +19,31 @@
       <div class="card-body">
         <h4 class="card-title"><%= @content.title %></h4>
 
+ <% videos = @content.doc  %>
 
+
+<% if(videos.scan("mp4") == ["mp4"]) %>
+
+<video poster="<%= @content.curse.picture %>" controls>
+  <source src="<%= @content.doc %>" type="video/mp4">
+</video>
+<% else %>
+
+<% if(videos.scan("youtu") == ["youtu"]) %>
+<div data-type="youtube" data-video-id="<%= @content.doc %>"></div>
+<% else %>
+
+<% if(videos.scan("youtube") == ["youtube"]) %>
+ <div data-type="youtube" data-video-id="<%= @content.doc %>"></div>
+<% else(videos.scan("vimeo")) %>
+  <div data-type="vimeo" data-video-id="<%= @content.doc %>"></div>
+
+  <% end %>
+  <% end %>
+  <% end %>
 
     <p>
-     <div data-type="youtube" data-video-id="<%= @content.doc %>"></div>
+
     </p>
 
 <p>
@@ -32,7 +53,7 @@
 
 <p>
 
-<h3><%= fa_icon('comment', text: 'Deixe seu comentário'.html_safe) %> </h3> 
+<h3><%= fa_icon('comment', text: 'Deixe seu comentário'.html_safe) %> </h3>
 <div id="disqus_thread"></div>
 
 
@@ -40,13 +61,20 @@
 
 
 </p>
+<% if current_user.superadmin_role? %>
 
 <div class="btn-group" role="group" aria-label="Basic example">
 <%= link_to fa_icon('pencil', text: 'Editar'), edit_content_path(@content), class:"btn btn-sm btn-outline-secondary" %>
 <%= link_to fa_icon('chevron-left', text: 'Voltar'), contents_path, class:"btn btn-sm btn-outline-secondary" %>
-
-
 </div>
+
+
+<% end %>
+<% if current_user.studant_role? || current_user.teacher_role? %>
+<%= link_to fa_icon('chevron-left', text: 'Voltar'), contents_path, class:"btn btn-sm btn-outline-secondary" %>
+<%= link_to fa_icon('chevron-left', text: 'Marcar como Concluída'), contents_path, class:"btn  btn-outline-secondary" %>
+<% end %>
+
 
 </div>
 </div>
