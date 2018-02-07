@@ -11,8 +11,6 @@ class User < ApplicationRecord
  def name_with_initial
          "#{name} #{lastname.first}."
  end
-
-User.update(1, superadmin_role:true)
-
+ 
 
 end
