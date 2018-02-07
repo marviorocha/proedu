@@ -49,8 +49,12 @@ class ContentsController < ApplicationController
 
     respond_to do |format|
       if @new.save
-      format.html { redirect_to @content, notice: 'Content was duplicate with successfully'}
+        format.html { redirect_to contents_path, notice: 'Content was duplicate with successfully'}
+      else
+        format.html { render :edit }
+        format.json { render json: @content.errors, status: :unprocessable_entity }
       end
+
     end
 
   end
@@ -80,13 +84,13 @@ class ContentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_content
-      @content = Content.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_content
+    @content = Content.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def content_params
-      params.require(:content).permit(:title, :body, :doc, :curse_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def content_params
+    params.require(:content).permit(:title, :body, :doc, :curse_id)
+  end
 end

@@ -1,6 +1,6 @@
 class CursesController < ApplicationController
 
-before_action :set_curse, only: [:destroy, :show, :edit, :update, :list ]
+before_action :set_curse, only: [:destroy, :show, :edit, :update, :list, :home ]
 
 def index
 @curses = Curse.all
@@ -15,9 +15,14 @@ def show
 end
 
 def list
-
 @curses = current_user.curse
 end
+
+def home
+@curses = current_user.curse
+@contents = Content.where(curse_id: params[:id]) 
+end
+
 
 def edit
 

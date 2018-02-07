@@ -19,10 +19,11 @@
       <div class="card-body">
         <h4 class="card-title"><%= @content.title %></h4>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @content.title %>
-</p>
+
+
+    <p>
+     <div data-type="youtube" data-video-id="<%= @content.doc %>"></div>
+    </p>
 
 <p>
   <strong>Conteúdo:</strong>
@@ -30,14 +31,19 @@
 </p>
 
 <p>
-  <strong>Doc:</strong>
-  <%= @content.doc %>
+
+<h3><%= fa_icon('comment', text: 'Deixe seu comentário'.html_safe) %> </h3> 
+<div id="disqus_thread"></div>
+
+
+
+
+
 </p>
 
 <div class="btn-group" role="group" aria-label="Basic example">
 <%= link_to fa_icon('pencil', text: 'Editar'), edit_content_path(@content), class:"btn btn-sm btn-outline-secondary" %>
 <%= link_to fa_icon('chevron-left', text: 'Voltar'), contents_path, class:"btn btn-sm btn-outline-secondary" %>
- <%= link_to fa_icon('copy', text: 'Duplicar Conteúdo'), content_clone_path, class:"btn btn-sm btn-outline-info" %>
 
 
 </div>

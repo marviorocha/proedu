@@ -31,21 +31,23 @@
                 <th>Curso:</th>
 
                 <th>Titulo:</th>
-                <th>Conteúdo:</th>
-                <th cellspacing='5'></th>
+                <th cellspacing='2' >Conteúdo:</th>
+                <th ></th>
+
               </tr>
             </thead>
             <tfoot>
-            <tr>
-              <th>#</th>
-              <th>Curso</th>
+              <tr>
+                <th>#</th>
+                <th>Curso</th>
 
-              <th>Titulo</th>
-              <th>Conteúdo</th>
-              <th></th>
-            </tr>
-        </tfoot>
+                <th>Titulo</th>
+                <th>Conteúdo</th>
+                <th></th>
+              </tr>
+            </tfoot>
             <tbody>
+
               <% @contents.each do |content| %>
               <tr>
                 <td><%#Content= content.curse.picture %></td>
@@ -60,18 +62,23 @@
                 <td><%= truncate(content.body, length:80 ,omission: '... (mais)') %></td>
 
                 <td>
+
+
                   <%= link_to fa_icon('eye', text:''), content, class: 'btn btn-outline-primary btn-sm' %>
                   <%= link_to fa_icon('pencil', text:'Editar'), edit_content_path(content), class: 'btn btn-outline-info btn-sm' %>
-                  <%= link_to fa_icon('trash', text: ''), content ,class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <%= link_to fa_icon('trash', text: ''), content ,class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <%= link_to fa_icon('copy'), content_clone_path(content), class:"btn btn-sm btn-outline-info" %>
 
                 </td>
 
+              </td>
 
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
+</div>

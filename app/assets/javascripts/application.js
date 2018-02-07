@@ -13,11 +13,13 @@
 
 //= require trumbowyg/trumbowyg
 //= require trombowyg
+//= require vendor/jquery-validation/jquery.validate.min
 //= require vendor/popper.js/umd/popper.min
 //= require datatables.min
 //= require vendor/jquery.cookie/jquery.cookie
 //= require vendor/chart.js/Chart.min
-//= require vendor/jquery-validation/jquery.validate.min
+//= require plyr/plyr
+//= require comment
 //= require charts-home
 //= require front
 //= require jquery.turbolinks
@@ -35,5 +37,7 @@
 // });
 
 document.addEventListener("turbolinks:load", function() {
+
+plyr.setup();
       $('#datatable').DataTable();
 })
