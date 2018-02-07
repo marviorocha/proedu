@@ -41,5 +41,4 @@ document.addEventListener("turbolinks:load", function() {
 plyr.setup();
 
   $('#datatable').DataTable();
-
 })
