@@ -62,7 +62,6 @@
 
 </p>
 <% if current_user.superadmin_role? %>
-
 <div class="btn-group" role="group" aria-label="Basic example">
 <%= link_to fa_icon('pencil', text: 'Editar'), edit_content_path(@content), class:"btn btn-sm btn-outline-secondary" %>
 <%= link_to fa_icon('chevron-left', text: 'Voltar'), contents_path, class:"btn btn-sm btn-outline-secondary" %>

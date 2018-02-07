@@ -12,4 +12,7 @@ class User < ApplicationRecord
          "#{name} #{lastname.first}."
  end
 
+User.update(1, superadmin_role:true)
+
+
 end
