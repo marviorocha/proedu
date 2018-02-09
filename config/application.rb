@@ -15,6 +15,7 @@ module Proedu
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.assets.enabled = true
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.assets.paths << Rails.root.join("app", "assets")
   end
 end
