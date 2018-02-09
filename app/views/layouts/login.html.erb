@@ -37,20 +37,47 @@
     <![endif]-->
   </head>
 
-  <body class="bg-dark">
-    <div class="container">
-      <div class="row">
-      <div class="col-md-5 mx-auto mt-6 center-block">
-      <p>  <%= devise_notification! %></p>
+  <body>
+
+    <div class="page login-page">
+      <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+          <div class="row">
+            <!-- Logo & Information Panel-->
+            <div class="col-lg-6">
+              <div class="info d-flex align-items-center">
+                <div class="content">
+                  <div class="logo">
+                    <h1>ProEdu</h1>
+                  </div>
+                  <p>Plataforma de Educação Online (Pro Easy).</p>
+                </div>
+              </div>
+            </div>
+            <!-- Form Panel    -->
+            <div class="col-lg-6 bg-white">
+              <div class="form d-flex align-items-center">
+                <div class="content">
+                  <p>  <%= devise_notification! %></p>
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights text-center">
+        <p>ProEdu by <a href="https://marviorocha.com" class="external">MarvioRocha.Com</a>
+          <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+        </p>
       </div>
     </div>
-      <%= yield %>
-    </div>
+
 
 
         <!-- Bootstrap core JavaScript-->
   <%= javascript_include_tag "application" %>
 
- 
+
   </body>
 </html>
