@@ -4,10 +4,13 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
 
 
-
 <div class="form-group">
+
   <%= f.email_field :email, autofocus: true, class: 'input-material' %>
   <%= f.label :email, class: 'label-material', for: 'login-email' %>
+
+ <%= f.hidden_field :curse_ids, value: params[:curses] %>
+
 </div>
 <div class="form-group">
   <%= f.password_field :password, autocomplete: 'off', class: 'input-material' %>
