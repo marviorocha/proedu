@@ -21,6 +21,9 @@ gem 'carrierwave'
 gem 'notify'
 
 gem 'mini_magick'
+
+gem 'figaro'
+
 # Jquery
 
 gem 'jquery-turbolinks'
