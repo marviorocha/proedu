@@ -1,12 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.default_url_options = { host: 'dev.local.me', port: 3000 }
-
-  config.action_mailer.perform_caching = false
-
-  config.action_mailer.perform_deliveries = true
-
-  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.delivery_method = :smtp
 
