@@ -17,7 +17,8 @@ gem 'onesignal'
 gem 'trumbowyg_rails'
 
 gem 'carrierwave'
- 
+
+gem 'notify'
 
 gem 'mini_magick'
 # Jquery

@@ -6,6 +6,7 @@ before_action :find_user, only: [:destroy, :show, :update, :destroy]
 # GET /users
 def index
 @users = User.all
+ 
 end
 
 # GET /users/new
