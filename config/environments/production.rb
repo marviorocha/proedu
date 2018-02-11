@@ -11,8 +11,8 @@ Rails.application.configure do
     domain: "v-proedu.herokuapp.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["marviorocha@gmail.com"],
-    password: ENV["rupha5hs"]
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
   }
   # Code is not reloaded between requests.
   config.cache_classes = true
