@@ -18,11 +18,7 @@ class Users::SessionsController < Devise::SessionsController
 
   #protected
 
-def after_save(user)
-
-UserMailer.welcome_mail(user).deliver_now
-
-end
+ 
 
 
 
