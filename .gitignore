@@ -77,3 +77,4 @@ build-iPhoneSimulator/
 
 # Ignore application configuration
 /config/application.yml
+config/database.yml\nconfig/secrets.yml
