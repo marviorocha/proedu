@@ -11,7 +11,7 @@ require 'capistrano/passenger'
 # If you are using rvm add these lines:
 # require 'capistrano/rvm'
 set :rvm_type, :user
-set :rvm_ruby_version, '2.5.0'
+set :rvm_ruby_version, '2.4.1'
 
 
 # Load the SCM plugin appropriate to your project:
