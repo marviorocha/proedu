@@ -14,7 +14,7 @@ gem 'simple_form'
 
 gem 'onesignal'
 
-gem 'trumbowyg_rails'
+gem 'trumbowyg_rails', '~> 2.1', '>= 2.1.0.3'
 
 gem 'carrierwave'
 
@@ -35,6 +35,7 @@ gem 'popper_js'
 gem 'devise-bootstrap-views'
 gem 'bootstrap', '~> 4.0.0.beta3'
 
+gem 'nokogiri', '~> 1.8.2'
 
 # Fontaswesome
 gem 'font-awesome-rails'
@@ -43,7 +44,7 @@ gem 'font-awesome-rails'
 # - not working gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.1.5'
 source "https://rubygems.org"
 ruby "2.4.1"
 # Use Puma as the app server
@@ -67,7 +68,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+#gem 'capistrano-rails', group: :development
+gem 'capistrano', '~> 3.7', '>= 3.7.1'
+gem 'capistrano-rails', '~> 1.2'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rvm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
