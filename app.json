@@ -1,0 +1,14 @@
+{
+  "name": "proedu",
+  "description": "App criado como um Tutorial para o OneBitCode",
+  "keywords": [
+    "dokku",
+    "rails",
+    "https://proedu.marviorocha.com"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
