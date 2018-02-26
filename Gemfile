@@ -68,9 +68,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development
-gem 'nokogiri', '~> 1.8.2'
-
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -79,7 +76,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+ 
 
 end
 
@@ -90,8 +87,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'capistrano', '~> 3.7', '>= 3.7.1'
-  gem 'capistrano-rails', '~> 1.2'
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-rails", "~> 1.3", require: false
   gem 'capistrano-passenger', '~> 0.2.0'
   gem 'capistrano-rvm'
 end

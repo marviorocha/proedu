@@ -18,7 +18,6 @@
 //= require datatables.min
 //= require vendor/jquery.cookie/jquery.cookie
 //= require vendor/chart.js/Chart.min
-//= require plyr/plyr
 //= require comment
 //= require charts-home
 //= require front

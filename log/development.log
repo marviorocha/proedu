@@ -1,0 +1,708 @@
+Started GET "/" for 127.0.0.1 at 2018-02-25 22:42:36 -0300
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.5) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.5) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.5) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20171118181115)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171118181115"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToUsers (20171122022905)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "superadmin_role" boolean DEFAULT 'f'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "teacher_role" boolean DEFAULT 'f'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "studant_role" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171122022905"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNamesToUsers (20171203141535)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "lastname" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171203141535"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMessagers (20171207123220)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "messagers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "body" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_205946e1ec"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_messagers_on_user_id" ON "messagers" ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171207123220"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateContents (20171216023548)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "contents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "doc" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171216023548"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCurses (20171216025550)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "curses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "descricao" varchar, "picture" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171216025550"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20171223133342)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171223133342"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeyFromCategoriesToCurse (20171225220922)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "curses" ADD "category_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_curses_on_category_id" ON "curses" ("category_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171225220922"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForeignKeyFromCursesToContent (20171225230330)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "contents" ADD "curse_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_contents_on_curse_id" ON "contents" ("curse_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171225230330"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateJoinTableCurseUser (20180204142157)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "curses_users" ("curse_id" integer NOT NULL, "user_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_curses_users_on_curse_id_and_user_id" ON "curses_users" ("curse_id", "user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_curses_users_on_curse_id_and_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_curses_users_on_curse_id_and_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_curses_users_on_user_id_and_curse_id" ON "curses_users" ("user_id", "curse_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180204142157"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-02-26 01:42:51.635991"], ["updated_at", "2018-02-26 01:42:51.635991"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_contents_on_curse_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_contents_on_curse_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_curses_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_curses_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_curses_users_on_user_id_and_curse_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_curses_users_on_user_id_and_curse_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_curses_users_on_curse_id_and_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_curses_users_on_curse_id_and_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_messagers_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_messagers_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "superadmin_role", "studant_role", "name", "lastname") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$RQsrN50lUItypQNbGZz4cee4LD3B0Wl0epD/y35K/SypuJ28zeKeq"], ["created_at", "2018-02-26 01:43:01.639140"], ["updated_at", "2018-02-26 01:43:01.639140"], ["superadmin_role", "t"], ["studant_role", "f"], ["name", "Admin"], ["lastname", "ProEdu"]]
+  Rendering user_mailer/welcome_mail.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_mail.html.erb within layouts/mailer (1.4ms)
+UserMailer#welcome_mail: processed outbound mail in 161.0ms
+Sent mail to showbiz@showbiz.mus.br (4031.5ms)
+Date: Sun, 25 Feb 2018 22:43:01 -0300
+From: marviorocha@gmail.com
+To: showbiz@showbiz.mus.br
+Message-ID: <5a936625e8ed8_33bb2aebc8d24644260e6@marviorocha-PC.mail>
+Subject: Bem-vindo Admin - ProEdu
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:=
+//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1" />
+  <title>Boas Vindas</title>
+
+  <style type=3D"text/css">
+    /* Take care of image borders and formatting, client hacks */
+    img { max-width: 600px; outline: none; text-decoration: none; -ms-int=
+erpolation-mode: bicubic;}
+    a img { border: none; }
+    table { border-collapse: collapse !important;}
+    #outlook a { padding:0; }
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .backgroundTable { margin: 0 auto; padding: 0; width: 100% !important=
+; }
+    table td { border-collapse: collapse; }
+    .ExternalClass * { line-height: 115%; }
+    .container-for-gmail-android { min-width: 600px; }
+
+
+    /* General styling */
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100% !important;
+      margin: 0 !important;
+      height: 100%;
+      color: #676767;
+    }
+
+    td {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #777777;
+      text-align: center;
+      line-height: 21px;
+    }
+
+    a {
+      color: #676767;
+      text-decoration: none !important;
+    }
+
+    .pull-left {
+      text-align: left;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
+
+    .header-lg,
+    .header-md,
+    .header-sm {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: normal;
+      padding: 35px 0 0;
+      color: #4d4d4d;
+    }
+
+    .header-md {
+      font-size: 24px;
+    }
+
+    .header-sm {
+      padding: 5px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .content-padding {
+      padding: 20px 0 30px;
+    }
+
+    .mobile-header-padding-right {
+      width: 290px;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    .mobile-header-padding-left {
+      width: 290px;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .free-text {
+      width: 100% !important;
+      padding: 10px 60px 0px;
+    }
+
+    .block-rounded {
+      border-radius: 5px;
+      border: 1px solid #e5e5e5;
+      vertical-align: top;
+    }
+
+    .button {
+      padding: 55px 0 0;
+    }
+
+    .info-block {
+      padding: 0 20px;
+      width: 260px;
+    }
+
+    .mini-block-container {
+      padding: 30px 50px;
+      width: 500px;
+    }
+
+    .mini-block {
+      background-color: #ffffff;
+      width: 498px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 60px 75px;
+    }
+
+    .block-rounded {
+      width: 260px;
+    }
+
+    .info-img {
+      width: 258px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .force-width-img {
+      width: 480px;
+      height: 1px !important;
+    }
+
+    .force-width-full {
+      width: 600px;
+      height: 1px !important;
+    }
+
+    .user-img img {
+      width: 82px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
+
+    .user-img {
+      width: 92px;
+      text-align: left;
+    }
+
+    .user-msg {
+      width: 236px;
+      font-size: 14px;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .code-block {
+      padding: 10px 0;
+      border: 1px solid #cccccc;
+      color: #4d4d4d;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .force-width-gmail {
+      min-width:600px;
+      height: 0px !important;
+      line-height: 1px !important;
+      font-size: 1px !important;
+    }
+
+     .button-width {
+      width: 228px;
+    }
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @import url(http://fonts.googleapis.com/css?family=3DOxygen:400,700);=
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @media screen {
+      /* Thanks Outlook 2013! */
+      * {
+        font-family: 'Oxygen', 'Helvetica Neue', 'Arial', 'sans-serif' !i=
+mportant;
+      }
+    }
+  </style>
+
+  <style type=3D"text/css" media=3D"only screen and (max-width: 480px)">
+    /* Mobile styles */
+    @media only screen and (max-width: 480px) {
+
+      table[class*=3D"container-for-gmail-android"] {
+        min-width: 290px !important;
+        width: 100% !important;
+      }
+
+      table[class=3D"w320"] {
+        width: 320px !important;
+      }
+
+      img[class=3D"force-width-gmail"] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      a[class=3D"button-width"],
+      a[class=3D"button-mobile"] {
+        width: 248px !important;
+      }
+
+      td[class*=3D"mobile-header-padding-left"] {
+        width: 160px !important;
+        padding-left: 0 !important;
+      }
+
+      td[class*=3D"mobile-header-padding-right"] {
+        width: 160px !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"header-lg"] {
+        font-size: 24px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"header-md"] {
+        font-size: 18px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"content-padding"] {
+        padding: 5px 0 30px !important;
+      }
+
+       td[class=3D"button"] {
+        padding: 15px 0 5px !important;
+      }
+
+      td[class*=3D"free-text"] {
+        padding: 10px 18px 30px !important;
+      }
+
+      img[class=3D"force-width-img"],
+      img[class=3D"force-width-full"] {
+        display: none !important;
+      }
+
+      td[class=3D"info-block"] {
+        display: block !important;
+        width: 280px !important;
+        padding-bottom: 40px !important;
+      }
+
+      td[class=3D"info-img"],
+      img[class=3D"info-img"] {
+        width: 278px !important;
+      }
+
+      td[class=3D"mini-block-container"] {
+        padding: 8px 20px !important;
+        width: 280px !important;
+      }
+
+      td[class=3D"mini-block"] {
+        padding: 20px !important;
+      }
+
+      td[class=3D"user-img"] {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      td[class=3D"user-msg"] {
+        display: block !important;
+        padding-bottom: 20px !important;
+      }
+    }
+  </style>
+</head>
+
+<body bgcolor=3D"#f7f7f7">
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"cont=
+ainer-for-gmail-android" width=3D"100%">
+  <tr>
+    <td align=3D"left" valign=3D"top" width=3D"100%" style=3D"background:=
+repeat-x url(http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_=
+bg_top_02.jpg) #ffffff;">
+      <center>
+      <img src=3D"http://s3.amazonaws.com/swu-filepicker/SBb2fQPrQ5ezxmqU=
+TgCr_transparent.png" class=3D"force-width-gmail">
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=
+=3D"#ffffff" background=3D"http://s3.amazonaws.com/swu-filepicker/4E687TR=
+e69Ld95IDWyEg_bg_top_02.jpg" style=3D"background-color:transparent">
+          <tr>
+            <td width=3D"100%" height=3D"80" valign=3D"top" style=3D"text=
+-align: center; vertical-align:middle;">
+            <!--[if gte mso 9]>
+            <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"tru=
+e" stroke=3D"false" style=3D"mso-width-percent:1000;height:80px; v-text-a=
+nchor:middle;">
+              <v:fill type=3D"tile" src=3D"http://s3.amazonaws.com/swu-fi=
+lepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" color=3D"#ffffff" />
+              <v:textbox inset=3D"0,0,0,0">
+            <![endif]-->
+              <center>
+                <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" =
+class=3D"w320">
+                  <tr>
+                    <td class=3D"pull-left mobile-header-padding-left" st=
+yle=3D"vertical-align: middle;">
+                   <a href=3D"http://dev.local.me:3000/users/sign_in">Pro=
+ Edu</a>
+                    </td>
+                    <td class=3D"pull-right mobile-header-padding-right" =
+style=3D"color: #4d4d4d;">
+                      <a href=3D""><img width=3D"44" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gi=
+f" alt=3D"twitter" /></a>
+                      <a href=3D""><img width=3D"38" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gi=
+f" alt=3D"facebook" /></a>
+                      <a href=3D""><img width=3D"40" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/hR33ye5FQXuDDarXCGIW_social_10.gi=
+f" alt=3D"rss" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+              <!--[if gte mso 9]>
+              </v:textbox>
+            </v:rect>
+            <![endif]-->
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7;" class=3D"content-padding">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td class=3D"header-lg">
+              Bem-vindo(a)
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"free-text">
+              Ol=C3=A1 <strong> Admin</strong>,
+
+  Esse =C3=A9 um email de boas vindas a nossa plataforma de curso online =
+segue abaixo os dados de login a sua conta:
+
+
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"mini-block-container">
+              <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"  =
+style=3D"border-collapse:separate !important;">
+                <tr>
+                  <td class=3D"mini-block">
+                    <table cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+                      <tr>
+                        <td style=3D"padding-bottom: 30px;">
+                      Fa=C3=A7a login utilizando os dados abaixo:
+                           <span style=3D"font-weight:700; color: #ff6f6f=
+; font-size: 18px;">102030</span> your next purchase!
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"code-block">
+                          Ax8Sp0023KL2
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"button">
+                          <div><!--[if mso]>
+                            <v:roundrect xmlns:v=3D"urn:schemas-microsoft=
+-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"http:=
+//" style=3D"height:45px;v-text-anchor:middle;width:155px;" arcsize=3D"15=
+%" strokecolor=3D"#ffffff" fillcolor=3D"#ff6f6f">
+                              <w:anchorlock/>
+                              <center style=3D"color:#ffffff;font-family:=
+Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">Shop No=
+w</center>
+                            </v:roundrect>
+                          <![endif]-->
+                          <a class=3D"button-mobile" style=3D"background-=
+color:#2B90D9;border-radius:5px;color:#ffffff;display:inline-block;font-f=
+amily:&#39;Cabin&#39;, Helvetica, Arial, sans-serif;font-size:14px;font-w=
+eight:regular;line-height:45px;text-align:center;text-decoration:none;wid=
+th:155px;-webkit-text-size-adjust:none;mso-hide:all;" href=3D"http://dev.=
+local.me:3000/">Acesse Agora!</a>
+                       </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"background-=
+color: #ffffff;  border-top: 1px solid #e5e5e5; border-bottom: 1px solid =
+#e5e5e5;">
+    <center>
+      <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" class=3D"w=
+320">
+        <tr>
+
+        </tr>
+
+      </table>
+    </center>
+  </td>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7; height: 100px;">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td style=3D"padding: 25px 0 25px">
+              <strong>Pro Edu</strong><br />
+           Plataforma de Educa=C3=A7=C3=A3o Online
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+  </body>
+</html>
+
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-02-25 22:43:17 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-25 22:43:17 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (14.9ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+Completed 200 OK in 20289ms (Views: 20267.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-25 22:48:28 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (10.1ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
