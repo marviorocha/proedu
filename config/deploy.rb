@@ -14,6 +14,8 @@ set :deploy_to, "/var/www/proedu"
 # set :format, :airbrussh
 set :migration_servers, -> { primary(fetch(:migration_role)) }
 
+set :migration_role, :app
+
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
