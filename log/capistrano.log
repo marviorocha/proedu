@@ -1765,3 +1765,25 @@ FOREIGN KEY ("curse_id")
   INFO [df7368e8] Running /usr/bin/env echo "Branch master (at e4ddc9fb8df262609315e3f07f8128bb690abd7d) deployed as release 20180227005712 by marviorocha" >> /var/www/proedu/revisions.log as deploy@35.231.126.217
  DEBUG [df7368e8] Command: cd /var/www/proedu/releases && /usr/bin/env echo "Branch master (at e4ddc9fb8df262609315e3f07f8128bb690abd7d) deployed as release 20180227005712 by marviorocha" >> /var/www/proedu/revisions.log
   INFO [df7368e8] Finished in 0.509 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-26 22:27:10 -0300 cap production rails:rake:db:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2a76f517] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [2a76f517] Command: /usr/bin/env which passenger
+ DEBUG [2a76f517] 	/usr/bin/passenger
+ DEBUG [2a76f517] Finished in 6.752 seconds with exit status 0 (successful).
+ DEBUG [362b1aaf] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [362b1aaf] Command: [ -d ~/.rvm ]
+ DEBUG [362b1aaf] Finished in 0.496 seconds with exit status 0 (successful).
+ DEBUG [00b5082e] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [00b5082e] Command: ~/.rvm/bin/rvm version
+ DEBUG [00b5082e] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [00b5082e] Finished in 0.655 seconds with exit status 0 (successful).
+ DEBUG [ca69e35b] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [ca69e35b] Command: ~/.rvm/bin/rvm current
+ DEBUG [ca69e35b] 	ruby-2.5.0
+ DEBUG [ca69e35b] Finished in 0.653 seconds with exit status 0 (successful).
+ DEBUG [cf0a2a3a] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [cf0a2a3a] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [cf0a2a3a] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [cf0a2a3a] Finished in 0.781 seconds with exit status 0 (successful).
