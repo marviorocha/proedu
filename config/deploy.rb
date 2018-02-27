@@ -35,18 +35,18 @@ set :migration_role, :app
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
 namespace :deploy do
-  desc 'Runs any rake task, cap deploy:rake task=db:rollback'
-  task rake: [:set_rails_env] do
-    on release_roles([:db]) do
+  desc 'Runs rake db:seed for SeedMigrations data'
+  task :seed => [:set_rails_env] do
+    on primary fetch(:migration_role) do
       within release_path do
         with rails_env: fetch(:rails_env) do
-          execute :rake, ENV['task'], RAILS_ENV=production
+          execute :rake, "db:seed"
         end
       end
     end
   end
+  after 'deploy:migrate', 'deploy:seed'
 end
-
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 

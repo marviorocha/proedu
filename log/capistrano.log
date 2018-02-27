@@ -20,3 +20,682 @@
  DEBUG [be50773e] Command: ~/.rvm/bin/rvm default do ruby --version
  DEBUG [be50773e] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
  DEBUG [be50773e] Finished in 0.775 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-27 00:26:02 -0300 cap production deploy:rake task=db:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [99991538] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [99991538] Command: /usr/bin/env which passenger
+ DEBUG [99991538] 	/usr/bin/passenger
+ DEBUG [99991538] Finished in 5.166 seconds with exit status 0 (successful).
+ DEBUG [6f4dc143] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [6f4dc143] Command: [ -d ~/.rvm ]
+ DEBUG [6f4dc143] Finished in 0.496 seconds with exit status 0 (successful).
+ DEBUG [81425d37] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [81425d37] Command: ~/.rvm/bin/rvm version
+ DEBUG [81425d37] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [81425d37] Finished in 0.657 seconds with exit status 0 (successful).
+ DEBUG [a5056f18] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [a5056f18] Command: ~/.rvm/bin/rvm current
+ DEBUG [a5056f18] 	ruby-2.5.0
+ DEBUG [a5056f18] Finished in 0.650 seconds with exit status 0 (successful).
+ DEBUG [406ccd6f] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [406ccd6f] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [406ccd6f] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [406ccd6f] Finished in 0.768 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-27 00:30:26 -0300 cap production deploy:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [aac06fdc] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [aac06fdc] Command: /usr/bin/env which passenger
+ DEBUG [aac06fdc] 	/usr/bin/passenger
+ DEBUG [aac06fdc] Finished in 7.076 seconds with exit status 0 (successful).
+ DEBUG [be852353] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [be852353] Command: [ -d ~/.rvm ]
+ DEBUG [be852353] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [a9f4ce14] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [a9f4ce14] Command: ~/.rvm/bin/rvm version
+ DEBUG [a9f4ce14] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [a9f4ce14] Finished in 0.656 seconds with exit status 0 (successful).
+ DEBUG [395f486e] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [395f486e] Command: ~/.rvm/bin/rvm current
+ DEBUG [395f486e] 	ruby-2.5.0
+ DEBUG [395f486e] Finished in 0.666 seconds with exit status 0 (successful).
+ DEBUG [be5ca8b8] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [be5ca8b8] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [be5ca8b8] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [be5ca8b8] Finished in 0.778 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-27 00:31:00 -0300 cap production deploy:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c6544d21] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [c6544d21] Command: /usr/bin/env which passenger
+ DEBUG [c6544d21] 	/usr/bin/passenger
+ DEBUG [c6544d21] Finished in 4.884 seconds with exit status 0 (successful).
+ DEBUG [470d1148] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [470d1148] Command: [ -d ~/.rvm ]
+ DEBUG [470d1148] Finished in 0.497 seconds with exit status 0 (successful).
+ DEBUG [b5e66e2c] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [b5e66e2c] Command: ~/.rvm/bin/rvm version
+ DEBUG [b5e66e2c] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [b5e66e2c] Finished in 0.654 seconds with exit status 0 (successful).
+ DEBUG [a0b1f0bd] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [a0b1f0bd] Command: ~/.rvm/bin/rvm current
+ DEBUG [a0b1f0bd] 	ruby-2.5.0
+ DEBUG [a0b1f0bd] Finished in 0.656 seconds with exit status 0 (successful).
+ DEBUG [1e6603e1] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [1e6603e1] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [1e6603e1] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [1e6603e1] Finished in 0.771 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-27 00:32:00 -0300 cap production deploy:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1f2f5076] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [1f2f5076] Command: /usr/bin/env which passenger
+ DEBUG [1f2f5076] 	/usr/bin/passenger
+ DEBUG [1f2f5076] Finished in 12.145 seconds with exit status 0 (successful).
+ DEBUG [d32718e6] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [d32718e6] Command: [ -d ~/.rvm ]
+ DEBUG [d32718e6] Finished in 0.498 seconds with exit status 0 (successful).
+ DEBUG [4bac9513] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [4bac9513] Command: ~/.rvm/bin/rvm version
+ DEBUG [4bac9513] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [4bac9513] Finished in 0.670 seconds with exit status 0 (successful).
+ DEBUG [dfa8dad8] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [dfa8dad8] Command: ~/.rvm/bin/rvm current
+ DEBUG [dfa8dad8] 	ruby-2.5.0
+ DEBUG [dfa8dad8] Finished in 0.649 seconds with exit status 0 (successful).
+ DEBUG [ac921ccf] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [ac921ccf] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [ac921ccf] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [ac921ccf] Finished in 0.773 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-27 00:32:38 -0300 cap production deploy:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3f1ac966] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [3f1ac966] Command: /usr/bin/env which passenger
+ DEBUG [3f1ac966] 	/usr/bin/passenger
+ DEBUG [3f1ac966] Finished in 5.965 seconds with exit status 0 (successful).
+ DEBUG [4521d434] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [4521d434] Command: [ -d ~/.rvm ]
+ DEBUG [4521d434] Finished in 0.530 seconds with exit status 0 (successful).
+ DEBUG [b52469e2] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [b52469e2] Command: ~/.rvm/bin/rvm version
+ DEBUG [b52469e2] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [b52469e2] Finished in 0.663 seconds with exit status 0 (successful).
+ DEBUG [2ac3c072] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [2ac3c072] Command: ~/.rvm/bin/rvm current
+ DEBUG [2ac3c072] 	ruby-2.5.0
+ DEBUG [2ac3c072] Finished in 0.670 seconds with exit status 0 (successful).
+ DEBUG [52fca648] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [52fca648] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [52fca648] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [52fca648] Finished in 0.781 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-27 00:33:28 -0300 cap production deploy:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [50032b16] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [50032b16] Command: /usr/bin/env which passenger
+ DEBUG [50032b16] 	/usr/bin/passenger
+ DEBUG [50032b16] Finished in 12.010 seconds with exit status 0 (successful).
+ DEBUG [97f0f5cc] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [97f0f5cc] Command: [ -d ~/.rvm ]
+ DEBUG [97f0f5cc] Finished in 0.490 seconds with exit status 0 (successful).
+ DEBUG [c7ec8c7c] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [c7ec8c7c] Command: ~/.rvm/bin/rvm version
+ DEBUG [c7ec8c7c] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [c7ec8c7c] Finished in 0.663 seconds with exit status 0 (successful).
+ DEBUG [e89b542f] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [e89b542f] Command: ~/.rvm/bin/rvm current
+ DEBUG [e89b542f] 	ruby-2.5.0
+ DEBUG [e89b542f] Finished in 0.652 seconds with exit status 0 (successful).
+ DEBUG [c1bccee8] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [c1bccee8] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [c1bccee8] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [c1bccee8] Finished in 0.763 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-27 00:42:25 -0300 cap production deploy:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [eb91f9cb] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [eb91f9cb] Command: /usr/bin/env which passenger
+ DEBUG [eb91f9cb] 	/usr/bin/passenger
+ DEBUG [eb91f9cb] Finished in 4.645 seconds with exit status 0 (successful).
+ DEBUG [f08cced6] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [f08cced6] Command: [ -d ~/.rvm ]
+ DEBUG [f08cced6] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG [8e669d3c] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [8e669d3c] Command: ~/.rvm/bin/rvm version
+ DEBUG [8e669d3c] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [8e669d3c] Finished in 0.654 seconds with exit status 0 (successful).
+ DEBUG [282a3d5c] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [282a3d5c] Command: ~/.rvm/bin/rvm current
+ DEBUG [282a3d5c] 	ruby-2.5.0
+ DEBUG [282a3d5c] Finished in 0.647 seconds with exit status 0 (successful).
+ DEBUG [a6209783] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [a6209783] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [a6209783] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [a6209783] Finished in 0.769 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-27 00:43:45 -0300 cap production deploy:seed
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e35108aa] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [e35108aa] Command: /usr/bin/env which passenger
+ DEBUG [e35108aa] 	/usr/bin/passenger
+ DEBUG [e35108aa] Finished in 4.921 seconds with exit status 0 (successful).
+ DEBUG [ce150a91] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [ce150a91] Command: [ -d ~/.rvm ]
+ DEBUG [ce150a91] Finished in 0.527 seconds with exit status 0 (successful).
+ DEBUG [0835c541] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [0835c541] Command: ~/.rvm/bin/rvm version
+ DEBUG [0835c541] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [0835c541] Finished in 0.659 seconds with exit status 0 (successful).
+ DEBUG [c3714a3c] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [c3714a3c] Command: ~/.rvm/bin/rvm current
+ DEBUG [c3714a3c] 	ruby-2.5.0
+ DEBUG [c3714a3c] Finished in 0.665 seconds with exit status 0 (successful).
+ DEBUG [34f10c4c] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [34f10c4c] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [34f10c4c] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [34f10c4c] Finished in 0.783 seconds with exit status 0 (successful).
+ DEBUG [b3655ee9] Running if test ! -d /var/www/proedu/current; then echo "Directory does not exist '/var/www/proedu/current'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [b3655ee9] Command: if test ! -d /var/www/proedu/current; then echo "Directory does not exist '/var/www/proedu/current'" 1>&2; false; fi
+ DEBUG [b3655ee9] Finished in 0.495 seconds with exit status 0 (successful).
+  INFO [2ca558d3] Running ~/.rvm/bin/rvm default do bundle exec rake db:seed as deploy@35.231.126.217
+ DEBUG [2ca558d3] Command: cd /var/www/proedu/current && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:seed )
+ DEBUG [2ca558d3] 	  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+ DEBUG [2ca558d3] 	  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+ DEBUG [2ca558d3] 	  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+ DEBUG [2ca558d3] 	  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "superadmin_role", "studant_role", "name", "lastname") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$F0YqU/XAgr9xl2lL3kHnwOtP7.pd/WPf8/zFYu0EQsdJbYT9dFu/K"], ["created_at", "2018-02-27 03:43:56.103411"], ["updated_at", "2018-02-27 03:43:56.103411"], ["superadmin_role", "t"], ["studant_role", "f"], ["name", "Admin"], ["lastname", "ProEdu"]]
+ DEBUG [2ca558d3] 	  Rendering user_mailer/welcome_mail.html.erb within layouts/mailer
+ DEBUG [2ca558d3] 	  Rendered user_mailer/welcome_mail.html.erb within layouts/mailer (1.7ms)
+ DEBUG [2ca558d3] 	UserMailer#welcome_mail: processed outbound mail in 213.5ms
+ DEBUG [2ca558d3] 	Sent mail to showbiz@showbiz.mus.br (67.7ms)
+ DEBUG [2ca558d3] 	Date: Tue, 27 Feb 2018 03:43:56 +0000
+From: marviorocha@gmail.com
+To: showbiz@showbiz.mus.br
+Message-ID: <5a94d3fc67e39_457ffea6501f9@ubuntu-v16.mail>
+Subject: Bem-vindo Admin - ProEdu
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:=
+//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1" />
+  <title>Boas Vindas</title>
+
+  <style type=3D"text/css">
+    /* Take care of image borders and formatting, client hacks */
+    img { max-width: 600px; outline: none; text-decoration: none; -ms-int=
+erpolation-mode: bicubic;}
+    a img { border: none; }
+    table { border-collapse: collapse !important;}
+    #outlook a { padding:0; }
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .backgroundTable { margin: 0 auto; padding: 0; width: 100% !important=
+; }
+    table td { border-collapse: collapse; }
+    .ExternalClass * { line-height: 115%; }
+    .container-for-gmail-android { min-width: 600px; }
+
+
+    /* General styling */
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100% !important;
+      margin: 0 !important;
+      height: 100%;
+      color: #676767;
+    }
+
+    td {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #777777;
+      text-align: center;
+      line-height: 21px;
+    }
+
+    a {
+      color: #676767;
+      text-decoration: none !important;
+    }
+
+    .pull-left {
+      text-align: left;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
+
+    .header-lg,
+    .header-md,
+    .header-sm {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: normal;
+      padding: 35px 0 0;
+      color: #4d4d4d;
+    }
+
+    .header-md {
+      font-size: 24px;
+    }
+
+    .header-sm {
+      padding: 5px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .content-padding {
+      padding: 20px 0 30px;
+    }
+
+    .mobile-header-padding-right {
+      width: 290px;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    .mobile-header-padding-left {
+      width: 290px;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .free-text {
+      width: 100% !important;
+      padding: 10px 60px 0px;
+    }
+
+    .block-rounded {
+      border-radius: 5px;
+      border: 1px solid #e5e5e5;
+      vertical-align: top;
+    }
+
+    .button {
+      padding: 55px 0 0;
+    }
+
+    .info-block {
+      padding: 0 20px;
+      width: 260px;
+    }
+
+    .mini-block-container {
+      padding: 30px 50px;
+      width: 500px;
+    }
+
+    .mini-block {
+      background-color: #ffffff;
+      width: 498px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 60px 75px;
+    }
+
+    .block-rounded {
+      width: 260px;
+    }
+
+    .info-img {
+      width: 258px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .force-width-img {
+      width: 480px;
+      height: 1px !important;
+    }
+
+    .force-width-full {
+      width: 600px;
+      height: 1px !important;
+    }
+
+    .user-img img {
+      width: 82px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
+
+    .user-img {
+      width: 92px;
+      text-align: left;
+    }
+
+    .user-msg {
+      width: 236px;
+      font-size: 14px;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .code-block {
+      padding: 10px 0;
+      border: 1px solid #cccccc;
+      color: #4d4d4d;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .force-width-gmail {
+      min-width:600px;
+      height: 0px !important;
+      line-height: 1px !important;
+      font-size: 1px !important;
+    }
+
+     .button-width {
+      width: 228px;
+    }
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @import url(http://fonts.googleapis.com/css?family=3DOxygen:400,700);=
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @media screen {
+      /* Thanks Outlook 2013! */
+      * {
+        font-family: 'Oxygen', 'Helvetica Neue', 'Arial', 'sans-serif' !i=
+mportant;
+      }
+    }
+  </style>
+
+  <style type=3D"text/css" media=3D"only screen and (max-width: 480px)">
+    /* Mobile styles */
+    @media only screen and (max-width: 480px) {
+
+      table[class*=3D"container-for-gmail-android"] {
+        min-width: 290px !important;
+        width: 100% !important;
+      }
+
+      table[class=3D"w320"] {
+        width: 320px !important;
+      }
+
+      img[class=3D"force-width-gmail"] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      a[class=3D"button-width"],
+      a[class=3D"button-mobile"] {
+        width: 248px !important;
+      }
+
+      td[class*=3D"mobile-header-padding-left"] {
+        width: 160px !important;
+        padding-left: 0 !important;
+      }
+
+      td[class*=3D"mobile-header-padding-right"] {
+        width: 160px !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"header-lg"] {
+        font-size: 24px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"header-md"] {
+        font-size: 18px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"content-padding"] {
+        padding: 5px 0 30px !important;
+      }
+
+       td[class=3D"button"] {
+        padding: 15px 0 5px !important;
+      }
+
+      td[class*=3D"free-text"] {
+        padding: 10px 18px 30px !important;
+      }
+
+      img[class=3D"force-width-img"],
+      img[class=3D"force-width-full"] {
+        display: none !important;
+      }
+
+      td[class=3D"info-block"] {
+        display: block !important;
+        width: 280px !important;
+        padding-bottom: 40px !important;
+      }
+
+      td[class=3D"info-img"],
+      img[class=3D"info-img"] {
+        width: 278px !important;
+      }
+
+      td[class=3D"mini-block-container"] {
+        padding: 8px 20px !important;
+        width: 280px !important;
+      }
+
+      td[class=3D"mini-block"] {
+        padding: 20px !important;
+      }
+
+      td[class=3D"user-img"] {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      td[class=3D"user-msg"] {
+        display: block !important;
+        padding-bottom: 20px !important;
+      }
+    }
+  </style>
+</head>
+
+<body bgcolor=3D"#f7f7f7">
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"cont=
+ainer-for-gmail-android" width=3D"100%">
+  <tr>
+    <td align=3D"left" valign=3D"top" width=3D"100%" style=3D"background:=
+repeat-x url(http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_=
+bg_top_02.jpg) #ffffff;">
+      <center>
+      <img src=3D"http://s3.amazonaws.com/swu-filepicker/SBb2fQPrQ5ezxmqU=
+TgCr_transparent.png" class=3D"force-width-gmail">
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=
+=3D"#ffffff" background=3D"http://s3.amazonaws.com/swu-filepicker/4E687TR=
+e69Ld95IDWyEg_bg_top_02.jpg" style=3D"background-color:transparent">
+          <tr>
+            <td width=3D"100%" height=3D"80" valign=3D"top" style=3D"text=
+-align: center; vertical-align:middle;">
+            <!--[if gte mso 9]>
+            <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"tru=
+e" stroke=3D"false" style=3D"mso-width-percent:1000;height:80px; v-text-a=
+nchor:middle;">
+              <v:fill type=3D"tile" src=3D"http://s3.amazonaws.com/swu-fi=
+lepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" color=3D"#ffffff" />
+              <v:textbox inset=3D"0,0,0,0">
+            <![endif]-->
+              <center>
+                <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" =
+class=3D"w320">
+                  <tr>
+                    <td class=3D"pull-left mobile-header-padding-left" st=
+yle=3D"vertical-align: middle;">
+                   <a href=3D"http://proedu.marviorocha.com/users/sign_in=
+">Pro Edu</a>
+                    </td>
+                    <td class=3D"pull-right mobile-header-padding-right" =
+style=3D"color: #4d4d4d;">
+                      <a href=3D""><img width=3D"44" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gi=
+f" alt=3D"twitter" /></a>
+                      <a href=3D""><img width=3D"38" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gi=
+f" alt=3D"facebook" /></a>
+                      <a href=3D""><img width=3D"40" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/hR33ye5FQXuDDarXCGIW_social_10.gi=
+f" alt=3D"rss" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+              <!--[if gte mso 9]>
+              </v:textbox>
+            </v:rect>
+            <![endif]-->
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7;" class=3D"content-padding">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td class=3D"header-lg">
+              Bem-vindo(a)
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"free-text">
+              Ol=C3=A1 <strong> Admin</strong>,
+
+  Esse =C3=A9 um email de boas vindas a nossa plataforma de curso online =
+segue abaixo os dados de login a sua conta:
+
+
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"mini-block-container">
+              <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"  =
+style=3D"border-collapse:separate !important;">
+                <tr>
+                  <td class=3D"mini-block">
+                    <table cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+                      <tr>
+                        <td style=3D"padding-bottom: 30px;">
+                      Fa=C3=A7a login utilizando os dados abaixo:
+                           <span style=3D"font-weight:700; color: #ff6f6f=
+; font-size: 18px;">102030</span> your next purchase!
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"code-block">
+                          Ax8Sp0023KL2
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"button">
+                          <div><!--[if mso]>
+                            <v:roundrect xmlns:v=3D"urn:schemas-microsoft=
+-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"http:=
+//" style=3D"height:45px;v-text-anchor:middle;width:155px;" arcsize=3D"15=
+%" strokecolor=3D"#ffffff" fillcolor=3D"#ff6f6f">
+                              <w:anchorlock/>
+                              <center style=3D"color:#ffffff;font-family:=
+Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">Shop No=
+w</center>
+                            </v:roundrect>
+                          <![endif]-->
+                          <a class=3D"button-mobile" style=3D"background-=
+color:#2B90D9;border-radius:5px;color:#ffffff;display:inline-block;font-f=
+amily:&#39;Cabin&#39;, Helvetica, Arial, sans-serif;font-size:14px;font-w=
+eight:regular;line-height:45px;text-align:center;text-decoration:none;wid=
+th:155px;-webkit-text-size-adjust:none;mso-hide:all;" href=3D"http://proe=
+du.marviorocha.com/">Acesse Agora!</a>
+                       </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"background-=
+color: #ffffff;  border-top: 1px solid #e5e5e5; border-bottom: 1px solid =
+#e5e5e5;">
+    <center>
+      <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" class=3D"w=
+320">
+        <tr>
+
+        </tr>
+
+      </table>
+    </center>
+  </td>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7; height: 100px;">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td style=3D"padding: 25px 0 25px">
+              <strong>Pro Edu</strong><br />
+           Plataforma de Educa=C3=A7=C3=A3o Online
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+  </body>
+</html>
+
+ DEBUG [2ca558d3] 	  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  INFO [2ca558d3] Finished in 3.715 seconds with exit status 0 (successful).
