@@ -1543,3 +1543,1194 @@ Processing by ContentsController#show as HTML
 Completed 200 OK in 114ms (Views: 110.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-27 18:29:04 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_mailer/welcome_mail.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_mail.html.erb within layouts/mailer (3.0ms)
+UserMailer#welcome_mail: processed outbound mail in 239.2ms
+Sent mail to showbiz@showbiz.mus.br (5639.2ms)
+Date: Tue, 27 Feb 2018 18:29:06 -0300
+From: marviorocha@gmail.com
+To: showbiz@showbiz.mus.br
+Message-ID: <5a95cda25af0_11162b17ff1c643865522@marviorocha-PC.mail>
+Subject: Bem-vindo Admin - ProEdu
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:=
+//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1" />
+  <title>Boas Vindas</title>
+
+  <style type=3D"text/css">
+    /* Take care of image borders and formatting, client hacks */
+    img { max-width: 600px; outline: none; text-decoration: none; -ms-int=
+erpolation-mode: bicubic;}
+    a img { border: none; }
+    table { border-collapse: collapse !important;}
+    #outlook a { padding:0; }
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .backgroundTable { margin: 0 auto; padding: 0; width: 100% !important=
+; }
+    table td { border-collapse: collapse; }
+    .ExternalClass * { line-height: 115%; }
+    .container-for-gmail-android { min-width: 600px; }
+
+
+    /* General styling */
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100% !important;
+      margin: 0 !important;
+      height: 100%;
+      color: #676767;
+    }
+
+    td {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #777777;
+      text-align: center;
+      line-height: 21px;
+    }
+
+    a {
+      color: #676767;
+      text-decoration: none !important;
+    }
+
+    .pull-left {
+      text-align: left;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
+
+    .header-lg,
+    .header-md,
+    .header-sm {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: normal;
+      padding: 35px 0 0;
+      color: #4d4d4d;
+    }
+
+    .header-md {
+      font-size: 24px;
+    }
+
+    .header-sm {
+      padding: 5px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .content-padding {
+      padding: 20px 0 30px;
+    }
+
+    .mobile-header-padding-right {
+      width: 290px;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    .mobile-header-padding-left {
+      width: 290px;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .free-text {
+      width: 100% !important;
+      padding: 10px 60px 0px;
+    }
+
+    .block-rounded {
+      border-radius: 5px;
+      border: 1px solid #e5e5e5;
+      vertical-align: top;
+    }
+
+    .button {
+      padding: 55px 0 0;
+    }
+
+    .info-block {
+      padding: 0 20px;
+      width: 260px;
+    }
+
+    .mini-block-container {
+      padding: 30px 50px;
+      width: 500px;
+    }
+
+    .mini-block {
+      background-color: #ffffff;
+      width: 498px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 60px 75px;
+    }
+
+    .block-rounded {
+      width: 260px;
+    }
+
+    .info-img {
+      width: 258px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .force-width-img {
+      width: 480px;
+      height: 1px !important;
+    }
+
+    .force-width-full {
+      width: 600px;
+      height: 1px !important;
+    }
+
+    .user-img img {
+      width: 82px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
+
+    .user-img {
+      width: 92px;
+      text-align: left;
+    }
+
+    .user-msg {
+      width: 236px;
+      font-size: 14px;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .code-block {
+      padding: 10px 0;
+      border: 1px solid #cccccc;
+      color: #4d4d4d;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .force-width-gmail {
+      min-width:600px;
+      height: 0px !important;
+      line-height: 1px !important;
+      font-size: 1px !important;
+    }
+
+     .button-width {
+      width: 228px;
+    }
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @import url(http://fonts.googleapis.com/css?family=3DOxygen:400,700);=
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @media screen {
+      /* Thanks Outlook 2013! */
+      * {
+        font-family: 'Oxygen', 'Helvetica Neue', 'Arial', 'sans-serif' !i=
+mportant;
+      }
+    }
+  </style>
+
+  <style type=3D"text/css" media=3D"only screen and (max-width: 480px)">
+    /* Mobile styles */
+    @media only screen and (max-width: 480px) {
+
+      table[class*=3D"container-for-gmail-android"] {
+        min-width: 290px !important;
+        width: 100% !important;
+      }
+
+      table[class=3D"w320"] {
+        width: 320px !important;
+      }
+
+      img[class=3D"force-width-gmail"] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      a[class=3D"button-width"],
+      a[class=3D"button-mobile"] {
+        width: 248px !important;
+      }
+
+      td[class*=3D"mobile-header-padding-left"] {
+        width: 160px !important;
+        padding-left: 0 !important;
+      }
+
+      td[class*=3D"mobile-header-padding-right"] {
+        width: 160px !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"header-lg"] {
+        font-size: 24px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"header-md"] {
+        font-size: 18px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"content-padding"] {
+        padding: 5px 0 30px !important;
+      }
+
+       td[class=3D"button"] {
+        padding: 15px 0 5px !important;
+      }
+
+      td[class*=3D"free-text"] {
+        padding: 10px 18px 30px !important;
+      }
+
+      img[class=3D"force-width-img"],
+      img[class=3D"force-width-full"] {
+        display: none !important;
+      }
+
+      td[class=3D"info-block"] {
+        display: block !important;
+        width: 280px !important;
+        padding-bottom: 40px !important;
+      }
+
+      td[class=3D"info-img"],
+      img[class=3D"info-img"] {
+        width: 278px !important;
+      }
+
+      td[class=3D"mini-block-container"] {
+        padding: 8px 20px !important;
+        width: 280px !important;
+      }
+
+      td[class=3D"mini-block"] {
+        padding: 20px !important;
+      }
+
+      td[class=3D"user-img"] {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      td[class=3D"user-msg"] {
+        display: block !important;
+        padding-bottom: 20px !important;
+      }
+    }
+  </style>
+</head>
+
+<body bgcolor=3D"#f7f7f7">
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"cont=
+ainer-for-gmail-android" width=3D"100%">
+  <tr>
+    <td align=3D"left" valign=3D"top" width=3D"100%" style=3D"background:=
+repeat-x url(http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_=
+bg_top_02.jpg) #ffffff;">
+      <center>
+      <img src=3D"http://s3.amazonaws.com/swu-filepicker/SBb2fQPrQ5ezxmqU=
+TgCr_transparent.png" class=3D"force-width-gmail">
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=
+=3D"#ffffff" background=3D"http://s3.amazonaws.com/swu-filepicker/4E687TR=
+e69Ld95IDWyEg_bg_top_02.jpg" style=3D"background-color:transparent">
+          <tr>
+            <td width=3D"100%" height=3D"80" valign=3D"top" style=3D"text=
+-align: center; vertical-align:middle;">
+            <!--[if gte mso 9]>
+            <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"tru=
+e" stroke=3D"false" style=3D"mso-width-percent:1000;height:80px; v-text-a=
+nchor:middle;">
+              <v:fill type=3D"tile" src=3D"http://s3.amazonaws.com/swu-fi=
+lepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" color=3D"#ffffff" />
+              <v:textbox inset=3D"0,0,0,0">
+            <![endif]-->
+              <center>
+                <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" =
+class=3D"w320">
+                  <tr>
+                    <td class=3D"pull-left mobile-header-padding-left" st=
+yle=3D"vertical-align: middle;">
+                   <a href=3D"http://dev.local.me:3000/users/sign_in">Pro=
+ Edu</a>
+                    </td>
+                    <td class=3D"pull-right mobile-header-padding-right" =
+style=3D"color: #4d4d4d;">
+                      <a href=3D""><img width=3D"44" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gi=
+f" alt=3D"twitter" /></a>
+                      <a href=3D""><img width=3D"38" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gi=
+f" alt=3D"facebook" /></a>
+                      <a href=3D""><img width=3D"40" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/hR33ye5FQXuDDarXCGIW_social_10.gi=
+f" alt=3D"rss" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+              <!--[if gte mso 9]>
+              </v:textbox>
+            </v:rect>
+            <![endif]-->
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7;" class=3D"content-padding">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td class=3D"header-lg">
+              Bem-vindo(a)
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"free-text">
+              Ol=C3=A1 <strong> Admin</strong>,
+
+  Esse =C3=A9 um email de boas vindas a nossa plataforma de curso online =
+segue abaixo os dados de login a sua conta:
+
+
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"mini-block-container">
+              <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"  =
+style=3D"border-collapse:separate !important;">
+                <tr>
+                  <td class=3D"mini-block">
+                    <table cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+                      <tr>
+                        <td style=3D"padding-bottom: 30px;">
+                      Fa=C3=A7a login utilizando os dados abaixo:
+                           <span style=3D"font-weight:700; color: #ff6f6f=
+; font-size: 18px;"></span> your next purchase!
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"code-block">
+                          Ax8Sp0023KL2
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"button">
+                          <div><!--[if mso]>
+                            <v:roundrect xmlns:v=3D"urn:schemas-microsoft=
+-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"http:=
+//" style=3D"height:45px;v-text-anchor:middle;width:155px;" arcsize=3D"15=
+%" strokecolor=3D"#ffffff" fillcolor=3D"#ff6f6f">
+                              <w:anchorlock/>
+                              <center style=3D"color:#ffffff;font-family:=
+Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">Shop No=
+w</center>
+                            </v:roundrect>
+                          <![endif]-->
+                          <a class=3D"button-mobile" style=3D"background-=
+color:#2B90D9;border-radius:5px;color:#ffffff;display:inline-block;font-f=
+amily:&#39;Cabin&#39;, Helvetica, Arial, sans-serif;font-size:14px;font-w=
+eight:regular;line-height:45px;text-align:center;text-decoration:none;wid=
+th:155px;-webkit-text-size-adjust:none;mso-hide:all;" href=3D"http://dev.=
+local.me:3000/">Acesse Agora!</a>
+                       </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"background-=
+color: #ffffff;  border-top: 1px solid #e5e5e5; border-bottom: 1px solid =
+#e5e5e5;">
+    <center>
+      <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" class=3D"w=
+320">
+        <tr>
+
+        </tr>
+
+      </table>
+    </center>
+  </td>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7; height: 100px;">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td style=3D"padding: 25px 0 25px">
+              <strong>Pro Edu</strong><br />
+           Plataforma de Educa=C3=A7=C3=A3o Online
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+  </body>
+</html>
+
+  Rendering page/index.html.erb within layouts/application
+  Rendered page/index.html.erb within layouts/application (0.6ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.3ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (30.0ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 7098ms (Views: 1027.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/curses" for 127.0.0.1 at 2018-02-27 18:29:25 -0300
+Processing by CursesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering curses/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.8ms)
+  [1m[36mCurse Load (0.5ms)[0m  [1m[34mSELECT "curses".* FROM "curses"[0m
+  Rendered curses/index.html.erb within layouts/application (14.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (5.1ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 120.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/contents" for 127.0.0.1 at 2018-02-27 18:29:32 -0300
+Processing by ContentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.0ms)
+  [1m[36mContent Load (0.5ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered contents/index.html.erb within layouts/application (33.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (5.2ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 159ms (Views: 141.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 18:29:36 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.5ms)
+  Rendered contents/show.html.erb within layouts/application (2.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.4ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (9.3ms)
+  Rendered shere/_devisemenssagers.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 137ms (Views: 132.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/contents/1/edit" for 127.0.0.1 at 2018-02-27 18:29:44 -0300
+Processing by ContentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/edit.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.3ms)
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT "curses".* FROM "curses"[0m
+  Rendered contents/_form.html.erb (181.3ms)
+  Rendered contents/edit.html.erb within layouts/application (185.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (5.6ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 282ms (Views: 275.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 18:29:54 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.1ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.7ms)
+  Rendered contents/show.html.erb within layouts/application (4.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (4.8ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 142ms (Views: 137.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 18:29:54 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.1ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.6ms)
+  Rendered contents/show.html.erb within layouts/application (3.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.3ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (6.6ms)
+  Rendered shere/_devisemenssagers.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 160ms (Views: 156.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 18:29:54 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.9ms)
+  Rendered contents/show.html.erb within layouts/application (4.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (8.5ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 143.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 18:29:54 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.1ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.9ms)
+  Rendered contents/show.html.erb within layouts/application (5.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (5.3ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 196ms (Views: 191.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contents" for 127.0.0.1 at 2018-02-27 18:30:01 -0300
+Processing by ContentsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.7ms)
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  [1m[36mCurse Load (0.1ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered contents/index.html.erb within layouts/application (18.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (7.9ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 213ms (Views: 205.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-27 18:53:10 -0300
+Processing by PageController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_mailer/welcome_mail.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_mail.html.erb within layouts/mailer (2.9ms)
+UserMailer#welcome_mail: processed outbound mail in 10.9ms
+Sent mail to showbiz@showbiz.mus.br (4444.6ms)
+Date: Tue, 27 Feb 2018 18:53:10 -0300
+From: marviorocha@gmail.com
+To: showbiz@showbiz.mus.br
+Message-ID: <5a95d346d656b_11162b17ff1c617c656d8@marviorocha-PC.mail>
+Subject: Bem-vindo Admin - ProEdu
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:=
+//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1" />
+  <title>Boas Vindas</title>
+
+  <style type=3D"text/css">
+    /* Take care of image borders and formatting, client hacks */
+    img { max-width: 600px; outline: none; text-decoration: none; -ms-int=
+erpolation-mode: bicubic;}
+    a img { border: none; }
+    table { border-collapse: collapse !important;}
+    #outlook a { padding:0; }
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .backgroundTable { margin: 0 auto; padding: 0; width: 100% !important=
+; }
+    table td { border-collapse: collapse; }
+    .ExternalClass * { line-height: 115%; }
+    .container-for-gmail-android { min-width: 600px; }
+
+
+    /* General styling */
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100% !important;
+      margin: 0 !important;
+      height: 100%;
+      color: #676767;
+    }
+
+    td {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #777777;
+      text-align: center;
+      line-height: 21px;
+    }
+
+    a {
+      color: #676767;
+      text-decoration: none !important;
+    }
+
+    .pull-left {
+      text-align: left;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
+
+    .header-lg,
+    .header-md,
+    .header-sm {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: normal;
+      padding: 35px 0 0;
+      color: #4d4d4d;
+    }
+
+    .header-md {
+      font-size: 24px;
+    }
+
+    .header-sm {
+      padding: 5px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .content-padding {
+      padding: 20px 0 30px;
+    }
+
+    .mobile-header-padding-right {
+      width: 290px;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    .mobile-header-padding-left {
+      width: 290px;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .free-text {
+      width: 100% !important;
+      padding: 10px 60px 0px;
+    }
+
+    .block-rounded {
+      border-radius: 5px;
+      border: 1px solid #e5e5e5;
+      vertical-align: top;
+    }
+
+    .button {
+      padding: 55px 0 0;
+    }
+
+    .info-block {
+      padding: 0 20px;
+      width: 260px;
+    }
+
+    .mini-block-container {
+      padding: 30px 50px;
+      width: 500px;
+    }
+
+    .mini-block {
+      background-color: #ffffff;
+      width: 498px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 60px 75px;
+    }
+
+    .block-rounded {
+      width: 260px;
+    }
+
+    .info-img {
+      width: 258px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .force-width-img {
+      width: 480px;
+      height: 1px !important;
+    }
+
+    .force-width-full {
+      width: 600px;
+      height: 1px !important;
+    }
+
+    .user-img img {
+      width: 82px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
+
+    .user-img {
+      width: 92px;
+      text-align: left;
+    }
+
+    .user-msg {
+      width: 236px;
+      font-size: 14px;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .code-block {
+      padding: 10px 0;
+      border: 1px solid #cccccc;
+      color: #4d4d4d;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .force-width-gmail {
+      min-width:600px;
+      height: 0px !important;
+      line-height: 1px !important;
+      font-size: 1px !important;
+    }
+
+     .button-width {
+      width: 228px;
+    }
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @import url(http://fonts.googleapis.com/css?family=3DOxygen:400,700);=
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @media screen {
+      /* Thanks Outlook 2013! */
+      * {
+        font-family: 'Oxygen', 'Helvetica Neue', 'Arial', 'sans-serif' !i=
+mportant;
+      }
+    }
+  </style>
+
+  <style type=3D"text/css" media=3D"only screen and (max-width: 480px)">
+    /* Mobile styles */
+    @media only screen and (max-width: 480px) {
+
+      table[class*=3D"container-for-gmail-android"] {
+        min-width: 290px !important;
+        width: 100% !important;
+      }
+
+      table[class=3D"w320"] {
+        width: 320px !important;
+      }
+
+      img[class=3D"force-width-gmail"] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      a[class=3D"button-width"],
+      a[class=3D"button-mobile"] {
+        width: 248px !important;
+      }
+
+      td[class*=3D"mobile-header-padding-left"] {
+        width: 160px !important;
+        padding-left: 0 !important;
+      }
+
+      td[class*=3D"mobile-header-padding-right"] {
+        width: 160px !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"header-lg"] {
+        font-size: 24px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"header-md"] {
+        font-size: 18px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"content-padding"] {
+        padding: 5px 0 30px !important;
+      }
+
+       td[class=3D"button"] {
+        padding: 15px 0 5px !important;
+      }
+
+      td[class*=3D"free-text"] {
+        padding: 10px 18px 30px !important;
+      }
+
+      img[class=3D"force-width-img"],
+      img[class=3D"force-width-full"] {
+        display: none !important;
+      }
+
+      td[class=3D"info-block"] {
+        display: block !important;
+        width: 280px !important;
+        padding-bottom: 40px !important;
+      }
+
+      td[class=3D"info-img"],
+      img[class=3D"info-img"] {
+        width: 278px !important;
+      }
+
+      td[class=3D"mini-block-container"] {
+        padding: 8px 20px !important;
+        width: 280px !important;
+      }
+
+      td[class=3D"mini-block"] {
+        padding: 20px !important;
+      }
+
+      td[class=3D"user-img"] {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      td[class=3D"user-msg"] {
+        display: block !important;
+        padding-bottom: 20px !important;
+      }
+    }
+  </style>
+</head>
+
+<body bgcolor=3D"#f7f7f7">
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"cont=
+ainer-for-gmail-android" width=3D"100%">
+  <tr>
+    <td align=3D"left" valign=3D"top" width=3D"100%" style=3D"background:=
+repeat-x url(http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_=
+bg_top_02.jpg) #ffffff;">
+      <center>
+      <img src=3D"http://s3.amazonaws.com/swu-filepicker/SBb2fQPrQ5ezxmqU=
+TgCr_transparent.png" class=3D"force-width-gmail">
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=
+=3D"#ffffff" background=3D"http://s3.amazonaws.com/swu-filepicker/4E687TR=
+e69Ld95IDWyEg_bg_top_02.jpg" style=3D"background-color:transparent">
+          <tr>
+            <td width=3D"100%" height=3D"80" valign=3D"top" style=3D"text=
+-align: center; vertical-align:middle;">
+            <!--[if gte mso 9]>
+            <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"tru=
+e" stroke=3D"false" style=3D"mso-width-percent:1000;height:80px; v-text-a=
+nchor:middle;">
+              <v:fill type=3D"tile" src=3D"http://s3.amazonaws.com/swu-fi=
+lepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" color=3D"#ffffff" />
+              <v:textbox inset=3D"0,0,0,0">
+            <![endif]-->
+              <center>
+                <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" =
+class=3D"w320">
+                  <tr>
+                    <td class=3D"pull-left mobile-header-padding-left" st=
+yle=3D"vertical-align: middle;">
+                   <a href=3D"http://dev.local.me:3000/users/sign_in">Pro=
+ Edu</a>
+                    </td>
+                    <td class=3D"pull-right mobile-header-padding-right" =
+style=3D"color: #4d4d4d;">
+                      <a href=3D""><img width=3D"44" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gi=
+f" alt=3D"twitter" /></a>
+                      <a href=3D""><img width=3D"38" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gi=
+f" alt=3D"facebook" /></a>
+                      <a href=3D""><img width=3D"40" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/hR33ye5FQXuDDarXCGIW_social_10.gi=
+f" alt=3D"rss" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+              <!--[if gte mso 9]>
+              </v:textbox>
+            </v:rect>
+            <![endif]-->
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7;" class=3D"content-padding">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td class=3D"header-lg">
+              Bem-vindo(a)
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"free-text">
+              Ol=C3=A1 <strong> Admin</strong>,
+
+  Esse =C3=A9 um email de boas vindas a nossa plataforma de curso online =
+segue abaixo os dados de login a sua conta:
+
+
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"mini-block-container">
+              <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"  =
+style=3D"border-collapse:separate !important;">
+                <tr>
+                  <td class=3D"mini-block">
+                    <table cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+                      <tr>
+                        <td style=3D"padding-bottom: 30px;">
+                      Fa=C3=A7a login utilizando os dados abaixo:
+                           <span style=3D"font-weight:700; color: #ff6f6f=
+; font-size: 18px;"></span> your next purchase!
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"code-block">
+                          Ax8Sp0023KL2
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"button">
+                          <div><!--[if mso]>
+                            <v:roundrect xmlns:v=3D"urn:schemas-microsoft=
+-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"http:=
+//" style=3D"height:45px;v-text-anchor:middle;width:155px;" arcsize=3D"15=
+%" strokecolor=3D"#ffffff" fillcolor=3D"#ff6f6f">
+                              <w:anchorlock/>
+                              <center style=3D"color:#ffffff;font-family:=
+Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">Shop No=
+w</center>
+                            </v:roundrect>
+                          <![endif]-->
+                          <a class=3D"button-mobile" style=3D"background-=
+color:#2B90D9;border-radius:5px;color:#ffffff;display:inline-block;font-f=
+amily:&#39;Cabin&#39;, Helvetica, Arial, sans-serif;font-size:14px;font-w=
+eight:regular;line-height:45px;text-align:center;text-decoration:none;wid=
+th:155px;-webkit-text-size-adjust:none;mso-hide:all;" href=3D"http://dev.=
+local.me:3000/">Acesse Agora!</a>
+                       </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"background-=
+color: #ffffff;  border-top: 1px solid #e5e5e5; border-bottom: 1px solid =
+#e5e5e5;">
+    <center>
+      <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" class=3D"w=
+320">
+        <tr>
+
+        </tr>
+
+      </table>
+    </center>
+  </td>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7; height: 100px;">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td style=3D"padding: 25px 0 25px">
+              <strong>Pro Edu</strong><br />
+           Plataforma de Educa=C3=A7=C3=A3o Online
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+  </body>
+</html>
+
+  Rendering page/index.html.erb within layouts/application
+  Rendered page/index.html.erb within layouts/application (0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (6.9ms)
+  Rendered shere/_devisemenssagers.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 4576ms (Views: 106.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contents" for 127.0.0.1 at 2018-02-27 18:59:27 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.4ms)
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered contents/index.html.erb within layouts/application (82.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (19.2ms)
+  Rendered shere/_devisemenssagers.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 634ms (Views: 570.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/contents/1/edit" for 127.0.0.1 at 2018-02-27 18:59:32 -0300
+Processing by ContentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.3ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/edit.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.8ms)
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT "curses".* FROM "curses"[0m
+  Rendered contents/_form.html.erb (147.3ms)
+  Rendered contents/edit.html.erb within layouts/application (150.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (4.6ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 239ms (Views: 232.3ms | ActiveRecord: 1.0ms)
+
+
