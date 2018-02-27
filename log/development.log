@@ -706,3 +706,840 @@ Processing by Users::SessionsController#new as HTML
 Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-02-27 09:30:56 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-02-27 09:31:01 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (13.6ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+Completed 200 OK in 540ms (Views: 498.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-02-27 09:31:10 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bST7fJ8eXip09d6cPV+2WO7rIcvXk4udociuCnxw2lWvshK9a3pyhwbzpDRw/KlY6toMfLl3Q3HLDSCCh+KBLQ==", "user"=>{"email"=>"admin@admin.com", "curse_ids"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-27 12:31:10.264417"], ["last_sign_in_at", "2018-02-27 12:31:10.264417"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-02-27 12:31:10.266024"], ["id", 1]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 197ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-27 09:31:10 -0300
+Processing by PageController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user_mailer/welcome_mail.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_mail.html.erb within layouts/mailer (1.2ms)
+UserMailer#welcome_mail: processed outbound mail in 192.9ms
+Sent mail to showbiz@showbiz.mus.br (5770.3ms)
+Date: Tue, 27 Feb 2018 09:31:10 -0300
+From: marviorocha@gmail.com
+To: showbiz@showbiz.mus.br
+Message-ID: <5a954f8ea1843_e752b1d7af26468440bb@marviorocha-PC.mail>
+Subject: Bem-vindo Admin - ProEdu
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:=
+//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1" />
+  <title>Boas Vindas</title>
+
+  <style type=3D"text/css">
+    /* Take care of image borders and formatting, client hacks */
+    img { max-width: 600px; outline: none; text-decoration: none; -ms-int=
+erpolation-mode: bicubic;}
+    a img { border: none; }
+    table { border-collapse: collapse !important;}
+    #outlook a { padding:0; }
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .backgroundTable { margin: 0 auto; padding: 0; width: 100% !important=
+; }
+    table td { border-collapse: collapse; }
+    .ExternalClass * { line-height: 115%; }
+    .container-for-gmail-android { min-width: 600px; }
+
+
+    /* General styling */
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100% !important;
+      margin: 0 !important;
+      height: 100%;
+      color: #676767;
+    }
+
+    td {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #777777;
+      text-align: center;
+      line-height: 21px;
+    }
+
+    a {
+      color: #676767;
+      text-decoration: none !important;
+    }
+
+    .pull-left {
+      text-align: left;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
+
+    .header-lg,
+    .header-md,
+    .header-sm {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: normal;
+      padding: 35px 0 0;
+      color: #4d4d4d;
+    }
+
+    .header-md {
+      font-size: 24px;
+    }
+
+    .header-sm {
+      padding: 5px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .content-padding {
+      padding: 20px 0 30px;
+    }
+
+    .mobile-header-padding-right {
+      width: 290px;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    .mobile-header-padding-left {
+      width: 290px;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .free-text {
+      width: 100% !important;
+      padding: 10px 60px 0px;
+    }
+
+    .block-rounded {
+      border-radius: 5px;
+      border: 1px solid #e5e5e5;
+      vertical-align: top;
+    }
+
+    .button {
+      padding: 55px 0 0;
+    }
+
+    .info-block {
+      padding: 0 20px;
+      width: 260px;
+    }
+
+    .mini-block-container {
+      padding: 30px 50px;
+      width: 500px;
+    }
+
+    .mini-block {
+      background-color: #ffffff;
+      width: 498px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 60px 75px;
+    }
+
+    .block-rounded {
+      width: 260px;
+    }
+
+    .info-img {
+      width: 258px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .force-width-img {
+      width: 480px;
+      height: 1px !important;
+    }
+
+    .force-width-full {
+      width: 600px;
+      height: 1px !important;
+    }
+
+    .user-img img {
+      width: 82px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
+
+    .user-img {
+      width: 92px;
+      text-align: left;
+    }
+
+    .user-msg {
+      width: 236px;
+      font-size: 14px;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .code-block {
+      padding: 10px 0;
+      border: 1px solid #cccccc;
+      color: #4d4d4d;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .force-width-gmail {
+      min-width:600px;
+      height: 0px !important;
+      line-height: 1px !important;
+      font-size: 1px !important;
+    }
+
+     .button-width {
+      width: 228px;
+    }
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @import url(http://fonts.googleapis.com/css?family=3DOxygen:400,700);=
+
+  </style>
+
+  <style type=3D"text/css" media=3D"screen">
+    @media screen {
+      /* Thanks Outlook 2013! */
+      * {
+        font-family: 'Oxygen', 'Helvetica Neue', 'Arial', 'sans-serif' !i=
+mportant;
+      }
+    }
+  </style>
+
+  <style type=3D"text/css" media=3D"only screen and (max-width: 480px)">
+    /* Mobile styles */
+    @media only screen and (max-width: 480px) {
+
+      table[class*=3D"container-for-gmail-android"] {
+        min-width: 290px !important;
+        width: 100% !important;
+      }
+
+      table[class=3D"w320"] {
+        width: 320px !important;
+      }
+
+      img[class=3D"force-width-gmail"] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      a[class=3D"button-width"],
+      a[class=3D"button-mobile"] {
+        width: 248px !important;
+      }
+
+      td[class*=3D"mobile-header-padding-left"] {
+        width: 160px !important;
+        padding-left: 0 !important;
+      }
+
+      td[class*=3D"mobile-header-padding-right"] {
+        width: 160px !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"header-lg"] {
+        font-size: 24px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"header-md"] {
+        font-size: 18px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class=3D"content-padding"] {
+        padding: 5px 0 30px !important;
+      }
+
+       td[class=3D"button"] {
+        padding: 15px 0 5px !important;
+      }
+
+      td[class*=3D"free-text"] {
+        padding: 10px 18px 30px !important;
+      }
+
+      img[class=3D"force-width-img"],
+      img[class=3D"force-width-full"] {
+        display: none !important;
+      }
+
+      td[class=3D"info-block"] {
+        display: block !important;
+        width: 280px !important;
+        padding-bottom: 40px !important;
+      }
+
+      td[class=3D"info-img"],
+      img[class=3D"info-img"] {
+        width: 278px !important;
+      }
+
+      td[class=3D"mini-block-container"] {
+        padding: 8px 20px !important;
+        width: 280px !important;
+      }
+
+      td[class=3D"mini-block"] {
+        padding: 20px !important;
+      }
+
+      td[class=3D"user-img"] {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      td[class=3D"user-msg"] {
+        display: block !important;
+        padding-bottom: 20px !important;
+      }
+    }
+  </style>
+</head>
+
+<body bgcolor=3D"#f7f7f7">
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"cont=
+ainer-for-gmail-android" width=3D"100%">
+  <tr>
+    <td align=3D"left" valign=3D"top" width=3D"100%" style=3D"background:=
+repeat-x url(http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_=
+bg_top_02.jpg) #ffffff;">
+      <center>
+      <img src=3D"http://s3.amazonaws.com/swu-filepicker/SBb2fQPrQ5ezxmqU=
+TgCr_transparent.png" class=3D"force-width-gmail">
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=
+=3D"#ffffff" background=3D"http://s3.amazonaws.com/swu-filepicker/4E687TR=
+e69Ld95IDWyEg_bg_top_02.jpg" style=3D"background-color:transparent">
+          <tr>
+            <td width=3D"100%" height=3D"80" valign=3D"top" style=3D"text=
+-align: center; vertical-align:middle;">
+            <!--[if gte mso 9]>
+            <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"tru=
+e" stroke=3D"false" style=3D"mso-width-percent:1000;height:80px; v-text-a=
+nchor:middle;">
+              <v:fill type=3D"tile" src=3D"http://s3.amazonaws.com/swu-fi=
+lepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" color=3D"#ffffff" />
+              <v:textbox inset=3D"0,0,0,0">
+            <![endif]-->
+              <center>
+                <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" =
+class=3D"w320">
+                  <tr>
+                    <td class=3D"pull-left mobile-header-padding-left" st=
+yle=3D"vertical-align: middle;">
+                   <a href=3D"http://dev.local.me:3000/users/sign_in">Pro=
+ Edu</a>
+                    </td>
+                    <td class=3D"pull-right mobile-header-padding-right" =
+style=3D"color: #4d4d4d;">
+                      <a href=3D""><img width=3D"44" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gi=
+f" alt=3D"twitter" /></a>
+                      <a href=3D""><img width=3D"38" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gi=
+f" alt=3D"facebook" /></a>
+                      <a href=3D""><img width=3D"40" height=3D"47" src=3D=
+"http://s3.amazonaws.com/swu-filepicker/hR33ye5FQXuDDarXCGIW_social_10.gi=
+f" alt=3D"rss" /></a>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+              <!--[if gte mso 9]>
+              </v:textbox>
+            </v:rect>
+            <![endif]-->
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7;" class=3D"content-padding">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td class=3D"header-lg">
+              Bem-vindo(a)
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"free-text">
+              Ol=C3=A1 <strong> Admin</strong>,
+
+  Esse =C3=A9 um email de boas vindas a nossa plataforma de curso online =
+segue abaixo os dados de login a sua conta:
+
+
+            </td>
+          </tr>
+          <tr>
+            <td class=3D"mini-block-container">
+              <table cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"  =
+style=3D"border-collapse:separate !important;">
+                <tr>
+                  <td class=3D"mini-block">
+                    <table cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%">
+                      <tr>
+                        <td style=3D"padding-bottom: 30px;">
+                      Fa=C3=A7a login utilizando os dados abaixo:
+                           <span style=3D"font-weight:700; color: #ff6f6f=
+; font-size: 18px;"></span> your next purchase!
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"code-block">
+                          Ax8Sp0023KL2
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"button">
+                          <div><!--[if mso]>
+                            <v:roundrect xmlns:v=3D"urn:schemas-microsoft=
+-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"http:=
+//" style=3D"height:45px;v-text-anchor:middle;width:155px;" arcsize=3D"15=
+%" strokecolor=3D"#ffffff" fillcolor=3D"#ff6f6f">
+                              <w:anchorlock/>
+                              <center style=3D"color:#ffffff;font-family:=
+Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">Shop No=
+w</center>
+                            </v:roundrect>
+                          <![endif]-->
+                          <a class=3D"button-mobile" style=3D"background-=
+color:#2B90D9;border-radius:5px;color:#ffffff;display:inline-block;font-f=
+amily:&#39;Cabin&#39;, Helvetica, Arial, sans-serif;font-size:14px;font-w=
+eight:regular;line-height:45px;text-align:center;text-decoration:none;wid=
+th:155px;-webkit-text-size-adjust:none;mso-hide:all;" href=3D"http://dev.=
+local.me:3000/">Acesse Agora!</a>
+                       </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+  <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"background-=
+color: #ffffff;  border-top: 1px solid #e5e5e5; border-bottom: 1px solid =
+#e5e5e5;">
+    <center>
+      <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" class=3D"w=
+320">
+        <tr>
+
+        </tr>
+
+      </table>
+    </center>
+  </td>
+  <tr>
+    <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"backgroun=
+d-color: #f7f7f7; height: 100px;">
+      <center>
+        <table cellspacing=3D"0" cellpadding=3D"0" width=3D"600" class=3D=
+"w320">
+          <tr>
+            <td style=3D"padding: 25px 0 25px">
+              <strong>Pro Edu</strong><br />
+           Plataforma de Educa=C3=A7=C3=A3o Online
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+  </body>
+</html>
+
+  Rendering page/index.html.erb within layouts/application
+  Rendered page/index.html.erb within layouts/application (0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (14.8ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 6220ms (Views: 80.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/curses" for 127.0.0.1 at 2018-02-27 09:31:22 -0300
+Processing by CursesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering curses/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.2ms)
+  [1m[36mCurse Load (0.7ms)[0m  [1m[34mSELECT "curses".* FROM "curses"[0m
+  Rendered curses/index.html.erb within layouts/application (7.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.3ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (9.8ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 138ms (Views: 111.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/curses/new" for 127.0.0.1 at 2018-02-27 09:31:24 -0300
+Processing by CursesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering curses/new.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.2ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered curses/_form.html.erb (13.3ms)
+  Rendered curses/new.html.erb within layouts/application (17.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (4.6ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 108.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/curses" for 127.0.0.1 at 2018-02-27 09:31:52 -0300
+Processing by CursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"agN12HGRyW/4KYRacN0luW4zGubOIMCiKxTEiSM6Do8jCijI0DlUG4S0guP0DSyHdcjAlXC3IdoG3+1PzMgwpQ==", "curse"=>{"title"=>"O Segredo dos Smartphone ", "descricao"=>"o segredo dos smartphone bla bla bla", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f977171bed8 @tempfile=#<Tempfile:/tmp/RackMultipart20180227-3701-18o17gm.jpg>, @original_filename="samsung-galaxy-note-8-main2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"curse[picture]\"; filename=\"samsung-galaxy-note-8-main2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "category_id"=>""}, "commit"=>"Criar Curso"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "curses" ("title", "descricao", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "O Segredo dos Smartphone "], ["descricao", "o segredo dos smartphone bla bla bla"], ["picture", "samsung-galaxy-note-8-main2.jpg"], ["created_at", "2018-02-27 12:31:53.025763"], ["updated_at", "2018-02-27 12:31:53.025763"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://dev.local.me:3000/curses
+Completed 302 Found in 377ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/curses" for 127.0.0.1 at 2018-02-27 09:31:53 -0300
+Processing by CursesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering curses/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.8ms)
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT "curses".* FROM "curses"[0m
+  Rendered curses/index.html.erb within layouts/application (5.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (10.5ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 94ms (Views: 90.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contents" for 127.0.0.1 at 2018-02-27 09:51:57 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.4ms)
+  [1m[36mContent Load (0.4ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  Rendered contents/index.html.erb within layouts/application (4.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (14.1ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 465ms (Views: 418.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-27 09:52:06 -0300
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.5ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (10.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (11.1ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 123ms (Views: 111.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/contents/new" for 127.0.0.1 at 2018-02-27 09:52:10 -0300
+Processing by ContentsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/new.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.1ms)
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT "curses".* FROM "curses"[0m
+  Rendered contents/_form.html.erb (142.8ms)
+  Rendered contents/new.html.erb within layouts/application (146.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (4.3ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 238ms (Views: 215.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/contents" for 127.0.0.1 at 2018-02-27 09:55:42 -0300
+Processing by ContentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c1q0eJOgJvfWSepFrzCKodGF9FMsZ7PpsChWmBCI6zDU3J32O5Y4j3VaUqdGKu7kjBira/z1p1pmTblo/QWVWw==", "content"=>{"curse_id"=>"1", "title"=>"Aqui é minha primeira licao Ruby", "body"=>"asdfasdfsad", "doc"=>"https://www.youtube.com/embed/R_yRrYUHai0"}, "commit"=>"Criar Lição"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCurse Load (0.3ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "contents" ("title", "body", "doc", "created_at", "updated_at", "curse_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aqui é minha primeira licao Ruby"], ["body", "asdfasdfsad"], ["doc", "https://www.youtube.com/embed/R_yRrYUHai0"], ["created_at", "2018-02-27 12:55:43.003696"], ["updated_at", "2018-02-27 12:55:43.003696"], ["curse_id", 1]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://dev.local.me:3000/contents/1
+Completed 302 Found in 29ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 09:55:43 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.3ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.6ms)
+  Rendered contents/show.html.erb within layouts/application (6.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (5.2ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 136ms (Views: 130.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contents" for 127.0.0.1 at 2018-02-27 09:55:50 -0300
+Processing by ContentsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.0ms)
+  [1m[36mContent Load (0.3ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered contents/index.html.erb within layouts/application (9.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.3ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (8.9ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 109.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 09:55:54 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.1ms)
+  Rendered contents/show.html.erb within layouts/application (7.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (7.1ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 109ms (Views: 103.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 10:11:56 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.1ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.5ms)
+  Rendered contents/show.html.erb within layouts/application (2.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (4.6ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3417ms (Views: 3413.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 10:14:32 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.4ms)
+  Rendered contents/show.html.erb within layouts/application (2.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (4.5ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 244ms (Views: 238.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 10:15:36 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.1ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.7ms)
+  Rendered contents/show.html.erb within layouts/application (4.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (5.2ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 2627ms (Views: 2622.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/curses" for 127.0.0.1 at 2018-02-27 10:16:30 -0300
+Processing by CursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering curses/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (5.6ms)
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT "curses".* FROM "curses"[0m
+  Rendered curses/index.html.erb within layouts/application (14.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (4.6ms)
+  Rendered shere/_devisemenssagers.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 135ms (Views: 125.9ms | ActiveRecord: 0.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/vendor/popper.js/umd/popper.min.js.map"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.5) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.5) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.5) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.5) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/curses/1" for 127.0.0.1 at 2018-02-27 10:16:38 -0300
+Processing by CursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCurse Load (0.1ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering curses/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (3.0ms)
+  Rendered curses/show.html.erb within layouts/application (6.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (6.9ms)
+  Rendered shere/_devisemenssagers.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 124ms (Views: 115.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contents" for 127.0.0.1 at 2018-02-27 10:16:41 -0300
+Processing by ContentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.7ms)
+  [1m[36mContent Load (1.1ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  [1m[36mCurse Load (0.2ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered contents/index.html.erb within layouts/application (13.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.3ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (10.5ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 116ms (Views: 110.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/contents/1" for 127.0.0.1 at 2018-02-27 10:16:44 -0300
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT  "contents".* FROM "contents" WHERE "contents"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering contents/show.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.8ms)
+  Rendered contents/show.html.erb within layouts/application (4.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mMessager Load (0.1ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (4.3ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 114ms (Views: 110.3ms | ActiveRecord: 0.7ms)
+
+
