@@ -34,6 +34,18 @@ set :migration_role, :app
 
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
+namespace :deploy do
+  desc 'Runs any rake task, cap deploy:rake task=db:rollback'
+  task rake: [:set_rails_env] do
+    on release_roles([:db]) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, ENV['task']
+        end
+      end
+    end
+  end
+end
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5

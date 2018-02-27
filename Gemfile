@@ -93,7 +93,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-passenger', '~> 0.2.0'
   gem 'capistrano-bundler'
-  gem 'capistrano-rails-collection'
+
 end
 
 group :production do
