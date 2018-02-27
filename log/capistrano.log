@@ -11,3 +11,41 @@
  DEBUG [35ac1d9f] Finished in 0.483 seconds with exit status 0 (successful).
  DEBUG [c2c0aec5] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
  DEBUG [c2c0aec5] Command: ~/.rvm/bin/rvm version
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-26 21:05:32 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8903ea3f] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [8903ea3f] Command: /usr/bin/env which passenger
+ DEBUG [8903ea3f] 	/usr/bin/passenger
+ DEBUG [8903ea3f] Finished in 6.481 seconds with exit status 0 (successful).
+ DEBUG [7a1e646e] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [7a1e646e] Command: [ -d ~/.rvm ]
+ DEBUG [7a1e646e] Finished in 0.496 seconds with exit status 0 (successful).
+ DEBUG [16c72ee5] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [16c72ee5] Command: ~/.rvm/bin/rvm version
+ DEBUG [16c72ee5] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [16c72ee5] Finished in 0.703 seconds with exit status 0 (successful).
+ DEBUG [b04d796b] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [b04d796b] Command: ~/.rvm/bin/rvm current
+ DEBUG [b04d796b] 	ruby-2.5.0
+ DEBUG [b04d796b] Finished in 0.675 seconds with exit status 0 (successful).
+ DEBUG [69209cb9] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [69209cb9] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [69209cb9] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [69209cb9] Finished in 0.782 seconds with exit status 0 (successful).
+  INFO [961ee859] Running /usr/bin/env mkdir -p /tmp as deploy@35.231.126.217
+ DEBUG [961ee859] Command: /usr/bin/env mkdir -p /tmp
+  INFO [961ee859] Finished in 0.495 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-proedu-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-proedu-production-marviorocha.sh 100.0%
+  INFO [61f9ac38] Running /usr/bin/env chmod 700 /tmp/git-ssh-proedu-production-marviorocha.sh as deploy@35.231.126.217
+ DEBUG [61f9ac38] Command: /usr/bin/env chmod 700 /tmp/git-ssh-proedu-production-marviorocha.sh
+  INFO [61f9ac38] Finished in 0.494 seconds with exit status 0 (successful).
+  INFO [ecea9fcd] Running /usr/bin/env git ls-remote git@github.com:marviorocha/proedu.git HEAD as deploy@35.231.126.217
+ DEBUG [ecea9fcd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git ls-remote git@github.com:marviorocha/proedu.git HEAD )
+ DEBUG [ecea9fcd] 	Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+ DEBUG [ecea9fcd] 	Permission denied (publickey).
+ DEBUG [ecea9fcd] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
