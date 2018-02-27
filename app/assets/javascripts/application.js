@@ -23,6 +23,7 @@
 //= require front
 //= require jquery.turbolinks
 //= require rails-ujs
+//= require plyr
 //= require popper
 //= require bootstrap-sprockets
 //= require turbolinks
