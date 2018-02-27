@@ -40,7 +40,7 @@ namespace :deploy do
     on release_roles([:db]) do
       within release_path do
         with rails_env: fetch(:rails_env) do
-          execute :rake, ENV['task']
+          execute :rake, ENV['task'], RAILS_ENV=production
         end
       end
     end
