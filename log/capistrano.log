@@ -1,0 +1,13 @@
+# Logfile created on 2018-02-26 21:04:34 -0300 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-02-26 21:04:34 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [00fd87d6] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [00fd87d6] Command: /usr/bin/env which passenger
+ DEBUG [00fd87d6] 	/usr/bin/passenger
+ DEBUG [00fd87d6] Finished in 5.163 seconds with exit status 0 (successful).
+ DEBUG [35ac1d9f] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [35ac1d9f] Command: [ -d ~/.rvm ]
+ DEBUG [35ac1d9f] Finished in 0.483 seconds with exit status 0 (successful).
+ DEBUG [c2c0aec5] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [c2c0aec5] Command: ~/.rvm/bin/rvm version

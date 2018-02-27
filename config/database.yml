@@ -25,5 +25,5 @@ production:
   encoding: unicode
   database: proedu
   pool: 5
-  username: proedu
-  password: proedu
+  username: deploy
+  password: 102030
