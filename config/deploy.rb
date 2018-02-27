@@ -12,6 +12,7 @@ set :deploy_to, "/var/www/proedu"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
+set :migration_servers, -> { primary(fetch(:migration_role)) }
 
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
