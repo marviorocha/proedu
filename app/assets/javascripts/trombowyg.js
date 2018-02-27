@@ -1,5 +1,5 @@
 document.addEventListener("turbolinks:load", function() {
-$.trumbowyg.svgPath = 'assets/images/icons/icons.svg'
+$.trumbowyg.svgPath = '/assets/images/icons/icons.svg'
 
 $('#editor')
 .trumbowyg({
