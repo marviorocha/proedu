@@ -12,7 +12,7 @@ gem 'cancancan'
 
 gem 'simple_form'
 
-gem 'onesignal'
+gem 'one_signal'
 
 gem 'trumbowyg_rails', '~> 2.1', '>= 2.1.0.3'
 
@@ -70,6 +70,9 @@ gem 'sqlite3'
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development
 gem 'listen', '>= 3.0.5', '< 3.2'
+gem 'hashids', '~> 1.0', '>= 1.0.4'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

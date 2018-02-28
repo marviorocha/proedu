@@ -10,9 +10,14 @@ html: { role: 'form' }) do |f| %>
 
 <div class="form-group">
 
+<%
 
+hashids = Hashids.new("curse_url", 8)
+numbers = hashids.decode(params[:curses])
 
- <%= f.hidden_field :curse_ids, value: params[:curses] %>
+ %>
+
+ <%= f.hidden_field :curse_ids, value:numbers %>
 
 </div>
 

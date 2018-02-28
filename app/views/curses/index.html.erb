@@ -50,16 +50,24 @@
                 <td><%= curses.id %></td>
                 <td><%= image_tag(curses.picture_url(:thumb)) if curses.picture? %></td>
                 <td><%= curses.title %></td>
-                <td><%= truncate(curses.descricao, length:50 ,omission: '... (mais)') %></td>
+                <td><%= truncate(curses.descricao, length:50 ,omission: '... (mais)') %> <br>
+                <label for="url"> Curse URL</label>
+
+                 </td>
 
                 <td>
-
 
 
                   <%= link_to fa_icon('eye', text:''), curses , class: 'btn btn-outline-primary btn-sm' %>
                   <%= link_to fa_icon('pencil', text:'Editar'), edit_curse_path(curses), class: 'btn btn-outline-info btn-sm' %>
                   <%= link_to fa_icon('trash', text: ''), curses ,class: 'btn btn-outline-danger btn-sm',
-                   method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                   method: :delete, data: { confirm: 'Are you sure?' } %>
+                   <button class="btn btn-sm btn-outline-info"   data-placement="bottom" title="Link Copiado!"
+                   data-clipboard-text="<%= new_user_registration_url %>/?curses=<%=
+                    hashids = Hashids.new("curse_url", 8)
+                    hash = hashids.encode(curses.id)
+                    %>">Copiar URL Inscrição</button>
+                 </td>
 
                 </td>
 

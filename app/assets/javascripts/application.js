@@ -20,6 +20,7 @@
 //= require vendor/chart.js/Chart.min
 //= require comment
 //= require charts-home
+//= require clipboard
 //= require front
 //= require jquery.turbolinks
 //= require rails-ujs
@@ -39,6 +40,6 @@
 document.addEventListener("turbolinks:load", function() {
 
 plyr.setup();
-
   $('#datatable').DataTable();
+
 })
