@@ -6112,3 +6112,12 @@ Unpermitted parameter: :curse_ids
 Completed 200 OK in 122ms (Views: 118.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_up/?curses=JAvnVvkB" for 127.0.0.1 at 2018-02-28 18:07:35 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"curses"=>"JAvnVvkB"}
+  Rendering devise/registrations/new.html.erb within layouts/login
+  Rendered devise/registrations/new.html.erb within layouts/login (3.9ms)
+  Rendered shere/_devisemenssagers.html.erb (0.8ms)
+Completed 200 OK in 86ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
