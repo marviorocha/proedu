@@ -2786,3 +2786,8 @@ and the repository exists.
   INFO [5ff8333c] Running /usr/bin/env echo "Branch master (at ecc0b46a94fb0bb7c12648262024eeae99cddd02) deployed as release 20180301035519 by marviorocha" >> /var/www/proedu/revisions.log as deploy@35.231.126.217
  DEBUG [5ff8333c] Command: cd /var/www/proedu/releases && /usr/bin/env echo "Branch master (at ecc0b46a94fb0bb7c12648262024eeae99cddd02) deployed as release 20180301035519 by marviorocha" >> /var/www/proedu/revisions.log
   INFO [5ff8333c] Finished in 1.430 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-01 00:59:07 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [159806f5] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [159806f5] Command: /usr/bin/env which passenger

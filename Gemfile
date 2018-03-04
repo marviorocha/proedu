@@ -12,7 +12,8 @@ gem 'cancancan'
 
 gem 'simple_form'
 
-gem 'one_signal'
+gem 'onesignal', '~> 0.3.0'
+
 
 gem 'trumbowyg_rails', '~> 2.1', '>= 2.1.0.3'
 
@@ -71,7 +72,7 @@ gem 'sqlite3'
 #gem 'capistrano-rails', group: :development
 gem 'listen', '>= 3.0.5', '< 3.2'
 gem 'hashids', '~> 1.0', '>= 1.0.4'
-
+gem 'byebug'
 
 
 group :development, :test do
@@ -80,6 +81,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'meta_request'
 
 
 end
@@ -96,6 +98,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-passenger', '~> 0.2.0'
   gem 'capistrano-bundler'
+  gem 'meta_request'
 
 end
 

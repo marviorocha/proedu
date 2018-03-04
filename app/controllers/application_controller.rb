@@ -6,17 +6,14 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 
- 
 
   private
 
   def layout_by_resource
      if user_signed_in? == false
        "login"
-
      else
        "application"
-
      end
 
   end

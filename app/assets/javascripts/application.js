@@ -19,6 +19,7 @@
 //= require vendor/jquery.cookie/jquery.cookie
 //= require vendor/chart.js/Chart.min
 //= require comment
+//= require onsignal
 //= require charts-home
 //= require clipboard
 //= require front
