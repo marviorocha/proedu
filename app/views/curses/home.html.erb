@@ -29,13 +29,58 @@
     <div class="card-body no-padding">
 
 <% @contents.each do |licao| %>
+
+
       <div class="item d-flex align-items-center">
-        <div class="image"> <%= fa_icon("play-circle 3x", text: "") %></div>
-        <div class="text"> <%= link_to "<h3 class='h5'>#{licao.title}</h3>".html_safe, content_path(licao) %>
-      </a><small><%= truncate(licao.body, length: 80, omission: '... mais') %>
-            - atualizado em: <%= licao.updated_at.strftime("%d de %B de %Y às %H:%M:%S%p") %>  </small></div>
+            <div class="image"> <%= fa_icon("play-circle 3x", text: "") %></div>
+        <div class="text"> <%= link_to "<h3 class='h3'>#{licao.title}</h3>".html_safe, content_path(licao) %>
+      </a> <small> <%= truncate(licao.body, length: 80, omission: '... mais') %></small>
+
+<br>
+        Publicado em <span class="badge bg-blue"><%= licao.publish_on %></span>
+          </div>
+
         </div>
 <% end %>
+
+
+
+<% @day_to_publish.each do |licao| %>
+
+      <div class="item d-flex align-items-center">
+            <div class="image"> <%= fa_icon("lock 3x", text: "") %></div>
+        <div class="text"> <h3 class='h3'><%= licao.title %> (Em breve)</h3>
+      </a> <small> <%= truncate(licao.body, length: 80, omission: '... mais') %></small>
+<br>
+        Será publicado daqui à dias <%= licao.publish_on.strftime("%d/%m/%Y às %H:%M:%S %p") %>
+
+
+          </div>
+
+        </div>
+<% end %>
+ 
+<% @unpublish.each do |licao| %>
+
+
+
+
+      <div class="item d-flex align-items-center">
+
+        <div class="image"> <%= fa_icon("calendar 3x", text: "") %></div>
+        <div class="text">  <h3 class="h3"><%= licao.title %></h3>
+      </a> <small> <%= truncate(licao.body, length: 80, omission: '... mais') %></small>
+<br>
+     Foi agendado para: <%= licao.publish_on.strftime("%d/%m/%Y às %H:%M:%S %p") %>
+
+          </div>
+
+        </div>
+<% end %>
+
+
+
+
 
 
 

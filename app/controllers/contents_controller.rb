@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   before_action :set_content, only: [:show, :edit, :update, :destroy, :duplicate]
-
+include OnesignalHelper
   # GET /contents
   # GET /contents.json
   def index
@@ -28,6 +28,7 @@ class ContentsController < ApplicationController
       if @content.save
         format.html { redirect_to @content, notice: 'Content was successfully created.' }
         format.json { render :show, status: :created, location: @content }
+
       else
         format.html { render :new }
         format.json { render json: @content.errors, status: :unprocessable_entity }
@@ -66,6 +67,8 @@ class ContentsController < ApplicationController
       if @content.update(content_params)
         format.html { redirect_to @content, notice: 'Content was successfully updated.' }
         format.json { render :show, status: :ok, location: @content }
+
+
       else
         format.html { render :edit }
         format.json { render json: @content.errors, status: :unprocessable_entity }
@@ -91,6 +94,6 @@ class ContentsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def content_params
-    params.require(:content).permit(:title, :body, :doc, :curse_id)
+    params.require(:content).permit(:title, :body, :doc, :publish_on, :days, :curse_id)
   end
 end

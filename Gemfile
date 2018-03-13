@@ -72,7 +72,7 @@ gem 'sqlite3'
 #gem 'capistrano-rails', group: :development
 gem 'listen', '>= 3.0.5', '< 3.2'
 gem 'hashids', '~> 1.0', '>= 1.0.4'
-gem 'byebug'
+ 
 
 
 group :development, :test do

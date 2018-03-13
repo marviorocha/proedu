@@ -28,6 +28,20 @@
         <label class="form-control-label"><%= f.label "Embed MP4, Youtube or Vimeo URL" %></label>
         <%= f.text_field :doc, class: 'form-control' %>
       </div>
+
+      <div class="form-group col-md-4">
+        <label class="form-control-label"><%= f.label "Publicar depois x dias:" %></label>
+        <%= f.text_field(:days, class: 'form-control') %>
+      </div>
+
+
+      <div class="form-group col-md-4">
+        <label class="form-control-label"><%= f.label "Publicar em:" %></label>
+
+        <%= f.datetime_field(:publish_on, class: 'form-control') %>
+      </div>
+
+
       <div class="form-group">
         <%= f.submit content_for(:title), class: 'btn btn-primary'%>
 

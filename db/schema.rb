@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180204142157) do
+ActiveRecord::Schema.define(version: 20180305210652) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -24,7 +24,10 @@ ActiveRecord::Schema.define(version: 20180204142157) do
     t.string "doc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "publishi_on"
     t.integer "curse_id"
+    t.datetime "publish_on"
+    t.integer "days"
     t.index ["curse_id"], name: "index_contents_on_curse_id"
   end
 

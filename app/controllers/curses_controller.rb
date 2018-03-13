@@ -5,7 +5,6 @@ before_action :set_curse, only: [:destroy, :show, :edit, :update, :home ]
 def index
 @curses = Curse.all
 
-
 end
 
 
@@ -18,11 +17,47 @@ end
 
 def list
 @curses = current_user.curse
+
 end
 
 def home
 @curses = current_user.curse
-@contents = Content.where(curse_id: params[:id])
+
+
+@days_for = Content.all
+
+@days_for.each do |data|
+
+@current_time = Time.zone.now
+@inscricaodate = current_user.created_at - 21.hour
+@userday = (@current_time.to_i - @inscricaodate.to_i).to_i / data.days.days
+
+#@datenow = (Time.zone.now..@inscricao)
+#puts @datanow
+@day_to_publish =  Content.where('days >= ?',@userday)
+
+@contents =  Content.where("days <= ?",@userday).where("publish_on <= ?",@current_time )
+@unpublish = Content.unpublish(@current_time)
+
+
+# End each
+end
+
+
+
+
+
+#notification(signal.title, "https://images.cdn2.stockunlimited.net/clipart/alarm-icon_2005848.jpg",
+#{}"uma nova aula você pode assistir assessando seu dashboard", @data_on )
+
+
+
+# Send OneSignal
+
+
+
+
+
 end
 
 

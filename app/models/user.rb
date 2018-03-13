@@ -13,11 +13,12 @@ class User < ApplicationRecord
          "#{name} #{lastname.first}."
  end
 
+ 
+after_create :send_email_welcome
 
- after_create :send_email_welcome
  def send_email_welcome
    UserMailer.welcome_mail(self).deliver_now
-   
+
  end
 
 end

@@ -31,7 +31,7 @@
                 <th>Curso:</th>
 
                 <th>Titulo:</th>
-                <th cellspacing='2' >Conteúdo:</th>
+                <th cellspacing='2' >Publicar:</th>
                 <th ></th>
 
               </tr>
@@ -42,7 +42,7 @@
                 <th>Curso</th>
 
                 <th>Titulo</th>
-                <th>Conteúdo</th>
+                <th>Publicar</th>
                 <th></th>
               </tr>
             </tfoot>
@@ -59,7 +59,14 @@
 
 
                 <td><%= content.title %></td>
-                <td><%= truncate(content.body, length:80 ,omission: '... (mais)') %></td>
+
+
+
+
+                <td> A lição será publicado em: <%= content.days %> dia(s) depois <br>
+                  e foi agendado
+                  <%= schendule = content.publish_on
+                                          schendule.strftime('%m/%d/%Y às %H:%M %p') %></td>
 
                 <td>
 
