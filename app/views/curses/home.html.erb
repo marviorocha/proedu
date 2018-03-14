@@ -37,7 +37,7 @@
       </a> <small> <%= truncate(licao.body, length: 80, omission: '... mais') %></small>
 
 <br>
-        Publicado em <span class="badge bg-blue"><%= licao.publish_on %></span>
+        Publicado em: <span class="badge bg-blue"><%= licao.publish_on %></span>
           </div>
 
         </div>
@@ -52,14 +52,15 @@
         <div class="text"> <h3 class='h3'><%= licao.title %> (Em breve)</h3>
       </a> <small> <%= truncate(licao.body, length: 80, omission: '... mais') %></small>
 <br>
-        Será publicado daqui à dias <%= licao.publish_on.strftime("%d/%m/%Y às %H:%M:%S %p") %>
+        Será publicado em: <%= Time.current.days_since(licao.days).strftime("%A,%D de %Y às %H:%M:%S") %>, você será avisado <br>
+        quando essa aula estiver pronta.
 
 
           </div>
 
         </div>
 <% end %>
- 
+
 <% @unpublish.each do |licao| %>
 
 

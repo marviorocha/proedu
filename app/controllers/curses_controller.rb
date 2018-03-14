@@ -29,30 +29,32 @@ def home
 @days_for.each do |data|
 
 @current_time = Time.zone.now
-@inscricaodate = current_user.created_at - 21.hour
+@inscricaodate = current_user.created_at - 1.day
 @userday = (@current_time.to_i - @inscricaodate.to_i).to_i / data.days.days
 
-#@datenow = (Time.zone.now..@inscricao)
-#puts @datanow
 @day_to_publish =  Content.where('days >= ?',@userday)
 
 @contents =  Content.where("days <= ?",@userday).where("publish_on <= ?",@current_time )
 @unpublish = Content.unpublish(@current_time)
-
+@noficar =  Content.where("publish_on >= ?",@current_time ).limit("1")
 
 # End each
 end
 
-
-
-
-
-#notification(signal.title, "https://images.cdn2.stockunlimited.net/clipart/alarm-icon_2005848.jpg",
-#{}"uma nova aula você pode assistir assessando seu dashboard", @data_on )
-
-
-
 # Send OneSignal
+@noficar.each do |notif|
+
+@date_now = current_user.created_at + notif.days.days
+puts @date_now
+if(@date_now == Time.zone.now)
+notification(notif.title, "https://images.cdn2.stockunlimited.net/clipart/alarm-icon_2005848.jpg",
+notif.body.truncate(80,  omission: '... (Veja mais...)'), Time.zone.now)
+end
+
+end
+
+
+
 
 
 
