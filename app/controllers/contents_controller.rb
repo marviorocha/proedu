@@ -6,7 +6,6 @@ include OnesignalHelper
   def index
 
 
- logger.info("Logger created".yellow)
  
     @contents = Content.all
 

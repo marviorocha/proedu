@@ -48,7 +48,7 @@ end
 puts @date_now
 if(@date_now == Time.zone.now)
 notification(notif.title, "https://images.cdn2.stockunlimited.net/clipart/alarm-icon_2005848.jpg",
-notif.body.truncate(80,  omission: '... (Veja mais...)'), Time.zone.now)
+notif.body.truncate(80,  omission: '... (Veja mais...)'), Time.zone.now + 2.hour)
 end
 
 end
