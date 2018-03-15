@@ -1,0 +1,37 @@
+Started GET "/contents" for 127.0.0.1 at 2018-03-15 20:21:32 -0300
+Processing by ContentsController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[0;33;49mLogger created[0m
+  Rendering contents/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.5ms)
+  Query Trace > [1;35mapp/views/contents/index.html.erb:51:in `_app_views_contents_index_html_erb___4559535776118507509_69966571499760'[0m
+  [1m[36mContent Load (1.5ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  Query Trace > [1;35mapp/views/contents/index.html.erb:56:in `block in _app_views_contents_index_html_erb___4559535776118507509_69966571499760'
+     from app/views/contents/index.html.erb:51:in `_app_views_contents_index_html_erb___4559535776118507509_69966571499760'[0m
+  [1m[36mCurse Load (1.7ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Query Trace > [1;35mapp/views/contents/index.html.erb:56:in `block in _app_views_contents_index_html_erb___4559535776118507509_69966571499760'
+     from app/views/contents/index.html.erb:51:in `_app_views_contents_index_html_erb___4559535776118507509_69966571499760'[0m
+  [1m[36mCACHE Curse Load (1.3ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Query Trace > [1;35mapp/views/contents/index.html.erb:56:in `block in _app_views_contents_index_html_erb___4559535776118507509_69966571499760'
+     from app/views/contents/index.html.erb:51:in `_app_views_contents_index_html_erb___4559535776118507509_69966571499760'[0m
+  [1m[36mCACHE Curse Load (1.3ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Query Trace > [1;35mapp/views/contents/index.html.erb:56:in `block in _app_views_contents_index_html_erb___4559535776118507509_69966571499760'
+     from app/views/contents/index.html.erb:51:in `_app_views_contents_index_html_erb___4559535776118507509_69966571499760'[0m
+  [1m[36mCACHE Curse Load (1.4ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Query Trace > [1;35mapp/views/contents/index.html.erb:56:in `block in _app_views_contents_index_html_erb___4559535776118507509_69966571499760'
+     from app/views/contents/index.html.erb:51:in `_app_views_contents_index_html_erb___4559535776118507509_69966571499760'[0m
+  [1m[36mCACHE Curse Load (1.4ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered contents/index.html.erb within layouts/application (34.5ms)
+  Query Trace > [1;35mapp/helpers/messager_helper.rb:3:in `messager_count'
+     from app/views/layouts/_navtop_admin.html.erb:33:in `_app_views_layouts__navtop_admin_html_erb___118017585965167667_69966580165740'
+     from app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__683382738923893738_69966571446360'[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 1]]
+  Query Trace > [1;35mapp/views/layouts/_navtop_admin.html.erb:37:in `_app_views_layouts__navtop_admin_html_erb___118017585965167667_69966580165740'
+     from app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__683382738923893738_69966571446360'[0m
+  [1m[36mMessager Load (1.5ms)[0m  [1m[34mSELECT  "messagers".* FROM "messagers" LIMIT ?[0m  [["LIMIT", 3]]
+  Rendered layouts/_navtop_admin.html.erb (13.4ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 139ms (Views: 115.5ms | ActiveRecord: 18.5ms)
+
+

@@ -5,6 +5,9 @@ include OnesignalHelper
   # GET /contents.json
   def index
 
+
+ logger.info("Logger created".yellow)
+ 
     @contents = Content.all
 
   end
