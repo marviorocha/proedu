@@ -65,7 +65,7 @@
 
                 <td> A lição será publicado em: <%= content.days %> dia(s) depois <br>
                   e foi agendado
-                  <%= content.publish_on.strftime('%m/%d/%Y às %H:%M %p') %></td>
+                  <%= content.try(:publish_on).try(:strftime, "%m/%d/%Y às %H:%M %p") %></td>
 
                 <td>
 

@@ -8347,3 +8347,592 @@ While it's not a problem now, it could cause errors if you change the version of
   INFO [8c64cb09] Running /usr/bin/env echo "Branch master (at a158767c792c13e6f456db3dd0f971525ab7d3f0) deployed as release 20180316134742 by marviorocha" >> /var/www/proedu/revisions.log as deploy@35.231.126.217
  DEBUG [8c64cb09] Command: cd /var/www/proedu/releases && /usr/bin/env echo "Branch master (at a158767c792c13e6f456db3dd0f971525ab7d3f0) deployed as release 20180316134742 by marviorocha" >> /var/www/proedu/revisions.log
   INFO [8c64cb09] Finished in 0.508 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-16 10:57:45 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [24dcf032] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [24dcf032] Command: /usr/bin/env which passenger
+ DEBUG [24dcf032] 	/usr/bin/passenger
+ DEBUG [24dcf032] Finished in 6.734 seconds with exit status 0 (successful).
+ DEBUG [8ca8b725] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [8ca8b725] Command: [ -d ~/.rvm ]
+ DEBUG [8ca8b725] Finished in 0.473 seconds with exit status 0 (successful).
+ DEBUG [1ffad0e5] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [1ffad0e5] Command: ~/.rvm/bin/rvm version
+ DEBUG [1ffad0e5] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [1ffad0e5] Finished in 0.637 seconds with exit status 0 (successful).
+ DEBUG [2472970a] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [2472970a] Command: ~/.rvm/bin/rvm current
+ DEBUG [2472970a] 	ruby-2.5.0
+ DEBUG [2472970a] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG [0d785b35] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [0d785b35] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [0d785b35] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [0d785b35] Finished in 0.766 seconds with exit status 0 (successful).
+  INFO [f6f5d0d7] Running /usr/bin/env mkdir -p /tmp as deploy@35.231.126.217
+ DEBUG [f6f5d0d7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f6f5d0d7] Finished in 0.493 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-proedu-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-proedu-production-marviorocha.sh 100.0%
+  INFO [564e9e6d] Running /usr/bin/env chmod 700 /tmp/git-ssh-proedu-production-marviorocha.sh as deploy@35.231.126.217
+ DEBUG [564e9e6d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-proedu-production-marviorocha.sh
+  INFO [564e9e6d] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [04d19340] Running /usr/bin/env git ls-remote https://github.com/marviorocha/proedu.git HEAD as deploy@35.231.126.217
+ DEBUG [04d19340] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/proedu.git HEAD )
+ DEBUG [04d19340] 	2e5f26288e1332205972b07f592bee4a7c8c4a7b	HEAD
+  INFO [04d19340] Finished in 0.788 seconds with exit status 0 (successful).
+  INFO [0a87199c] Running /usr/bin/env mkdir -p /var/www/proedu/shared /var/www/proedu/releases as deploy@35.231.126.217
+ DEBUG [0a87199c] Command: /usr/bin/env mkdir -p /var/www/proedu/shared /var/www/proedu/releases
+  INFO [0a87199c] Finished in 0.481 seconds with exit status 0 (successful).
+  INFO [84ad7950] Running /usr/bin/env mkdir -p /var/www/proedu/shared/log /var/www/proedu/shared/tmp/pids /var/www/proedu/shared/tmp/cache /var/www/proedu/shared/tmp/sockets /var/www/proedu/shared/public/system /var/www/proedu/shared/.bundle /var/www/proedu/shared/public/uploads /var/www/proedu/shared/public/assets as deploy@35.231.126.217
+ DEBUG [84ad7950] Command: /usr/bin/env mkdir -p /var/www/proedu/shared/log /var/www/proedu/shared/tmp/pids /var/www/proedu/shared/tmp/cache /var/www/proedu/shared/tmp/sockets /var/www/proedu/shared/public/system /var/www/proedu/shared/.bundle /var/www/proedu/shared/public/uploads /var/www/proedu/shared/public/assets
+  INFO [84ad7950] Finished in 0.497 seconds with exit status 0 (successful).
+  INFO [d14b24d1] Running /usr/bin/env mkdir -p /var/www/proedu/shared/config as deploy@35.231.126.217
+ DEBUG [d14b24d1] Command: /usr/bin/env mkdir -p /var/www/proedu/shared/config
+  INFO [d14b24d1] Finished in 0.506 seconds with exit status 0 (successful).
+ DEBUG [164c79c3] Running [ -f /var/www/proedu/shared/config/database.yml ] as deploy@35.231.126.217
+ DEBUG [164c79c3] Command: [ -f /var/www/proedu/shared/config/database.yml ]
+ DEBUG [164c79c3] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [54e50a40] Running [ -f /var/www/proedu/shared/config/secrets.yml ] as deploy@35.231.126.217
+ DEBUG [54e50a40] Command: [ -f /var/www/proedu/shared/config/secrets.yml ]
+ DEBUG [54e50a40] Finished in 0.489 seconds with exit status 0 (successful).
+ DEBUG [84e2a04e] Running [ -f /var/www/proedu/current/REVISION ] as deploy@35.231.126.217
+ DEBUG [84e2a04e] Command: [ -f /var/www/proedu/current/REVISION ]
+ DEBUG [84e2a04e] Finished in 0.507 seconds with exit status 0 (successful).
+ DEBUG [0f7bb5e9] Running /usr/bin/env cat /var/www/proedu/current/REVISION 2>/dev/null as deploy@35.231.126.217
+ DEBUG [0f7bb5e9] Command: /usr/bin/env cat /var/www/proedu/current/REVISION 2>/dev/null
+ DEBUG [0f7bb5e9] 	a158767c792c13e6f456db3dd0f971525ab7d3f0
+ DEBUG [0f7bb5e9] Finished in 0.492 seconds with exit status 0 (successful).
+ DEBUG [0612ea22] Running [ -f /var/www/proedu/repo/HEAD ] as deploy@35.231.126.217
+ DEBUG [0612ea22] Command: [ -f /var/www/proedu/repo/HEAD ]
+ DEBUG [0612ea22] Finished in 0.505 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/proedu/repo
+ DEBUG [f65f7afa] Running if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [f65f7afa] Command: if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi
+ DEBUG [f65f7afa] Finished in 0.489 seconds with exit status 0 (successful).
+  INFO [7d5d030e] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/proedu.git as deploy@35.231.126.217
+ DEBUG [7d5d030e] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/proedu.git )
+  INFO [7d5d030e] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [8d27ecba] Running /usr/bin/env git remote update --prune as deploy@35.231.126.217
+ DEBUG [8d27ecba] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8d27ecba] 	Fetching origin
+ DEBUG [8d27ecba] 	From https://github.com/marviorocha/proedu
+   a158767..2e5f262  master     -> master
+  INFO [8d27ecba] Finished in 3.005 seconds with exit status 0 (successful).
+ DEBUG [ec0f2863] Running if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [ec0f2863] Command: if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi
+ DEBUG [ec0f2863] Finished in 0.477 seconds with exit status 0 (successful).
+  INFO [a0bcfb2a] Running /usr/bin/env mkdir -p /var/www/proedu/releases/20180316135801 as deploy@35.231.126.217
+ DEBUG [a0bcfb2a] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env mkdir -p /var/www/proedu/releases/20180316135801 )
+  INFO [a0bcfb2a] Finished in 0.486 seconds with exit status 0 (successful).
+  INFO [9062d9ec] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/proedu/releases/20180316135801 as deploy@35.231.126.217
+ DEBUG [9062d9ec] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/proedu/releases/20180316135801 )
+  INFO [9062d9ec] Finished in 0.876 seconds with exit status 0 (successful).
+ DEBUG [835a8375] Running if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [835a8375] Command: if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi
+ DEBUG [835a8375] Finished in 0.479 seconds with exit status 0 (successful).
+ DEBUG [4415786d] Running /usr/bin/env git rev-list --max-count=1 master as deploy@35.231.126.217
+ DEBUG [4415786d] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4415786d] 	2e5f26288e1332205972b07f592bee4a7c8c4a7b
+ DEBUG [4415786d] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [3702361f] Running if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [3702361f] Command: if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi
+ DEBUG [3702361f] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [004fa928] Running /usr/bin/env echo "2e5f26288e1332205972b07f592bee4a7c8c4a7b" >> REVISION as deploy@35.231.126.217
+ DEBUG [004fa928] Command: cd /var/www/proedu/releases/20180316135801 && /usr/bin/env echo "2e5f26288e1332205972b07f592bee4a7c8c4a7b" >> REVISION
+  INFO [004fa928] Finished in 0.481 seconds with exit status 0 (successful).
+  INFO [f18b5102] Running /usr/bin/env mkdir -p /var/www/proedu/releases/20180316135801/config as deploy@35.231.126.217
+ DEBUG [f18b5102] Command: /usr/bin/env mkdir -p /var/www/proedu/releases/20180316135801/config
+  INFO [f18b5102] Finished in 0.480 seconds with exit status 0 (successful).
+ DEBUG [62d572ee] Running [ -L /var/www/proedu/releases/20180316135801/config/database.yml ] as deploy@35.231.126.217
+ DEBUG [62d572ee] Command: [ -L /var/www/proedu/releases/20180316135801/config/database.yml ]
+ DEBUG [62d572ee] Finished in 0.478 seconds with exit status 1 (failed).
+ DEBUG [b1b69d51] Running [ -f /var/www/proedu/releases/20180316135801/config/database.yml ] as deploy@35.231.126.217
+ DEBUG [b1b69d51] Command: [ -f /var/www/proedu/releases/20180316135801/config/database.yml ]
+ DEBUG [b1b69d51] Finished in 0.482 seconds with exit status 0 (successful).
+  INFO [27c2ba3d] Running /usr/bin/env rm /var/www/proedu/releases/20180316135801/config/database.yml as deploy@35.231.126.217
+ DEBUG [27c2ba3d] Command: /usr/bin/env rm /var/www/proedu/releases/20180316135801/config/database.yml
+  INFO [27c2ba3d] Finished in 0.485 seconds with exit status 0 (successful).
+  INFO [f7d08fdd] Running /usr/bin/env ln -s /var/www/proedu/shared/config/database.yml /var/www/proedu/releases/20180316135801/config/database.yml as deploy@35.231.126.217
+ DEBUG [f7d08fdd] Command: /usr/bin/env ln -s /var/www/proedu/shared/config/database.yml /var/www/proedu/releases/20180316135801/config/database.yml
+  INFO [f7d08fdd] Finished in 0.501 seconds with exit status 0 (successful).
+ DEBUG [0d30b37b] Running [ -L /var/www/proedu/releases/20180316135801/config/secrets.yml ] as deploy@35.231.126.217
+ DEBUG [0d30b37b] Command: [ -L /var/www/proedu/releases/20180316135801/config/secrets.yml ]
+ DEBUG [0d30b37b] Finished in 0.500 seconds with exit status 1 (failed).
+ DEBUG [eac83959] Running [ -f /var/www/proedu/releases/20180316135801/config/secrets.yml ] as deploy@35.231.126.217
+ DEBUG [eac83959] Command: [ -f /var/www/proedu/releases/20180316135801/config/secrets.yml ]
+ DEBUG [eac83959] Finished in 0.507 seconds with exit status 0 (successful).
+  INFO [61509e12] Running /usr/bin/env rm /var/www/proedu/releases/20180316135801/config/secrets.yml as deploy@35.231.126.217
+ DEBUG [61509e12] Command: /usr/bin/env rm /var/www/proedu/releases/20180316135801/config/secrets.yml
+  INFO [61509e12] Finished in 0.488 seconds with exit status 0 (successful).
+  INFO [c4fa6312] Running /usr/bin/env ln -s /var/www/proedu/shared/config/secrets.yml /var/www/proedu/releases/20180316135801/config/secrets.yml as deploy@35.231.126.217
+ DEBUG [c4fa6312] Command: /usr/bin/env ln -s /var/www/proedu/shared/config/secrets.yml /var/www/proedu/releases/20180316135801/config/secrets.yml
+  INFO [c4fa6312] Finished in 0.501 seconds with exit status 0 (successful).
+  INFO [75453444] Running /usr/bin/env mkdir -p /var/www/proedu/releases/20180316135801 /var/www/proedu/releases/20180316135801/tmp /var/www/proedu/releases/20180316135801/public as deploy@35.231.126.217
+ DEBUG [75453444] Command: /usr/bin/env mkdir -p /var/www/proedu/releases/20180316135801 /var/www/proedu/releases/20180316135801/tmp /var/www/proedu/releases/20180316135801/public
+  INFO [75453444] Finished in 0.498 seconds with exit status 0 (successful).
+ DEBUG [ce9abe54] Running [ -L /var/www/proedu/releases/20180316135801/log ] as deploy@35.231.126.217
+ DEBUG [ce9abe54] Command: [ -L /var/www/proedu/releases/20180316135801/log ]
+ DEBUG [ce9abe54] Finished in 0.513 seconds with exit status 1 (failed).
+ DEBUG [2021c794] Running [ -d /var/www/proedu/releases/20180316135801/log ] as deploy@35.231.126.217
+ DEBUG [2021c794] Command: [ -d /var/www/proedu/releases/20180316135801/log ]
+ DEBUG [2021c794] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [3b6e6034] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/log as deploy@35.231.126.217
+ DEBUG [3b6e6034] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/log
+  INFO [3b6e6034] Finished in 0.501 seconds with exit status 0 (successful).
+  INFO [12bd4790] Running /usr/bin/env ln -s /var/www/proedu/shared/log /var/www/proedu/releases/20180316135801/log as deploy@35.231.126.217
+ DEBUG [12bd4790] Command: /usr/bin/env ln -s /var/www/proedu/shared/log /var/www/proedu/releases/20180316135801/log
+  INFO [12bd4790] Finished in 0.498 seconds with exit status 0 (successful).
+ DEBUG [df5d8709] Running [ -L /var/www/proedu/releases/20180316135801/tmp/pids ] as deploy@35.231.126.217
+ DEBUG [df5d8709] Command: [ -L /var/www/proedu/releases/20180316135801/tmp/pids ]
+ DEBUG [df5d8709] Finished in 0.500 seconds with exit status 1 (failed).
+ DEBUG [97440e38] Running [ -d /var/www/proedu/releases/20180316135801/tmp/pids ] as deploy@35.231.126.217
+ DEBUG [97440e38] Command: [ -d /var/www/proedu/releases/20180316135801/tmp/pids ]
+ DEBUG [97440e38] Finished in 0.508 seconds with exit status 1 (failed).
+  INFO [90ae91ed] Running /usr/bin/env ln -s /var/www/proedu/shared/tmp/pids /var/www/proedu/releases/20180316135801/tmp/pids as deploy@35.231.126.217
+ DEBUG [90ae91ed] Command: /usr/bin/env ln -s /var/www/proedu/shared/tmp/pids /var/www/proedu/releases/20180316135801/tmp/pids
+  INFO [90ae91ed] Finished in 0.499 seconds with exit status 0 (successful).
+ DEBUG [0179ed8a] Running [ -L /var/www/proedu/releases/20180316135801/tmp/cache ] as deploy@35.231.126.217
+ DEBUG [0179ed8a] Command: [ -L /var/www/proedu/releases/20180316135801/tmp/cache ]
+ DEBUG [0179ed8a] Finished in 0.496 seconds with exit status 1 (failed).
+ DEBUG [94f6c0db] Running [ -d /var/www/proedu/releases/20180316135801/tmp/cache ] as deploy@35.231.126.217
+ DEBUG [94f6c0db] Command: [ -d /var/www/proedu/releases/20180316135801/tmp/cache ]
+ DEBUG [94f6c0db] Finished in 0.499 seconds with exit status 0 (successful).
+  INFO [61229d4e] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/tmp/cache as deploy@35.231.126.217
+ DEBUG [61229d4e] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/tmp/cache
+  INFO [61229d4e] Finished in 0.532 seconds with exit status 0 (successful).
+  INFO [5ca87272] Running /usr/bin/env ln -s /var/www/proedu/shared/tmp/cache /var/www/proedu/releases/20180316135801/tmp/cache as deploy@35.231.126.217
+ DEBUG [5ca87272] Command: /usr/bin/env ln -s /var/www/proedu/shared/tmp/cache /var/www/proedu/releases/20180316135801/tmp/cache
+  INFO [5ca87272] Finished in 0.490 seconds with exit status 0 (successful).
+ DEBUG [f31ae393] Running [ -L /var/www/proedu/releases/20180316135801/tmp/sockets ] as deploy@35.231.126.217
+ DEBUG [f31ae393] Command: [ -L /var/www/proedu/releases/20180316135801/tmp/sockets ]
+ DEBUG [f31ae393] Finished in 0.508 seconds with exit status 1 (failed).
+ DEBUG [ba56df11] Running [ -d /var/www/proedu/releases/20180316135801/tmp/sockets ] as deploy@35.231.126.217
+ DEBUG [ba56df11] Command: [ -d /var/www/proedu/releases/20180316135801/tmp/sockets ]
+ DEBUG [ba56df11] Finished in 0.492 seconds with exit status 1 (failed).
+  INFO [5700b10e] Running /usr/bin/env ln -s /var/www/proedu/shared/tmp/sockets /var/www/proedu/releases/20180316135801/tmp/sockets as deploy@35.231.126.217
+ DEBUG [5700b10e] Command: /usr/bin/env ln -s /var/www/proedu/shared/tmp/sockets /var/www/proedu/releases/20180316135801/tmp/sockets
+  INFO [5700b10e] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [f24803be] Running [ -L /var/www/proedu/releases/20180316135801/public/system ] as deploy@35.231.126.217
+ DEBUG [f24803be] Command: [ -L /var/www/proedu/releases/20180316135801/public/system ]
+ DEBUG [f24803be] Finished in 0.482 seconds with exit status 1 (failed).
+ DEBUG [5079775d] Running [ -d /var/www/proedu/releases/20180316135801/public/system ] as deploy@35.231.126.217
+ DEBUG [5079775d] Command: [ -d /var/www/proedu/releases/20180316135801/public/system ]
+ DEBUG [5079775d] Finished in 0.481 seconds with exit status 1 (failed).
+  INFO [a0089ac5] Running /usr/bin/env ln -s /var/www/proedu/shared/public/system /var/www/proedu/releases/20180316135801/public/system as deploy@35.231.126.217
+ DEBUG [a0089ac5] Command: /usr/bin/env ln -s /var/www/proedu/shared/public/system /var/www/proedu/releases/20180316135801/public/system
+  INFO [a0089ac5] Finished in 0.481 seconds with exit status 0 (successful).
+ DEBUG [4836c214] Running [ -L /var/www/proedu/releases/20180316135801/.bundle ] as deploy@35.231.126.217
+ DEBUG [4836c214] Command: [ -L /var/www/proedu/releases/20180316135801/.bundle ]
+ DEBUG [4836c214] Finished in 0.479 seconds with exit status 1 (failed).
+ DEBUG [2eb0b0fe] Running [ -d /var/www/proedu/releases/20180316135801/.bundle ] as deploy@35.231.126.217
+ DEBUG [2eb0b0fe] Command: [ -d /var/www/proedu/releases/20180316135801/.bundle ]
+ DEBUG [2eb0b0fe] Finished in 0.482 seconds with exit status 0 (successful).
+  INFO [9071191b] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/.bundle as deploy@35.231.126.217
+ DEBUG [9071191b] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/.bundle
+  INFO [9071191b] Finished in 0.486 seconds with exit status 0 (successful).
+  INFO [abcb93e9] Running /usr/bin/env ln -s /var/www/proedu/shared/.bundle /var/www/proedu/releases/20180316135801/.bundle as deploy@35.231.126.217
+ DEBUG [abcb93e9] Command: /usr/bin/env ln -s /var/www/proedu/shared/.bundle /var/www/proedu/releases/20180316135801/.bundle
+  INFO [abcb93e9] Finished in 0.482 seconds with exit status 0 (successful).
+ DEBUG [10fc78f1] Running [ -L /var/www/proedu/releases/20180316135801/public/uploads ] as deploy@35.231.126.217
+ DEBUG [10fc78f1] Command: [ -L /var/www/proedu/releases/20180316135801/public/uploads ]
+ DEBUG [10fc78f1] Finished in 0.480 seconds with exit status 1 (failed).
+ DEBUG [e8e445fa] Running [ -d /var/www/proedu/releases/20180316135801/public/uploads ] as deploy@35.231.126.217
+ DEBUG [e8e445fa] Command: [ -d /var/www/proedu/releases/20180316135801/public/uploads ]
+ DEBUG [e8e445fa] Finished in 0.477 seconds with exit status 0 (successful).
+  INFO [d49afe2b] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/public/uploads as deploy@35.231.126.217
+ DEBUG [d49afe2b] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/public/uploads
+  INFO [d49afe2b] Finished in 0.507 seconds with exit status 0 (successful).
+  INFO [f101b234] Running /usr/bin/env ln -s /var/www/proedu/shared/public/uploads /var/www/proedu/releases/20180316135801/public/uploads as deploy@35.231.126.217
+ DEBUG [f101b234] Command: /usr/bin/env ln -s /var/www/proedu/shared/public/uploads /var/www/proedu/releases/20180316135801/public/uploads
+  INFO [f101b234] Finished in 0.524 seconds with exit status 0 (successful).
+ DEBUG [60870bbe] Running [ -L /var/www/proedu/releases/20180316135801/public/assets ] as deploy@35.231.126.217
+ DEBUG [60870bbe] Command: [ -L /var/www/proedu/releases/20180316135801/public/assets ]
+ DEBUG [60870bbe] Finished in 0.764 seconds with exit status 1 (failed).
+ DEBUG [7e2963f3] Running [ -d /var/www/proedu/releases/20180316135801/public/assets ] as deploy@35.231.126.217
+ DEBUG [7e2963f3] Command: [ -d /var/www/proedu/releases/20180316135801/public/assets ]
+ DEBUG [7e2963f3] Finished in 0.491 seconds with exit status 0 (successful).
+  INFO [cd1f8769] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/public/assets as deploy@35.231.126.217
+ DEBUG [cd1f8769] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316135801/public/assets
+  INFO [cd1f8769] Finished in 0.776 seconds with exit status 0 (successful).
+  INFO [d55b3db7] Running /usr/bin/env ln -s /var/www/proedu/shared/public/assets /var/www/proedu/releases/20180316135801/public/assets as deploy@35.231.126.217
+ DEBUG [d55b3db7] Command: /usr/bin/env ln -s /var/www/proedu/shared/public/assets /var/www/proedu/releases/20180316135801/public/assets
+  INFO [d55b3db7] Finished in 0.482 seconds with exit status 0 (successful).
+ DEBUG [65bdf266] Running if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [65bdf266] Command: if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi
+ DEBUG [65bdf266] Finished in 0.562 seconds with exit status 0 (successful).
+ DEBUG [4d8d8ef4] Running ~/.rvm/bin/rvm default do bundle check --path /var/www/proedu/shared/bundle as deploy@35.231.126.217
+ DEBUG [4d8d8ef4] Command: cd /var/www/proedu/releases/20180316135801 && ~/.rvm/bin/rvm default do bundle check --path /var/www/proedu/shared/bundle
+ DEBUG [4d8d8ef4] 	Your Gemfile lists the gem meta_request (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [4d8d8ef4] 	The Gemfile's dependencies are satisfied
+ DEBUG [4d8d8ef4] Finished in 1.116 seconds with exit status 0 (successful).
+ DEBUG [a69ddb5b] Running if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [a69ddb5b] Command: if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi
+ DEBUG [a69ddb5b] Finished in 0.507 seconds with exit status 0 (successful).
+  INFO [b9257a06] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@35.231.126.217
+ DEBUG [b9257a06] Command: cd /var/www/proedu/releases/20180316135801 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [b9257a06] 	yarn install v1.3.2
+ DEBUG [b9257a06] 	[1/4] Resolving packages...
+ DEBUG [b9257a06] 	[2/4] Fetching packages...
+ DEBUG [b9257a06] 	[3/4] Linking dependencies...
+ DEBUG [b9257a06] 	[4/4] Building fresh packages...
+ DEBUG [b9257a06] 	Done in 1.35s.
+  INFO [b9257a06] Finished in 5.559 seconds with exit status 0 (successful).
+ DEBUG [eae259ff] Running if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [eae259ff] Command: if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi
+ DEBUG [eae259ff] Finished in 0.482 seconds with exit status 0 (successful).
+  INFO [f3f13fa0] Running /usr/bin/env mkdir -p /var/www/proedu/releases/20180316135801/assets_manifest_backup as deploy@35.231.126.217
+ DEBUG [f3f13fa0] Command: cd /var/www/proedu/releases/20180316135801 && /usr/bin/env mkdir -p /var/www/proedu/releases/20180316135801/assets_manifest_backup
+  INFO [f3f13fa0] Finished in 0.483 seconds with exit status 0 (successful).
+ DEBUG [edc22817] Running /usr/bin/env ls /var/www/proedu/releases/20180316135801/public/assets/.sprockets-manifest* as deploy@35.231.126.217
+ DEBUG [edc22817] Command: cd /var/www/proedu/releases/20180316135801 && /usr/bin/env ls /var/www/proedu/releases/20180316135801/public/assets/.sprockets-manifest*
+ DEBUG [edc22817] 	/var/www/proedu/releases/20180316135801/public/assets/.sprockets-manifest-e510aaffa4a365d1dd6b86490e6df487.json
+ DEBUG [edc22817] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [40b45e32] Running /usr/bin/env ls /var/www/proedu/releases/20180316135801/public/assets/.sprockets-manifest* as deploy@35.231.126.217
+ DEBUG [40b45e32] Command: cd /var/www/proedu/releases/20180316135801 && /usr/bin/env ls /var/www/proedu/releases/20180316135801/public/assets/.sprockets-manifest*
+ DEBUG [40b45e32] 	/var/www/proedu/releases/20180316135801/public/assets/.sprockets-manifest-e510aaffa4a365d1dd6b86490e6df487.json
+ DEBUG [40b45e32] Finished in 0.481 seconds with exit status 0 (successful).
+  INFO [f660ad36] Running /usr/bin/env cp /var/www/proedu/releases/20180316135801/public/assets/.sprockets-manifest-e510aaffa4a365d1dd6b86490e6df487.json /var/www/proedu/releases/20180316135801/assets_manifest_backup as deploy@35.231.126.217
+ DEBUG [f660ad36] Command: cd /var/www/proedu/releases/20180316135801 && /usr/bin/env cp /var/www/proedu/releases/20180316135801/public/assets/.sprockets-manifest-e510aaffa4a365d1dd6b86490e6df487.json /var/www/proedu/releases/20180316135801/assets_manifest_backup
+  INFO [f660ad36] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [f2cefc4c] Running if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [f2cefc4c] Command: if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi
+ DEBUG [f2cefc4c] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [2b485bcc] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@35.231.126.217
+ DEBUG [2b485bcc] Command: cd /var/www/proedu/releases/20180316135801 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [2b485bcc] Finished in 3.065 seconds with exit status 0 (successful).
+ DEBUG [e845c105] Running if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [e845c105] Command: if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi
+ DEBUG [e845c105] Finished in 0.501 seconds with exit status 0 (successful).
+  INFO [355a06f3] Running ~/.rvm/bin/rvm default do bundle exec rake db:seed as deploy@35.231.126.217
+ DEBUG [355a06f3] Command: cd /var/www/proedu/releases/20180316135801 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:seed )
+  INFO [355a06f3] Finished in 3.109 seconds with exit status 0 (successful).
+  INFO [81ba9cb2] Running /usr/bin/env ln -s /var/www/proedu/releases/20180316135801 /var/www/proedu/releases/current as deploy@35.231.126.217
+ DEBUG [81ba9cb2] Command: /usr/bin/env ln -s /var/www/proedu/releases/20180316135801 /var/www/proedu/releases/current
+  INFO [81ba9cb2] Finished in 0.481 seconds with exit status 0 (successful).
+  INFO [469c5afa] Running /usr/bin/env mv /var/www/proedu/releases/current /var/www/proedu as deploy@35.231.126.217
+ DEBUG [469c5afa] Command: /usr/bin/env mv /var/www/proedu/releases/current /var/www/proedu
+  INFO [469c5afa] Finished in 0.499 seconds with exit status 0 (successful).
+ DEBUG [f3f354b2] Running if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [f3f354b2] Command: if test ! -d /var/www/proedu/releases/20180316135801; then echo "Directory does not exist '/var/www/proedu/releases/20180316135801'" 1>&2; false; fi
+ DEBUG [f3f354b2] Finished in 0.511 seconds with exit status 0 (successful).
+ DEBUG [02685ca5] Running /usr/bin/env passenger -v as deploy@35.231.126.217
+ DEBUG [02685ca5] Command: cd /var/www/proedu/releases/20180316135801 && /usr/bin/env passenger -v
+ DEBUG [02685ca5] 	Phusion Passenger 5.2.0
+ DEBUG [02685ca5] 	
+ DEBUG [02685ca5] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO [71d0ad7f] Running /usr/bin/env passenger-config restart-app /var/www/proedu --ignore-app-not-running as deploy@35.231.126.217
+ DEBUG [71d0ad7f] Command: cd /var/www/proedu/releases/20180316135801 && /usr/bin/env passenger-config restart-app /var/www/proedu --ignore-app-not-running
+ DEBUG [71d0ad7f] 	Restarting /var/www/proedu/current (production)
+  INFO [71d0ad7f] Finished in 0.646 seconds with exit status 0 (successful).
+ DEBUG [1a812be2] Running /usr/bin/env ls -x /var/www/proedu/releases as deploy@35.231.126.217
+ DEBUG [1a812be2] Command: /usr/bin/env ls -x /var/www/proedu/releases
+ DEBUG [1a812be2] 	20180316130326	20180316131246	20180316134742	20180316135801
+ DEBUG [1a812be2] Finished in 0.490 seconds with exit status 0 (successful).
+ DEBUG [aae2954f] Running if test ! -d /var/www/proedu/releases; then echo "Directory does not exist '/var/www/proedu/releases'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [aae2954f] Command: if test ! -d /var/www/proedu/releases; then echo "Directory does not exist '/var/www/proedu/releases'" 1>&2; false; fi
+ DEBUG [aae2954f] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [b1115547] Running /usr/bin/env echo "Branch master (at 2e5f26288e1332205972b07f592bee4a7c8c4a7b) deployed as release 20180316135801 by marviorocha" >> /var/www/proedu/revisions.log as deploy@35.231.126.217
+ DEBUG [b1115547] Command: cd /var/www/proedu/releases && /usr/bin/env echo "Branch master (at 2e5f26288e1332205972b07f592bee4a7c8c4a7b) deployed as release 20180316135801 by marviorocha" >> /var/www/proedu/revisions.log
+  INFO [b1115547] Finished in 0.499 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-16 11:01:04 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ced456ee] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [ced456ee] Command: /usr/bin/env which passenger
+ DEBUG [ced456ee] 	/usr/bin/passenger
+ DEBUG [ced456ee] Finished in 5.362 seconds with exit status 0 (successful).
+ DEBUG [2e0d72c4] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [2e0d72c4] Command: [ -d ~/.rvm ]
+ DEBUG [2e0d72c4] Finished in 0.657 seconds with exit status 0 (successful).
+ DEBUG [2864f620] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [2864f620] Command: ~/.rvm/bin/rvm version
+ DEBUG [2864f620] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [2864f620] Finished in 0.640 seconds with exit status 0 (successful).
+ DEBUG [48120a2c] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [48120a2c] Command: ~/.rvm/bin/rvm current
+ DEBUG [48120a2c] 	ruby-2.5.0
+ DEBUG [48120a2c] Finished in 0.658 seconds with exit status 0 (successful).
+ DEBUG [db08065a] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [db08065a] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [db08065a] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [db08065a] Finished in 0.780 seconds with exit status 0 (successful).
+  INFO [8a1028bc] Running /usr/bin/env mkdir -p /tmp as deploy@35.231.126.217
+ DEBUG [8a1028bc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8a1028bc] Finished in 0.560 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-proedu-production-marviorocha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-proedu-production-marviorocha.sh 100.0%
+  INFO [ccb29bb0] Running /usr/bin/env chmod 700 /tmp/git-ssh-proedu-production-marviorocha.sh as deploy@35.231.126.217
+ DEBUG [ccb29bb0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-proedu-production-marviorocha.sh
+  INFO [ccb29bb0] Finished in 0.495 seconds with exit status 0 (successful).
+  INFO [0aef9efc] Running /usr/bin/env git ls-remote https://github.com/marviorocha/proedu.git HEAD as deploy@35.231.126.217
+ DEBUG [0aef9efc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git ls-remote https://github.com/marviorocha/proedu.git HEAD )
+ DEBUG [0aef9efc] 	2e5f26288e1332205972b07f592bee4a7c8c4a7b	HEAD
+  INFO [0aef9efc] Finished in 1.059 seconds with exit status 0 (successful).
+  INFO [b7fa1c9b] Running /usr/bin/env mkdir -p /var/www/proedu/shared /var/www/proedu/releases as deploy@35.231.126.217
+ DEBUG [b7fa1c9b] Command: /usr/bin/env mkdir -p /var/www/proedu/shared /var/www/proedu/releases
+  INFO [b7fa1c9b] Finished in 1.487 seconds with exit status 0 (successful).
+  INFO [93c95a84] Running /usr/bin/env mkdir -p /var/www/proedu/shared/log /var/www/proedu/shared/tmp/pids /var/www/proedu/shared/tmp/cache /var/www/proedu/shared/tmp/sockets /var/www/proedu/shared/public/system /var/www/proedu/shared/.bundle /var/www/proedu/shared/public/uploads /var/www/proedu/shared/public/assets as deploy@35.231.126.217
+ DEBUG [93c95a84] Command: /usr/bin/env mkdir -p /var/www/proedu/shared/log /var/www/proedu/shared/tmp/pids /var/www/proedu/shared/tmp/cache /var/www/proedu/shared/tmp/sockets /var/www/proedu/shared/public/system /var/www/proedu/shared/.bundle /var/www/proedu/shared/public/uploads /var/www/proedu/shared/public/assets
+  INFO [93c95a84] Finished in 0.557 seconds with exit status 0 (successful).
+  INFO [edd68303] Running /usr/bin/env mkdir -p /var/www/proedu/shared/config as deploy@35.231.126.217
+ DEBUG [edd68303] Command: /usr/bin/env mkdir -p /var/www/proedu/shared/config
+  INFO [edd68303] Finished in 0.640 seconds with exit status 0 (successful).
+ DEBUG [f8de06e8] Running [ -f /var/www/proedu/shared/config/database.yml ] as deploy@35.231.126.217
+ DEBUG [f8de06e8] Command: [ -f /var/www/proedu/shared/config/database.yml ]
+ DEBUG [f8de06e8] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [6fa7ba57] Running [ -f /var/www/proedu/shared/config/secrets.yml ] as deploy@35.231.126.217
+ DEBUG [6fa7ba57] Command: [ -f /var/www/proedu/shared/config/secrets.yml ]
+ DEBUG [6fa7ba57] Finished in 0.479 seconds with exit status 0 (successful).
+ DEBUG [69990618] Running [ -f /var/www/proedu/current/REVISION ] as deploy@35.231.126.217
+ DEBUG [69990618] Command: [ -f /var/www/proedu/current/REVISION ]
+ DEBUG [69990618] Finished in 0.477 seconds with exit status 0 (successful).
+ DEBUG [22e60c9d] Running /usr/bin/env cat /var/www/proedu/current/REVISION 2>/dev/null as deploy@35.231.126.217
+ DEBUG [22e60c9d] Command: /usr/bin/env cat /var/www/proedu/current/REVISION 2>/dev/null
+ DEBUG [22e60c9d] 	2e5f26288e1332205972b07f592bee4a7c8c4a7b
+ DEBUG [22e60c9d] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [cc353126] Running [ -f /var/www/proedu/repo/HEAD ] as deploy@35.231.126.217
+ DEBUG [cc353126] Command: [ -f /var/www/proedu/repo/HEAD ]
+ DEBUG [cc353126] Finished in 0.478 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/proedu/repo
+ DEBUG [2a00ee7b] Running if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [2a00ee7b] Command: if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi
+ DEBUG [2a00ee7b] Finished in 0.481 seconds with exit status 0 (successful).
+  INFO [9e7b5155] Running /usr/bin/env git remote set-url origin https://github.com/marviorocha/proedu.git as deploy@35.231.126.217
+ DEBUG [9e7b5155] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git remote set-url origin https://github.com/marviorocha/proedu.git )
+  INFO [9e7b5155] Finished in 0.971 seconds with exit status 0 (successful).
+  INFO [07098024] Running /usr/bin/env git remote update --prune as deploy@35.231.126.217
+ DEBUG [07098024] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [07098024] 	Fetching origin
+  INFO [07098024] Finished in 4.422 seconds with exit status 0 (successful).
+ DEBUG [a377414d] Running if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [a377414d] Command: if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi
+ DEBUG [a377414d] Finished in 6.584 seconds with exit status 0 (successful).
+  INFO [b5c407a3] Running /usr/bin/env mkdir -p /var/www/proedu/releases/20180316140121 as deploy@35.231.126.217
+ DEBUG [b5c407a3] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env mkdir -p /var/www/proedu/releases/20180316140121 )
+  INFO [b5c407a3] Finished in 1.081 seconds with exit status 0 (successful).
+  INFO [cfc4b87b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/proedu/releases/20180316140121 as deploy@35.231.126.217
+ DEBUG [cfc4b87b] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/proedu/releases/20180316140121 )
+  INFO [cfc4b87b] Finished in 1.147 seconds with exit status 0 (successful).
+ DEBUG [4ba93290] Running if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [4ba93290] Command: if test ! -d /var/www/proedu/repo; then echo "Directory does not exist '/var/www/proedu/repo'" 1>&2; false; fi
+ DEBUG [4ba93290] Finished in 0.820 seconds with exit status 0 (successful).
+ DEBUG [7bda6a3a] Running /usr/bin/env git rev-list --max-count=1 master as deploy@35.231.126.217
+ DEBUG [7bda6a3a] Command: cd /var/www/proedu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-proedu-production-marviorocha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [7bda6a3a] 	2e5f26288e1332205972b07f592bee4a7c8c4a7b
+ DEBUG [7bda6a3a] Finished in 0.482 seconds with exit status 0 (successful).
+ DEBUG [ae7d8086] Running if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [ae7d8086] Command: if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi
+ DEBUG [ae7d8086] Finished in 0.487 seconds with exit status 0 (successful).
+  INFO [6490dad0] Running /usr/bin/env echo "2e5f26288e1332205972b07f592bee4a7c8c4a7b" >> REVISION as deploy@35.231.126.217
+ DEBUG [6490dad0] Command: cd /var/www/proedu/releases/20180316140121 && /usr/bin/env echo "2e5f26288e1332205972b07f592bee4a7c8c4a7b" >> REVISION
+  INFO [6490dad0] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [ddad978b] Running /usr/bin/env mkdir -p /var/www/proedu/releases/20180316140121/config as deploy@35.231.126.217
+ DEBUG [ddad978b] Command: /usr/bin/env mkdir -p /var/www/proedu/releases/20180316140121/config
+  INFO [ddad978b] Finished in 0.496 seconds with exit status 0 (successful).
+ DEBUG [6350fbec] Running [ -L /var/www/proedu/releases/20180316140121/config/database.yml ] as deploy@35.231.126.217
+ DEBUG [6350fbec] Command: [ -L /var/www/proedu/releases/20180316140121/config/database.yml ]
+ DEBUG [6350fbec] Finished in 0.521 seconds with exit status 1 (failed).
+ DEBUG [0706a4cb] Running [ -f /var/www/proedu/releases/20180316140121/config/database.yml ] as deploy@35.231.126.217
+ DEBUG [0706a4cb] Command: [ -f /var/www/proedu/releases/20180316140121/config/database.yml ]
+ DEBUG [0706a4cb] Finished in 0.533 seconds with exit status 0 (successful).
+  INFO [e844315a] Running /usr/bin/env rm /var/www/proedu/releases/20180316140121/config/database.yml as deploy@35.231.126.217
+ DEBUG [e844315a] Command: /usr/bin/env rm /var/www/proedu/releases/20180316140121/config/database.yml
+  INFO [e844315a] Finished in 5.582 seconds with exit status 0 (successful).
+  INFO [cc10a2d8] Running /usr/bin/env ln -s /var/www/proedu/shared/config/database.yml /var/www/proedu/releases/20180316140121/config/database.yml as deploy@35.231.126.217
+ DEBUG [cc10a2d8] Command: /usr/bin/env ln -s /var/www/proedu/shared/config/database.yml /var/www/proedu/releases/20180316140121/config/database.yml
+  INFO [cc10a2d8] Finished in 1.991 seconds with exit status 0 (successful).
+ DEBUG [efb66b89] Running [ -L /var/www/proedu/releases/20180316140121/config/secrets.yml ] as deploy@35.231.126.217
+ DEBUG [efb66b89] Command: [ -L /var/www/proedu/releases/20180316140121/config/secrets.yml ]
+ DEBUG [efb66b89] Finished in 0.603 seconds with exit status 1 (failed).
+ DEBUG [e45ad2cc] Running [ -f /var/www/proedu/releases/20180316140121/config/secrets.yml ] as deploy@35.231.126.217
+ DEBUG [e45ad2cc] Command: [ -f /var/www/proedu/releases/20180316140121/config/secrets.yml ]
+ DEBUG [e45ad2cc] Finished in 0.487 seconds with exit status 0 (successful).
+  INFO [83dbceae] Running /usr/bin/env rm /var/www/proedu/releases/20180316140121/config/secrets.yml as deploy@35.231.126.217
+ DEBUG [83dbceae] Command: /usr/bin/env rm /var/www/proedu/releases/20180316140121/config/secrets.yml
+  INFO [83dbceae] Finished in 0.489 seconds with exit status 0 (successful).
+  INFO [5294f2d2] Running /usr/bin/env ln -s /var/www/proedu/shared/config/secrets.yml /var/www/proedu/releases/20180316140121/config/secrets.yml as deploy@35.231.126.217
+ DEBUG [5294f2d2] Command: /usr/bin/env ln -s /var/www/proedu/shared/config/secrets.yml /var/www/proedu/releases/20180316140121/config/secrets.yml
+  INFO [5294f2d2] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [f2f3189f] Running /usr/bin/env mkdir -p /var/www/proedu/releases/20180316140121 /var/www/proedu/releases/20180316140121/tmp /var/www/proedu/releases/20180316140121/public as deploy@35.231.126.217
+ DEBUG [f2f3189f] Command: /usr/bin/env mkdir -p /var/www/proedu/releases/20180316140121 /var/www/proedu/releases/20180316140121/tmp /var/www/proedu/releases/20180316140121/public
+  INFO [f2f3189f] Finished in 0.482 seconds with exit status 0 (successful).
+ DEBUG [6917148c] Running [ -L /var/www/proedu/releases/20180316140121/log ] as deploy@35.231.126.217
+ DEBUG [6917148c] Command: [ -L /var/www/proedu/releases/20180316140121/log ]
+ DEBUG [6917148c] Finished in 0.622 seconds with exit status 1 (failed).
+ DEBUG [231466ec] Running [ -d /var/www/proedu/releases/20180316140121/log ] as deploy@35.231.126.217
+ DEBUG [231466ec] Command: [ -d /var/www/proedu/releases/20180316140121/log ]
+ DEBUG [231466ec] Finished in 0.641 seconds with exit status 0 (successful).
+  INFO [88fd3f25] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/log as deploy@35.231.126.217
+ DEBUG [88fd3f25] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/log
+  INFO [88fd3f25] Finished in 1.320 seconds with exit status 0 (successful).
+  INFO [99d5167f] Running /usr/bin/env ln -s /var/www/proedu/shared/log /var/www/proedu/releases/20180316140121/log as deploy@35.231.126.217
+ DEBUG [99d5167f] Command: /usr/bin/env ln -s /var/www/proedu/shared/log /var/www/proedu/releases/20180316140121/log
+  INFO [99d5167f] Finished in 0.897 seconds with exit status 0 (successful).
+ DEBUG [cd75ee7b] Running [ -L /var/www/proedu/releases/20180316140121/tmp/pids ] as deploy@35.231.126.217
+ DEBUG [cd75ee7b] Command: [ -L /var/www/proedu/releases/20180316140121/tmp/pids ]
+ DEBUG [cd75ee7b] Finished in 0.482 seconds with exit status 1 (failed).
+ DEBUG [a44f20a1] Running [ -d /var/www/proedu/releases/20180316140121/tmp/pids ] as deploy@35.231.126.217
+ DEBUG [a44f20a1] Command: [ -d /var/www/proedu/releases/20180316140121/tmp/pids ]
+ DEBUG [a44f20a1] Finished in 0.480 seconds with exit status 1 (failed).
+  INFO [47d2dc1f] Running /usr/bin/env ln -s /var/www/proedu/shared/tmp/pids /var/www/proedu/releases/20180316140121/tmp/pids as deploy@35.231.126.217
+ DEBUG [47d2dc1f] Command: /usr/bin/env ln -s /var/www/proedu/shared/tmp/pids /var/www/proedu/releases/20180316140121/tmp/pids
+  INFO [47d2dc1f] Finished in 0.531 seconds with exit status 0 (successful).
+ DEBUG [e4620151] Running [ -L /var/www/proedu/releases/20180316140121/tmp/cache ] as deploy@35.231.126.217
+ DEBUG [e4620151] Command: [ -L /var/www/proedu/releases/20180316140121/tmp/cache ]
+ DEBUG [e4620151] Finished in 0.506 seconds with exit status 1 (failed).
+ DEBUG [2a4a3405] Running [ -d /var/www/proedu/releases/20180316140121/tmp/cache ] as deploy@35.231.126.217
+ DEBUG [2a4a3405] Command: [ -d /var/www/proedu/releases/20180316140121/tmp/cache ]
+ DEBUG [2a4a3405] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [f932d0a6] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/tmp/cache as deploy@35.231.126.217
+ DEBUG [f932d0a6] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/tmp/cache
+  INFO [f932d0a6] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [57c83a8c] Running /usr/bin/env ln -s /var/www/proedu/shared/tmp/cache /var/www/proedu/releases/20180316140121/tmp/cache as deploy@35.231.126.217
+ DEBUG [57c83a8c] Command: /usr/bin/env ln -s /var/www/proedu/shared/tmp/cache /var/www/proedu/releases/20180316140121/tmp/cache
+  INFO [57c83a8c] Finished in 0.492 seconds with exit status 0 (successful).
+ DEBUG [89ca7818] Running [ -L /var/www/proedu/releases/20180316140121/tmp/sockets ] as deploy@35.231.126.217
+ DEBUG [89ca7818] Command: [ -L /var/www/proedu/releases/20180316140121/tmp/sockets ]
+ DEBUG [89ca7818] Finished in 0.494 seconds with exit status 1 (failed).
+ DEBUG [0bae0aec] Running [ -d /var/www/proedu/releases/20180316140121/tmp/sockets ] as deploy@35.231.126.217
+ DEBUG [0bae0aec] Command: [ -d /var/www/proedu/releases/20180316140121/tmp/sockets ]
+ DEBUG [0bae0aec] Finished in 0.509 seconds with exit status 1 (failed).
+  INFO [58001288] Running /usr/bin/env ln -s /var/www/proedu/shared/tmp/sockets /var/www/proedu/releases/20180316140121/tmp/sockets as deploy@35.231.126.217
+ DEBUG [58001288] Command: /usr/bin/env ln -s /var/www/proedu/shared/tmp/sockets /var/www/proedu/releases/20180316140121/tmp/sockets
+  INFO [58001288] Finished in 0.510 seconds with exit status 0 (successful).
+ DEBUG [7c716c07] Running [ -L /var/www/proedu/releases/20180316140121/public/system ] as deploy@35.231.126.217
+ DEBUG [7c716c07] Command: [ -L /var/www/proedu/releases/20180316140121/public/system ]
+ DEBUG [7c716c07] Finished in 0.500 seconds with exit status 1 (failed).
+ DEBUG [5f279807] Running [ -d /var/www/proedu/releases/20180316140121/public/system ] as deploy@35.231.126.217
+ DEBUG [5f279807] Command: [ -d /var/www/proedu/releases/20180316140121/public/system ]
+ DEBUG [5f279807] Finished in 0.499 seconds with exit status 1 (failed).
+  INFO [6e466af1] Running /usr/bin/env ln -s /var/www/proedu/shared/public/system /var/www/proedu/releases/20180316140121/public/system as deploy@35.231.126.217
+ DEBUG [6e466af1] Command: /usr/bin/env ln -s /var/www/proedu/shared/public/system /var/www/proedu/releases/20180316140121/public/system
+  INFO [6e466af1] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [7d2468d7] Running [ -L /var/www/proedu/releases/20180316140121/.bundle ] as deploy@35.231.126.217
+ DEBUG [7d2468d7] Command: [ -L /var/www/proedu/releases/20180316140121/.bundle ]
+ DEBUG [7d2468d7] Finished in 0.499 seconds with exit status 1 (failed).
+ DEBUG [7facc045] Running [ -d /var/www/proedu/releases/20180316140121/.bundle ] as deploy@35.231.126.217
+ DEBUG [7facc045] Command: [ -d /var/www/proedu/releases/20180316140121/.bundle ]
+ DEBUG [7facc045] Finished in 0.502 seconds with exit status 0 (successful).
+  INFO [cbe4e7d8] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/.bundle as deploy@35.231.126.217
+ DEBUG [cbe4e7d8] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/.bundle
+  INFO [cbe4e7d8] Finished in 0.497 seconds with exit status 0 (successful).
+  INFO [aa83c53c] Running /usr/bin/env ln -s /var/www/proedu/shared/.bundle /var/www/proedu/releases/20180316140121/.bundle as deploy@35.231.126.217
+ DEBUG [aa83c53c] Command: /usr/bin/env ln -s /var/www/proedu/shared/.bundle /var/www/proedu/releases/20180316140121/.bundle
+  INFO [aa83c53c] Finished in 0.500 seconds with exit status 0 (successful).
+ DEBUG [755b4fe4] Running [ -L /var/www/proedu/releases/20180316140121/public/uploads ] as deploy@35.231.126.217
+ DEBUG [755b4fe4] Command: [ -L /var/www/proedu/releases/20180316140121/public/uploads ]
+ DEBUG [755b4fe4] Finished in 0.492 seconds with exit status 1 (failed).
+ DEBUG [9bd783ab] Running [ -d /var/www/proedu/releases/20180316140121/public/uploads ] as deploy@35.231.126.217
+ DEBUG [9bd783ab] Command: [ -d /var/www/proedu/releases/20180316140121/public/uploads ]
+ DEBUG [9bd783ab] Finished in 0.537 seconds with exit status 0 (successful).
+  INFO [89dec779] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/public/uploads as deploy@35.231.126.217
+ DEBUG [89dec779] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/public/uploads
+  INFO [89dec779] Finished in 0.532 seconds with exit status 0 (successful).
+  INFO [4c1d048e] Running /usr/bin/env ln -s /var/www/proedu/shared/public/uploads /var/www/proedu/releases/20180316140121/public/uploads as deploy@35.231.126.217
+ DEBUG [4c1d048e] Command: /usr/bin/env ln -s /var/www/proedu/shared/public/uploads /var/www/proedu/releases/20180316140121/public/uploads
+  INFO [4c1d048e] Finished in 0.499 seconds with exit status 0 (successful).
+ DEBUG [cdb1aca7] Running [ -L /var/www/proedu/releases/20180316140121/public/assets ] as deploy@35.231.126.217
+ DEBUG [cdb1aca7] Command: [ -L /var/www/proedu/releases/20180316140121/public/assets ]
+ DEBUG [cdb1aca7] Finished in 0.499 seconds with exit status 1 (failed).
+ DEBUG [6ae60907] Running [ -d /var/www/proedu/releases/20180316140121/public/assets ] as deploy@35.231.126.217
+ DEBUG [6ae60907] Command: [ -d /var/www/proedu/releases/20180316140121/public/assets ]
+ DEBUG [6ae60907] Finished in 0.528 seconds with exit status 0 (successful).
+  INFO [79f54849] Running /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/public/assets as deploy@35.231.126.217
+ DEBUG [79f54849] Command: /usr/bin/env rm -rf /var/www/proedu/releases/20180316140121/public/assets
+  INFO [79f54849] Finished in 0.661 seconds with exit status 0 (successful).
+  INFO [97ca3a4f] Running /usr/bin/env ln -s /var/www/proedu/shared/public/assets /var/www/proedu/releases/20180316140121/public/assets as deploy@35.231.126.217
+ DEBUG [97ca3a4f] Command: /usr/bin/env ln -s /var/www/proedu/shared/public/assets /var/www/proedu/releases/20180316140121/public/assets
+  INFO [97ca3a4f] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [62615cd5] Running if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [62615cd5] Command: if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi
+ DEBUG [62615cd5] Finished in 0.479 seconds with exit status 0 (successful).
+ DEBUG [83a03108] Running ~/.rvm/bin/rvm default do bundle check --path /var/www/proedu/shared/bundle as deploy@35.231.126.217
+ DEBUG [83a03108] Command: cd /var/www/proedu/releases/20180316140121 && ~/.rvm/bin/rvm default do bundle check --path /var/www/proedu/shared/bundle
+ DEBUG [83a03108] 	Your Gemfile lists the gem meta_request (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [83a03108] 	The Gemfile's dependencies are satisfied
+ DEBUG [83a03108] Finished in 1.077 seconds with exit status 0 (successful).
+ DEBUG [a4447d09] Running if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [a4447d09] Command: if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi
+ DEBUG [a4447d09] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [aa549c00] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@35.231.126.217
+ DEBUG [aa549c00] Command: cd /var/www/proedu/releases/20180316140121 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [aa549c00] 	yarn install v1.3.2
+ DEBUG [aa549c00] 	[1/4] Resolving packages...
+ DEBUG [aa549c00] 	[2/4] Fetching packages...
+ DEBUG [aa549c00] 	[3/4] Linking dependencies...
+ DEBUG [aa549c00] 	[4/4] Building fresh packages...
+ DEBUG [aa549c00] 	Done in 1.32s.
+  INFO [aa549c00] Finished in 12.892 seconds with exit status 0 (successful).
+ DEBUG [dc0d464a] Running if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [dc0d464a] Command: if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi
+ DEBUG [dc0d464a] Finished in 1.108 seconds with exit status 0 (successful).
+  INFO [8d38766f] Running /usr/bin/env mkdir -p /var/www/proedu/releases/20180316140121/assets_manifest_backup as deploy@35.231.126.217
+ DEBUG [8d38766f] Command: cd /var/www/proedu/releases/20180316140121 && /usr/bin/env mkdir -p /var/www/proedu/releases/20180316140121/assets_manifest_backup
+  INFO [8d38766f] Finished in 1.267 seconds with exit status 0 (successful).
+ DEBUG [f4d03275] Running /usr/bin/env ls /var/www/proedu/releases/20180316140121/public/assets/.sprockets-manifest* as deploy@35.231.126.217
+ DEBUG [f4d03275] Command: cd /var/www/proedu/releases/20180316140121 && /usr/bin/env ls /var/www/proedu/releases/20180316140121/public/assets/.sprockets-manifest*
+ DEBUG [f4d03275] 	/var/www/proedu/releases/20180316140121/public/assets/.sprockets-manifest-e510aaffa4a365d1dd6b86490e6df487.json
+ DEBUG [f4d03275] Finished in 0.915 seconds with exit status 0 (successful).
+ DEBUG [07d8fbd9] Running /usr/bin/env ls /var/www/proedu/releases/20180316140121/public/assets/.sprockets-manifest* as deploy@35.231.126.217
+ DEBUG [07d8fbd9] Command: cd /var/www/proedu/releases/20180316140121 && /usr/bin/env ls /var/www/proedu/releases/20180316140121/public/assets/.sprockets-manifest*
+ DEBUG [07d8fbd9] 	/var/www/proedu/releases/20180316140121/public/assets/.sprockets-manifest-e510aaffa4a365d1dd6b86490e6df487.json
+ DEBUG [07d8fbd9] Finished in 0.992 seconds with exit status 0 (successful).
+  INFO [a4387183] Running /usr/bin/env cp /var/www/proedu/releases/20180316140121/public/assets/.sprockets-manifest-e510aaffa4a365d1dd6b86490e6df487.json /var/www/proedu/releases/20180316140121/assets_manifest_backup as deploy@35.231.126.217
+ DEBUG [a4387183] Command: cd /var/www/proedu/releases/20180316140121 && /usr/bin/env cp /var/www/proedu/releases/20180316140121/public/assets/.sprockets-manifest-e510aaffa4a365d1dd6b86490e6df487.json /var/www/proedu/releases/20180316140121/assets_manifest_backup
+  INFO [a4387183] Finished in 11.140 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [62bd3ec6] Running if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [62bd3ec6] Command: if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi
+ DEBUG [62bd3ec6] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [e2e87b06] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@35.231.126.217
+ DEBUG [e2e87b06] Command: cd /var/www/proedu/releases/20180316140121 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [e2e87b06] Finished in 3.449 seconds with exit status 0 (successful).
+ DEBUG [63595523] Running if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [63595523] Command: if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi
+ DEBUG [63595523] Finished in 8.258 seconds with exit status 0 (successful).
+  INFO [181ee550] Running ~/.rvm/bin/rvm default do bundle exec rake db:seed as deploy@35.231.126.217
+ DEBUG [181ee550] Command: cd /var/www/proedu/releases/20180316140121 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:seed )
+  INFO [181ee550] Finished in 7.799 seconds with exit status 0 (successful).
+  INFO [ea00f972] Running /usr/bin/env ln -s /var/www/proedu/releases/20180316140121 /var/www/proedu/releases/current as deploy@35.231.126.217
+ DEBUG [ea00f972] Command: /usr/bin/env ln -s /var/www/proedu/releases/20180316140121 /var/www/proedu/releases/current
+  INFO [ea00f972] Finished in 0.997 seconds with exit status 0 (successful).
+  INFO [ebbf1afc] Running /usr/bin/env mv /var/www/proedu/releases/current /var/www/proedu as deploy@35.231.126.217
+ DEBUG [ebbf1afc] Command: /usr/bin/env mv /var/www/proedu/releases/current /var/www/proedu
+  INFO [ebbf1afc] Finished in 10.871 seconds with exit status 0 (successful).
+ DEBUG [45862560] Running if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [45862560] Command: if test ! -d /var/www/proedu/releases/20180316140121; then echo "Directory does not exist '/var/www/proedu/releases/20180316140121'" 1>&2; false; fi
+ DEBUG [45862560] Finished in 1.668 seconds with exit status 0 (successful).
+ DEBUG [50bd38fd] Running /usr/bin/env passenger -v as deploy@35.231.126.217
+ DEBUG [50bd38fd] Command: cd /var/www/proedu/releases/20180316140121 && /usr/bin/env passenger -v
+ DEBUG [50bd38fd] 	Phusion Passenger 5.2.0
+ DEBUG [50bd38fd] 	
+ DEBUG [50bd38fd] Finished in 0.986 seconds with exit status 0 (successful).
+  INFO [08e1f8da] Running /usr/bin/env passenger-config restart-app /var/www/proedu --ignore-app-not-running as deploy@35.231.126.217
+ DEBUG [08e1f8da] Command: cd /var/www/proedu/releases/20180316140121 && /usr/bin/env passenger-config restart-app /var/www/proedu --ignore-app-not-running
+ DEBUG [08e1f8da] 	Restarting /var/www/proedu/current (production)
+  INFO [08e1f8da] Finished in 1.036 seconds with exit status 0 (successful).
+ DEBUG [92882ec2] Running /usr/bin/env ls -x /var/www/proedu/releases as deploy@35.231.126.217
+ DEBUG [92882ec2] Command: /usr/bin/env ls -x /var/www/proedu/releases
+ DEBUG [92882ec2] 	20180316130326	20180316131246	20180316134742	20180316135801	20180316140121
+ DEBUG [92882ec2] Finished in 0.719 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 5 deployed releases on 35.231.126.217
+ DEBUG [10bfa475] Running [ -d /var/www/proedu/current ] as deploy@35.231.126.217
+ DEBUG [10bfa475] Command: [ -d /var/www/proedu/current ]
+ DEBUG [10bfa475] Finished in 0.784 seconds with exit status 0 (successful).
+ DEBUG [49381853] Running /usr/bin/env readlink /var/www/proedu/current as deploy@35.231.126.217
+ DEBUG [49381853] Command: /usr/bin/env readlink /var/www/proedu/current
+ DEBUG [49381853] 	/var/www/proedu/releases/20180316140121
+ DEBUG [49381853] Finished in 0.514 seconds with exit status 0 (successful).
+  INFO No old releases (keeping newest 5) on 35.231.126.217
+ DEBUG [833f9aec] Running if test ! -d /var/www/proedu/releases; then echo "Directory does not exist '/var/www/proedu/releases'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [833f9aec] Command: if test ! -d /var/www/proedu/releases; then echo "Directory does not exist '/var/www/proedu/releases'" 1>&2; false; fi
+ DEBUG [833f9aec] Finished in 0.529 seconds with exit status 0 (successful).
+  INFO [c6de8c97] Running /usr/bin/env echo "Branch master (at 2e5f26288e1332205972b07f592bee4a7c8c4a7b) deployed as release 20180316140121 by marviorocha" >> /var/www/proedu/revisions.log as deploy@35.231.126.217
+ DEBUG [c6de8c97] Command: cd /var/www/proedu/releases && /usr/bin/env echo "Branch master (at 2e5f26288e1332205972b07f592bee4a7c8c4a7b) deployed as release 20180316140121 by marviorocha" >> /var/www/proedu/revisions.log
+  INFO [c6de8c97] Finished in 0.500 seconds with exit status 0 (successful).
