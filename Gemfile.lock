@@ -295,7 +295,7 @@ DEPENDENCIES
   mini_magick
   notify
   onesignal (~> 0.3.0)
-  pg (~> 1.0)
+  pg
   popper_js
   puma (~> 3.7)
   rails (~> 5.1.5)
