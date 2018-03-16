@@ -5,8 +5,6 @@ include OnesignalHelper
   # GET /contents.json
   def index
 
-
- 
     @contents = Content.all
 
   end

@@ -38,7 +38,7 @@
       <div class="form-group col-md-4">
         <label class="form-control-label"><%= f.label "Publicar em:" %></label>
 
-        <%= f.datetime_field(:publish_on, class: 'form-control') %>
+        <%= f.datetime_field(:publish_on, min: Date.today,  class: 'form-control') %>
       </div>
 
 
