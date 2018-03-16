@@ -102,7 +102,6 @@ group :development do
   gem 'meta_request'
 
   #gem for debugger
-  gem 'active_record_query_trace'
   gem 'better_errors'
 
 
