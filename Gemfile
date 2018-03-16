@@ -104,12 +104,12 @@ group :development do
   #gem for debugger
   gem 'active_record_query_trace'
   gem 'better_errors'
-
+ 
 
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.21.0'
   gem 'rails_12factor'
 end
 

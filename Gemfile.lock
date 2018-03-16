@@ -159,7 +159,7 @@ GEM
     notify (0.5.2)
     onesignal (0.3.0)
     orm_adapter (0.5.0)
-    pg (1.0.0)
+    pg (0.21.0)
     popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.3)
@@ -295,7 +295,7 @@ DEPENDENCIES
   mini_magick
   notify
   onesignal (~> 0.3.0)
-  pg
+  pg (~> 0.21.0)
   popper_js
   puma (~> 3.7)
   rails (~> 5.1.5)
