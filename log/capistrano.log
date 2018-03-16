@@ -5094,3 +5094,75 @@ Caused by:
  DEBUG [f2bdab14] Command: ~/.rvm/bin/rvm default do ruby --version
  DEBUG [f2bdab14] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
  DEBUG [f2bdab14] Finished in 0.808 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-16 00:12:47 -0300 cap production bundle:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9dc9e9ee] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [9dc9e9ee] Command: /usr/bin/env which passenger
+ DEBUG [9dc9e9ee] 	/usr/bin/passenger
+ DEBUG [9dc9e9ee] Finished in 7.872 seconds with exit status 0 (successful).
+ DEBUG [cb89bc23] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [cb89bc23] Command: [ -d ~/.rvm ]
+ DEBUG [cb89bc23] Finished in 0.520 seconds with exit status 0 (successful).
+ DEBUG [c500a331] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [c500a331] Command: ~/.rvm/bin/rvm version
+ DEBUG [c500a331] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [c500a331] Finished in 0.691 seconds with exit status 0 (successful).
+ DEBUG [ef150611] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [ef150611] Command: ~/.rvm/bin/rvm current
+ DEBUG [ef150611] 	ruby-2.5.0
+ DEBUG [ef150611] Finished in 0.702 seconds with exit status 0 (successful).
+ DEBUG [e991935c] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [e991935c] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [e991935c] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [e991935c] Finished in 0.767 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-16 00:13:45 -0300 cap production bundler:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d491edf1] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [d491edf1] Command: /usr/bin/env which passenger
+ DEBUG [d491edf1] 	/usr/bin/passenger
+ DEBUG [d491edf1] Finished in 4.635 seconds with exit status 0 (successful).
+ DEBUG [396bc8b0] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [396bc8b0] Command: [ -d ~/.rvm ]
+ DEBUG [396bc8b0] Finished in 0.481 seconds with exit status 0 (successful).
+ DEBUG [495c373e] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [495c373e] Command: ~/.rvm/bin/rvm version
+ DEBUG [495c373e] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [495c373e] Finished in 0.648 seconds with exit status 0 (successful).
+ DEBUG [954f9de2] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [954f9de2] Command: ~/.rvm/bin/rvm current
+ DEBUG [954f9de2] 	ruby-2.5.0
+ DEBUG [954f9de2] Finished in 0.672 seconds with exit status 0 (successful).
+ DEBUG [b11258df] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [b11258df] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [b11258df] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [b11258df] Finished in 0.765 seconds with exit status 0 (successful).
+ DEBUG [a78011d0] Running if test ! -d /var/www/proedu/current; then echo "Directory does not exist '/var/www/proedu/current'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [a78011d0] Command: if test ! -d /var/www/proedu/current; then echo "Directory does not exist '/var/www/proedu/current'" 1>&2; false; fi
+ DEBUG [a78011d0] 	Directory does not exist '/var/www/proedu/current'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-16 00:13:59 -0300 cap production bundler:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a066a16c] Running /usr/bin/env which passenger as deploy@35.231.126.217
+ DEBUG [a066a16c] Command: /usr/bin/env which passenger
+ DEBUG [a066a16c] 	/usr/bin/passenger
+ DEBUG [a066a16c] Finished in 5.702 seconds with exit status 0 (successful).
+ DEBUG [2a43b180] Running [ -d ~/.rvm ] as deploy@35.231.126.217
+ DEBUG [2a43b180] Command: [ -d ~/.rvm ]
+ DEBUG [2a43b180] Finished in 0.470 seconds with exit status 0 (successful).
+ DEBUG [d76cb2d9] Running ~/.rvm/bin/rvm version as deploy@35.231.126.217
+ DEBUG [d76cb2d9] Command: ~/.rvm/bin/rvm version
+ DEBUG [d76cb2d9] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [d76cb2d9] Finished in 0.634 seconds with exit status 0 (successful).
+ DEBUG [abe1e75b] Running ~/.rvm/bin/rvm current as deploy@35.231.126.217
+ DEBUG [abe1e75b] Command: ~/.rvm/bin/rvm current
+ DEBUG [abe1e75b] 	ruby-2.5.0
+ DEBUG [abe1e75b] Finished in 0.626 seconds with exit status 0 (successful).
+ DEBUG [2286e9ec] Running ~/.rvm/bin/rvm default do ruby --version as deploy@35.231.126.217
+ DEBUG [2286e9ec] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [2286e9ec] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [2286e9ec] Finished in 0.846 seconds with exit status 0 (successful).
+ DEBUG [3bb9b7de] Running if test ! -d /var/www/proedu/current; then echo "Directory does not exist '/var/www/proedu/current'" 1>&2; false; fi as deploy@35.231.126.217
+ DEBUG [3bb9b7de] Command: if test ! -d /var/www/proedu/current; then echo "Directory does not exist '/var/www/proedu/current'" 1>&2; false; fi
+ DEBUG [3bb9b7de] 	Directory does not exist '/var/www/proedu/current'
