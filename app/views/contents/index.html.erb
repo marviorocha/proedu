@@ -65,8 +65,7 @@
 
                 <td> A lição será publicado em: <%= content.days %> dia(s) depois <br>
                   e foi agendado
-                  <%= schendule = content.publish_on
-                                          schendule.strftime('%m/%d/%Y às %H:%M %p') %></td>
+                  <%= content.publish_on.strftime('%m/%d/%Y às %H:%M %p') %></td>
 
                 <td>
 
