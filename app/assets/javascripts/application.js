@@ -10,10 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require jquery3
-
 //= require trumbowyg/trumbowyg
 //= require trombowyg
-//= require vendor/jquery-validation/jquery.validate.min
 //= require vendor/popper.js/umd/popper.min
 //= require datatables.min
 //= require vendor/jquery.cookie/jquery.cookie
@@ -24,9 +22,9 @@
 //= require clipboard
 //= require front
 //= require jquery.turbolinks
+//= require vendor/jquery-validation/jquery.validate.min
 //= require rails-ujs
 //= require plyr
-//= require popper
 //= require bootstrap-sprockets
 //= require turbolinks
 
