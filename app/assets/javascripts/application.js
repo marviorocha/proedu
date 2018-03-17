@@ -9,7 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//= require jquery3
+//= require jquery
 //= require trumbowyg/trumbowyg
 //= require trombowyg
 //= require vendor/popper.js/umd/popper.min
