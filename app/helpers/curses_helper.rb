@@ -1,18 +1,34 @@
 module CursesHelper
 
-  def OneSignalcreate(title, picture, content)
 
-  client = OneSignal::Client.new(auth_token: 'YmFmNjdlM2QtY2RjNS00MjlhLWIxYTItYTkxMTYxYWJhNTIy', app_id: 'f25ce7ac-9737-4b46-af9a-42c20444cf12')
 
-  params = {"app_id" => "f25ce7ac-9737-4b46-af9a-42c20444cf12",
-            "headings" => {"en"=> title},
-            "chrome_big_picture" => picture,
-            "contents" => {"en" => content},
-            "included_segments" => ["All"]}
+def board
+  @curses = current_user.curse
+  @days_for = Content.all
+  @days_for.each do |data|
+  @current_time = Time.zone.now
+  @inscricaodate = current_user.created_at - 1.day
+  @userday = (@current_time.to_i - @inscricaodate.to_i).to_i / data.days.days
+  @day_to_publish =  Content.where('days >= ?',@userday)
+  @contents =  Content.where("days <= ?",@userday).where("publish_on <= ?",@current_time )
+  @unpublish = Content.unpublish(@current_time)
+  @noficar =  Content.where("publish_on >= ?",@current_time ).limit("1")
+  @progress = Progress.statuses[:archived] 
+  # End each
+end
 
-  client.notifications.create(params)
+  # # Send OneSignal
+  # @noficar.each do |notif|
+  # @date_now = current_user.created_at + notif.days.days
+  # if(@date_now == Time.zone.now)
+  # notification(notif.title, "https://images.cdn2.stockunlimited.net/clipart/alarm-icon_2005848.jpg",
+  # notif.body.truncate(80,  omission: '... (Veja mais...)'), Time.zone.now + 2.hour)
+  # UserMailer.new_publish(current_user).deliver_now
+  # end
+  # end
+  #
+end
 
-  end
 
 
 end

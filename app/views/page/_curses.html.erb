@@ -1,0 +1,46 @@
+
+<section class="projects no-padding-top">
+            <div class="container-fluid">
+
+              <h2><%= pluralize(@curses.size, "Meu Curso") %></h2>
+
+<% @curses.each do |curse| %>
+              <!-- Project-->
+
+              <div class="project">
+
+                <div class="row bg-white has-shadow">
+                  <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
+                            <a style="text-decoration: none;" href="<%= curse_home_url(curse) %>">
+                    <div class="project-title d-flex align-items-center">
+
+                      <div class="image has-shadow">
+                          <%= image_tag(curse.picture_url(:thumb),size: "55x55") if curse.picture? %>
+                         </div>
+                      <div class="text">
+                        <h3 class="h4"><%= curse.title %></h3><small><%= curse.descricao %></small>
+                      </div>
+                    </div>
+                          </a>
+                    <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
+                  </div>
+                  <div class="right-col col-lg-6 d-flex align-items-center">
+
+                    <div class="comments">Total de Lição: <%= @contents.size %>   </div>
+                     <div class="comments">Progresso do curso: 100%</div>
+                    <div class="project-progress">
+                      <div class="progress">
+
+                        <div role="progressbar" style="width: 45%; height: 9px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Project-->
+<% end %>
+
+            </div>
+          </section>

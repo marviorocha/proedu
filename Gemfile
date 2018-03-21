@@ -102,7 +102,7 @@ group :development do
   gem 'meta_request'
 
   #gem for debugger
-  gem 'better_errors'
+  # gem 'better_errors'
 
 
 end

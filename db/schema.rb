@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305210652) do
+ActiveRecord::Schema.define(version: 20180321125836) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -55,6 +55,16 @@ ActiveRecord::Schema.define(version: 20180305210652) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_messagers_on_user_id"
+  end
+
+  create_table "progresses", force: :cascade do |t|
+    t.integer "progress", default: 0
+    t.integer "user_id"
+    t.integer "content_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["content_id"], name: "index_progresses_on_content_id"
+    t.index ["user_id"], name: "index_progresses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

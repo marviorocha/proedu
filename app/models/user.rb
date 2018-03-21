@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :messager
   has_many :content
+  has_many :progress
   has_and_belongs_to_many :curse
 
   devise :database_authenticatable, :registerable,

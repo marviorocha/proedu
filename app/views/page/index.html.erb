@@ -1,0 +1,23 @@
+<%= content_for(:title, "Olá #{current_user.name}! ".titleize) %>
+
+<!-- Page Header-->
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom"><%= content_for(:title) %> </h2>
+  </div>
+</header>
+
+
+<p></p>
+<!-- Admin dashboard  -->
+<% if current_user.superadmin_role? %>
+
+<%= render "page/admindash" %>
+
+<% end %>
+
+<% if current_user.studant_role? %>
+
+<%= render "page/curses" %>
+
+<% end %>

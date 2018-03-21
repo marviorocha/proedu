@@ -2,9 +2,9 @@
 
 <!-- Page Header-->
 <header class="page-header">
-  <div class="container-fluid">
-    <h2 class="no-margin-bottom">Criar um novo curso</h2>
-  </div>
+<div class="container-fluid">
+<h2 class="no-margin-bottom">Criar um novo curso</h2>
+</div>
 </header>
 
 <%= render "layouts/brandcrumb" %>
@@ -12,71 +12,72 @@
 <div class="container-fluid">
 
 
-  <div class="card">
+<div class="card">
 
-    <h4 class="card-header d-flex align-items-center">Curso</h4>
-    <div class="card-body">
+<h4 class="card-header d-flex align-items-center">Curso</h4>
+<div class="card-body">
 
-      <p><%= link_to fa_icon('plus', text: 'Criar Novo'), new_curse_path, class: 'float-right btn btn-primary' %>
+<p><%= link_to fa_icon('plus', text: 'Criar Novo'), new_curse_path, class: 'float-right btn btn-primary' %>
 
-        <div class="table-responsive">
-          <p></p>
-          <table id="datatable" class="display table" cellspacing="0" >
-
-
-            <thead>
-
-              <tr>
-                <th>#</th>
-                <th>Thumb:</th>
-                <th>Titulo:</th>
-                <th>Descrição:</th>
-                <th cellspacing='5'></th>
-              </tr>
-            </thead>
-            <tfoot>
-            <tr>
-              <th>#</th>
-              <th>Thumb:</th>
-              <th>Titulo</th>
-              <th>Descrição</th>
-              <th></th>
-            </tr>
-        </tfoot>
-            <tbody>
-              <% @curses.each do |curses| %>
-
-              <tr>
-                <td><%= curses.id %></td>
-                <td><%= image_tag(curses.picture_url(:thumb)) if curses.picture? %></td>
-                <td><%= curses.title %></td>
-                <td><%= truncate(curses.descricao, length:50 ,omission: '... (mais)') %> <br>
-               
-
-                 </td>
-
-                <td>
+<div class="table-responsive">
+<p></p>
+<table id="datatable" class="display table" cellspacing="0" >
 
 
-                  <%= link_to fa_icon('eye', text:''), curses , class: 'btn btn-outline-primary btn-sm' %>
-                  <%= link_to fa_icon('pencil', text:'Editar'), edit_curse_path(curses), class: 'btn btn-outline-info btn-sm' %>
-                  <%= link_to fa_icon('trash', text: ''), curses ,class: 'btn btn-outline-danger btn-sm',
-                   method: :delete, data: { confirm: 'Are you sure?' } %>
-                   <button class="btn btn-sm btn-outline-info"   data-placement="bottom" title="Link Copiado!"
-                   data-clipboard-text="<%= new_user_registration_url %>/?curses=<%=
-                    hashids = Hashids.new("curse_url", 8)
-                    hash = hashids.encode(curses.id)
-                    %>">Copiar URL Inscrição</button>
-                 </td>
+<thead>
 
-                </td>
+  <tr>
+    <th>Lição</th>
+    <th>Thumb:</th>
+    <th>Titulo:</th>
+
+    <th cellspacing='5'></th>
+  </tr>
+</thead>
+<tfoot>
+  <tr>
+    <th>Lição</th>
+    <th>Thumb:</th>
+    <th>Titulo</th>
+
+    <th></th>
+  </tr>
+</tfoot>
+<tbody>
+  <% @curses.each do |curses| %>
+
+  <tr>
+    <td> <%= link_to fa_icon('folder', text: 'Lição'),
+    contents_path(curse: curses), class: 'float-right btn ' %></td>
+    <td><%= image_tag(curses.picture_url(:thumb)) if curses.picture? %></td>
+
+    <td><%= truncate(curses.descricao, length:50 ,omission: '... (mais)') %> <br>
 
 
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
+    </td>
+
+    <td>
+
+
+      <%= link_to fa_icon('eye', text:''), curses , class: 'btn btn-outline-primary btn-sm' %>
+      <%= link_to fa_icon('pencil', text:'Editar'), edit_curse_path(curses), class: 'btn btn-outline-info btn-sm' %>
+      <%= link_to fa_icon('trash', text: ''), curses ,class: 'btn btn-outline-danger btn-sm',
+      method: :delete, data: { confirm: 'Are you sure?' } %>
+      <button class="btn btn-sm btn-outline-info"   data-placement="bottom" title="Link Copiado!"
+      data-clipboard-text="<%= new_user_registration_url %>/?curses=<%=
+      hashids = Hashids.new("curse_url", 8)
+      hash = hashids.encode(curses.id)
+      %>">Copiar URL Inscrição</button>
+    </td>
+
+  </td>
+
+
+</tr>
+<% end %>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>

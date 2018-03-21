@@ -58,8 +58,8 @@
                 <td>
 
 
-           
-                  <%= link_to fa_icon('envelop', text:'Enviar Mensagem'), edit_user_path(user), class: 'btn btn-outline-info btn-sm' %>
+
+                 <%= link_to fa_icon('envelop', text:'Enviar Mensagem'), new_messager_path(user: user), class: 'btn btn-outline-info btn-sm' %>
                   <%= link_to fa_icon('trash', text: ''), user ,class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
                 </td>

@@ -1,5 +1,6 @@
 class CursesController < ApplicationController
 include OnesignalHelper
+include CursesHelper
 before_action :set_curse, only: [:destroy, :show, :edit, :update, :home ]
 
 def index
@@ -13,6 +14,9 @@ def new
 end
 
 def show
+
+
+
 end
 
 def list
@@ -21,45 +25,8 @@ def list
 end
 
 def home
-@curses = current_user.curse
 
-
-@days_for = Content.all
-
-@days_for.each do |data|
-
-@current_time = Time.zone.now
-@inscricaodate = current_user.created_at - 1.day
-@userday = (@current_time.to_i - @inscricaodate.to_i).to_i / data.days.days
-
-@day_to_publish =  Content.where('days >= ?',@userday)
-
-@contents =  Content.where("days <= ?",@userday).where("publish_on <= ?",@current_time )
-@unpublish = Content.unpublish(@current_time)
-@noficar =  Content.where("publish_on >= ?",@current_time ).limit("1")
-
-# End each
-end
-
-# Send OneSignal
-@noficar.each do |notif|
-
-@date_now = current_user.created_at + notif.days.days
-
-if(@date_now == Time.zone.now)
-notification(notif.title, "https://images.cdn2.stockunlimited.net/clipart/alarm-icon_2005848.jpg",
-notif.body.truncate(80,  omission: '... (Veja mais...)'), Time.zone.now + 2.hour)
-UserMailer.new_publish(current_user).deliver_now
-end
-
-end
-
-
-
-
-
-
-
+board
 
 end
 
@@ -116,6 +83,7 @@ end
 
 def set_params
   params.require(:curse).permit(:title, :descricao, :picture, :category_id)
+  params.require(:progress).permit(:user_id, :content_id, :progress)
 end
 
 

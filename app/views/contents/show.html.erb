@@ -44,12 +44,32 @@
 
     <p>
 
+      <div class="d-flex justify-content-center">
+
+        <% if current_user.studant_role?  %>
+        <%# link_to fa_icon('chevron-left', text: 'Voltar'), contents_path, class:"btn btn-sm btn-outline-secondary" %>
+
+       <%= form_for @progress do |f| %>
+
+         <%= f.hidden_field :content_id, value: params[:id] %>
+         <%= f.hidden_field :user_id, value: current_user.id   %>
+         <%= f.hidden_field :progress, value: 1 %>
+          <%= f.submit ("Marcar como concluída").html_safe, class: "btn  btn-outline-info"  %>
+       <% end %>
+
+
+        <% end %>
+
+      </div>
     </p>
 
 <p>
+
   <strong>Conteúdo:</strong>
   <%= @content.body.html_safe %>
 </p>
+
+
 
 <p>
 
@@ -68,10 +88,6 @@
 </div>
 
 
-<% end %>
-<% if current_user.studant_role? || current_user.teacher_role? %>
-<%= link_to fa_icon('chevron-left', text: 'Voltar'), contents_path, class:"btn btn-sm btn-outline-secondary" %>
-<%= link_to fa_icon('chevron-left', text: 'Marcar como Concluída'), contents_path, class:"btn  btn-outline-secondary" %>
 <% end %>
 
 
