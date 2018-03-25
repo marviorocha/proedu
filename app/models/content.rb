@@ -1,13 +1,14 @@
 class Content < ApplicationRecord
 
 has_many :curses
-has_many :progress
+has_many :progress, -> { where(progress: true) }
 belongs_to :curse
+
+
 
 scope :publish,   ->  (user) { where("publish_on > ?", user) if user.present? }
 scope :unpublish, ->  (user) { where("publish_on >= ?", user) if user.present? }
 scope :days_lock, ->  (days) { where("publish_on > ?", days) if days.present? }
-
 scope :licao, ->(curse) { where("curse_id = ?", curse) if curse.present?  }
 
 

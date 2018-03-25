@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180321125836) do
+ActiveRecord::Schema.define(version: 20180324125656) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -24,10 +24,9 @@ ActiveRecord::Schema.define(version: 20180321125836) do
     t.string "doc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "publishi_on"
     t.integer "curse_id"
     t.datetime "publish_on"
-    t.integer "days"
+    t.integer "days", default: 1
     t.index ["curse_id"], name: "index_contents_on_curse_id"
   end
 
@@ -58,11 +57,9 @@ ActiveRecord::Schema.define(version: 20180321125836) do
   end
 
   create_table "progresses", force: :cascade do |t|
-    t.integer "progress", default: 0
-    t.integer "user_id"
     t.integer "content_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.boolean "progress"
     t.index ["content_id"], name: "index_progresses_on_content_id"
     t.index ["user_id"], name: "index_progresses_on_user_id"
   end

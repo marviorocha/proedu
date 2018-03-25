@@ -83,7 +83,7 @@ end
 
 def set_params
   params.require(:curse).permit(:title, :descricao, :picture, :category_id)
-  params.require(:progress).permit(:user_id, :content_id, :progress)
+
 end
 
 

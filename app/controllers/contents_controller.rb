@@ -5,7 +5,7 @@ class ContentsController < ApplicationController
   # GET /contents.json
   def index
 
-    @contents = Content.licao(params['curse'])
+    @contents = Content.licao(params['curse']).references(:content)
 
   end
 
@@ -27,7 +27,7 @@ class ContentsController < ApplicationController
 
     respond_to do |format|
       if @content.save
-        format.html { redirect_to @content, notice: 'Content was successfully created.' }
+        format.html { redirect_to contents_path, notice: 'Content was successfully created.' }
         format.json { render :show, status: :created, location: @content }
 
       else
@@ -47,7 +47,7 @@ class ContentsController < ApplicationController
   def duplicate
 
     @new = @content.dup
-    @new.title = "#Copy #{@new.title}"
+    @new.title = "#copy #{@new.title}".clone
 
     respond_to do |format|
       if @new.save
@@ -66,7 +66,7 @@ class ContentsController < ApplicationController
   def update
     respond_to do |format|
       if @content.update(content_params)
-        format.html { redirect_to @content, notice: 'Content was successfully updated.' }
+        format.html { redirect_to contents_path, notice: 'Content was successfully updated.' }
         format.json { render :show, status: :ok, location: @content }
 
 

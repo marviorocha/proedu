@@ -3,19 +3,27 @@ module CursesHelper
 
 
 def board
-  @curses = current_user.curse
-  @days_for = Content.all
-  @days_for.each do |data|
-  @current_time = Time.zone.now
-  @inscricaodate = current_user.created_at - 1.day
-  @userday = (@current_time.to_i - @inscricaodate.to_i).to_i / data.days.days
-  @day_to_publish =  Content.where('days >= ?',@userday)
-  @contents =  Content.where("days <= ?",@userday).where("publish_on <= ?",@current_time )
-  @unpublish = Content.unpublish(@current_time)
-  @noficar =  Content.where("publish_on >= ?",@current_time ).limit("1")
-  @progress = Progress.statuses[:archived] 
+
+    @curses         = current_user.curse
+    @days_for       = Content.all
+    @days_for.each do |data|
+    @current_time   = Time.zone.now
+    @inscricaodate  = current_user.created_at
+    @userday        = (@current_time.to_i - @inscricaodate.to_i).to_i / data.days.days
+    @day_to_publish = Content.where('days > ?', @userday)
+    @contents       = Content.where("days = ?", @userday)
+    @unpublish      = Content.unpublish(@current_time)
+    @noficar        = Content.where("publish_on >= ?", @current_time ).limit("1")
+
+
   # End each
 end
+
+  @user_progress    = current_user.progress
+  @licao_total      = @day_to_publish.size + @contents.size + @unpublish.size
+  @porcentagem      = 100 / 5 * @user_progress.size
+  @licao            = @porcentagem
+
 
   # # Send OneSignal
   # @noficar.each do |notif|

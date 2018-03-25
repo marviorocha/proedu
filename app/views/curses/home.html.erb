@@ -32,18 +32,26 @@
 
 
       <div class="item d-flex align-items-center">
+
             <div class="image"> <%= fa_icon("play-circle 3x", text: "") %></div>
+
         <div class="text"> <%= link_to "<h3 class='h3'>#{licao.title}</h3>".html_safe, content_path(licao) %>
+
+
       </a> <small> <%= truncate(licao.body, length: 80, omission: '... mais') %></small>
 
 <br>
-        Publicado em: <span class="badge bg-blue"><%= licao.publish_on %></span>
 
-<%=  licao.progress %>
+
+        <% if  licao.progress.exists? == true %>
+
+        <div class="badge badge-rounded bg-green"> <%= fa_icon('check-circle') %> Lição Concluída!  </div>
+        <% end %>
           </div>
 
         </div>
 <% end %>
+
 
 
 
