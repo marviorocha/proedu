@@ -54675,3 +54675,268 @@ Processing by CursesController#home as HTML
 Completed 200 OK in 116ms (Views: 93.6ms | ActiveRecord: 3.3ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2019-02-26 11:41:33 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-26 11:41:33 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (23.3ms)
+  Rendered shere/_devisemenssagers.html.erb (2.8ms)
+Completed 200 OK in 51967ms (Views: 51917.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-02-26 11:42:29 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q2yXWyiacW86zYLSan43iTi4W7fy62Ulg+q47Gz1xKCHNs2XlLvI6iN/xzPfYfpibFTyFSZJJel+CVh0bulH8w==", "user"=>{"email"=>"", "curse_ids"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q2yXWyiacW86zYLSan43iTi4W7fy62Ulg+q47Gz1xKCHNs2XlLvI6iN/xzPfYfpibFTyFSZJJel+CVh0bulH8w==", "user"=>{"email"=>"", "curse_ids"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+Unpermitted parameter: :curse_ids
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (5.7ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+Completed 200 OK in 263ms (Views: 259.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-02-26 11:42:32 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/login
+  Rendered devise/registrations/new.html.erb within layouts/login (5.8ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+Completed 200 OK in 156ms (Views: 152.6ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2019-02-26 14:29:48 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+Completed 401 Unauthorized in 26ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-26 14:29:49 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (16.0ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+Completed 200 OK in 755ms (Views: 718.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-02-26 14:29:57 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VhysgYCM2y2MJpFZLQmLpOaetZ08lEc1xJNhxO2TWyKSRvZNPK1iqJWU1LiYFkZPsnIcP+g2B/k5cIFc74/YcQ==", "user"=>{"email"=>"marviorocha@marviorocha.com", "curse_ids"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "marviorocha@marviorocha.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2019-02-26 17:29:57.484910"], ["last_sign_in_at", "2018-03-25 02:27:20.100136"], ["sign_in_count", 7], ["updated_at", "2019-02-26 17:29:57.488454"], ["id", 2]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 234ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-26 14:29:57 -0300
+Processing by PageController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContent Load (0.6ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (days > 86)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (days = 86)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (publish_on >= '2019-02-26 17:29:57.605594')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "progresses" WHERE "progresses"."user_id" = ? AND "progresses"."progress" = ?[0m  [["user_id", 2], ["progress", "t"]]
+  Rendering page/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "curses" INNER JOIN "curses_users" ON "curses"."id" = "curses_users"."curse_id" WHERE "curses_users"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mCurse Load (0.8ms)[0m  [1m[34mSELECT "curses".* FROM "curses" INNER JOIN "curses_users" ON "curses"."id" = "curses_users"."curse_id" WHERE "curses_users"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered page/_curses.html.erb (52.2ms)
+  Rendered page/index.html.erb within layouts/application (57.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered layouts/_navtop_user.html.erb (13.6ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 490ms (Views: 391.2ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/1/home" for 127.0.0.1 at 2019-02-26 14:30:13 -0300
+Processing by CursesController#home as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCurse Load (0.3ms)[0m  [1m[34mSELECT  "curses".* FROM "curses" WHERE "curses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mContent Load (1.3ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (days > 86)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (days = 86)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (publish_on >= '2019-02-26 17:30:13.659803')[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "progresses" WHERE "progresses"."user_id" = ? AND "progresses"."progress" = ?[0m  [["user_id", 2], ["progress", "t"]]
+  Rendering curses/home.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (1.3ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (days = 86)[0m
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT "contents".* FROM "contents" WHERE (days = 86)[0m
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT "contents".* FROM "contents" WHERE (days > 86)[0m
+  [1m[36mContent Load (0.2ms)[0m  [1m[34mSELECT "contents".* FROM "contents" WHERE (publish_on >= '2019-02-26 17:30:13.659803')[0m
+  Rendered curses/home.html.erb within layouts/application (15.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered layouts/_navtop_user.html.erb (7.0ms)
+  Rendered shere/_devisemenssagers.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 247ms (Views: 180.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/messagers" for 127.0.0.1 at 2019-02-26 14:30:21 -0300
+Processing by MessagersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering messagers/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.9ms)
+  [1m[36mMessager Load (1.5ms)[0m  [1m[34mSELECT "messagers".* FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered messagers/index.html.erb within layouts/application (39.7ms)
+  Rendered layouts/_navtop_user.html.erb (4.8ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 179ms (Views: 166.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/messagers" for 127.0.0.1 at 2019-02-26 14:30:31 -0300
+Processing by MessagersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering messagers/index.html.erb within layouts/application
+  Rendered layouts/_brandcrumb.html.erb (0.9ms)
+  [1m[36mMessager Load (0.2ms)[0m  [1m[34mSELECT "messagers".* FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered messagers/index.html.erb within layouts/application (30.2ms)
+  Rendered layouts/_navtop_user.html.erb (5.0ms)
+  Rendered shere/_devisemenssagers.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 194ms (Views: 184.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-26 14:30:38 -0300
+Processing by PageController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mContent Load (0.3ms)[0m  [1m[34mSELECT "contents".* FROM "contents"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (days > 86)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (days = 86)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "contents" WHERE (publish_on >= '2019-02-26 17:30:38.737738')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "progresses" WHERE "progresses"."user_id" = ? AND "progresses"."progress" = ?[0m  [["user_id", 2], ["progress", "t"]]
+  Rendering page/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "curses" INNER JOIN "curses_users" ON "curses"."id" = "curses_users"."curse_id" WHERE "curses_users"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mCurse Load (0.3ms)[0m  [1m[34mSELECT "curses".* FROM "curses" INNER JOIN "curses_users" ON "curses"."id" = "curses_users"."curse_id" WHERE "curses_users"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered page/_curses.html.erb (9.7ms)
+  Rendered page/index.html.erb within layouts/application (14.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "messagers"."id" FROM "messagers" WHERE "messagers"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered layouts/_navtop_user.html.erb (8.2ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 281ms (Views: 259.7ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-02-26 14:30:42 -0300
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HDv+MDmyXEBfuoTRKLyzWJjFwrikYv4qnAu6z/cdiea3f4RaLtNxCP/bNa284siw6Ec2CDx2gmbZpQVADfNs7Q=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://dev.local.me:3000/
+Completed 302 Found in 35ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-26 14:30:42 -0300
+Processing by PageController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-26 14:30:42 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (13.1ms)
+  Rendered shere/_devisemenssagers.html.erb (0.6ms)
+Completed 200 OK in 174ms (Views: 167.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2019-02-26 14:30:51 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/login
+  Rendered devise/passwords/new.html.erb within layouts/login (2.3ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2019-02-26 14:30:54 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pzRKtUMEEFPEAHpKTTiTO986x1ECZUBftLWbPsZ7oZxCXPFJLxiy6DpTirLjGpreEj6/FWmuguoVN9BnNAs3wg==", "user"=>{"email"=>"marviorocha@marviorocha.com"}, "commit"=>"Enviar instruções para redefinição da senha"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "marviorocha@marviorocha.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "c29f8d4946116a650b7c04dcf005283a6cbadea81582e060cc5ebfcc3a47ae44"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "c29f8d4946116a650b7c04dcf005283a6cbadea81582e060cc5ebfcc3a47ae44"], ["reset_password_sent_at", "2019-02-26 17:30:55.072091"], ["updated_at", "2019-02-26 17:30:55.073064"], ["id", 2]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (3.4ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 260.4ms
+Sent mail to marviorocha@marviorocha.com (4358.2ms)
+Date: Tue, 26 Feb 2019 14:30:55 -0300
+From: marviorocha@marviorocha.com
+Reply-To: marviorocha@marviorocha.com
+To: marviorocha@marviorocha.com
+Message-ID: <5c7577cf94865_22002b02307b47bc59250@marviorocha-os.mail>
+Subject: =?UTF-8?Q?Instru=C3=A7=C3=B5es_de_redefini=C3=A7=C3=A3o_de_senha?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>Ol=C3=A1 marviorocha@marviorocha.com!</p>=0D
+=0D
+<p>Algu=C3=A9m fez o pedido para redefinir sua senha, e voc=C3=AA pode fa=
+zer isso clicando no link abaixo.</p>=0D
+=0D
+<p><a href=3D"http://dev.local.me:3000/users/password/edit?locale=3Dpt-BR=
+&amp;reset_password_token=3DmxY8yqTMFcYzvLD5SoYe">Redefinir minha senha</=
+a></p>=0D
+=0D
+<p>Se voc=C3=AA n=C3=A3o fez este pedido, por favor ignore este e-mail.</=
+p>=0D
+<p>Sua senha n=C3=A3o ser=C3=A1 alterada at=C3=A9 que voc=C3=AA acesse o =
+link acima e crie uma nova.</p>=0D
+
+Redirected to http://dev.local.me:3000/users/sign_in
+Completed 302 Found in 5162ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-26 14:30:59 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (9.2ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+Completed 200 OK in 146ms (Views: 141.0ms | ActiveRecord: 0.0ms)
+
+

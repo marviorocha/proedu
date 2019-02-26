@@ -44,9 +44,9 @@ gem 'font-awesome-rails'
 # - not working gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.5'
+gem 'rails', '~> 5.2.2'
 source "https://rubygems.org"
-ruby "2.5.0"
+ruby "2.5.3"
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -67,7 +67,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 # Use Capistrano for deployment
 #gem 'capistrano-rails', group: :development
 gem 'listen', '>= 3.0.5', '< 3.2'
