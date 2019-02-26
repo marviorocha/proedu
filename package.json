@@ -1,8 +1,9 @@
 {
   "name": "proedu",
-  "private": true,
-  "dependencies": {
-    "alloyeditor": "^1.5.1",
-    "gulp": "^3.9.1"
-  }
+  "version": "1.0.0",
+  "description": "Update projeto proedu",
+  "main": "index.js",
+  "repository": "git@github.com:marviorocha/proedu.git",
+  "author": "Marvio Rocha <marviorocha@marviorocha.com>",
+  "license": "MIT"
 }

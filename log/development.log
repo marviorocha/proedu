@@ -54940,3 +54940,61 @@ Processing by Users::SessionsController#new as HTML
 Completed 200 OK in 146ms (Views: 141.0ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-02-26 14:52:59 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (39.7ms)
+  Rendered shere/_devisemenssagers.html.erb (1.2ms)
+Completed 200 OK in 703ms (Views: 662.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-02-26 14:53:09 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VlaplYlUJXEijZ0a5DtGilzw3VdjfhxKgIx6bUTtf2rbWLXdxmTzy0t1trNw0hyUpgkJAZYqrVcWT0ZIHxxccQ==", "user"=>{"email"=>"admin@admin.com", "curse_ids"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 194ms (ActiveRecord: 0.3ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VlaplYlUJXEijZ0a5DtGilzw3VdjfhxKgIx6bUTtf2rbWLXdxmTzy0t1trNw0hyUpgkJAZYqrVcWT0ZIHxxccQ==", "user"=>{"email"=>"admin@admin.com", "curse_ids"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+Unpermitted parameter: :curse_ids
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (9.7ms)
+  Rendered shere/_devisemenssagers.html.erb (2.0ms)
+Completed 200 OK in 268ms (Views: 97.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-02-26 14:53:13 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TlHzvWJLJxfhRKd0LUTABE9MvmSCbcGl31NKfmKru6nDX+/1LXvxrYi8jN25rZoatbVqMnc5cLhJkHZbOVqYsg==", "user"=>{"email"=>"admin@admin.com", "curse_ids"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 175ms (ActiveRecord: 0.4ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TlHzvWJLJxfhRKd0LUTABE9MvmSCbcGl31NKfmKru6nDX+/1LXvxrYi8jN25rZoatbVqMnc5cLhJkHZbOVqYsg==", "user"=>{"email"=>"admin@admin.com", "curse_ids"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+Unpermitted parameter: :curse_ids
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (5.0ms)
+  Rendered shere/_devisemenssagers.html.erb (0.4ms)
+Completed 200 OK in 281ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
