@@ -1,12 +1,12 @@
 # Welcome to ProEdu!
 
-Hi! I'm Marvio Rocha, development by ProEdu. That is online LMS **learning management system** for studants and teaches.  Written in Ruby on Rails, that sofware has a simple notification with email and onsignal (Push Notification)
+Hi! I'm Marvio Rocha, development by ProEdu. That is an online LMS **learning management system** for students and teaches.  Written in Ruby on Rails, that software has a simple notification with email and onsignal (Push Notification)
 
-That is my first project where put my learning in action. I'm happy with that way has any user working with proedu in my oficial site proedu.marviorocha.com
+That is my first project where put my learning in action. I'm happy with that way has any user working with proedu in my official site proedu.marviorocha.com
 
 ## Screenshot
 
-![backend-proedu](https://pasteboard.co/HbQZTq3.png)
+![backend-proedu](https://raw.githubusercontent.com/marviorocha/proedu/master/app/assets/images/header-logo.png)
 
 ## Follow an contact me
 
