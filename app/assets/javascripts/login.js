@@ -12,12 +12,11 @@
 
 //= require vendor/jquery-validation/jquery.validate.min
 //= require vendor/popper.js/umd/popper.min
-//= require vendor/bootstrap/bootstrap.min
+//= require bootstrap/dist/js/bootstrap.min
 //= require vendor/jquery.cookie/jquery.cookie
 //= require popper
 //= require vendor/chart.js/Chart.min
 //= require charts-home
 //= require front
 //= require jquery.turbolinks
-//= require bootstrap-sprockets
 //= require turbolinks

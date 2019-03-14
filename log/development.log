@@ -54998,3 +54998,433 @@ Unpermitted parameter: :curse_ids
 Completed 200 OK in 281ms (Views: 110.6ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2019-03-13 21:22:02 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+Completed 401 Unauthorized in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 21:22:02 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (27.5ms)
+Completed 500  in 355ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /home/marviorocha/www/proedu/app/assets/config
+  /home/marviorocha/www/proedu/app/assets/images
+  /home/marviorocha/www/proedu/app/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-turbolinks-2.1.0/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/images
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actioncable-5.2.2/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activestorage-5.2.2/app/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actionview-5.2.2/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets
+  /home/marviorocha/www/proedu/node_modules
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/popper_js-1.14.5/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "ProEdu - Educação Online" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/stylesheets/application.css.scss:17
+app/views/layouts/login.html.erb:10:in `_app_views_layouts_login_html_erb___3815360399409994544_70321231450540'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 21:47:01 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (44.3ms)
+Completed 500  in 1189ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap-sprockets' with type 'application/javascript'
+Checked in these paths: 
+  /home/marviorocha/www/proedu/app/assets/config
+  /home/marviorocha/www/proedu/app/assets/images
+  /home/marviorocha/www/proedu/app/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-turbolinks-2.1.0/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/images
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actioncable-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activestorage-5.2.2.1/app/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actionview-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets
+  /home/marviorocha/www/proedu/node_modules
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/popper_js-1.14.5/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "ProEdu - Educação Online" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/javascripts/login.js:22
+app/views/layouts/login.html.erb:10:in `_app_views_layouts_login_html_erb___3760009546409100082_70232448389500'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 21:50:50 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (51.8ms)
+Completed 500  in 404ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap-sprockets' with type 'application/javascript'
+Checked in these paths: 
+  /home/marviorocha/www/proedu/app/assets/config
+  /home/marviorocha/www/proedu/app/assets/images
+  /home/marviorocha/www/proedu/app/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-turbolinks-2.1.0/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/images
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actioncable-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activestorage-5.2.2.1/app/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actionview-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets
+  /home/marviorocha/www/proedu/node_modules
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/popper_js-1.14.5/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "ProEdu - Educação Online" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/javascripts/login.js:22
+app/views/layouts/login.html.erb:10:in `_app_views_layouts_login_html_erb__1702538137707712006_69860697541540'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 21:51:44 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (35.6ms)
+Completed 500  in 395ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'vendor/bootstrap/bootstrap.min' with type 'application/javascript'
+Checked in these paths: 
+  /home/marviorocha/www/proedu/app/assets/config
+  /home/marviorocha/www/proedu/app/assets/images
+  /home/marviorocha/www/proedu/app/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-turbolinks-2.1.0/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/images
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actioncable-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activestorage-5.2.2.1/app/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actionview-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets
+  /home/marviorocha/www/proedu/node_modules
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/popper_js-1.14.5/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "ProEdu - Educação Online" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/javascripts/login.js:15
+app/views/layouts/login.html.erb:10:in `_app_views_layouts_login_html_erb__965518640726872873_70326603000840'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 21:52:58 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (42.7ms)
+Completed 500  in 432ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'vendor/bootstrap/bootstrap.min' with type 'application/javascript'
+Checked in these paths: 
+  /home/marviorocha/www/proedu/app/assets/config
+  /home/marviorocha/www/proedu/app/assets/images
+  /home/marviorocha/www/proedu/app/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-turbolinks-2.1.0/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/images
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actioncable-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activestorage-5.2.2.1/app/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actionview-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets
+  /home/marviorocha/www/proedu/node_modules
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/popper_js-1.14.5/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "ProEdu - Educação Online" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/javascripts/login.js:15
+app/views/layouts/login.html.erb:10:in `_app_views_layouts_login_html_erb__3013778724230801645_70344116349900'
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 21:53:06 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (4.4ms)
+Completed 500  in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'vendor/bootstrap/bootstrap.min' with type 'application/javascript'
+Checked in these paths: 
+  /home/marviorocha/www/proedu/app/assets/config
+  /home/marviorocha/www/proedu/app/assets/images
+  /home/marviorocha/www/proedu/app/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/fonts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/font-awesome-rails-4.7.0.4/app/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-rails-4.3.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/jquery-turbolinks-2.1.0/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/images
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/trumbowyg_rails-2.1.0.3/vendor/assets/stylesheets
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actioncable-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/activestorage-5.2.2.1/app/assets/javascripts
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/actionview-5.2.2.1/lib/assets/compiled
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/marviorocha/www/proedu/app/assets
+  /home/marviorocha/www/proedu/node_modules
+  /home/marviorocha/.rvm/gems/ruby-2.5.3/gems/popper_js-1.14.5/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "ProEdu - Educação Online" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/javascripts/login.js:15
+app/views/layouts/login.html.erb:10:in `_app_views_layouts_login_html_erb__3013778724230801645_70344048259740'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/marviorocha/www/proedu/config/environment.rb:5)
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-03-13 21:54:06 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/login
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/login (52.4ms)
+  Rendered shere/_devisemenssagers.html.erb (0.7ms)
+Completed 200 OK in 1826ms (Views: 1783.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 21:54:11 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/login
+  Rendered devise/registrations/new.html.erb within layouts/login (14.5ms)
+  Rendered shere/_devisemenssagers.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-03-13 21:55:34 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/login
+  Rendered devise/registrations/new.html.erb within layouts/login (25.4ms)
+  Rendered shere/_devisemenssagers.html.erb (2.3ms)
+Completed 200 OK in 151ms (Views: 145.2ms | ActiveRecord: 0.0ms)
+
+

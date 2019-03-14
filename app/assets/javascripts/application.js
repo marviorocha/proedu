@@ -14,7 +14,6 @@
 //= require trumbowyg/trumbowyg
 //= require trombowyg
 //= require vendor/jquery-validation/jquery.validate.min
-//= require vendor/bootstrap/bootstrap.min
 //= require vendor/popper.js/umd/popper.min
 //= require datatables.min
 //= require vendor/jquery.cookie/jquery.cookie
@@ -27,7 +26,7 @@
 //= require front
 //= require jquery.turbolinks
 //= require plyr
-//= require bootstrap-sprockets
+//= require bootstrap/dist/js/bootstrap.min
 //= require turbolinks
 
 // $(document).addEventListener("page:change", function() {
