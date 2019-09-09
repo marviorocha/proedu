@@ -18,6 +18,8 @@
 
 /yarn-error.log
 
+log/development.log
+
 .byebug_history
 
 /config/database.yml
