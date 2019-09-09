@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
- 
 # My Gem files
 gem 'devise'
 
@@ -31,11 +30,8 @@ gem 'popper_js'
 # Devise Boorstrap
 gem 'devise-bootstrap-views'
 
-
-
-# Fontaswesome
-gem 'font-awesome-rails'
-
+gem 'font_awesome5_rails'
+ 
 # Theme admin dependenciaes
 # - not working gem 'jquery-rails'
 

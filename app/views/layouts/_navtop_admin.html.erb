@@ -81,24 +81,25 @@
     <li class="<%= active_for(controller: "curses") %>" ><a href="#cursosdropdownDropdown" aria-expanded="false" data-toggle="collapse">
       <i class="icon-interface-windows"></i> Cursos </a>
       <ul id="cursosdropdownDropdown" class="collapse list-unstyled ">
-        <li> <%= link_to fa_icon('plus-square-o', text: 'Criar Curso'), new_curse_path %></li>
+        <li> <%= link_to fa_icon('plus-circle', text: 'Criar Curso'), new_curse_path %></li>
         <li> <%= link_to fa_icon('list-alt', text: 'Gerenciar Curso(s)'), curses_path %></li>
       </ul>
     </li>
 
     <li class="<%= active_for(controller: "contents") %>" ><a
   href="#licaodropdownDropdown"  aria-expanded="false" data-toggle="collapse">
-      <%= fa_icon('folder-open-o', text: 'Lição') %> </a>
+      <%= fa_icon('folder-open', text: 'Lição') %> </a>
       <ul id="licaodropdownDropdown" class="collapse list-unstyled ">
-        <li> <%= link_to fa_icon('plus-square-o', text: 'Criar Lição'), new_content_path %></li>
+        <li> <%= link_to fa_icon('plus-circle', text: 'Criar Lição'), new_content_path %></li>
         <li> <%= link_to fa_icon('list-alt', text: 'Gerenciar Lição(es)'), contents_path %></li>
       </ul>
     </li>
 
-    <li class="<%= active_for(controller: "categories") %>" ><a href="#categoriadropdownDropdown" aria-expanded="false" data-toggle="collapse">
+    <li class="<%= active_for(controller: "categories") %>" ><a href="#categoriadropdownDropdown" 
+    aria-expanded="false" data-toggle="collapse">
       <i class="icon-list-1"></i> Categoria </a> </a>
       <ul id="categoriadropdownDropdown" class="collapse list-unstyled ">
-        <li> <%= link_to fa_icon('plus-square-o', text: 'Criar Categoria'), new_category_path %></li>
+        <li> <%= link_to fa_icon('plus-circle', text: 'Criar Categoria'), new_category_path %></li>
         <li> <%= link_to fa_icon('list-alt', text: 'Lista Categoria(s)'), categories_path %></li>
       </ul>
     </li>

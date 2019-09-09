@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   private
 
   def layout_by_resource
+    
      if user_signed_in? == false
        "login"
      else
@@ -18,6 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
+
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :lastname, :curse_ids ])
       devise_parameter_sanitizer.permit(:account_update, keys: [:name, :lastname, :curse_ids ])
 

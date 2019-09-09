@@ -20,7 +20,7 @@ def board
 end
 
   @user_progress    = current_user.progress
-  @licao_total      = @day_to_publish.size + @contents.size + @unpublish.size
+  # @licao_total      = @day_to_publish.size + @contents.size + @unpublish.size
   @porcentagem      = 100 / 5 * @user_progress.size
   @licao            = @porcentagem
 

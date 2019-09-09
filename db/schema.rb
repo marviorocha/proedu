@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180324125656) do
+ActiveRecord::Schema.define(version: 2018_03_24_125656) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 20180324125656) do
     t.string "doc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "curse_id"
+    t.bigint "curse_id"
     t.datetime "publish_on"
     t.integer "days", default: 1
     t.index ["curse_id"], name: "index_contents_on_curse_id"
@@ -36,13 +39,13 @@ ActiveRecord::Schema.define(version: 20180324125656) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
+    t.bigint "category_id"
     t.index ["category_id"], name: "index_curses_on_category_id"
   end
 
   create_table "curses_users", id: false, force: :cascade do |t|
-    t.integer "curse_id", null: false
-    t.integer "user_id", null: false
+    t.bigint "curse_id", null: false
+    t.bigint "user_id", null: false
     t.index ["curse_id", "user_id"], name: "index_curses_users_on_curse_id_and_user_id"
     t.index ["user_id", "curse_id"], name: "index_curses_users_on_user_id_and_curse_id"
   end
@@ -50,15 +53,15 @@ ActiveRecord::Schema.define(version: 20180324125656) do
   create_table "messagers", force: :cascade do |t|
     t.string "subject"
     t.text "body"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_messagers_on_user_id"
   end
 
   create_table "progresses", force: :cascade do |t|
-    t.integer "content_id"
-    t.integer "user_id"
+    t.bigint "content_id"
+    t.bigint "user_id"
     t.boolean "progress"
     t.index ["content_id"], name: "index_progresses_on_content_id"
     t.index ["user_id"], name: "index_progresses_on_user_id"
@@ -86,4 +89,9 @@ ActiveRecord::Schema.define(version: 20180324125656) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contents", "curses"
+  add_foreign_key "curses", "categories"
+  add_foreign_key "messagers", "users"
+  add_foreign_key "progresses", "contents"
+  add_foreign_key "progresses", "users"
 end
