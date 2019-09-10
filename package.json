@@ -6,7 +6,5 @@
   "repository": "git@github.com:marviorocha/proedu.git",
   "author": "Marvio Rocha <marviorocha@marviorocha.com>",
   "license": "MIT",
-  "dependencies": {
-    "bootstrap-4": "^4.0.0"
-  }
+  "dependencies": {}
 }

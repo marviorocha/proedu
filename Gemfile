@@ -31,7 +31,7 @@ gem 'popper_js'
 gem 'devise-bootstrap-views'
 
 gem 'font_awesome5_rails'
- 
+
 # Theme admin dependenciaes
 # - not working gem 'jquery-rails'
 

@@ -15,6 +15,7 @@
 !/log/.keep
 !/tmp/.keep
 
+/public/shards-dashboard/*
 
 /yarn-error.log
 
@@ -23,3 +24,6 @@ log/development.log
 .byebug_history
 
 /config/database.yml
+
+node_modules
+ 
