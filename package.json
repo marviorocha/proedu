@@ -6,5 +6,15 @@
   "repository": "git@github.com:marviorocha/proedu.git",
   "author": "Marvio Rocha <marviorocha@marviorocha.com>",
   "license": "MIT",
-  "dependencies": {}
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.24.5",
+    "chart.js": "^2.8.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "shards-ui": "^2.1.0"
+  }
 }

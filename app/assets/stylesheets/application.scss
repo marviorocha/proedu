@@ -9,10 +9,8 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
+ *= require extras.1.1.0.min.css
  *= require_self
- *= require fontastic
- *= require bootstrap/dist/css/bootstrap.min
- *= require font_awesome5_webfont
- *= require style.blue
- *= require trumbowyg/trumbowyg
  */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import 'font_awesome5_webfont';
