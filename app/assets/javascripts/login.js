@@ -10,13 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-//= require vendor/jquery-validation/jquery.validate.min
-//= require vendor/popper.js/umd/popper.min
+//= require jquery/dist/jquery.min
 //= require bootstrap/dist/js/bootstrap.min
-//= require vendor/jquery.cookie/jquery.cookie
-//= require popper
-//= require vendor/chart.js/Chart.min
-//= require charts-home
-//= require front
-//= require jquery.turbolinks
-//= require turbolinks
+//= require popper.js/dist/popper
+//= require extras.1.1.0.min
+//= require shards-dashboards.1.1.0.min
+//= require app/app-blog-overview.1.1.0

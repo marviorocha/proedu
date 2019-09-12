@@ -2,7 +2,7 @@ module DeviseHelper
 
   def devise_notification!
 
-    render 'shere/devisemenssagers'
+    render 'shered/devisemenssagers'
 
   end
 

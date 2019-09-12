@@ -44,6 +44,30 @@
 
   <body>
 
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+    
+        <!-- Icon -->
+        <div class="fadeIn first">
+         <h1>Pro Edu - Online Plataform</h1>
+        </div>
+    
+        <!-- Login Form -->
+        <form>
+          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+          <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+    
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+    
+      </div>
+    </div>
+
     <div class="page login-page">
       <div class="container d-flex align-items-center">
         <div class="form-holder has-shadow">
@@ -79,7 +103,8 @@
     </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <%= javascript_include_tag "login" %>
+ 
+   <%= javascript_include_tag "login" %>
 
   </body>
  </html>
