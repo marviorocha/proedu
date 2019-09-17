@@ -17,6 +17,8 @@
 
 /public/shards-dashboard/*
 
+public/Login_v1/*
+
 /yarn-error.log
 
 log/development.log

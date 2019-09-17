@@ -14,5 +14,4 @@
 //= require bootstrap/dist/js/bootstrap.min
 //= require popper.js/dist/popper
 //= require extras.1.1.0.min
-//= require shards-dashboards.1.1.0.min
-//= require app/app-blog-overview.1.1.0
+//= require main_login

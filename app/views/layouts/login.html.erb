@@ -7,7 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "ProEdu - Educação Online" %></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "login", :media => "all" %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -44,66 +44,32 @@
 
   <body>
 
-    <div class="wrapper fadeInDown">
-      <div id="formContent">
-        <!-- Tabs Titles -->
-    
-        <!-- Icon -->
-        <div class="fadeIn first">
-         <h1>Pro Edu - Online Plataform</h1>
-        </div>
-    
-        <!-- Login Form -->
-        <form>
-          <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-          <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-          <input type="submit" class="fadeIn fourth" value="Log In">
-        </form>
-    
-        <!-- Remind Passowrd -->
-        <div id="formFooter">
-          <a class="underlineHover" href="#">Forgot Password?</a>
-        </div>
-    
-      </div>
-    </div>
 
-    <div class="page login-page">
-      <div class="container d-flex align-items-center">
-        <div class="form-holder has-shadow">
-          <div class="row">
-            <!-- Logo & Information Panel-->
-            <div class="col-lg-6">
-              <div class="info d-flex align-items-center">
-                <div class="content">
-                  <div class="logo">
-                    <h1>ProEdu</h1>
-                  </div>
-
-                  <p>Plataforma de Educação Online (Pro Easy).</p>
-                </div>
-              </div>
-            </div>
-            <!-- Form Panel    -->
-            <div class="col-lg-6 bg-white">
-              <div class="form d-flex align-items-center">
-                <div class="content">
-                  <p>  <%= devise_notification! %></p>
-                  <%= yield %>
-                </div>
-              </div>
-            </div>
+    <div class="limiter">
+      <div class="container-login100">
+       
+        <div class="wrap-login100">
+       
+          <div class="login100-pic js-tilt" data-tilt>
+           <%= devise_notification! %>
+            <%= image_tag('images/img-01.png') %> 
           </div>
+     
+          <%= yield %>
+         
         </div>
       </div>
-      <div class="copyrights text-center">
-        <p>ProEdu by <a href="https://marviorocha.com" class="external">MarvioRocha.Com</a>
-            </p>
-      </div>
     </div>
+    
+    
+  
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
  
+ <script>
+ 		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+ </script>
    <%= javascript_include_tag "login" %>
 
   </body>
