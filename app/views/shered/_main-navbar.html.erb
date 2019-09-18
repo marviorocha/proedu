@@ -8,7 +8,7 @@
               <i class="fas fa-search"></i>
             </div>
           </div>
-          <input class="navbar-search form-control" type="text" placeholder="Search for something..." aria-label="Search"> </div>
+          <input class="navbar-search form-control" type="text" placeholder="Pesquisar por..." aria-label="Search"> </div>
       </form>
       <ul class="navbar-nav border-left flex-row ">
         <li class="nav-item border-right dropdown notifications">
@@ -48,8 +48,9 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="user-avatar rounded-circle mr-2" src="images/avatars/0.jpg" alt="User Avatar">
-            <span class="d-none d-md-inline-block">Sierra Brooks</span>
+            <%= image_tag(gravatar(current_user.email,'35'), class: 'user-avatar rounded-circle mr-2') %>
+            
+            <span class="d-none d-md-inline-block"><%= current_user.name.capitalize + ' ' + current_user.lastname.capitalize %></span>
           </a>
           <div class="dropdown-menu dropdown-menu-small">
             <a class="dropdown-item" href="user-profile-lite.html">
@@ -59,11 +60,8 @@
             <a class="dropdown-item" href="add-new-post.html">
               <i class="material-icons">note_add</i> Add New Post</a>
             <div class="dropdown-divider"></div>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-            <a class="dropdown-item text-danger" href="javascript:void()">
-          
-              <i class="material-icons text-danger">&#xE879;</i> 
-               </a>
+           <%= link_to '<i class="material-icons text-danger">&#xE879;</i> Logout'.html_safe, destroy_user_session_path, method: :delete, class: 'dropdown-item text-danger' %>
+         
           </div>
         </li>
       </ul>
