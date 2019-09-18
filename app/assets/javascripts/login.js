@@ -12,6 +12,3 @@
 
 //= require jquery/dist/jquery.min
 //= require bootstrap/dist/js/bootstrap.min
-//= require popper.js/dist/popper
-//= require extras.1.1.0.min
-//= require main_login

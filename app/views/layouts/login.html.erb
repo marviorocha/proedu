@@ -45,17 +45,44 @@
   <body>
 
 
+    <div class="container-fluid">
+      <div class="row no-gutter">
+          <!-- The image half -->
+          <div class="col-md-6 d-none d-md-flex bg-image"></div>
+  
+  
+          <!-- The content half -->
+          <div class="col-md-6 bg-light">
+              <div class="login d-flex align-items-center py-5">
+  
+                  <!-- Demo content-->
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-10 col-xl-7 mx-auto">
+
+                            <%= devise_notification! %>
+                             <%= yield %>
+                          </div>
+                      </div>
+                  </div><!-- End -->
+  
+              </div>
+          </div><!-- End -->
+  
+      </div>
+  </div>
+  
+
+
     <div class="limiter">
       <div class="container-login100">
        
         <div class="wrap-login100">
        
           <div class="login100-pic js-tilt" data-tilt>
-           <%= devise_notification! %>
-            <%= image_tag('images/img-01.png') %> 
+     
           </div>
      
-          <%= yield %>
          
         </div>
       </div>
@@ -65,11 +92,7 @@
   
 
  
- <script>
- 		$('.js-tilt').tilt({
-			scale: 1.1
-		})
- </script>
+ 
    <%= javascript_include_tag "login" %>
 
   </body>
