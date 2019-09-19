@@ -2,15 +2,15 @@ Rails.application.routes.draw do
 
 
  
-
-# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+ 
 root to: 'page#index'
 
 # admin routes
 
 devise_for :users
 
+
+get '/users/sign_up/:id', to: 'users#new', as: 'user_new'
 
 #messager resources
 resources :messagers

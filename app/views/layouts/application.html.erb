@@ -26,31 +26,31 @@
     <div class="row">
       <!-- Main Sidebar -->
      
-     <%= render 'shered/mainsidebar' %>
+     <%= render 'shered/main-sidebar' %>
 
     <!-- Main Navbar-->
 
   <!-- End Main Sidebar -->
   <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
  
-    <%= render 'shered/main-navbar' %>
+    <%= render 'shered/main-top-navbar' %>
 
 
     <!-- / .main-navbar -->
-    <div class="main-content-container container-fluid px-4">
+    
+
+      <%= render 'shered/alerts/notifications' %>
+
       <!-- Page Header -->
-      <div class="page-header row no-gutters py-4">
-        <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
       
-
-          <%= devise_notification! %>
-
-                <%= yield %>
+ 
+      
+           <%= yield %>
    
-        </div>
+   
         <!-- End Top Referrals Component -->
-      </div>
-    </div>
+      
+   
     <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
 
     <%= render 'layouts/footer' %>
