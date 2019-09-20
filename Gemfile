@@ -7,7 +7,7 @@ gem 'cancancan'
 
 gem 'simple_form'
 
-gem 'onesignal', '~> 0.3.0'
+gem 'onesignal'
 
 gem 'trumbowyg_rails', '~> 2.1', '>= 2.1.0.3'
 
@@ -19,40 +19,33 @@ gem 'mini_magick'
 
 gem 'figaro'
 
-# Jquery
-
 gem 'jquery-turbolinks'
+
 gem 'jquery-rails'
 
 gem 'popper_js'
-
  
-
 gem 'font_awesome5_rails'
 
-# Theme admin dependenciaes
-# - not working gem 'jquery-rails'
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.2'
+ 
+gem 'rails', '~> 6.0.0'
 
 ruby "2.6.3"
-# Use Puma as the app server
-gem 'puma', '~> 3.7'
-# Use SCSS for stylesheets
+ 
+gem 'puma'
+ 
 gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
+ 
 gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+ 
+gem 'turbolinks'
 
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+ 
 gem 'jbuilder', '~> 2.5'
- 
- 
+
+
+gem "webpacker"
+
 
 
 group :development do
