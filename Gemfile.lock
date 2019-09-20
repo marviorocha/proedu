@@ -188,7 +188,7 @@ GEM
       rails (>= 3.1)
       railties (>= 3.1)
       sass (>= 3.2)
-    turbolinks (5.2.0)
+    turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
     tzinfo (1.2.5)
