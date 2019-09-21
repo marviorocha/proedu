@@ -1,9 +1,9 @@
 class CursesController < ApplicationController
-include OnesignalHelper
-include CursesHelper
+
 before_action :set_curse, only: [:destroy, :show, :edit, :update, :home ]
 
 def index
+
 @curses = Curse.all
 
 end
@@ -14,8 +14,6 @@ def new
 end
 
 def show
-
-
 
 end
 

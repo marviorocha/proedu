@@ -8,3 +8,14 @@
 
 user = User.create(name: 'Admin', lastname: 'ProEdu',
   email:'admin@admin.com', password: '102030', superadmin_role: true, studant_role: false)
+
+studants = User.create([
+{name: 'Maria', lastname: 'Emilia', email:'maria@admin.com', password: '123456',
+superadmin_role: false, studant_role: true },
+{name: 'João', lastname: 'Felipe', email:'joao@admin.com', password: '123456',
+superadmin_role: false, studant_role: true },
+{name: 'Maryana', lastname: 'João', email:'maryana@admin.com', password: '123456',
+superadmin_role: false, studant_role: true }
+])
+
+
