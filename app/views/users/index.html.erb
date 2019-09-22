@@ -1,0 +1,67 @@
+<%= title "Gerenciar Estudantes" %>
+ 
+
+
+<div class="main-content-container container-fluid px-4">
+            <!-- Page Header -->
+            <div class="page-header row no-gutters py-4">
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                <span class="text-uppercase page-subtitle">lista de estudantes</span>
+                <h3 class="page-title">Estudantes</h3>
+                
+              </div>
+              
+            </div>
+            <!-- End Page Header -->
+            <!-- Default Light Table -->
+            <div class="row">
+            
+              <div class="col">
+              
+                <div class="card card-small mb-4">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Estudantes</h6>
+                    <%= link_to fa_icon('plus', text: "Add Estudante"), new_curse_path, class: 'float-right btn btn-primary' %>
+                  </div>
+                  <div class="card-body p-0 pb-3 text-center">
+                    <table class="table" id="datatable">
+                      <thead class="bg-light">
+                        <tr>
+                          <th scope="col" class="border-0">User</th>
+                          <th scope="col" class="border-0">Nome:</th>
+                          <th scope="col" class="border-0">Email:</th>
+                          <th scope="col" class="border-0">Ação</th>
+                    
+                        </tr>
+                      </thead>
+                      <tbody>
+                  <% @users.each do |user| %>
+                  <tr>
+                  <td> <%= image_tag(gravatar(user.email, '80'), class: 'user-avatar rounded-circle mr-2') %> </td>
+                  <td> <%= user.name %> <%= user.lastname %> </td>
+                  <td> <%= user.email %> </td>
+
+                  <td>
+
+                    <%= link_to fa_icon('eye', text:''), user , class: 'btn btn-outline-primary btn-sm' %>
+                    <%= link_to fa_icon('pencil', text:'Editar'), edit_user_path(@users), class: 'btn btn-outline-info btn-sm' %>
+                    <%= link_to fa_icon('trash', text: ''), user ,class: 'btn btn-outline-danger btn-sm',
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+                  </td>
+              <% end %>
+                </td>
+                         
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Default Light Table -->
+            <!-- Default Dark Table -->
+ 
+</tbody>
+</table>
+</div>

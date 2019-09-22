@@ -1,7 +1,7 @@
 Rails.application.configure do
  
   config.hosts << "dev.local.me"
-
+ 
   config.cache_classes = false
 
   # Do not eager load code on boot.

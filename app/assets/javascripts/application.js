@@ -9,4 +9,5 @@
 //= require extras.1.1.0.min
 //= require shards-dashboards.1.1.0.min
 //= require app/app-blog-overview.1.1.0
+//= require datatables
 //= require rails-ujs

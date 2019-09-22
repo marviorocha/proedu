@@ -1,98 +1,43 @@
-<!-- Main Navbar-->
-<header class="header">
-  <nav class="navbar">
-    <!-- Search Box-->
-    <div class="search-box">
-      <button class="dismiss"><i class="icon-close"></i></button>
-      <form id="searchForm" action="#" role="search">
-        <input type="search" placeholder="What are you looking for..." class="form-control">
-      </form>
-    </div>
-    <div class="container-fluid">
-      <div class="navbar-holder d-flex align-items-center justify-content-between">
-        <!-- Navbar Header-->
-        <div class="navbar-header">
-          <!-- Navbar Brand -->
-          <%= link_to "<div class='brand-text brand-big'><span>Pro </span><strong>EDU</strong></div>
-          <div class='brand-text brand-small'><strong>PE</strong></div>".html_safe, root_path, class: 'navbar-brand' %>
+<div class="nav-wrapper">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link active" href="<%= curses_path  %>">
+        <i class="material-icons">menu_book</i>
+        <span>Cursos</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="<%= new_content_path %>">
+        <i class="material-icons">note_add</i>
+        <span>Lição</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="add-new-post.html">
+        <i class="material-icons">vertical_split</i>
+        <span>Categorias</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="form-components.html">
+        <i class="material-icons">chat</i>
+        <span>Mensagens</span>
+      </a>
+    </li>
+ 
+    <li class="nav-item">
+      <a class="nav-link " href="<%= users_path %>">
+        <i class="material-icons">person</i>
+        <span>Estudantes</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="errors.html">
+        <i class="material-icons">error</i>
+        <span>Errors</span>
+      </a>
+    </li>
+  </ul>
+</div>
 
-          <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
-        </div>
-        <!-- Navbar Menu -->
-        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-          <!-- Search-->
-          <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
-          <!-- Notifications-->
-          <li class="nav-link ">
-            <%= link_to "<i class='fa fa-user'></i> Editar Perfil".html_safe, edit_user_registration_path,
-                class: ''  %>
-          </li>
-
-
-          <!-- Messages                        -->
-
-          <li class="nav-item dropdown">
-            <a id="messages" rel="nofollow" data-target="#" href="#"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-              class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-red">
-              <%= messager_count %></span></a>
-            <ul aria-labelledby="notifications" class="dropdown-menu">
-              <% if @messager == nil %>
-              <% else %>
-              <% @messager.take(3).each do |messager| %>
-              <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
-                <div class="msg-profile"> <%= image_tag(gravatar(messager.user.email, 40),
-                class:'img-fluid rounded-circle' ) %>
-              </div>
-              <div class="msg-body">
-                <h3 class="h5"><%= messager.user.name_with_initial %></h3><span>Enviou mensagem...</span>
-              </div></a></li>
-              <% end %>
-              <% end %>
-              <li>
-                <%= link_to '<strong>Todas as mensagens</strong>'.html_safe, messagers_path, class: 'dropdown-item all-notifications text-center' %>
-
-              </li>
-            </ul>
-          </li>
-          <!-- Logout    -->
-          <li class="nav-item">
-
-            <%= link_to "Logout<i class='fa fa-sign-out'></i>".html_safe, destroy_user_session_path,
- method: :delete, class: 'nav-link logout'  %>
-
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-<div class="page-content d-flex align-items-stretch">
-  <!-- Side Navbar -->
-  <nav class="side-navbar">
-    <!-- Sidebar Header-->
-    <div class="sidebar-header d-flex align-items-center">
-      <div class="avatar">
-        <%= image_tag(gravatar(current_user.email,'65'), class: 'img-fluid rounded-circle') %>
-      </div>
-      <div class="title">
-        <h1 class="h4"><%= current_user.name.capitalize + ' ' + current_user.lastname.capitalize %></h1>
-        <p>Estudante</p>
-      </div>
-    </div>
-
-    <!-- Sidebar Navidation Menus-->
-    <span class="heading">Main</span>
-    <ul class="list-unstyled">
-      <li class="<%= active_for(path: "/") %>" > <%= link_to '<i class="icon-home"></i>Home </a>'.html_safe , root_path %> </li>
-
-    <li class="<%= active_for(controller: "curses") %>" >
-     <%= link_to '<i class="fa fa-book"></i>Cursos </a>'.html_safe, curse_list_path(current_user) %> </li>
-
-
-
-
-      <li> <%= link_to fa_icon('envelope', text: 'Mensagens'), messagers_path %></li>
-
-
-    </nav>
+ 

@@ -9,13 +9,10 @@
 user = User.create(name: 'Admin', lastname: 'ProEdu',
   email:'admin@admin.com', password: '102030', superadmin_role: true, studant_role: false)
 
-studants = User.create([
-{name: 'Maria', lastname: 'Emilia', email:'maria@admin.com', password: '123456',
-superadmin_role: false, studant_role: true },
-{name: 'João', lastname: 'Felipe', email:'joao@admin.com', password: '123456',
-superadmin_role: false, studant_role: true },
-{name: 'Maryana', lastname: 'João', email:'maryana@admin.com', password: '123456',
-superadmin_role: false, studant_role: true }
-])
+10.times do |index|
+User.create(name: Faker::Name.first_name, email: Faker::Internet.email, 
+            lastname: Faker::Name.last_name, password: '123456', 
+            superadmin_role: false, studant_role: true )
+end
 
-
+puts 'User created with success #{User.count}'

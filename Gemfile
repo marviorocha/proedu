@@ -6,11 +6,9 @@ gem 'devise'
 
 gem 'cancancan'
 
-gem 'simple_form'
+gem 'jquery-datatables'
 
 gem 'onesignal'
-
-gem 'trumbowyg_rails', '~> 2.1', '>= 2.1.0.3'
 
 gem 'carrierwave'
 
@@ -19,6 +17,8 @@ gem 'notify'
 gem 'mini_magick'
 
 gem 'figaro'
+
+gem 'faker'
 
 gem 'popper_js'
  

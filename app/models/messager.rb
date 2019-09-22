@@ -1,4 +1,5 @@
 class Messager < ApplicationRecord
+ 
   belongs_to :user
 
 def datatime

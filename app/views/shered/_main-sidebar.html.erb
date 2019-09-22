@@ -26,6 +26,8 @@
 
     <% if current_user.superadmin_role? %>
      <%= render 'shered/menu/navtop_admin' %>
-<% end  %>
+     <% else %>
+     <%= render 'shered/menu/navtop_user' %>
+  <% end  %>
 
   </aside>

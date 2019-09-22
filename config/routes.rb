@@ -20,7 +20,7 @@ resources :contents
 
 resources :progresses
 
-
+resources :users
 
 get '/contents/:id/duplicate', to: 'contents#duplicate', as: 'content_clone'
 
