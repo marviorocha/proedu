@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   before_action :set_content, only: [:show, :edit, :update, :destroy, :duplicate]
-  include OnesignalHelper
+
   # GET /contents
   # GET /contents.json
   def index

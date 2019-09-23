@@ -15,4 +15,4 @@ User.create(name: Faker::Name.first_name, email: Faker::Internet.email,
             superadmin_role: false, studant_role: true )
 end
 
-puts 'User created with success #{User.count}'
+puts "User created with success #{User.count}"
