@@ -1,32 +1,32 @@
 <div class="nav-wrapper">
   <ul class="nav flex-column">
     <li class="nav-item">
-      <a class="nav-link active" href="<%= curses_path  %>">
+      <a class="nav-link <%= url_for == curses_path ? 'active' : ''  %> " href="<%= curses_path  %>">
         <i class="material-icons">menu_book</i>
         <span>Cursos</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="<%= new_content_path %>">
+      <a class="nav-link  <%= new_content_path == url_for ? 'active' : ''  %>" href="<%= new_content_path %>">
         <i class="material-icons">note_add</i>
         <span>Lição</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="add-new-post.html">
+      <a class="nav-link  <%= categories_path == url_for ? 'active' : ''  %> " href="<%= categories_path %>">
         <i class="material-icons">vertical_split</i>
         <span>Categorias</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="form-components.html">
+      <a class="nav-link  <%= messagers_path == url_for ? 'active' : ''  %> " href="<%= messagers_path %>">
         <i class="material-icons">chat</i>
         <span>Mensagens</span>
       </a>
     </li>
  
     <li class="nav-item">
-      <a class="nav-link " href="<%= users_path %>">
+      <a class="nav-link  <%= users_path == url_for ? 'active' : ''  %>" href="<%= users_path %>">
         <i class="material-icons">person</i>
         <span>Estudantes</span>
       </a>

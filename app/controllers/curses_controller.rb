@@ -43,8 +43,8 @@ def create
     format.html { redirect_to curses_path, notice: 'Curse foi criado com sucesso!'}
     format.json { render :index, status: :created, location: @curse }
   else
-    format.html { render :new}
-    format.json {render json: @curse.errors, status: :unprocessable_entity}
+    format.html { render :new, alert: @curse.errors.full_messages.to_sentence  }
+    format.json { render :index, status: :created, location: @curse }
     end
   end
 end
@@ -54,7 +54,7 @@ def update
      if @curse.update(set_params)
      format.html {redirect_to curses_path, notice: 'Curso foi atualizado com sucesso!'}
      format.json { render :index, status: :edited, location: @curse }
-     notification(@curse.title, 'http://cursos.faap.br/images/turmas-confirmadas-icon.png', 'Vamos ver se agora vai #{ @curses.title}')
+      
 
     else
       format.html { render :edit}
@@ -67,6 +67,7 @@ end
 def destroy
 @curse.destroy
   respond_to do |format|
+    format.js
     format.html { redirect_to curses_path, notice: 'O curso foi deletado com sucesso!'}
     format.json { render :show, status: :created, location: @curse }
   end

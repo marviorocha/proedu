@@ -53,8 +53,8 @@
             <span class="d-none d-md-inline-block"><%= current_user.name.capitalize + ' ' + current_user.lastname.capitalize %></span>
           </a>
           <div class="dropdown-menu dropdown-menu-small">
-            <a class="dropdown-item" href="user-profile-lite.html">
-              <i class="material-icons">&#xE7FD;</i> Profile</a>
+            <a class="dropdown-item" href="<%= edit_user_registration_path %>">
+              <i class="material-icons">&#xE7FD;</i> Meu Perfil</a>
             <a class="dropdown-item" href="components-blog-posts.html">
               <i class="material-icons">vertical_split</i> Blog Posts</a>
             <a class="dropdown-item" href="add-new-post.html">

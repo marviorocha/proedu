@@ -15,4 +15,10 @@ User.create(name: Faker::Name.first_name, email: Faker::Internet.email,
             superadmin_role: false, studant_role: true )
 end
 
-puts "User created with success #{User.count}"
+10.times do |index|
+
+  Category.create(name: Faker::Educator.course_name)
+
+end
+
+puts "User created with success User: #{User.count}  Categories: #{Category.count}"
