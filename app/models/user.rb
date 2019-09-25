@@ -9,6 +9,19 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  
+def self.studant_status
+
+  studant_total = User.where(studant_role: true).count
+
+  if studant_total >= studant_total - 2
+      'stats-small__percentage--increase'
+  else
+    'stats-small__percentage--decrease'
+  end
+  
+
+end
 
  ROLES = %i[superadmin_role teacher_role studant_role]
 

@@ -27,6 +27,7 @@
                     <table class="table" id="datatable">
                       <thead class="bg-light">
                         <tr>
+                          <th scope="col" class="border-0"><input type="checkbox" id="selectAll">All Items</input></th>
                           <th scope="col" class="border-0">User</th>
                           <th scope="col" class="border-0">Nome:</th>
                           <th scope="col" class="border-0">Email:</th>
@@ -37,6 +38,7 @@
                       <tbody>
                   <% @users.each do |user| %>
                   <tr>
+                  <td><input type="checkbox" class="selectable">Item <%= user.id %></input></td>
                   <td> <%= image_tag(gravatar(user.email, '80'), class: 'user-avatar rounded-circle mr-2') %> </td>
                   <td> <%= user.name %> <%= user.lastname %> </td>
                   <td> <%=  link_to fa_icon('chat', text: 'Enviar mensagem'), new_messager_path("/ #{user.id}"), class: 'btn btn-outline-info' %> </td>
@@ -49,6 +51,11 @@
                     method: :delete, remote: true, data: { confirm: 'Are you sure?'}, class: 'btn btn-outline-danger' %>
 
 
+ 
+
+ 
+
+ 
                   </td>
               <% end %>
                 </td>

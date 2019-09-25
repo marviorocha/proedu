@@ -24,7 +24,9 @@ gem 'popper_js'
  
 gem 'font_awesome5_rails'
 
- 
+gem 'select_all-rails'
+
+
 gem 'rails', '~> 6.0.0'
 
 ruby "2.6.3"
