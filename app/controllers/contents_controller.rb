@@ -5,7 +5,7 @@ class ContentsController < ApplicationController
   # GET /contents.json
   def index
 
-    @contents = Content.licao(params['curse']).references(:content)
+    @contents = Curse.all
 
   end
 

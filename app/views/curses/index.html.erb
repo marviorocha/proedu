@@ -29,6 +29,7 @@
                         <tr>
                           <th scope="col" class="border-0">#ID</th>
                           <th scope="col" class="border-0">Thumb:</th>
+                          <th scope="col" class="border-0">Cursos:</th>
                           <th scope="col" class="border-0">Descrição:</th>
                           <th scope="col" class="border-0">Categoria:</th>
                             <th scope="col" class="border-0">Estudantes:</th>
@@ -41,8 +42,9 @@
                            <tr>
                   <td> <%= link_to fa_icon('folder', text: 'Lição'),
                   contents_path(curse: curses), class: 'float-right btn ' %></td>
+                 
                   <td><%= image_tag(curses.picture_url(:thumb)) if curses.picture? %></td>
-
+                       <td><%= curses.title %></td>
                   <td><%= truncate(curses.descricao, length:50 ,omission: '... (mais)') %> <br></td>
                   <td><%=  Category.find(curses.category_id).name %></td>
                   <td><span class="badge badge-pill badge-secondary"><%= curses.user.count %></span> </td>

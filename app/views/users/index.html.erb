@@ -31,7 +31,7 @@
                           <th scope="col" class="border-0">User</th>
                           <th scope="col" class="border-0">Nome:</th>
                           <th scope="col" class="border-0">Email:</th>
-                          <th scope='col' class='border-0'>Últimas visita</th>
+                          <th scope='col' class='border-0'>Última visita</th>
                           <th scope="col" class="border-0">Ação</th>
                     
                         </tr>
@@ -42,13 +42,14 @@
                   <td> <%= user.id %></td>
                   <td> <%= image_tag(gravatar(user.email, '80'), class: 'user-avatar rounded-circle mr-2') %> </td>
                   <td> <%= user.name %> <%= user.lastname %> </td>
-                  <td> <%=  link_to fa_icon('chat', text: 'Enviar mensagem'), new_messager_path("/ #{user.id}"),
-                   class: 'btn btn-outline-info' %> </td>
-                  <td> <%= user.current_sign_in_at ? time_ago_in_words(user.last_sign_in_at) : 'Marvio Rocha' %></td>
+                  <td> <%= user.email %> </td>
+                  <td> <%= user.current_sign_in_at ? time_ago_in_words(user.last_sign_in_at) : 'Nunca fez login' %></td>
                   <td>
 
                     <%= link_to fa_icon('eye', text:''), user , class: 'btn btn-outline-primary' %>
-                    <%= link_to fa_icon('pencil', text:'Editar'), edit_user_path(@users), class: 'btn btn-outline-info' %>
+                     <%=  link_to fa_icon('chat', text: 'Enviar mensagem'), new_messager_path("/ #{user.id}"),
+                   class: 'btn btn-outline-info' %>
+                    <%# <%= link_to fa_icon('pencil', text:'Editar'), edit_user_path(@users), class: 'btn btn-outline-info' %>
                     <%= link_to fa_icon('trash', text: ''), user ,
                     method: :delete, remote: true, data: { confirm: 'Are you sure?'}, class: 'btn btn-outline-danger' %>
 

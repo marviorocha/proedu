@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     
-    before_action :set_params_user_id, only: ['destroy'] 
+    before_action :set_params_user_id, only: ['destroy', 'show'] 
 #    generator users
     def index
         @users = User.where(studant_role: true)
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     def destroy 
 
-        @user.destroy
+        @users.destroy
 
         respond_to do |format|
             format.js
@@ -16,10 +16,13 @@ class UsersController < ApplicationController
         end
     end
 
+    def show
+    end
+
     private
 
     def set_params_user_id
-        @user = User.find(params['id'])
+        @users = User.find(params['id'])
     end    
 
     def set_user_params

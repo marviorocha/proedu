@@ -1,9 +1,8 @@
 class Content < ApplicationRecord
 
-has_many :curses
 has_many :progress, -> { where(progress: true) }
-belongs_to :curse
 
+belongs_to :curse
 
 
 scope :publish,   ->  (user) { where("publish_on > ?", user) if user.present? }
@@ -13,9 +12,9 @@ scope :licao, ->(curse) { where("curse_id = ?", curse) if curse.present?  }
 
 
 # list the picture the curse_id
-validates :title, :body, presence: true
-validates :title, length: {in: 5..280 }
-validates :days, numericality: { only_integer: true }
+# validates :title, :body, presence: true
+# validates :title, length: {in: 5..280 }
+# validates :days, numericality: { only_integer: true }
 
 # scan url to show youtube or vimeo
 

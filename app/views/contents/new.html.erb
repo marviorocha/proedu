@@ -1,16 +1,14 @@
 
 <%= title "Criar Lição" %>
 
-<!-- Page Header-->
-<header class="page-header">
-  <div class="container-fluid">
-    <h2 class="no-margin-bottom">Nova Lição</h2>
-  </div>
-</header>
-
-<%= render "layouts/brandcrumb" %>
-
-<p></p>
+ <div class="main-content-container container-fluid px-4">
+            <!-- Page Header -->
+            <div class="page-header row no-gutters py-4">
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                <span class="text-uppercase page-subtitle">Lição</span>
+                <h3 class="page-title">Add Nova Lição</h3>
+              </div>
+            </div>
 
 
 <%= render 'form', content: @content %>
