@@ -27,10 +27,11 @@
                     <table class="table" id="datatable">
                       <thead class="bg-light">
                         <tr>
-                          <th scope="col" class="border-0"><input type="checkbox" id="selectAll">All Items</input></th>
+                          <th scope="col" class="border-0">#ID</th>
                           <th scope="col" class="border-0">User</th>
                           <th scope="col" class="border-0">Nome:</th>
                           <th scope="col" class="border-0">Email:</th>
+                          <th scope='col' class='border-0'>Últimas visita</th>
                           <th scope="col" class="border-0">Ação</th>
                     
                         </tr>
@@ -38,11 +39,12 @@
                       <tbody>
                   <% @users.each do |user| %>
                   <tr>
-                  <td><input type="checkbox" class="selectable">Item <%= user.id %></input></td>
+                  <td> <%= user.id %></td>
                   <td> <%= image_tag(gravatar(user.email, '80'), class: 'user-avatar rounded-circle mr-2') %> </td>
                   <td> <%= user.name %> <%= user.lastname %> </td>
-                  <td> <%=  link_to fa_icon('chat', text: 'Enviar mensagem'), new_messager_path("/ #{user.id}"), class: 'btn btn-outline-info' %> </td>
-
+                  <td> <%=  link_to fa_icon('chat', text: 'Enviar mensagem'), new_messager_path("/ #{user.id}"),
+                   class: 'btn btn-outline-info' %> </td>
+                  <td> <%= user.current_sign_in_at ? time_ago_in_words(user.last_sign_in_at) : 'Marvio Rocha' %></td>
                   <td>
 
                     <%= link_to fa_icon('eye', text:''), user , class: 'btn btn-outline-primary' %>
