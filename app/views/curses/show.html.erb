@@ -1,45 +1,174 @@
 
 <%= title "Lição - #{ @curse.title }" %>
 
-<!-- Page Header-->
-<header class="page-header">
-  <div class="container-fluid">
-    <h2 class="no-margin-bottom"><%= @curse.title %></h2>
+ 
+
+
+ <div class="main-content-container container-fluid px-4">
+
+
+
+            <!-- Page Header -->
+            <div class="page-header row no-gutters py-4">
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                <span class="text-uppercase page-subtitle">curso</span>
+                <h3 class="page-title">Cursos</h3>
+              </div>
+            </div>
+            <!-- End Page Header -->
+
+<div class="row">
+
+              <div class="col-lg-8 col-sm-12 mb-6">
+                <div class="card card-small card-post card-post--aside card-post--1">
+                  <div class="card-post__image" style="background-image: url(<%=  @curse.picture_url(:thumb) if @curse.picture? %>);">
+                    <a href="#" class="card-post__category badge badge-pill badge-info"> <%= @curse.category.name %></a>
+                    <div class="card-post__author d-flex">
+                      <%# <a href="#" class="card-post__author-avatar card-post__author-avatar--small" style="background-image: url('images/avatars/0.jpg');">Written by Anna Ken</a> %>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a class="text-fiord-blue" href="#"><%= @curse.title %></a>
+                    </h5>
+                    <p class="card-text d-inline-block mb-3"> <%= @curse.descricao %></p> <br>
+                    <span class="text-muted">Esse curso foi atualizado em: <%= @curse.updated_at.strftime('%d-%M-%Y') %></span>
+                  </div>
+                </div>
+              </div>
+           
   </div>
-</header>
-
-<%= render "layouts/brandcrumb" %>
-
 <p></p>
-<div class="container-fluid">
+            <!-- Default Light Table -->
+            <div class="row">
+              <div class="col">
+                <div class="card card-small mb-4">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Lições</h6>
+                  </div>
+ 
+  <%= link_to fa_icon('plus', text: 'Add Lição'), new_content_path ,class: 'btn btn btn-primary' %>
+                             <!-- Page Header -->
 
-    <div class="card">
+           
+                <!--Accordion wrapper-->
+<div class="accordion md-accordion" id="accordionEx1" role="tablist" aria-multiselectable="true">
 
+  <!-- Accordion card -->
+  <div class="card">
 
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingTwo1">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo1"
+        aria-expanded="false" aria-controls="collapseTwo1">
+        <h5 class="mb-0">
+          Collapsible Group Item #1 <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1"
+      data-parent="#accordionEx1">
       <div class="card-body">
-        <h4 class="card-title"><%= @curse.title %></h4>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+        wolf
+        moon
+        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+        Brunch
+        3
+        wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+        shoreditch
+        et.
+        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        Ad
+        vegan
+        excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+        nesciunt
+        you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @curse.title %>
-</p>
+  </div>
+  <!-- Accordion card -->
 
-<p>
-  <strong>Descrição:</strong>
-  <%= @curse.descricao.html_safe %>
-</p>
+  <!-- Accordion card -->
+  <div class="card">
 
-<p>
-  <strong>Picture:</strong>
-  <%= @curse.picture %>
-</p>
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingTwo2">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo21"
+        aria-expanded="false" aria-controls="collapseTwo21">
+        <h5 class="mb-0">
+          Collapsible Group Item #2 <i class="fas fa-lock rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
 
-<div class="btn-group" role="group" aria-label="Basic example">
-<%= link_to fa_icon('pencil', text: 'Editar'), edit_curse_path(@curse), class:"btn btn-sm btn-outline-secondary" %>
-<%= link_to fa_icon('chevron-left', text: 'Voltar'), curses_path, class:"btn btn-sm btn-outline-secondary" %>
+    <!-- Card body -->
+    <div id="collapseTwo21" class="collapse" role="tabpanel" aria-labelledby="headingTwo21"
+      data-parent="#accordionEx1">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+        wolf
+        moon
+        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+      
+      </div>
+    </div>
+
+  </div>
+  <!-- Accordion card -->
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingThree31">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseThree31"
+        aria-expanded="false" aria-controls="collapseThree31">
+        <h5 class="mb-0">
+          Collapsible Group Item #3 <i class="fas fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseThree31" class="collapse" role="tabpanel" aria-labelledby="headingThree31"
+      data-parent="#accordionEx1">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+        wolf
+        moon
+        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+        Brunch
+        3
+        wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+        shoreditch
+        et.
+        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        Ad
+        vegan
+        excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+        nesciunt
+        you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+
+  </div>
+  <!-- Accordion card -->
 
 </div>
+<!-- Accordion wrapper -->
 
-</div>
-</div>
-</div>
+                     
+ 
+                </div>
+              </div>
+            </div>
+            <!-- End Default Light Table -->
+            <!-- Default Dark Table -->
+             
+          
+            <!-- End Default Dark Table -->
+          </div>

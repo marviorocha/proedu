@@ -46,7 +46,7 @@
                   <td><%= image_tag(curses.picture_url(:thumb)) if curses.picture? %></td>
                        <td><%= curses.title %></td>
                   <td><%= truncate(curses.descricao, length:50 ,omission: '... (mais)') %> <br></td>
-                  <td><%=  Category.find(curses.category_id).name %></td>
+                  <td><%=  curses.category.name %></td>
                   <td><span class="badge badge-pill badge-secondary"><%= curses.user.count %></span> </td>
 
                   <td>
