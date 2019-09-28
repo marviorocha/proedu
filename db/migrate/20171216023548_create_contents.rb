@@ -4,7 +4,8 @@ class CreateContents < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :body
       t.string :doc
-
+      t.datetime :publish_on
+      t.boolean :publish, default: false
       t.timestamps
     end
   end

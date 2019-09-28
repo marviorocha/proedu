@@ -15,7 +15,33 @@
 
               </div>
             </div>
+        <div class="card card-small mb-3 publish-show">
+        
+              <div class="card-body">
+                
+                  
+               
+                    <div class="input-group">
+                      <%= f.text_field :publish_on, class: 'form-control calendar mb-6', placeholder: "Adicionar lição" %>
+                      <div class="input-group-append">
+                        <button class="btn btn-white px-2" type="button"><i class="material-icons">calendar_today</i></button>
+                      </div>
+                    </div>       
+                   
+  <div class="form-group col-md-4">
+    <label class="form-control-label"><%= f.label "Publicar em:" %></label>
+   <%= f.label 'Status' %>
 
+   <%= f.select :publish, [['Publicado', 1], ['Rascunho', 2]], class: 'form-control browser-default custom-select' %>
+                 
+  </div>
+                 
+                      
+
+              </div>
+            </div>
+
+           
            
 
             <!-- / Add New Post Form -->
@@ -51,35 +77,7 @@
               <div class="card-body p-0">
                 <ul class="list-group list-group-flush">
 
-<div id="exampleModalPopovers" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalPopoversLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalPopoversLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h5>Popover in a modal</h5>
-        <p>This
-          <a role="button" class="btn btn-secondary popover-test" title="" data-content="Popover body content is set in this attribute."
-            data-original-title="Popover title" data-toggle="popover">button</a> triggers a popover on click.</p>
-        <hr>
-        <h5>Tooltips in a modal</h5>
-        <p>
-          <a class="tooltip-test" title="" data-original-title="Tooltip" data-toggle="tooltip">This link</a>
-          and
-          <a class="tooltip-test" title="" data-original-title="Tooltip" data-toggle="tooltip">that link</a>
-          have tooltips on hover.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
                   <li class="list-group-item px-3 pb-2">
 
@@ -156,15 +154,10 @@
 
   <div class="form-group col-md-4">
     <label class="form-control-label"><%= f.label "Publicar depois x dias:" %></label>
-    <%= f.text_field(:days, min: "1", class: 'form-control') %>
+     
   </div>
 
 
-  <div class="form-group col-md-4">
-    <label class="form-control-label"><%= f.label "Publicar em:" %></label>
-
-    <%= f.datetime_field(:publish_on,  class: 'form-control') %>
-  </div>
 
 
   <div class="form-group">

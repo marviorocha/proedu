@@ -56,11 +56,11 @@ ActiveRecord::Schema.define(version: 2019_09_27_014122) do
     t.string "title"
     t.text "body"
     t.string "doc"
+    t.datetime "publish_on"
+    t.boolean "publish", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "curse_id"
-    t.datetime "publish_on"
-    t.integer "days", default: 1
     t.index ["curse_id"], name: "index_contents_on_curse_id"
   end
 
