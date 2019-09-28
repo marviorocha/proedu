@@ -5,13 +5,19 @@
             <!-- Add New Post Form -->
             <div class="card card-small mb-3">
               <div class="card-body">
-                <%= form_with model: Content.new do |f| %>
-                    <%= f.text_field :title, class: 'form-control form-control-lg mb-3', placeholder: "Adicionar lição" %>
-                   <%= f.rich_text_area :body, class: 'form-control form-control-lg mb-3' %>
-                 
-           
+                <%= form_with model: Content.new, class: '' do |f| %>
+                   <%= f.label :title %>
+                   <%= f.text_field :title, class: 'form-control form-control-lg mb-3', placeholder: "Adicionar lição" %>
+                    <%= f.label 'Inserir Video, Docs etc...' %>
+                    <%= f.text_field :doc, class: 'form-control form-control mb-3', placeholder: "Documentos, Vídeo URL Etc.." %>
+                   <%= f.label 'Conteúdo' %>
+                   <%= f.rich_text_area :body, class: 'md-textarea form-control mb-3', rows: '8' %>       
+
               </div>
             </div>
+
+           
+
             <!-- / Add New Post Form -->
           </div>
           <div class="col-lg-3 col-md-12">
@@ -25,7 +31,8 @@
                   <li class="list-group-item p-3">
                     <span class="d-flex mb-2"><i class="material-icons mr-1">flag</i><strong class="mr-1">Status:</strong> Draft <a class="ml-auto" href="#">Edit</a></span>
                     <span class="d-flex mb-2"><i class="material-icons mr-1">visibility</i><strong class="mr-1">Visibility:</strong> <strong class="text-success">Public</strong> <a class="ml-auto" href="#">Edit</a></span>
-                    <span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i><strong class="mr-1">Schedule:</strong> Now <a class="ml-auto" href="#">Edit</a></span>
+                    <span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i>
+                    <strong class="mr-1">Agendar:</strong> Now <a id='jobs' class="ml-auto" href="#">Edit</a></span>
                     <span class="d-flex"><i class="material-icons mr-1">score</i><strong class="mr-1">Readability:</strong> <strong class="text-warning">Ok</strong></span>
                   </li>
                   <li class="list-group-item d-flex px-3">
@@ -44,7 +51,35 @@
               <div class="card-body p-0">
                 <ul class="list-group list-group-flush">
 
-
+<div id="exampleModalPopovers" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalPopoversLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalPopoversLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Popover in a modal</h5>
+        <p>This
+          <a role="button" class="btn btn-secondary popover-test" title="" data-content="Popover body content is set in this attribute."
+            data-original-title="Popover title" data-toggle="popover">button</a> triggers a popover on click.</p>
+        <hr>
+        <h5>Tooltips in a modal</h5>
+        <p>
+          <a class="tooltip-test" title="" data-original-title="Tooltip" data-toggle="tooltip">This link</a>
+          and
+          <a class="tooltip-test" title="" data-original-title="Tooltip" data-toggle="tooltip">that link</a>
+          have tooltips on hover.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
                   <li class="list-group-item px-3 pb-2">
 
