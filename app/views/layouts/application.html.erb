@@ -9,7 +9,7 @@
   
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
+     <%= javascript_pack_tag 'application' %> 
 
      <%= stylesheet_link_tag "application", :media => "all" %>
   <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -17,7 +17,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="robots" content="all,follow">
-      <script async defer src="https://buttons.github.io/buttons.js"></script>     
+      
 </head>
 <body class="h-100">
   
@@ -67,7 +67,8 @@
 
 
    <%= javascript_include_tag "application" %>
+
    <%= javascript_include_tag "https://unpkg.com/shards-ui@latest/dist/js/shards.min.js" %>
    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js" %>
-  '<%= javascript_include_tag "https://cdn.onesignal.com/sdks/OneSignalSDK.js", async="" %>
+   <%= javascript_include_tag "https://cdn.onesignal.com/sdks/OneSignalSDK.js", async="" %>
   </html>
