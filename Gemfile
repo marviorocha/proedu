@@ -16,6 +16,8 @@ gem 'notify'
 
 gem 'mini_magick'
 
+gem 'image_processing'
+
 gem 'figaro'
 
 gem 'faker'

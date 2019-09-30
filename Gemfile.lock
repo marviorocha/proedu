@@ -229,6 +229,7 @@ DEPENDENCIES
   faker
   figaro
   font_awesome5_rails
+  image_processing
   jbuilder (~> 2.5)
   jquery-datatables
   meta_request

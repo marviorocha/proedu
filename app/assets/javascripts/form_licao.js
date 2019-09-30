@@ -12,11 +12,7 @@ $(document).ready(function(){
 
     })
 
-    $('#content_publish').on('option', function(){
-       
-        $('#content_publish_display').text($(this).val());
-
-    })
+ 
 
 });
 
