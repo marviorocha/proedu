@@ -1,171 +1,115 @@
 
-        <!-- End Page Header -->
-        <div class="row">
-          <div class="col-lg-9 col-md-12">
-            <!-- Add New Post Form -->
-            <div class="card card-small mb-3">
-              <div class="card-body">
-                <%= form_with model: Content.new, class: '' do |f| %>
-                   <%= f.label :title %>
-                   <%= f.text_field :title, class: 'form-control form-control-lg mb-3', placeholder: "Adicionar lição" %>
-                    <%= f.label 'Inserir Video, Docs etc...' %>
-                    <%= f.text_field :doc, class: 'form-control form-control mb-3', placeholder: "Documentos, Vídeo URL Etc.." %>
-                   <%= f.label 'Conteúdo' %>
-                   <%= f.rich_text_area :body, class: 'md-textarea form-control mb-3', rows: '8' %>       
+  <!-- End Page Header -->
+  <div class="row">
+    <div class="col-lg-9 col-md-12">
+      <!-- Add New Post Form -->
+      <div class="card card-small mb-3">
+        <div class="card-body">
+          <%= form_with model: Content.new, class: '' do |f| %>
+              <%= f.label :title %>
+              <%= f.text_field :title, class: 'form-control form-control-lg mb-3', placeholder: "Adicionar lição" %>
+              <%= f.label 'Inserir Video, Docs etc...' %>
+              <%= f.text_field :doc, class: 'form-control form-control mb-3', placeholder: "Documentos, Vídeo URL Etc.." %>
+              <%= f.label 'Conteúdo' %>
+              <%= f.rich_text_area :body, class: 'md-textarea form-control mb-3', rows: '8' %>       
 
-              </div>
-            </div>
-        <div class="card card-small mb-3 publish-show">
-        
-              <div class="card-body">
-                
-                  
-               
-                    <div class="input-group">
-                      <%= f.text_field :publish_on, class: 'form-control calendar mb-6', placeholder: "Adicionar lição" %>
-                      <div class="input-group-append">
-                        <button class="btn btn-white px-2" type="button"><i class="material-icons">calendar_today</i></button>
-                      </div>
-                    </div>       
-                   
-  <div class="form-group col-md-4">
-    <label class="form-control-label"><%= f.label "Publicar em:" %></label>
-   <%= f.label 'Status' %>
-
-   <%= f.select :publish, [['Publicado', 1], ['Rascunho', 2]], class: 'form-control browser-default custom-select' %>
-                 
-  </div>
-                 
-                      
-
-              </div>
-            </div>
-
-           
-           
-
-            <!-- / Add New Post Form -->
-          </div>
-          <div class="col-lg-3 col-md-12">
-            <!-- Post Overview -->
-            <div class="card card-small mb-3">
-              <div class="card-header border-bottom">
-                <h6 class="m-0">Actions</h6>
-              </div>
-              <div class="card-body p-0">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item p-3">
-                    <span class="d-flex mb-2"><i class="material-icons mr-1">flag</i><strong class="mr-1">Status:</strong> Draft <a class="ml-auto" href="#">Edit</a></span>
-                    <span class="d-flex mb-2"><i class="material-icons mr-1">visibility</i><strong class="mr-1">Visibility:</strong> <strong class="text-success">Public</strong> <a class="ml-auto" href="#">Edit</a></span>
-                    <span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i>
-                    <strong class="mr-1">Agendar:</strong> Now <a id='jobs' class="ml-auto" href="#">Edit</a></span>
-                    <span class="d-flex"><i class="material-icons mr-1">score</i><strong class="mr-1">Readability:</strong> <strong class="text-warning">Ok</strong></span>
-                  </li>
-                  <li class="list-group-item d-flex px-3">
-                    <button class="btn btn-sm btn-outline-accent"><i class="material-icons">save</i> Save Draft</button>
-                    <button class="btn btn-sm btn-accent ml-auto"><i class="material-icons">file_copy</i> Publish</button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- / Post Overview -->
-            <!-- Post Overview -->
-            <div class="card card-small mb-3">
-              <div class="card-header border-bottom">
-                <h6 class="m-0">Cursos</h6>
-              </div>
-              <div class="card-body p-0">
-                <ul class="list-group list-group-flush">
-
-
-
-                  <li class="list-group-item px-3 pb-2">
-
-
-        
-
-            <%= collection_radio_buttons(:curses, :curse_ids, Curse.all, :id, :title ) do |b| %>
-            <div class="custom-control custom-radio mb-1">
-                    <%= b.radio_button(class:'custom-control-input', id: "category#{b.value}") %>
-                    <%= b.label(class: 'custom-control-label', for:"category#{b.value}") %>
-                 
-             </div>
-             <% end %>
-                      <%# <div class="custom-control custom-radio mb-1">
-                      <input type="checkbox" class="custom-control-input" id="category6">
-                      <label class="custom-control-label" for="category6">Books</label>
-                    </div>
-                  
-                    <div class="custom-control custom-radio mb-1">
-                      <input type="checkbox" class="custom-control-input" id="category7">
-                      <label class="custom-control-label" for="category7">Books</label>
-                    </div> %>
-                  </li>
-                  <li class="list-group-item d-flex px-3">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="New category" aria-label="Add new category" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <button class="btn btn-white px-2" type="button"><i class="material-icons">add</i></button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- / Post Overview -->
-          </div>
         </div>
       </div>
+ 
+
+      
+      
+
+      <!-- / Add New Post Form -->
+    </div>
+    <div class="col-lg-3 col-md-12">
+      <!-- Post Overview -->
+      <div class="card card-small mb-3">
+        <div class="card-header border-bottom">
+          <h6 class="m-0">Actions</h6>
+        </div>
+        <div class="card-body p-0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item p-3">
+             
+       <%= f.select :publish, [['Publicado', 1], ['Rascunho', 2]], {},  {class: 'browser-default custom-select'} %>
+
+  </li>
+   <li class="list-group-item p-3">
+              <span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i>
+              <strong class="mr-1">Agendar:</strong> <span id='content_publish_on_display'>Agora</span>
+               <a id='jobs' class="ml-auto" href="#">Editar</a></span> 
+               <div class="publish-show">
+                <%= f.text_field :publish_on, class: 'form-control calendar', placeholder: "Selecione data", autocomplete: 'off' %> 
+               </div>
+   </li>
+ 
+              
+         
+        
+            
+              
+           
+            <li class="list-group-item d-flex px-3">
+              <button class="btn btn-sm btn-outline-accent"><i class="material-icons">save</i> Rascunho</button>
+              <button class="btn btn btn-accent ml-auto"><i class="material-icons">file_copy</i> Publicar</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- / Post Overview -->
+      <!-- Post Overview -->
+      <div class="card card-small mb-3">
+        <div class="card-header border-bottom">
+          <h6 class="m-0">Cursos</h6>
+        </div>
+        <div class="card-body p-0">
+          <ul class="list-group list-group-flush">
 
 
-     <% end %> 
-     <%# end form %>
+
+            <li class="list-group-item px-3 pb-2">
 
 
+  
 
-
-
-
-
-
-
-
-
-
-  <%= form_for @content do |f| %>
-  <%#= render "shared/errors", object: @content %>
-  <div class="form-group">
-    <label class="form-control-label"><%= f.label :curse %></label>
-   
+      <%= collection_radio_buttons(:curses, :curse_ids, Curse.all, :id, :title ) do |b| %>
+      <div class="custom-control custom-radio mb-1">
+              <%= b.radio_button(class:'custom-control-input', id: "category#{b.value}") %>
+              <%= b.label(class: 'custom-control-label', for:"category#{b.value}") %>
+            
+        </div>
+        <% end %>
+                <%# <div class="custom-control custom-radio mb-1">
+                <input type="checkbox" class="custom-control-input" id="category6">
+                <label class="custom-control-label" for="category6">Books</label>
+              </div>
+            
+              <div class="custom-control custom-radio mb-1">
+                <input type="checkbox" class="custom-control-input" id="category7">
+                <label class="custom-control-label" for="category7">Books</label>
+              </div> %>
+            </li>
+        
+          </ul>
+        </div>
+      </div>
+      <!-- / Post Overview -->
+    </div>
   </div>
-  <div class="form-group">
-    <label class="form-control-label"><%= f.label :title %></label>
-    <%= f.text_field :title, placeholder: 'Digite sua lição', class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <label class="form-control-label"><%= f.label 'Conteúdo do curso' %></label>
-    <%= f.text_area :body, id: "editor", class: 'form-control' %>
-  </div>
-  <div class="form-group">
-    <label class="form-control-label"><%= f.label "Embed MP4, Youtube or Vimeo URL" %></label>
-    <%= f.text_field :doc, class: 'form-control' %>
-  </div>
-
-  <div class="form-group col-md-4">
-    <label class="form-control-label"><%= f.label "Publicar depois x dias:" %></label>
-     
-  </div>
-
-
-
-
-  <div class="form-group">
-    <%= f.submit content_for(:title), class: 'btn btn-primary' %>
-
-  </div>
-  <% end %>
 </div>
 
-</div>
-</div>
+
+<% end %> 
+<%# end form %>
+
+
+
+
+
+
+
+
+
+
+ 
