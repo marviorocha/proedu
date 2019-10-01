@@ -43,8 +43,8 @@ def create
     format.html { redirect_to curses_path, notice: 'Curse foi criado com sucesso!'}
     format.json { render :index, status: :created, location: @curse }
   else
-    format.html { render :new, alert: @curse.errors.full_messages.to_sentence  }
-    format.json { render :index, status: :created, location: @curse }
+    flash[:notice] = "No file found!"
+      render "new"
     end
   end
 end

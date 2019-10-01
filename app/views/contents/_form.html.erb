@@ -1,3 +1,4 @@
+   <%= render 'shered/alerts/notifications' %>
 
 <!-- End Page Header -->
 <div class="row">
@@ -5,7 +6,8 @@
 <!-- Add New Post Form -->
 <div class="card card-small mb-3">
 <div class="card-body">
-<%= form_with model: Content.new, class: '' do |f| %>
+
+<%= form_with model: content, local:true do |f| %>
 <%= f.label :title %>
 <%= f.text_field :title, class: 'form-control form-control-lg mb-3', placeholder: "Adicionar lição" %>
 <%= f.label 'Inserir Video, Docs etc...' %>
@@ -41,15 +43,9 @@
 </div>
 </li>
 
-
-
-
-
-
-
 <li class="list-group-item d-flex px-3">
-<button class="btn btn-sm btn-outline-accent"><i class="material-icons">save</i> Rascunho</button>
-<button class="btn btn btn-accent ml-auto"><i class="material-icons">file_copy</i> Publicar</button>
+<%# button_tag fa_icon('file-alt', text: 'Publicar'), class: 'btn btn btn-accent ml-auto', data: { disable_with: "Publicando..."} %>
+ <%= f.submit "Submit" %>
 </li>
 </ul>
 </div>
@@ -70,7 +66,7 @@
 
 
 
-<%= collection_radio_buttons(:curses, :curse_ids, Curse.all, :id, :title ) do |b| %>
+<%= collection_radio_buttons(:content, :curse_id, Curse.all, :id, :title ) do |b| %>
 <div class="custom-control custom-radio mb-1">
 <%= b.radio_button(class:'custom-control-input', id: "category#{b.value}") %>
 <%= b.label(class: 'custom-control-label', for:"category#{b.value}") %>

@@ -1,14 +1,15 @@
 class Content < ApplicationRecord
 
+has_rich_text :body    
 has_many :progress, -> { where(progress: true) }
 
 belongs_to :curse
 
 
-scope :publish,   ->  (user) { where("publish_on > ?", user) if user.present? }
-scope :unpublish, ->  (user) { where("publish_on >= ?", user) if user.present? }
-scope :days_lock, ->  (days) { where("publish_on > ?", days) if days.present? }
-scope :licao, ->(curse) { where("curse_id = ?", curse) if curse.present?  }
+# scope :publish,   ->  (user) { where("publish_on > ?", user) if user.present? }
+# scope :unpublish, ->  (user) { where("publish_on >= ?", user) if user.present? }
+# scope :days_lock, ->  (days) { where("publish_on > ?", days) if days.present? }
+# scope :licao, ->(curse) { where("curse_id = ?", curse) if curse.present?  }
 
 
 # list the picture the curse_id

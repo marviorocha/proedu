@@ -17,26 +17,27 @@ class ContentsController < ApplicationController
 
   # GET /contents/new
   def new
+    
+     
     @content = Content.new
   end
 
   # POST /contents
   # POST /contents.json
   def create
+   
     @content = Content.new(content_params)
 
-    respond_to do |format|
-      if @content.save
-        format.html { redirect_to contents_path, notice: 'Content was successfully created.' }
-        format.json { render :show, status: :created, location: @content }
-
-      else
-        format.html { render :new }
-        format.json { render json: @content.errors, status: :unprocessable_entity }
+  
+      
+      respont_to do |format|
+        if @content.save
+        format.html { redirect_to content_pach, notice: 'Lição criada com sucesso'}
+        else
+          format.html {render 'new', alert: @content.errors_full_mensagers.to_sentence}
       end
     end
-  end
-
+end
 
 
   # GET /contents/1/edit
@@ -44,22 +45,22 @@ class ContentsController < ApplicationController
   end
 
   # GET /contents/1/deplicate
-  def duplicate
+  # def duplicate
 
-    @new = @content.dup
-    @new.title = "#copy #{@new.title}".clone
+  #   @new = @content.dup
+  #   @new.title = "#copy #{@new.title}".clone
 
-    respond_to do |format|
-      if @new.save
-        format.html { redirect_to contents_path, notice: 'Content was duplicate with successfully'}
-      else
-        format.html { render :edit }
-        format.json { render json: @content.errors, status: :unprocessable_entity }
-      end
+  #   respond_to do |format|
+  #     if @new.save
+  #       format.html { redirect_to contents_path, notice: 'Content was duplicate with successfully'}
+  #     else
+  #       format.html { render :edit }
+         
+  #     end
 
-    end
+  #   end
 
-  end
+  # end
 
   # PATCH/PUT /contents/1
   # PATCH/PUT /contents/1.json
@@ -72,9 +73,9 @@ class ContentsController < ApplicationController
 
       else
         format.html { render :edit }
-        format.json { render json: @content.errors, status: :unprocessable_entity }
+       
       end
-    end
+   
   end
 
   # DELETE /contents/1
@@ -95,6 +96,9 @@ class ContentsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def content_params
-    params.require(:content).permit(:title, :body, :doc, :publish_on, :days, :curse_id)
+    params.require(:content).permit(:title, :doc, :publish_on, :publish, :curse_id)
   end
+ 
+
+end
 end
