@@ -3,7 +3,11 @@ class ContentsController < ApplicationController
 before_action :set_params_contents, only: [:edit, :show, :destroy, :update]    
 
 def index
-    @contents = Content.curse
+    @contents = Content.all
+end
+
+def curses
+    @contents = Content.where(curse_id: params[:id])
 end
 
 

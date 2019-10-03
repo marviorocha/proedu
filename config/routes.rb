@@ -16,7 +16,11 @@ get '/users/sign_up/:id', to: 'users#new', as: 'user_new'
 resources :messagers
 
 #content resources
-resources :contents
+resources :contents do
+    member do
+        get 'curses'
+    end
+end
 
 resources :progresses
 

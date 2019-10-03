@@ -13,6 +13,25 @@ def new
 @curse = Curse.new
 end
 
+
+def create
+
+  @curse = Curse.new(set_params)
+  
+  respond_to do |format|
+       
+    if @curse.save
+      format.html {redirect_to curses_path, notice: 'Curso foi criado com sucesso!'}
+    else
+      format.html {render 'new'}
+      flash.alert = @curse.errors.full_messages.to_sentence
+    
+    end
+  end
+end
+
+
+
 def show
 
 end
@@ -33,45 +52,32 @@ def edit
 
 end
 
-def create
-  @curse = Curse.new(set_params)
-
-  respond_to do |format|
-    if @curse.save
-   
-
-    format.html { redirect_to curses_path, notice: 'Curse foi criado com sucesso!'}
-   
-  else
-    flash[:notice] = @curse.errors.full_messages.to_sentence
-      render "new"
-    end
-  end
-end
+ 
 
 def update
+
    respond_to do |format|
      if @curse.update(set_params)
-     format.html {redirect_to curses_path, notice: 'Curso foi atualizado com sucesso!'}
-     format.json { render :index, status: :edited, location: @curse }
       
-
+      format.html {redirect_to curses_path, notice: 'Curso foi atualizado com sucesso!'}
+      
+      
     else
       format.html { render :edit}
-      format.json { render json: @curse.errors, status: :unprocessable_entity}
+      
 
     end
   end
 end
 
-def destroy
-@curse.destroy
-  respond_to do |format|
-    format.js
-    format.html { redirect_to curses_path, notice: 'O curso foi deletado com sucesso!'}
-    format.json { render :show, status: :created, location: @curse }
+  def destroy
+  @curse.destroy
+    respond_to do |format|
+      format.js
+      format.html { redirect_to curses_path, notice: 'O curso foi deletado com sucesso!'}
+       
+    end
   end
-end
 
 
 private
