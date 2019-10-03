@@ -9,10 +9,10 @@ def board
     @days_for.each do |data|
     @current_time   = Time.zone.now
     @inscricaodate  = current_user.created_at
-    @userday        = (@current_time.to_i - @inscricaodate.to_i).to_i / data.days.days
+   # @userday        = (@current_time.to_i - @inscricaodate.to_i).to_i / data.days.days
     @day_to_publish = Content.where('days > ?', @userday)
     @contents       = Content.where("days = ?", @userday)
-    @unpublish      = Content.unpublish(@current_time)
+   # @unpublish      = Content.unpublish(@current_time)
     @noficar        = Content.where("publish_on >= ?", @current_time ).limit("1")
 
 

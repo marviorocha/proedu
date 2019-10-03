@@ -23,8 +23,9 @@ before_action :set_category, only: [:edit, :destroy, :show, :update]
       if @category.save
       format.html {redirect_to categories_path, notice: 'Category was created with successfully'}
     else
+      flash.alert = @category.errors.full_messages.to_sentence 
       format.html {render :new}
-      format.json {render json: @curse.errors, status: :unprocessable_entity}
+      
     end
     end
   end
@@ -37,7 +38,7 @@ before_action :set_category, only: [:edit, :destroy, :show, :update]
     @category.destroy
    respond_to do |format|
      format.html { redirect_to categories_path, notice: 'A categoria foi deletadado com sucesso!'}
-     format.json { render :show, status: :created, location: @curse }
+      
    end
 
   end

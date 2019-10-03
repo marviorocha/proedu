@@ -38,12 +38,12 @@ def create
 
   respond_to do |format|
     if @curse.save
-    @curse.picture.url # => '/url/to/file.png'
+   
 
     format.html { redirect_to curses_path, notice: 'Curse foi criado com sucesso!'}
-    format.json { render :index, status: :created, location: @curse }
+   
   else
-    flash[:notice] = "No file found!"
+    flash[:notice] = @curse.errors.full_messages.to_sentence
       render "new"
     end
   end

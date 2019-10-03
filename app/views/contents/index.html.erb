@@ -9,7 +9,7 @@
             <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
                 <span class="text-uppercase page-subtitle">Overview</span>
-                <h3 class="page-title">Data Tables</h3>
+                <h3 class="page-title"><%= @contents %></h3>
               </div>
             </div>
             <!-- End Page Header -->
@@ -39,7 +39,7 @@
                         <tr>
                           <td><%= licao.id %></td>
                           <td><%= licao.title %></td>
-                          <td><span class="badge badge-pill badge-secondary"><%= licao.contents.count %></span> </td>
+                          <td><span class="badge badge-pill badge-secondary"><%# licao.contents.count %></span> </td>
                           <td><%= link_to fa_icon('plus-circle', text: 'Add Lição'), new_content_path, class: 'mb-2 btn btn-primary mr-2' %></td>
                         </tr>
                        <% end %>

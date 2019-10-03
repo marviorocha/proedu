@@ -10,7 +10,7 @@ gem 'jquery-datatables'
 
 gem 'onesignal'
 
-gem 'carrierwave'
+ 
 
 gem 'notify'
 
@@ -56,7 +56,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'meta_request'
-
+  gem 'pry'
   #gem for debugger
   # gem 'better_errors'
 

@@ -43,7 +43,7 @@
                   <td> <%= link_to fa_icon('folder', text: 'Lição'),
                   contents_path(curse: curses), class: 'float-right btn ' %></td>
                  
-                  <td><%= image_tag(curses.picture_url(:thumb)) if curses.picture? %></td>
+                  <td><%# image_tag(curses.picture) if curses.picture? %></td>
                        <td><%= curses.title %></td>
                   <td><%= truncate(curses.descricao, length:50 ,omission: '... (mais)') %> <br></td>
                   <td><%=  curses.category.name %></td>

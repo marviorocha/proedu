@@ -1,104 +1,63 @@
 class ContentsController < ApplicationController
-  before_action :set_content, only: [:show, :edit, :update, :destroy, :duplicate]
 
-  # GET /contents
-  # GET /contents.json
-  def index
+before_action :set_params_contents, only: [:edit, :show, :destroy, :update]    
 
-    @contents = Curse.all
+def index
+    @contents = Content.curse
+end
 
-  end
 
-  # GET /contents/1
-  # GET /contents/1.json
-  def show
-      @progress = Progress.new
-  end
+def show 
 
-  # GET /contents/new
-  def new
-    
-     
+end
+
+def new
     @content = Content.new
-  end
+end
 
-  # POST /contents
-  # POST /contents.json
-  def create
+
+def create
+    @content = Content.new(params_contents)
    
-    @content = Content.new(content_params)
-
-  
-      
-      respont_to do |format|
-        if @content.save
-        format.html { redirect_to content_pach, notice: 'Lição criada com sucesso'}
+    respond_to do |format|
+        if @content.save 
+         format.html {redirect_to contents_path, notice: "Lição [#{@content.id}] foi criado com sucesso"}
         else
-          format.html {render 'new', alert: @content.errors_full_mensagers.to_sentence}
-      end
-    end
-end
-
-
-  # GET /contents/1/edit
-  def edit
-  end
-
-  # GET /contents/1/deplicate
-  # def duplicate
-
-  #   @new = @content.dup
-  #   @new.title = "#copy #{@new.title}".clone
-
-  #   respond_to do |format|
-  #     if @new.save
-  #       format.html { redirect_to contents_path, notice: 'Content was duplicate with successfully'}
-  #     else
-  #       format.html { render :edit }
-         
-  #     end
-
-  #   end
-
-  # end
-
-  # PATCH/PUT /contents/1
-  # PATCH/PUT /contents/1.json
-  def update
-    respond_to do |format|
-      if @content.update(content_params)
-        format.html { redirect_to contents_path, notice: 'Content was successfully updated.' }
-        format.json { render :show, status: :ok, location: @content }
-
-
-      else
-        format.html { render :edit }
-       
-      end
+          flash.alert = @content.errors.full_messages.to_sentence
+          format.html {render 'new'}       
+        end
    
-  end
-
-  # DELETE /contents/1
-  # DELETE /contents/1.json
-  def destroy
-    @content.destroy
-    respond_to do |format|
-      format.html { redirect_to contents_url, notice: 'Content was successfully destroyed.' }
-      format.json { head :no_content }
     end
-  end
+end
 
-  private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_content
+
+def edit
+
+end
+
+def update
+
+end
+
+def destroy
+
+end
+
+private
+
+def set_params_contents
+
     @content = Content.find(params[:id])
-  end
-
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def content_params
-    params.require(:content).permit(:title, :doc, :publish_on, :publish, :curse_id)
-  end
- 
 
 end
+
+def params_contents
+
+    params.require(:content).permit(:title, :body, :doc, :publish, :publish_on, :curse_id)
+
 end
+
+
+
+# // end class for ContentsController
+end 
