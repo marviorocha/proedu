@@ -2,6 +2,12 @@ module CursesHelper
 
 
 
+def status
+
+ 
+end
+
+
 def board
 
     @curses         = current_user.curse

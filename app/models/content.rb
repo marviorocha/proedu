@@ -6,6 +6,10 @@ has_many :progress, -> { where(progress: true) }
 belongs_to :curse
 
 has_one_attached :picture
+ 
+scope :unpublished, ->{where("publish_on >= ?", Time.zone.now)}
+ 
+
 
 # scope :publish,   ->  (user) { where("publish_on > ?", user) if user.present? }
 # scope :unpublish, ->  (user) { where("publish_on >= ?", user) if user.present? }

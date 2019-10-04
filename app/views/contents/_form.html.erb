@@ -30,8 +30,8 @@
 <div class="card-body p-0">
 <ul class="list-group list-group-flush">
 <li class="list-group-item p-3">
-
-<%= f.select :publish, [['Publicado', 1], ['Rascunho', 2]], {},  {class: 'browser-default custom-select'} %>
+ 
+<%= f.select :publish, options_for_select([["Publish",1], ['Rascunho', 0]]), {},  {class: 'browser-default custom-select'} %>
 
 </li>
 <li class="list-group-item p-3">
