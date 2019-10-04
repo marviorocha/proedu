@@ -1,21 +1,19 @@
 
 <%= title "Editando" %>
+ 
 
-<!-- Page Header-->
-<header class="page-header">
-  <div class="container-fluid">
-    <h2 class="no-margin-bottom"  > Editar <%= @content.title %></h2>
-  </div>
-</header>
+ <div class="main-content-container container-fluid px-4">
+            <!-- Page Header -->
+            <div class="page-header row no-gutters py-4">
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                <span class="text-uppercase page-subtitle">Lição</span>
+                <h3 class="page-title"> Editar <%= @content.title %></h3>
+              </div>
+            </div>
 
-<%= render "layouts/brandcrumb" %>
-
-<p></p>
-<div class="container-fluid">
 
 
 <%= render 'form', content: @content %>
 
 
-
-</div>
+ 

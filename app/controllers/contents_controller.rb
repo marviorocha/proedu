@@ -3,11 +3,12 @@ class ContentsController < ApplicationController
 before_action :set_params_contents, only: [:edit, :show, :destroy, :update]    
 
 def index
-    @contents = Content.all
+    @contents = Curse.all
 end
 
 def curses
-    @contents = Content.where(curse_id: params[:id])
+    @curse = Curse.find(params[:id])
+    @contents = @curse.contents
 end
 
 
@@ -37,9 +38,20 @@ end
 
 def edit
 
+
 end
 
 def update
+
+    respond_to do |format|
+        if @content.update(params_contents)
+            format.html {redirect_to curses_content_path(@content.curse_id), notice: 'Lição foi atualizada com sucesso'}
+        else
+            format.html {render 'edit', alert: @content.errors.full_messages.to_sentence}
+        end
+    end
+
+
 
 end
 

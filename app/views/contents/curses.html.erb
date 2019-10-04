@@ -1,16 +1,23 @@
-<%= title "Minhas Lições" %>
+<%= title "Minhas Lições #{@curse.title}" %>
 
 
  <div class="main-content-container container-fluid px-4">
 
-
-
+ 
             <!-- Page Header -->
-            <div class="page-header row no-gutters py-4">
-              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+            <div class="clearfix page-header row no-gutters py-4">
+              <div class="float-left col-12 col-sm-8 text-center text-sm-left mb-0">
+
+              
                 <span class="text-uppercase page-subtitle">Overview</span>
-                <h3 class="page-title"><%= @contents %></h3>
+                <h3 class="page-title"><%= @curse.title %></h3>
+                
               </div>
+
+          <div class="col-12 col-sm-4 text-center text-sm-right">
+          <%= link_to fa_icon('plus-circle', text: 'Add Lição'), new_content_path, class: 'mb-2 btn btn-primary mr-2' %>
+          </div>
+
             </div>
             <!-- End Page Header -->
             <!-- Default Light Table -->
@@ -18,7 +25,7 @@
               <div class="col">
                 <div class="card card-small mb-4">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Active Users</h6>
+                    <h6 class="m-0">Total de lições: <%= @contents.count %></h6>
                   </div>
 
                              <!-- Page Header -->
@@ -28,7 +35,7 @@
                       <thead class="bg-light">
                         <tr>
                           <th scope="col" class="border-0">#</th>
-                          <th scope="col" class="border-0">Titulo</th>
+                          <th scope="col" class="border-0 text-left">Titulo</th>
                           <th scope="col" class="border-0">Lição total:</th>
                           <th scope="col" class="border-0">Assistido</th>
                           
@@ -38,9 +45,9 @@
                       <% @contents.each do |licao| %>
                         <tr>
                           <td><%= licao.id %></td>
-                          <td><%= licao.title %></td>
-                          <td><span class="badge badge-pill badge-secondary"><%# licao.contents.count %></span> </td>
-                          <td><%= link_to fa_icon('plus-circle', text: 'Add Lição'), new_content_path, class: 'mb-2 btn btn-primary mr-2' %></td>
+                          <td class='text-left' ><%= licao.title %></td>
+                          <td><span class="badge badge-pill badge-secondary"><%= licao.publish  %></span> </td>
+                          <td><%= link_to fa_icon('file-alt', text: 'Editar'), edit_content_path(licao), class: 'btn btn-sm btn-info mb-0' %></td>
                         </tr>
                        <% end %>
                       </tbody>
