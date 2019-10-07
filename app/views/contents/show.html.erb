@@ -1,40 +1,52 @@
 <%= title "Lição - #{ @content.title }" %>
 
 
- <div class="main-content-container container-fluid px-4">
+ <div class="main-content-container container-fluid px-4 bg-dark">
 
 
 
             <!-- Page Header -->
             <div class="page-header row no-gutters py-4">
-              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">Overview</span>
-                <h3 class="page-title">Data Tables</h3>
+              <div class="col-12 col-sm-6 text-center text-sm-left mb-0">
+                <span class="text-uppercase page-subtitle">Aula #<%= @content.id %></span>
+                <h3 class="page-title text-light"><%= @content.title %></h3>
               </div>
             </div>
             <!-- End Page Header -->
             <!-- Default Light Table -->
             <div class="row">
               <div class="col">
-                <div class="card card-small mb-4">
+                <div class="card card-small mb-4 ">
+
+<%= show_video %>
+
+              
+                <%# <img class="card-img-top" src="<%= url_for(@content.curse.picture) %>
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Active Users</h6>
+                    <h6 class="m-0">Atualizado em: <%= @content.updated_at.strftime("%d/%m/%Y") %></h6>
                   </div>
 
                              <!-- Page Header -->
-
-                  <div class="card-body p-0 pb-3 text-center">
+ 
+                  <div class="card-body p-0 pb-3 ">
                     <table class="table mb-0">
-             
+                    <%= @content.body %>
                       </tbody>
                     </table>
                   </div>
                 </div>
+                 <div class="btn-group" role="group" aria-label="Exemplo básico">
+ 
+  <%= link_to fa_icon('chevron-left', text: 'Voltar'), curses_content_path(@content.curse), class: 'btn btn-secondary' %>
+  <%= link_to fa_icon('check', text: 'Marcar como Concluída'), curses_content_path(@content.curse), class: 'btn btn-success' %>
+ 
+</div>
               </div>
+              
             </div>
             <!-- End Default Light Table -->
             <!-- Default Dark Table -->
-             
+
           
             <!-- End Default Dark Table -->
           </div>

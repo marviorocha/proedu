@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :progress, -> { where(progress: true) }
   has_and_belongs_to_many :curse
 
+  has_one_attached :avatar
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

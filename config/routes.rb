@@ -19,6 +19,7 @@ resources :messagers
 resources :contents do
     member do
         get 'curses'
+        get 'duplicar'
     end
 end
 

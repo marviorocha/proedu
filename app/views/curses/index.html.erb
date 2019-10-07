@@ -1,18 +1,25 @@
 <%= title "Cursos" %>
 
-
-
 <div class="main-content-container container-fluid px-4">
-            <!-- Page Header -->
-            <div class="page-header row no-gutters py-4">
-              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">lista cursos</span>
-                <h3 class="page-title">Cursos</h3>
-                
-              </div>
-              
-            </div>
-            <!-- End Page Header -->
+  
+  
+  <!-- Page Header -->
+  <div class="clearfix page-header row no-gutters py-4">
+    <div class="float-left col-12 col-sm-8 text-center text-sm-left mb-0">
+      
+      
+      <span class="text-uppercase page-subtitle">Lista de cursos</span>
+      <h3 class="page-title">Cursos</h3>
+      
+    </div>
+    
+    <div class="col-12 col-sm-4 text-center text-sm-right">
+      <%= link_to fa_icon('plus-circle', text: 'Add Curso'), new_curse_path, class: 'mb-2 btn btn-primary mr-2' %>
+    </div>
+    
+  </div>
+  <!-- End Page Header -->
+ 
             <!-- Default Light Table -->
             <div class="row">
             
@@ -20,8 +27,9 @@
               
                 <div class="card card-small mb-4">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Cursos</h6>
-                    <%= link_to fa_icon('plus', text: 'Criar Novo'), new_curse_path, class: 'float-right btn btn-primary' %>
+                   
+                   <h6 class="m-0">Lista de cursos</h6>
+                    
                   </div>
                   <div class="card-body p-0 pb-3 text-center">
                     <table class="table mb-0">

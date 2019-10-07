@@ -11,9 +11,10 @@
 <%= f.label :title %>
 <%= f.text_field :title, class: 'form-control form-control-lg mb-3', placeholder: "Adicionar lição" %>
 <%= f.label 'Inserir Video, Docs etc...' %>
-<%= f.text_field :doc, class: 'form-control  mb-3', placeholder: "Documentos, Vídeo URL Etc.." %>
+<%= f.text_field :doc, class: 'form-control  mb-3', placeholder: "http:// Documentos, Vídeo URL Etc.." %>
 <%= f.label 'Conteúdo' %>
 <%= f.rich_text_area :body, class: 'form-control' %>  
+
 </div>
 </div>
 
@@ -36,7 +37,8 @@
 </li>
 <li class="list-group-item p-3">
 <span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i>
-<strong class="mr-1">Agendar:</strong> <span id='content_publish_on_display'>Agora</span>
+<strong class="mr-1">Agendar:</strong> <span id='content_publish_on_display'><%= @content.publish_on.nil? ? 'Agora' :
+ @content.publish_on.strftime("%d/%m/%Y") %></span>
 <a id='jobs' class="ml-auto" href="#">Editar</a></span> 
 <div class="publish-show">
 <%= f.text_field :publish_on, class: 'form-control calendar', placeholder: "Selecione data", autocomplete: 'off' %> 

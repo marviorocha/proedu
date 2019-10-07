@@ -1,62 +1,54 @@
 <%= title "Categorias" %>
 
-<!-- Page Header-->
-<header class="page-header">
-  <div class="container-fluid">
-    <h2 class="no-margin-bottom">Categoria</h2>
+<div class="main-content-container container-fluid px-4">
+  
+  
+  <!-- Page Header -->
+  <div class="clearfix page-header row no-gutters py-4">
+    <div class="float-left col-9 col-sm-8 text-center text-sm-left mb-0">
+      
+      
+      <span class="text-uppercase page-subtitle">Overview</span>
+      <h3 class="page-title">Categorias</h3>
+      
+    </div>
+    
+    <div class="col-8 col-sm-4 text-center text-sm-right">
+      <%= link_to fa_icon('plus-circle', text: 'Add Categoria'), new_category_path, class: 'mb-2 btn btn-primary mr-2' %>
+    </div>
+    
   </div>
-</header>
-
-<%= render "layouts/brandcrumb" %>
-<p></p>
-<div class="container-fluid">
-
-
-  <div class="card">
-
-    <h4 class="card-header d-flex align-items-center">Categoria</h4>
-    <div class="card-body">
-
-      <p><%= link_to fa_icon('plus', text: 'Criar Novo'), new_category_path, class: 'float-right btn btn-primary' %>
-
-        <div class="table-responsive">
-          <p></p>
-          <table id="datatable" class="display table" cellspacing="0" >
-
-
-            <thead>
-
+  <!-- End Page Header -->
+  <!-- Default Light Table -->
+  <div class="row">
+    <div class="col-lg-8 col-md-12">
+      <div class="card card-small mb-4">
+        <div class="card-header border-bottom">
+          
+        </div>
+        
+        <!-- Page Header -->
+        
+        <div class="card-body">
+          <table class="table mb-0" >
+            <thead class="bg-light">
               <tr>
-                <th>#</th>
-
-                <th>Nome:</th>
-
-                <th cellspacing='5'></th>
+                <th scope="col" class="border-0">#</th>
+                <th scope="col" class="border-0 text-left">Nome</th>
+                <th scope="col" class="border-0">Ação</th>
+                
               </tr>
             </thead>
-            <tfoot>
-            <tr>
-              <th>#</th>
-
-              <th>Nome</th>
-
-              <th></th>
-            </tr>
-        </tfoot>
             <tbody>
-              <% @category.each do |category| %>
+              <%  @category.each do |categories| %>
               <tr>
-                <td><%= category.id %></td>
-                <td><%= category.name %></td>
-
-                <td>
-                  <%= link_to fa_icon('eye', text:''), category, class: 'btn btn-outline-primary btn-sm' %>
-                  <%= link_to fa_icon('pencil', text:'Editar'), edit_category_path(category), class: 'btn btn-outline-info btn-sm' %>
-                  <%= link_to fa_icon('trash', text: ''), category ,class: 'btn btn-outline-danger btn-sm', method: :delete, data: { confirm: 'Você deseja deletar a categoria?' } %></td>
-
+                <td><%= categories.id %></td>
+                <td class='text-left' ><%= categories.name %></td>
+            
+                 <td><%= link_to fa_icon('file-alt', text: 'Editar'), edit_category_path(categories), class: 'btn btn-sm btn-info mb-0' %>
+                  <%= link_to fa_icon('trash-alt', text: nil), category_path(categories), data: {confirm: "Deseja deletar: #{categories.name}"},
+                  class: 'btn btn-sm btn-danger mb-0', method: :delete, remote: true %>
                 </td>
-
-
               </tr>
               <% end %>
             </tbody>
@@ -65,3 +57,9 @@
       </div>
     </div>
   </div>
+  <!-- End Default Light Table -->
+  <!-- Default Dark Table -->
+  
+  
+  <!-- End Default Dark Table -->
+</div>

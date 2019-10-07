@@ -23,7 +23,7 @@ $(function() {
    
     $('.calendar').flatpickr({
         minDate: "today",
-        dateFormat: "d-m-Y",
+        dateFormat: "d/m/Y",
         allowInput: true
         
     }

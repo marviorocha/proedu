@@ -38,7 +38,7 @@
                 <th scope="col" class="border-0 text-left">Titulo</th>
                 <th scope="col" class="border-0">Status:</th>
                 <th scope="col" class="border-0">Agendado:</th>
-                <th scope="col" class="border-0">Assistido</th>
+                <th scope="col" class="border-0">Ação:</th>
                 
               </tr>
             </thead>
@@ -57,11 +57,16 @@
                  %>
                 </td>
               
-                <td> <%= licao.publish_on.nil? ? "" : licao.publish_on.strftime("%d/%m/%Y às %r") %></td>
-                <td><%= link_to fa_icon('file-alt', text: 'Editar'), edit_content_path(licao), class: 'btn btn-sm btn-info mb-0' %>
-                  <%= link_to fa_icon('trash-alt', text: nil), content_path(licao), data: {confirm: "Deseja deletar: #{licao.title}"},
-                  class: 'btn btn-sm btn-danger mb-0', method: :delete,  remote: true %>
-                </td>
+        <td><%= licao.publish? ? '' : licao.publish_on.strftime("%d/%m/%Y") %></td>
+     
+     
+        <td>
+        <%= link_to fa_icon('eye', text: 'Visualizar'), content_path(licao), class: 'btn btn-sm btn-primary mb-0' %>        
+        <%= link_to fa_icon('file-alt', text: 'Editar'), edit_content_path(licao), class: 'btn btn-sm btn-info mb-0' %>
+        <%= link_to fa_icon('copy', text: 'Duplicar'), duplicar_content_path(licao), class: 'btn btn-sm btn-primary mb-0' %>
+          <%= link_to fa_icon('trash-alt', text: nil), content_path(licao), data: {confirm: "Deseja deletar: #{licao.title}"},
+          class: 'btn btn-sm btn-danger mb-0', method: :delete,  remote: true %>
+        </td>
               </tr>
               <% end %>
             </tbody>

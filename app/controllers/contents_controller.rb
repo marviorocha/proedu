@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
     
-    before_action :set_params_contents, only: [:edit, :show, :destroy, :update]    
+    before_action :set_params_contents, only: [:edit, :show, :destroy, :update, :duplicar]    
     
     def index
         @contents = Curse.all
@@ -57,6 +57,20 @@ class ContentsController < ApplicationController
         
     end
     
+    def duplicar
+
+        respond_to do |format|
+            if @content.dup.save
+             @content.update(title: "#{@content.title} [Cópia #{@content.id}] ")
+              
+               format.html {redirect_to curses_content_path(@content.curse_id), notice: 'A lição foi duplicada com sucesso' }
+
+            end
+        end
+
+    end
+
+
     def destroy
 
         respond_to do |format|
