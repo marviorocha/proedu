@@ -6,11 +6,24 @@
     <!--DEMO01-->
     <div id="animatedModal">
         <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+ 
+    <div class="container-fluid">
+        
+<div class="container mt-3">
+ 
+ 
+  <div class="d-flex flex-row-reverse">
+       <div id="closebt-container" class="close-animatedModal">
+        <%= link_to fa_icon('times-circle', size: 'lg', style: 'color: #FFF', text: 'Fechar'), nil,  class: 'close-animatedModal'  %>
+ 
+        </div>  
+  </div>
+</div>
+
+     
     
-         
-        <div id="closebt-container" class="close-animatedModal">
-            <%= button_tag(fa_icon('times-circle ', text: 'Fechar'), class: 'btn btn-success close-animatedModal') %>
-        </div>    
+      
+      
         <div class="modal-content ">
         
      
@@ -43,6 +56,6 @@
       <p></p>
         <%= render "shered/nav-licao" %>
     </div>
-
+ </div>
 
 
