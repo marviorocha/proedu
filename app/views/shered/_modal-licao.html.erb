@@ -1,0 +1,48 @@
+ 
+ <a id="demo01"  class="btn btn-danger btn-lg" href="#animatedModal" >
+  <i class='fas fa-video'></i> Assistir Vídeo Aula
+</a>
+
+    <!--DEMO01-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+    
+         
+        <div id="closebt-container" class="close-animatedModal">
+            <%= button_tag(fa_icon('times-circle ', text: 'Fechar'), class: 'btn btn-success close-animatedModal') %>
+        </div>    
+        <div class="modal-content ">
+        
+     
+<% if @content.doc.split(/(vimeo\.com)/)[1] == "vimeo.com" %>
+       
+      <div class="plyr__video-embed embed-responsive embed-responsive-16by9" id="player">
+    <iframe
+        src="https://player.vimeo.com/video/<%= @content.doc.split(/(vimeo\.com\/(\w+))/)[2].to_s  %>?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+        allowfullscreen
+        allowtransparency
+        allow="autoplay"
+        class="embed-responsive-item"
+    ></iframe>
+</div>
+ 
+ <% else %>
+
+ <div class="plyr__video-embed embed-responsive embed-responsive-16by9" id="player">
+    <iframe
+        src="https://www.youtube.com/embed/<%=  @content.doc.split(/(youtu\.be\/|youtube\.com\/(watch\?(.*&)?v=|(embed|v)\/))([^\?&"'>]+)|vimeo\.com\/(\w+)/)[4]    %>?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+        allowfullscreen
+        allowtransparency
+        allow="autoplay"
+        class="embed-responsive-item"
+    ></iframe>
+</div>  
+
+<% end %>
+        </div>
+      <p></p>
+        <%= render "shered/nav-licao" %>
+    </div>
+
+
+
