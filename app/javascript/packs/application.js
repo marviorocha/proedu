@@ -9,3 +9,10 @@ import animatedmodal from 'animatedmodal'
 import Plyr from 'plyr';
 const player = new Plyr('#player');
 
+
+// pry player settings
+
+$("#licaoclick").click(function(){
+    player.pause();
+});
+

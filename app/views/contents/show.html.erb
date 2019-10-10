@@ -26,8 +26,7 @@
                   
                     <%= @content.doc %>
                     <% else %>
-                    
-                     <%= render "shered/modal-licao" %>
+                    <%= render "shered/modal-licao" %>
                     <% end %>
                  
 
@@ -40,14 +39,17 @@
 
                              <!-- Page Header -->
  
-                  <div class="card-body p-0 pb-3 ">
-                  <p class="card-text mb-3">
+                  <div class="card-body card-font-size">
+                  <p class="card-text ">
                     <%= @content.body %>
                   </p>
                   </div>
+                  <div class="card-footer">
+                  <%= render "shered/nav-licao" %>
+                 </div>
+         
                 </div>
 
-              <%= render "shered/nav-licao" %>
       
               </div>
               

@@ -1,29 +1,23 @@
 
 <%= title "Cadastrar Usuário" %>
 
-
-<header class="page-header">
-  <div class="container-fluid">
-    <h2 class="no-margin-bottom"><%= content_for(@title) %></h2>
-  </div>
-</header>
-
-<%= render "layouts/brandcrumb" %>
-
-<p></p>
-<div class="container-fluid">
-
-  <div class="card">
+<!-- End Page Header -->
+<div class="col-lg-9 col-md-12">
+  <div class="card card-small mb-3">
+  
+ 
     <div class="card-body">
-      <h4 class="card-title"><%= content_for(@title) %></h4>
+      <h4 class="card-title">Editar Meu Perfil</h4>
 
 
-      <%= render 'shered/alerts/notifications' %>
+      
+ 
 
   <div class="box box-primary">
-    <div class="box-header with-border">
-      <h3 class="box-title"><%= t('.title', resource: resource_class.model_name.human , default: "Editar #{resource_name.to_s.humanize}") %></h3>
-    </div>
+       <% if resource.avatar %>
+     
+      <%= image_tag(resource.avatar.variant(resize_to_limit: [100, 100]), class: 'rounded-circle') %>
+    <% end %>
     <!-- /.box-header -->
     <!-- form start -->
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), role:"form", html: { method: :put }) do |f| %>
@@ -42,7 +36,19 @@
     </div>
 
     <div class="form-group">
+ 
+ 
       <div class="row">
+            <div class="col">
+              <%= f.label :avatar, "Foto" %>
+              <%= f.file_field :avatar %>
+              </div>
+      </div>
+
+      <div class="row">
+
+  
+
         <div class="col">
           <%= f.label :name %>
           <%= f.text_field :name, class: 'form-control', placeholder: 'Digite seu nome' %>
@@ -79,10 +85,12 @@
         <!-- /.box-body -->
 
         <div class="box-footer">
-          <%= f.submit t('.update', default: 'Update'), class: 'btn btn-primary' %>
-          <span class="pull-right">
-            <%= t('.unhappy', default: 'Unhappy') %>?
-            <%= link_to t('.cancel_my_account', default: 'Cancel my account'),
+          <%= f.submit t('.update', default: 'Atualizar'), class: 'btn btn-primary' %>
+          <span class="d-flex justify-content-end">
+            
+            <%= t('.unhappy', default: 'Deseja deletar sua conta') %>? 
+            
+            <%= link_to t('.cancel_my_account', default: 'Apagar Minha Conta'),
             registration_path(resource_name), data: { confirm: t('.are_you_sure', default: "Você realmente deseja deletar sua conta?") },
             method: :delete %>.
           </span>
@@ -90,12 +98,14 @@
 
         </div>
         <% end %>
-      </div>
-
-      <p></p>
-      <%= link_to t('.back', default: 'Back'), :back %>
-
-
-    </div>
+      
+      
   </div>
-</div> -->
+ </div>
+
+
+  </div>
+  </div>
+ 
+ 
+ 

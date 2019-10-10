@@ -1,7 +1,11 @@
  
- <a id="demo01"  class="btn btn-danger btn-lg" href="#animatedModal" >
+ <a id="demo01"  class="btn btn-primary btn-lg" href="#animatedModal" >
   <i class='fas fa-video'></i> Assistir Vídeo Aula
 </a>
+
+
+
+
 
     <!--DEMO01-->
     <div id="animatedModal">
@@ -14,7 +18,8 @@
  
   <div class="d-flex flex-row-reverse">
        <div id="closebt-container" class="close-animatedModal">
-        <%= link_to fa_icon('times-circle', size: 'lg', style: 'color: #FFF', text: 'Fechar'), nil,  class: 'close-animatedModal'  %>
+        <%= link_to fa_icon('times-circle', size: 'lg', style: 'color: #FFF', text: 'Fechar'), nil, 
+         class: 'close-animatedModal', id: 'licaoclick'   %>
  
         </div>  
   </div>
@@ -26,10 +31,11 @@
       
         <div class="modal-content ">
  <% if @content.doc.match(/(.m4v|.mp4|.m4v|.webm|.3gp)/) %>
-    <video poster="<%= url_for(@content.curse.picture) %>" id="player" playsinline controls>
+    <video poster="<%= url_for(@content.curse.picture) %>" id="player" playsinline controls >
         <source src="<%= @content.doc %>" type="video/mp4" />
         <source src="<%= @content.doc %>" type="video/webm" />
     </video>
+     
 <% end %>
 <% if @content.doc.split(/(vimeo\.com)/)[1] == "vimeo.com" %>
        
