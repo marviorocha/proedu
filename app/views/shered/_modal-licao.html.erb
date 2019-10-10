@@ -22,11 +22,16 @@
 
      
     
-      
+  
       
         <div class="modal-content ">
-        
-     
+    <% if @content.doc.split(/(vimeo\.com|youtube\.com|youtu\.be|.m4v|.mp4|m4v|webm|3gp)/)[1] == nil  %>       
+<video poster="<%= url_for(@content.curse.picture) %>" id="player" playsinline controls>
+    <source src="<%= @content.doc %>" type="video/mp4" />
+    <source src="<%= @content.doc %>" type="video/webm" />
+ 
+ 
+</video>
 <% if @content.doc.split(/(vimeo\.com)/)[1] == "vimeo.com" %>
        
       <div class="plyr__video-embed embed-responsive embed-responsive-16by9" id="player">
@@ -43,10 +48,11 @@
 
  <div class="plyr__video-embed embed-responsive embed-responsive-16by9" id="player">
     <iframe
-        src="https://www.youtube.com/embed/<%=  @content.doc.split(/(youtu\.be\/|youtube\.com\/(watch\?(.*&)?v=|(embed|v)\/))([^\?&"'>]+)|vimeo\.com\/(\w+)/)[4]    %>?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+        src="https://www.youtube.com/embed/<%= reg_youtube %>?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
         allowfullscreen
         allowtransparency
         allow="autoplay"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; 
         class="embed-responsive-item"
     ></iframe>
 </div>  
@@ -54,8 +60,10 @@
 <% end %>
         </div>
       <p></p>
+      
         <%= render "shered/nav-licao" %>
     </div>
  </div>
 
 
+ 

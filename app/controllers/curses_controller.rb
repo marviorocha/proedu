@@ -33,7 +33,7 @@ end
 
 
 def show
-
+ @licao = @curse.contents.order(publish_on: :asc)
 end
 
 def list

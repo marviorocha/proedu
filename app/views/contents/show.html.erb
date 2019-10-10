@@ -22,7 +22,7 @@
               
                 <div class="card card-small mb-4 ">
   
-                    <% if @content.doc.split(/(vimeo\.com|youtube\.com)/)[1] == nil %>
+                    <% if @content.doc.split(/(vimeo\.com|youtube\.com|youtu\.be|.m4v|.mp4|m4v|webm|3gp)/)[1] == nil %>
                   
                     <%= @content.doc %>
                     <% else %>

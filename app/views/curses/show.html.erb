@@ -1,18 +1,15 @@
 
 <%= title "Lição - #{ @curse.title }" %>
 
- 
 
 
  <div class="main-content-container container-fluid px-4">
 
-
-
             <!-- Page Header -->
             <div class="page-header row no-gutters py-4">
-              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+              <div class="col-12 col-sm-6 text-center text-sm-left mb-0">
                 <span class="text-uppercase page-subtitle">curso</span>
-                <h3 class="page-title">Cursos</h3>
+                <h3 class="page-title"><%= @curse.title %></h3>
               </div>
             </div>
             <!-- End Page Header -->
@@ -32,7 +29,7 @@
                       <a class="text-fiord-blue" href="#"><%= @curse.title %></a>
                     </h5>
                     <p class="card-text d-inline-block mb-3"> <%= @curse.descricao %></p> <br>
-                    <span class="text-muted">Esse curso foi atualizado em: <%= @curse.updated_at.strftime('%d-%M-%Y') %></span>
+                    <span class="text-muted">Esse curso foi atualizado em: <%= @curse.updated_at.strftime('%d/%m/%Y') %></span>
                   </div>
                 </div>
               </div>
@@ -47,116 +44,44 @@
                     <h6 class="m-0">Lições</h6>
                   </div>
  
-  <%= link_to fa_icon('plus', text: 'Add Lição'), new_content_path ,class: 'btn btn btn-primary' %>
+  
                              <!-- Page Header -->
 
            
                 <!--Accordion wrapper-->
 <div class="accordion md-accordion" id="accordionEx1" role="tablist" aria-multiselectable="true">
-
+    <% @licao.each do |licao| %>
+ 
   <!-- Accordion card -->
   <div class="card">
 
     <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo1">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo1"
-        aria-expanded="false" aria-controls="collapseTwo1">
+    <div class="card-header" role="tab" id="heading<%=  licao.id %>">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse<%=  licao.id %>"
+        aria-expanded="false" aria-controls="collapse<%=  licao.id %>">
         <h5 class="mb-0">
-          Collapsible Group Item #1 <i class="fas fa-angle-down rotate-icon"></i>
+         # <%= licao.title.strip %> <%= licao.title %> <%= licao.publish? ? fa_icon('angle-down') : "#{fa_icon('lock')} <span class='badge badge-pill badge-info'>Faltam apenas: #{time_ago_in_words(licao.publish_on) } </span>".html_safe %>
         </h5>
       </a>
     </div>
-
+ 
     <!-- Card body -->
-    <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1"
+    <div id="collapse<%= licao.publish ? licao.id : licao.publish  %>" class="collapse" role="tabpanel" aria-labelledby="heading<%=  licao.id %>"
       data-parent="#accordionEx1">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf
-        moon
-        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-        Brunch
-        3
-        wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-        shoreditch
-        et.
-        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        Ad
-        vegan
-        excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-        nesciunt
-        you probably haven't heard of them accusamus labore sustainable VHS.
+        <%=  truncate(strip_tags(licao.body.to_s), leagth: 150) %>
+        <% if licao.publish? == false %>
+       
+        <% else %>
+        <%= link_to fa_icon('link', text: 'Acessar'), content_path(licao), class: 'btn btn-success' %>
+        <% end %>
       </div>
     </div>
 
   </div>
+   <% end %>
   <!-- Accordion card -->
-
-  <!-- Accordion card -->
-  <div class="card">
-
-    <!-- Card header -->
-    <div class="card-header" role="tab" id="headingTwo2">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo21"
-        aria-expanded="false" aria-controls="collapseTwo21">
-        <h5 class="mb-0">
-          Collapsible Group Item #2 <i class="fas fa-lock rotate-icon"></i>
-        </h5>
-      </a>
-    </div>
-
-    <!-- Card body -->
-    <div id="collapseTwo21" class="collapse" role="tabpanel" aria-labelledby="headingTwo21"
-      data-parent="#accordionEx1">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf
-        moon
-        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-      
-      </div>
-    </div>
-
-  </div>
-  <!-- Accordion card -->
-
-  <!-- Accordion card -->
-  <div class="card">
-
-    <!-- Card header -->
-    <div class="card-header" role="tab" id="headingThree31">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseThree31"
-        aria-expanded="false" aria-controls="collapseThree31">
-        <h5 class="mb-0">
-          Collapsible Group Item #3 <i class="fas fa-angle-down rotate-icon"></i>
-        </h5>
-      </a>
-    </div>
-
-    <!-- Card body -->
-    <div id="collapseThree31" class="collapse" role="tabpanel" aria-labelledby="headingThree31"
-      data-parent="#accordionEx1">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf
-        moon
-        officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-        Brunch
-        3
-        wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-        shoreditch
-        et.
-        Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        Ad
-        vegan
-        excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-        nesciunt
-        you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-
-  </div>
-  <!-- Accordion card -->
+  
 
 </div>
 <!-- Accordion wrapper -->
