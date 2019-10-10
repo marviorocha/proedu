@@ -16,9 +16,6 @@ def reg_youtube
 end
 
 
-def reg_html
-   
-
-end
+ 
 
 end
