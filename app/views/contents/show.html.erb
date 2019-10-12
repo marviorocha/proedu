@@ -1,62 +1,63 @@
 <%= title "Lição - #{ @content.title }" %>
 
 
- <div class="main-content-container container-fluid px-4 ">
-
-
-
-            <!-- Page Header -->
-            <div class="page-header row no-gutters py-4">
-              <div class="col-12 col-sm-6 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">Aula #<%= @content.id %></span>
-                <h3 class="page-title text-light"><%= @content.title %></h3>
-              </div>
-              
-            </div>
-            <!-- End Page Header -->
-            <!-- Default Light Table -->
-            
-            <div class="row">
-            
-              <div class="col">
-              
-                <div class="card card-small mb-4 ">
+<div class="main-content-container container-fluid px-4 ">
   
-                    <% if @content.doc.split(/(vimeo\.com|youtube\.com|youtu\.be|.m4v|.mp4|m4v|webm|3gp)/)[1] == nil %>
-                  
-                    <%= @content.doc %>
-                    <% else %>
-                    <%= render "shered/modal-licao" %>
-                    <% end %>
-                 
-
+  
+  
+  <!-- Page Header -->
+  <div class="page-header row no-gutters py-4">
+    <div class="col-12 col-sm-6 text-center text-sm-left mb-0">
+      <span class="text-uppercase page-subtitle">Aula #<%= @content.id %></span>
+      <h3 class="page-title text-light"><%= @content.title %></h3>
+    </div>
+    
+  </div>
+  <!-- End Page Header -->
  
-              
-                <%# <img class="card-img-top" src="<%= url_for(@content.curse.picture) %>
-                  <div class="card-header border-bottom">
-                    <h6 class="m-0">Atualizado em: <%= @content.updated_at.strftime("%d/%m/%Y") %></h6>
-                  </div>
-
-                             <!-- Page Header -->
- 
-                  <div class="card-body card-font-size">
-                  <p class="card-text ">
-                    <%= @content.body %>
-                  </p>
-                  </div>
-                  <div class="card-footer">
-                  <%= render "shered/nav-licao" %>
-                 </div>
+  
+  <div class="row">
+    
+    <div class="col">
+      <!-- Card card-small  -->
+      <div class="card">
+        
+        <% if @content.doc.split(/(vimeo\.com|youtube\.com|youtu\.be|.m4v|.mp4|m4v|webm|3gp)/)[1] == nil %>
          
-                </div>
+ <a  target='_blank' class="btn btn-primary btn-lg" href="<%= @content.doc %>" >
+  <i class='fas fa-file'></i> Download do Arquivo
+</a>
 
+        
+        <% else %>
+        <%= render "shered/modal-licao" %>
+        <% end %>
       
-              </div>
-              
-            </div>
-            <!-- End Default Light Table -->
-            <!-- Default Dark Table -->
-
-          
-            <!-- End Default Dark Table -->
-          </div>
+        
+        
+        <%# <img class="card-img-top" src="<%= url_for(@content.curse.picture) %>
+        <div class="card-header border-bottom">
+          <h4 class="m-0">Atualizado em: <%= @content.updated_at.strftime("%d/%m/%Y") %></h4>
+        </div>
+        
+        <!-- Page Header -->
+        
+        <div class="card-body card-font-size">
+          <p class="card-text ">
+            <%= @content.body %>
+          </p>
+        </div>
+        <div class="card-footer">
+          <%= render "shered/nav-licao" %>
+        </div>
+        
+      </div>
+      
+   
+    </div>
+   <!-- //    -->
+  </div>
+ 
+  
+  <!-- End Default Dark Table -->
+</div>

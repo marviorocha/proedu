@@ -49,10 +49,11 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
            
-           <% if current_user.avatar.nil? %>
-            <%= image_tag(gravatar(current_user.email,'35'), class: 'user-avatar rounded-circle mr-2') %>
+           <% if current_user.avatar.attached? %>
+            <%= image_tag(current_user.avatar.variant(resize: "35x35!", gamma: '1.0'), class: 'user-avatar rounded-circle mr-2') %>
+           
             <% else %>
-            <%= image_tag(current_user.avatar.variant(resize: "35x35", gamma: '1.0'), class: 'user-avatar rounded-circle mr-2') %>
+             <%= image_tag(gravatar(current_user.email,'35'), class: 'user-avatar rounded-circle mr-2') %>
              <% end %>
             
             <span class="d-none d-md-inline-block"><%= current_user.name.capitalize + ' ' + current_user.lastname.capitalize %></span>

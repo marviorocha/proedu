@@ -7,7 +7,11 @@ root to: 'page#index'
 
 # admin routes
 
-devise_for :users
+devise_for :users do
+    member do
+        delete :avatar_delete
+    end
+end
 
 
 get '/users/sign_up/:id', to: 'users#new', as: 'user_new'
