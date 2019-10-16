@@ -1,44 +1,56 @@
 
  
 
-<h2> <%= t('.sign_up', default: 'Sign up') %>
+<h2> <%= t('.sign_up', default: 'Cadastre-se') %>
 
 </h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name),
 html: { role: 'form', id: "register-form" }) do |f| %>
 
-<div class="form-group">
+  
 
-<%
 
-hashids = Hashids.new("curse_url", 8)
-numbers = hashids.decode(params[:curses])
+  <div class="row">
+   <div class="col">
 
- %>
 
- <%= f.hidden_field :curse_ids, value:numbers %>
+<div class="form-row">
+
+<div class="form-group col-md-6">
+<label for="feFirstName">Nome:</label>
+<%= f.text_field :name, class: 'form-control', placeholder: 'Digite seu nome' %>
+</div>
+<div class="form-group col-md-6">
+<label for="feLastName">Sobre nome:</label>
+<%= f.text_field :lastname, class: 'form-control', placeholder: 'Digite seu sobre nome' %>
+</div>
 
 </div>
 
-<div class="form-group"> <%= f.text_field :name, class: 'input-material',  required:"" %> <%=
-f.label :name, class: 'label-material' %> </div>
+<div class="form-row">
 
-<div class="form-group">
-<%= f.text_field :lastname, class: 'input-material'%>
-<%=f.label :lastname, class: 'label-material' %> </div>
+<div class="form-group col-md-12">
+<%= f.label :email, class: 'label-material' %>
+  <%= f.email_field :email, autofocus: true, class: 'form-control', required: "email", placeholder: 'Digite seu email'  %> 
+</div>
+<div class="form-group col-md-12">
+<%= f.label :password, class: 'label-material' %>
+  <%= f.password_field :password, class: 'form-control',  placeholder: 'Digite sua senha'  %>
+</div>
 
-<div class="form-group">
+<div class="form-group col-md-12">
+<%= f.label :password_confirmation, class: 'label-material', required:"" %>
+  <%= f.password_field :password_confirmation, class: 'form-control', required:"",  placeholder: 'Confirme sua senha'  %>
+</div>
+</div>
 
-  <%= f.email_field :email, autofocus: true, class: 'input-material', required: "email"  %> <%=
-  f.label :email, class: 'label-material' %> </div> <div class="form-group">
-
-  <%= f.password_field :password, class: 'input-material' %>
-  <%= f.label :password, class: 'label-material' %>
-</div> <div class="form-group">
-
-  <%= f.password_field :password_confirmation, class: 'input-material', required:""  %>
-  <%=  f.label :password_confirmation, class: 'label-material', required:""  %> </div>
+ 
+ 
 
   <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary' %> <%
-end %> </div>
+end %> 
+
+</div>
+</div>
+</div>
