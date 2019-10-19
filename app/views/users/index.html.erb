@@ -4,14 +4,20 @@
 
 <div class="main-content-container container-fluid px-4">
             <!-- Page Header -->
-            <div class="page-header row no-gutters py-4">
-              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">lista de estudantes</span>
-                <h3 class="page-title">Estudantes</h3>
-                
-              </div>
-              
-            </div>
+<div class="clearfix page-header row no-gutters py-4">
+    <div class="float-left col-12 col-sm-8 text-center text-sm-left mb-0">
+      
+      
+      <span class="text-uppercase page-subtitle">Lista de Usuários</span>
+      <h3 class="page-title">Usuários</h3>
+      
+    </div>
+    
+    <div class="col-12 col-sm-4 text-center text-sm-right">
+    <%= link_to fa_icon('plus-circle', text: 'Add Estudante'), new_curse_path, class: 'mb-2 btn btn-primary mr-2' %> 
+    </div>
+    
+  </div>
             <!-- End Page Header -->
             <!-- Default Light Table -->
             <div class="row">
@@ -21,7 +27,6 @@
                 <div class="card card-small mb-4">
                   <div class="card-header border-bottom">
                     <h6 class="m-0">Estudantes</h6>
-                    <%= link_to fa_icon('plus', text: "Add Estudante"), new_curse_path, class: 'float-right btn btn-primary' %>
                   </div>
                   <div class="card-body">
                     <table class="table" id="datatable">
@@ -33,36 +38,36 @@
                           <th scope="col" class="border-0">Email:</th>
                           <th scope='col' class='border-0'>Última visita</th>
                           <th scope="col" class="border-0">Ação</th>
-                    
+
                         </tr>
                       </thead>
                       <tbody>
-                  <% @users.each do |user| %>
-                  <tr>
-                  <td> <%= user.id %></td>
-                  <td> <%= image_tag(gravatar(user.email, '80'), class: 'user-avatar rounded-circle mr-2') %> </td>
-                  <td> <%= user.name %> <%= user.lastname %> </td>
-                  <td> <%= user.email %> </td>
-                  <td> <%= user.current_sign_in_at ? time_ago_in_words(user.last_sign_in_at) : 'Nunca fez login' %></td>
-                  <td>
+                        <% @users.each do |user| %>
+                          <tr>
+                            <td> <%= user.id %></td>
+                            <td> <%= image_tag(gravatar(user.email, '80'), class: 'user-avatar rounded-circle mr-2') %> </td>
+                            <td> <%= user.name %> <%= user.lastname %> </td>
+                            <td> <%= user.email %> </td>
+                            <td> <%= user.current_sign_in_at ? time_ago_in_words(user.last_sign_in_at) : 'Nunca fez login' %></td>
+                            <td>
 
-                    <%= link_to fa_icon('eye', text:''), user , class: 'btn btn-outline-primary' %>
-                     <%=  link_to fa_icon('chat', text: 'Enviar mensagem'), new_messager_path("/ #{user.id}"),
-                   class: 'btn btn-outline-info' %>
-                    <%# <%= link_to fa_icon('pencil', text:'Editar'), edit_user_path(@users), class: 'btn btn-outline-info' %>
-                    <%= link_to fa_icon('trash', text: ''), user ,
-                    method: :delete, remote: true, data: { confirm: 'Are you sure?'}, class: 'btn btn-outline-danger' %>
+                              <%= link_to fa_icon('eye', text:''), user , class: 'btn btn-outline-primary' %>
+                              <%=  link_to fa_icon('chat', text: 'Enviar mensagem'), new_messager_path("/ #{user.id}"),
+                                class: 'btn btn-outline-info' %>
+                              <%# <%= link_to fa_icon('pencil', text:'Editar'), edit_user_path(@users), class: 'btn btn-outline-info' %>
+                              <%= link_to fa_icon('trash', text: ''), user ,
+                              method: :delete, remote: true, data: { confirm: 'Are you sure?'}, class: 'btn btn-outline-danger' %>
 
 
- 
 
- 
 
- 
-                  </td>
-              <% end %>
-                </td>
-                         
+
+
+
+                            </td>
+                          <% end %>
+                          </td>
+
                       </tbody>
                     </table>
                   </div>
@@ -71,7 +76,7 @@
             </div>
             <!-- End Default Light Table -->
             <!-- Default Dark Table -->
- 
-</tbody>
-</table>
+
+            </tbody>
+            </table>
 </div>

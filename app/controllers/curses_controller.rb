@@ -1,95 +1,95 @@
 class CursesController < ApplicationController
 
-before_action :set_curse, only: [:destroy, :show, :edit, :update, :home ]
+  before_action :set_curse, only: [:destroy, :show, :edit, :update, :home ]
 
-def index
+  def index
 
-@curses = Curse.all
+    @curses = Curse.all
 
-end
-
-
-def new
-@curse = Curse.new
-end
+  end
 
 
-def create
+  def new
+    @curse = Curse.new
+  end
 
-  @curse = Curse.new(set_params)
-  
-  respond_to do |format|
-       
-    if @curse.save
-      format.html {redirect_to curses_path, notice: 'Curso foi criado com sucesso!'}
-    else
-      format.html {render 'new'}
-      flash.alert = @curse.errors.full_messages.to_sentence
-    
+
+  def create
+
+    @curse = Curse.new(set_params)
+
+    respond_to do |format|
+
+      if @curse.save
+        format.html {redirect_to curses_path, notice: 'Curso foi criado com sucesso!'}
+      else
+        format.html {render 'new'}
+        flash.alert = @curse.errors.full_messages.to_sentence
+
+      end
     end
   end
-end
 
 
 
-def show
- @licao = @curse.contents.order(publish_on: :asc)
-end
+  def show
+    @licao = @curse.contents.order(publish_on: :asc)
+  end
 
-def list
-@curses = current_user.curse
+  def list
+    @curses = current_user.curse
 
-end
+  end
 
-def home
+  def home
 
-board
+    board
 
-end
+  end
 
 
-def edit
+  def edit
 
-end
+  end
 
- 
 
-def update
 
-   respond_to do |format|
-     if @curse.update(set_params)
-      
-      format.html {redirect_to curses_path, notice: 'Curso foi atualizado com sucesso!'}
-      
-      
-    else
-      format.html { render :edit}
-      
+  def update
 
+    respond_to do |format|
+      if @curse.update(set_params)
+
+        format.html {redirect_to curses_path, notice: 'Curso foi atualizado com sucesso!'}
+
+
+      else
+        format.html { render :edit}
+
+
+      end
     end
   end
-end
 
   def destroy
-  @curse.destroy
+    @curse.destroy
     respond_to do |format|
       format.js
       format.html { redirect_to curses_path, notice: 'O curso foi deletado com sucesso!'}
-       
+
     end
   end
 
 
-private
+  private
 
-def set_curse
-  @curse = Curse.find(params[:id])
-end
+  def set_curse
+    @curse = Curse.find(params[:id])
+  end
 
-def set_params
-  params.require(:curse).permit(:title, :descricao, :picture, :category_id)
+  def set_params
+    params.require(:curse).permit(:title, :descricao, :picture, :category_id)
 
-end
+  end
 
 
 end
