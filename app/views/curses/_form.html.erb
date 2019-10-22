@@ -1,4 +1,3 @@
- 
 <!-- End Page Header -->
  
   <div class="col-lg-9 col-md-12">
@@ -6,10 +5,14 @@
     <div class="card card-small mb-3">
       <div class="card-body">
         
-        
+       
         <%= form_for @curse  do |f| %>
-      
-     
+
+        <% if url_for == new_curse_path %>
+          <%= f.hidden_field :uid, value: SecureRandom.uuid  %>
+          <% else %>
+        <%= f.hidden_field :uid %>
+        <% end %>
         <div class="form-group">
           <label class="form-control-label"><%= f.label 'Digite o nome do curso:' %></label>
           <%= f.text_field :title, placeholder: 'Digite o nome de seu curso', class: 'form-control form-control-lg mb-3' %>

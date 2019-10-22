@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_03_215850) do
+ActiveRecord::Schema.define(version: 2019_10_21_142142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_10_03_215850) do
   create_table "curses", force: :cascade do |t|
     t.string "title"
     t.string "descricao"
+    t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id", null: false
@@ -76,8 +77,6 @@ ActiveRecord::Schema.define(version: 2019_10_03_215850) do
   create_table "curses_users", id: false, force: :cascade do |t|
     t.bigint "curse_id", null: false
     t.bigint "user_id", null: false
-    t.index ["curse_id", "user_id"], name: "index_curses_users_on_curse_id_and_user_id"
-    t.index ["user_id", "curse_id"], name: "index_curses_users_on_user_id_and_curse_id"
   end
 
   create_table "messagers", force: :cascade do |t|

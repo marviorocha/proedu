@@ -87,7 +87,7 @@ class CursesController < ApplicationController
   end
 
   def set_params
-    params.require(:curse).permit(:title, :descricao, :picture, :category_id)
+    params.require(:curse).permit(:title, :descricao, :picture, :uid, :category_id)
 
   end
 

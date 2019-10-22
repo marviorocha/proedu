@@ -1,96 +1,96 @@
- 
+
 
 <!-- End Page Header -->
 <div class="row">
-<div class="col-lg-9 col-md-12">
-<!-- Add New Post Form -->
-<div class="card card-small mb-3">
-<div class="card-body">
+  <div class="col-lg-9 col-md-12">
+    <!-- Add New Post Form -->
+    <div class="card card-small mb-3">
+      <div class="card-body">
 
-<%= form_for @content do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title, class: 'form-control form-control-lg mb-3', placeholder: "Adicionar lição" %>
-<%= f.label 'Inserir Video, Docs etc...' %>
-<%= f.text_field :doc, class: 'form-control  mb-3', placeholder: "http:// Documentos, Vídeo URL Etc.." %>
-<%= f.label 'Conteúdo' %>
-<%= f.rich_text_area :body, class: 'form-control' %>  
+        <%= form_for @content do |f| %>
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'form-control form-control-lg mb-3', placeholder: "Adicionar lição" %>
+          <%= f.label 'Inserir Video, Docs etc...' %>
+          <%= f.text_field :doc, class: 'form-control  mb-3', placeholder: "http:// Documentos, Vídeo URL Etc.." %>
+          <%= f.label 'Conteúdo' %>
+          <%= f.rich_text_area :body, class: 'form-control' %>  
 
-</div>
-</div>
-
-
-
-<!-- / Add New Post Form -->
-</div>
-<div class="col-lg-3 col-md-12">
-<!-- Post Overview -->
-<div class="card card-small mb-3">
-<div class="card-header border-bottom">
-<h6 class="m-0">Ação</h6>
-</div>
-<div class="card-body p-0">
-<ul class="list-group list-group-flush">
-<li class="list-group-item p-3">
- 
-<%= f.select :publish, options_for_select([["Publish",1], ['Rascunho', 0]]), {},  {class: 'browser-default custom-select'} %>
-
-</li>
-<li class="list-group-item p-3">
-<span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i>
-<strong class="mr-1">Agendar:</strong> <span id='content_publish_on_display'><%= @content.publish_on.nil? ? 'Agora' :
- @content.publish_on.strftime("%d/%m/%Y") %></span>
-<a id='jobs' class="ml-auto" href="#">Editar</a></span> 
-<div class="publish-show">
-<%= f.text_field :publish_on, class: 'form-control calendar', placeholder: "Selecione data", autocomplete: 'off' %> 
-</div>
-</li>
-
-<li class="list-group-item d-flex px-3">
-<%= button_tag fa_icon('file-alt', text: 'Publicar'), class: 'btn btn btn-accent ml-auto', data: { disable_with: "Publicando..."} %>
- 
-</li>
-</ul>
-</div>
-</div>
-<!-- / Post Overview -->
-<!-- Post Overview -->
-<div class="card card-small mb-3">
-<div class="card-header border-bottom">
-<h6 class="m-0">Cursos</h6>
-</div>
-<div class="card-body p-0">
-<ul class="list-group list-group-flush">
+      </div>
+    </div>
 
 
 
-<li class="list-group-item px-3 pb-2">
+    <!-- / Add New Post Form -->
+  </div>
+  <div class="col-lg-3 col-md-12">
+    <!-- Post Overview -->
+    <div class="card card-small mb-3">
+      <div class="card-header border-bottom">
+        <h6 class="m-0">Ação</h6>
+      </div>
+      <div class="card-body p-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item p-3">
+
+            <%= f.select :publish, options_for_select([["Publish",1], ['Rascunho', 0]]), {},  {class: 'browser-default custom-select'} %>
+
+          </li>
+          <li class="list-group-item p-3">
+            <span class="d-flex mb-2"><i class="material-icons mr-1">calendar_today</i>
+              <strong class="mr-1">Agendar:</strong> <span id='content_publish_on_display'><%= @content.publish_on.nil? ? 'Agora' :
+                @content.publish_on.strftime("%d/%m/%Y") %></span>
+              <a id='jobs' class="ml-auto" href="#">Editar</a></span> 
+            <div class="publish-show">
+              <%= f.text_field :publish_on, class: 'form-control calendar', placeholder: "Selecione data", autocomplete: 'off' %> 
+            </div>
+          </li>
+
+          <li class="list-group-item d-flex px-3">
+            <%= button_tag fa_icon('file-alt', text: 'Publicar'), class: 'btn btn btn-accent ml-auto', data: { disable_with: "Publicando..."} %>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- / Post Overview -->
+    <!-- Post Overview -->
+    <div class="card card-small mb-3">
+      <div class="card-header border-bottom">
+        <h6 class="m-0">Cursos</h6>
+      </div>
+      <div class="card-body p-0">
+        <ul class="list-group list-group-flush">
+
+
+
+          <li class="list-group-item px-3 pb-2">
 
 
 
 
-<%= collection_radio_buttons(:content, :curse_id, Curse.all, :id, :title ) do |b| %>
-<div class="custom-control custom-radio mb-1">
-<%= b.radio_button(class:'custom-control-input', id: "category#{b.value}") %>
-<%= b.label(class: 'custom-control-label', for:"category#{b.value}") %>
+            <%= collection_radio_buttons(:content, :curse_id, Curse.all, :id, :title ) do |b| %>
+              <div class="custom-control custom-radio mb-1">
+                <%= b.radio_button(class:'custom-control-input', id: "category#{b.value}") %>
+                <%= b.label(class: 'custom-control-label', for:"category#{b.value}") %>
 
-</div>
-<% end %>
-<%# <div class="custom-control custom-radio mb-1">
-<input type="checkbox" class="custom-control-input" id="category6">
-<label class="custom-control-label" for="category6">Books</label>
-</div>
+              </div>
+            <% end %>
+            <%# <div class="custom-control custom-radio mb-1">
+              <input type="checkbox" class="custom-control-input" id="category6">
+            <label class="custom-control-label" for="category6">Books</label>
+            </div>
 
-<div class="custom-control custom-radio mb-1">
-<input type="checkbox" class="custom-control-input" id="category7">
-<label class="custom-control-label" for="category7">Books</label>
-</div> %>
-</li>
+            <div class="custom-control custom-radio mb-1">
+            <input type="checkbox" class="custom-control-input" id="category7">
+            <label class="custom-control-label" for="category7">Books</label>
+            </div> %>
+          </li>
 
-</ul>
-</div>
-</div>
-<!-- / Post Overview -->
-</div>
+        </ul>
+      </div>
+    </div>
+    <!-- / Post Overview -->
+  </div>
 </div>
 </div>
 
