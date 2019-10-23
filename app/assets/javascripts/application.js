@@ -1,6 +1,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
+//= require clipboard/dist/clipboard.min.js
 //= require jquery/dist/jquery.min
 //= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap.min
@@ -13,10 +14,11 @@
 //= require select_all.js
 //= require rails-ujs
 
+var clipboard = new ClipboardJS('.btn')
 
 $("#selectAll").select_all({
-    infinite_scroll_select: true
-   });
-   
+	infinite_scroll_select: true
+});
 
- 
+
+

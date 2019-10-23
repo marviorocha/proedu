@@ -55,10 +55,10 @@
                   <td><%= truncate(curses.descricao, length:50 , omission: '... (mais)') %> <br></td>
                   <td><%= curses.category.name %></td>
                   <td><span class="badge badge-pill badge-secondary"><%= curses.users.count %></span></td>
-                  <td> <%= link_to 'Inscrição URL', new_user_registration_path('curse'=> curses.uid) %>   </td>
-                  <td> <button class="btn" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">
+                  <td> <button class="btn btn-outline-primary"
+                               data-clipboard-text="<%= full_url_for(new_user_registration_url(curse: curses.uid))  %> ">
     Copy to clipboard
-                    </button> </td>
+                    </button>  </td>
                   <td>
                     <%= link_to fa_icon('eye', text:''), curses_content_path(curses) , class: 'btn btn-outline-primary btn-sm' %>
                     <%= link_to fa_icon('pencil', text:'Editar'), edit_curse_path(curses), class: 'btn btn-outline-info btn-sm' %>

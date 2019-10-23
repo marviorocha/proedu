@@ -1,6 +1,5 @@
 class User < ApplicationRecord
  # Include default devise modules. Others available are:
-
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   has_many :messager
@@ -23,11 +22,12 @@ class User < ApplicationRecord
 
   ROLES = %i[superadmin_role teacher_role studant_role]
 
-  #after_create :send_email_welcome
-  #def send_email_welcome
-
-  #UserMailer.welcome_mail(self).deliver_now
-  #end
+  after_create :send_email_welcome
+ 
+  def send_email_welcome
+   
+    UserMailer.welcome_mail(self).deliver_now
+  end
 
 end
 
