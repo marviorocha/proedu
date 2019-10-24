@@ -25,7 +25,7 @@ class User < ApplicationRecord
   after_create :send_email_welcome
  
   def send_email_welcome
-   
+    
     UserMailer.welcome_mail(self).deliver_now
   end
 
