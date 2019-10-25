@@ -30,16 +30,18 @@ class CursesController < ApplicationController
     end
   end
 
+  def register_user
 
+    @curse = Curse.find_by(uid: params[:uid])
+
+
+  end
 
   def show
     @licao = @curse.contents.order(publish_on: :asc)
   end
 
-  def list
-    @curses = current_user.curse
 
-  end
 
   def home
 

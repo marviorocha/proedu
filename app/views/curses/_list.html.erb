@@ -1,41 +1,33 @@
 <%= content_for(:title, "Meus cursos") %>
-<header class="page-header">
-            <div class="container-fluid">
-              <h2 class="no-margin-bottom"><%= content_for(:title) %></h2>
-            </div>
-          </header>
-<%= render "layouts/brandcrumb" %>
-<p></p>
-<div class="container">
-
-  <div class="row">
-
-
-<% @curses.each do |curses| %>
-
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-         <%= image_tag(curses.picture) %>
-
-       <div class="card-body">
-         <h5 class="card-title"> <%= fa_icon("leanpub") %> <%= curses.title %></h5>
-         <p class="card-text"><%= curses.descricao %></p>
-      
-         <%= link_to "Assistir as Aulas", curse_home_path(curses), class: 'btn btn-outline-secondary btn-block' %>
-       </div>
-     </div>
-
+  
+<div class="main-content-container container-fluid px-4">
+  
+  <div class="page-header row no-gutters py-4">
+    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+      <span class="text-uppercase page-subtitle">Dashboard</span>
+       <h3 class="page-title">Cursos</h3>
     </div>
-
- <% end %>
-
-
-
   </div>
 
+  <div class="container">
+    <div class="row">
 
+      <% @curses.each do |curses| %>
 
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <%= image_tag(curses.picture.variant(resize_to_limit: [300, 300])) %>
+            <div class="card-body">
+              <h5 class="card-title"><%= curses.title %></h5>
+              <p class="card-text"><%= truncate(curses.descricao, length: 150, omission: '...') %></p>
+              <%= link_to fa_icon('book', text: 'Assistir Aulas'), curse_path(curses),
+                class: 'btn btn-outline-secondary btn-block' %>
+            </div>
+          </div>
+        </div>
+    
+      <% end %>
 
-
-
- </div>
+    </div>
+  </div>
+</div>
