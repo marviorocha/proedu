@@ -1,11 +1,21 @@
 <div class="nav-wrapper">
   <ul class="nav flex-column">
     <li class="nav-item">
-      <a class="nav-link active" href="<%= curses_path  %>">
-        <i class="material-icons">menu_book</i>
-        <span>Cursos</span>
+      <a class="nav-link active" href="<%= root_path  %>">
+        
+        <i class="material-icons">home</i>
+        <span>Início</span>
       </a>
     </li>
+
+ <li class="nav-item">
+      <a class="nav-link " href="<%= curses_path %>">
+        <i class="material-icons">menu_book</i>
+        <span>Meus Cursos</span>
+      </a>
+    </li>
+
+    
     <li class="nav-item">
       <a class="nav-link " href="<%= new_content_path %>">
         <i class="material-icons">note_add</i>

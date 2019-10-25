@@ -20,14 +20,8 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    if resource.uid
-     @curse = Curse.find_by(uid: resource.uid)
-     @curse.users << current_user.id
-    else
-      user_path(resource)
-    end
-  end
 
+  end
 
   def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :lastname, :curse_ids, :uid ])
