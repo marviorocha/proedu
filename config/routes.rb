@@ -33,7 +33,11 @@ get '/contents/:id/duplicate', to: 'contents#duplicate', as: 'content_clone'
 resources :categories
 
 #content curse
-resources :curses
+resources :curses do
+  member do 
+    get 'register', to: 'curses#register' 
+  end
+end
 
 #studant curseuglifier
 get '/:id/list', to: 'curses#list', as: 'curse_list'

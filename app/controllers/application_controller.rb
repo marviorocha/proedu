@@ -7,6 +7,20 @@ class ApplicationController < ActionController::Base
 
   helper :all
 
+ 
+  def after_sign_in_path_for(resource)
+
+    if (params[:uid])
+
+      @curse = Curse.find_by(uid: params[:uid])
+      @curse.users << current_user
+      super 
+    else
+      super
+    end
+  end
+  
+  
   private
 
   def layout_by_resource
@@ -19,9 +33,7 @@ class ApplicationController < ActionController::Base
 
   end
 
-  def after_sign_in_path_for(resource)
-
-  end
+  
 
   def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :lastname, :curse_ids, :uid ])

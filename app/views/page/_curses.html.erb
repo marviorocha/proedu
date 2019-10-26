@@ -1,153 +1,124 @@
 
+<!-- Backend Users -->
 <section class="projects no-padding-top">
-            <div class="container-fluid">
-<div class="main-content-container container-fluid px-4">
-  <!-- Page Header -->
-  <div class="page-header row no-gutters py-4">
-    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-      <span class="text-uppercase page-subtitle">Dashboard</span>
-      <h3 class="page-title">Pro Edu</h3>
-    </div>
-  </div>
-  <!-- End Page Header -->
-  <!-- Small Stats Blocks -->
-  <div class="row">
-    <div class="col-lg col-md-6 col-sm-6 mb-4">
-      <div class="stats-small stats-small--1 card card-small">
-        <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-          <div class="d-flex flex-column m-auto">
-            <div class="stats-small__data text-center">
-              <span class="stats-small__label text-uppercase">Meus Cursos</span>
-              <h6 class="stats-small__value count my-3"> <%= current_user.curse.count %> </h6>
-            </div>
-        
-          </div>
-          <canvas height="92" class="blog-overview-stats-small-1 chartjs-render-monitor" style="display: block; width: 231px; height: 92px;" width="231"></canvas>
+  <div class="container-fluid">
+    <div class="main-content-container container-fluid px-4">
+      <!-- Page Header -->
+      <div class="page-header row no-gutters py-4">
+        <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+          <span class="text-uppercase page-subtitle">Dashboard</span>
+          <h3 class="page-title">Pro Edu</h3>
         </div>
       </div>
-    </div>
-    <div class="col-lg col-md-6 col-sm-6 mb-4">
-      <div class="stats-small stats-small--1 card card-small">
-        <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-          <div class="d-flex flex-column m-auto">
-            <div class="stats-small__data text-center">
-              <span class="stats-small__label text-uppercase">Estudantes Total</span>
-              <h6 class="stats-small__value count my-3">11</h6>
-            </div>
- 
-          </div>
-          <canvas height="92" class="blog-overview-stats-small-2 chartjs-render-monitor" width="231" style="display: block; width: 231px; height: 92px;"></canvas>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg col-md-4 col-sm-6 mb-4">
-      <div class="stats-small stats-small--1 card card-small">
-        <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-          <div class="d-flex flex-column m-auto">
-            <div class="stats-small__data text-center">
-              <span class="stats-small__label text-uppercase">Professores</span>
-              <h6 class="stats-small__value count my-3">0</h6>
-            </div>
-           
-          </div>
-          <canvas height="92" class="blog-overview-stats-small-3 chartjs-render-monitor" width="231" style="display: block; width: 231px; height: 92px;"></canvas>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg col-md-4 col-sm-6 mb-4">
-      <div class="stats-small stats-small--1 card card-small">
-        <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-          <div class="d-flex flex-column m-auto">
-            <div class="stats-small__data text-center">
-              <span class="stats-small__label text-uppercase">Categorias Total</span>
-              <h6 class="stats-small__value count my-3">2,413</h6>
-            </div>
-            <div class="stats-small__data">
-               
-            </div>
-          </div>
-          <canvas height="92" class="blog-overview-stats-small-4 chartjs-render-monitor" width="231" style="display: block; width: 231px; height: 92px;"></canvas>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg col-md-4 col-sm-12 mb-4">
-      <div class="stats-small stats-small--1 card card-small">
-        <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
-          <div class="d-flex flex-column m-auto">
-            <div class="stats-small__data text-center">
-              <span class="stats-small__label text-uppercase">Subscribers</span>
-              <h6 class="stats-small__value count my-3">17,281</h6>
-            </div>
-            <div class="stats-small__data">
-              <span class="stats-small__percentage stats-small__percentage--decrease">2.4%</span>
-            </div>
-          </div>
-          <canvas height="92" class="blog-overview-stats-small-5 chartjs-render-monitor" width="231" style="display: block; width: 231px; height: 92px;"></canvas>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Small Stats Blocks -->
-  <div class="row">
-
-
-		<div class="row mbr-justify-content-center">
-
-            <div class="col-lg-6 mbr-col-md-10">
-                <div class="wrap">
-                    <div class="ico-wrap">
-                        <span class="mbr-iconfont fa-volume-up fa"></span>
-                    </div>
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Stay <span>Successful</span></h2>
-                        <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                    </div>
+      <!-- End Page Header -->
+      <!-- Small Stats Blocks -->
+      <div class="row">
+        <div class="col-lg col-md-6 col-sm-6 mb-4">
+          <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+              <div class="d-flex flex-column m-auto">
+                <div class="stats-small__data text-center">
+                  <span class="stats-small__label text-uppercase">Meus Cursos</span>
+                  <h6 class="stats-small__value count my-3"> <%= current_user.curse.count %> </h6>
                 </div>
-            </div>
-            <div class="col-lg-6 mbr-col-md-10">
-                <div class="wrap">
-                    <div class="ico-wrap">
-                        <span class="mbr-iconfont fa-calendar fa"></span>
-                    </div>
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Create
-                            <span>An Effective Team</span>
-                        </h2>
-                        <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mbr-col-md-10">
-                <div class="wrap">
-                    <div class="ico-wrap">
-                        <span class="mbr-iconfont fa-globe fa"></span>
-                    </div>
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Launch
-                            <span>A Unique Project</span>
-                        </h2>
-                        <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mbr-col-md-10">
-                <div class="wrap">
-                    <div class="ico-wrap">
-                        <span class="mbr-iconfont fa-trophy fa"></span>
-                    </div>
-                    <div class="text-wrap vcenter">
-                        <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Achieve <span>Your Targets</span></h2>
-                        <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                    </div>
-                </div>
-            </div>
 
-            
+              </div>
+              <canvas height="92" class="blog-overview-stats-small-1 chartjs-render-monitor" style="display: block; width: 231px; height: 92px;" width="231"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-6 col-sm-6 mb-4">
+          <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+              <div class="d-flex flex-column m-auto">
+                <div class="stats-small__data text-center">
+                  <span class="stats-small__label text-uppercase">Estudantes Total</span>
+                  <h6 class="stats-small__value count my-3">11</h6>
+                </div>
 
-            
+              </div>
+              <canvas height="92" class="blog-overview-stats-small-2 chartjs-render-monitor" width="231" style="display: block; width: 231px; height: 92px;"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-4 col-sm-6 mb-4">
+          <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+              <div class="d-flex flex-column m-auto">
+                <div class="stats-small__data text-center">
+                  <span class="stats-small__label text-uppercase">Professores</span>
+                  <h6 class="stats-small__value count my-3">0</h6>
+                </div>
+
+              </div>
+              <canvas height="92" class="blog-overview-stats-small-3 chartjs-render-monitor" width="231" style="display: block; width: 231px; height: 92px;"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-4 col-sm-6 mb-4">
+          <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+              <div class="d-flex flex-column m-auto">
+                <div class="stats-small__data text-center">
+                  <span class="stats-small__label text-uppercase">Categorias Total</span>
+                  <h6 class="stats-small__value count my-3">2,413</h6>
+                </div>
+                <div class="stats-small__data">
+
+                </div>
+              </div>
+              <canvas height="92" class="blog-overview-stats-small-4 chartjs-render-monitor" width="231" style="display: block; width: 231px; height: 92px;"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg col-md-4 col-sm-12 mb-4">
+          <div class="stats-small stats-small--1 card card-small">
+            <div class="card-body p-0 d-flex"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+              <div class="d-flex flex-column m-auto">
+                <div class="stats-small__data text-center">
+                  <span class="stats-small__label text-uppercase">Subscribers</span>
+                  <h6 class="stats-small__value count my-3">17,281</h6>
+                </div>
+                <div class="stats-small__data">
+                  <span class="stats-small__percentage stats-small__percentage--decrease">2.4%</span>
+                </div>
+              </div>
+              <canvas height="92" class="blog-overview-stats-small-5 chartjs-render-monitor" width="231" style="display: block; width: 231px; height: 92px;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Small Stats Blocks -->
+      <div class="row">
+        <div class="page-header row no-gutters py-4">
+          <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+            <span class="text-uppercase page-subtitle">Meus</span>
+            <h3 class="page-title">Curso(s)</h3>
+          </div>
         </div>
 
-
-  </div>
-</div>
+        <div class="row">
+ <% @curses.each do |curse|  %>    
+   <div class="col-lg-6 col-sm-12 mb-4">
+     <div class="card card-small card-post card-post--aside card-post--1">
+       <div class="card-post__image" style="background-image: url(<%= url_for(curse.picture) %>);">
+         <a href="#" class="card-post__category badge badge-pill badge-info"> <%= curse.category.name %> </a>
+         <div class="card-post__author d-flex">
+           <a href="#" class="card-post__author-avatar card-post__author-avatar--small"
+           style="background-image: url(<%= url_for(curse.picture) %>);"> <%= curse.title %> </a>
+         </div>
+       </div>
+       <div class="card-body">
+         <h5 class="card-title">
+           <a class="text-fiord-blue" href="#"> <%= curse.title %> </a>
+         </h5>
+         <p class="card-text d-inline-block mb-3"> <%= curse.descricao %> </p>
+         <span class="text-muted">29 February 2019</span>
+       </div>
+     </div>
+   </div>
+        <% end %> 
+        </div>
+     
+      </div>
           </section>

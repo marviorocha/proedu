@@ -30,11 +30,10 @@ class CursesController < ApplicationController
     end
   end
 
-  def register_user
-
-    @curse = Curse.find_by(uid: params[:uid])
-
-
+  def register
+    @curse = Curse.find(params[:id])
+    @curse.users << current_user
+    redirect_to curses_path, notice: "Você foi cadastrado #{ @curse.title }!"
   end
 
   def show

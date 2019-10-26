@@ -20,7 +20,8 @@
             <div class="card-body">
               <h5 class="card-title"><%= curses.title %></h5>
               <p class="card-text"><%= truncate(curses.descricao, length: 150, omission: '...') %></p>
-              <%= link_to fa_icon('book', text: 'Assistir Aulas'), curse_path(curses),
+              <%= link_to fa_icon('book', text: 'Assistir Aulas'), register_curse_path(curses),
+
                 class: 'btn btn-outline-secondary btn-block' %>
             </div>
           </div>
