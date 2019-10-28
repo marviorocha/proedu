@@ -38,7 +38,6 @@
                 <th scope="col" class="border-0">#ID</th>
                 <th scope="col" class="border-0">Thumb:</th>
                 <th scope="col" class="border-0">Cursos:</th>
-                <th scope="col" class="border-0">Descrição:</th>
                 <th scope="col" class="border-0">Categoria:</th>
                 <th scope="col" class="border-0">Estudantes:</th>
                 <th scope="col" class="border-0">Inscrição URL:</th>
@@ -52,7 +51,6 @@
 
                   <td><%= image_tag curses.picture.variant(resize: "150x150", gamma: '1.0') %></td>
                   <td><%= curses.title %></td>
-                  <td><%= truncate(curses.descricao, length:50 , omission: '... (mais)') %> <br></td>
                   <td><%= curses.category.name %></td>
                   <td><span class="badge badge-pill badge-secondary"><%= curses.users.count %></span></td>
                   <td> <button class="btn btn-outline-primary"

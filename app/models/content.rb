@@ -1,7 +1,7 @@
 class Content < ApplicationRecord
 
 has_rich_text :body    
-has_many :progress, -> { where(progress: true) }
+has_and_belongs_to_many :progress 
 
 belongs_to :curse
 

@@ -22,16 +22,26 @@ module ApplicationHelper
   end
 
   # list mensagers menu page
+  def saudacao
+    tempo = Time.zone.now.strftime('%k')
 
+    case tempo.to_i
 
-  
-  
-
-  def decrypt(key)
-    cipher = OpenSSL::Cipher.new('DES-EDE3-CBC').decrypt
-    cipher.key = Digest::SHA1.hexdigest key
-    s = [self].pack("H*").unpack("C*").pack("c*")
-
-    cipher.update(s) + cipher.final
+    when 0..12
+      "Bom dia!"
+    when 12..18
+      "Boa tarde!"
+    when 18..24
+      "Boa noite!"
+    when 1..5
+      "Boa madrugada!"
+    else
+      ""
+    end
   end
-end
+
+
+  
+  
+
+ end
