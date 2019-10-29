@@ -81,7 +81,8 @@ class ContentsController < ApplicationController
         end
         
     end
-    
+
+ 
     private
     
     def set_params_contents

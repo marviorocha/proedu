@@ -1,28 +1,27 @@
 class ProgressesController < ApplicationController
 
-before_action :set_params, only: []
+before_action :set_progress, only: ['edit', 'update', 'destroy', 'show' ]
 
 
-def create
-respond_to do |format|
+def edit 
 
-  @progress = Progress.new(set_params)
-  if @progress.save
-  format.html {redirect_to root_path, notice: "Você marcou está lição como concluída!" }
-  else
-  format.html { redirect_to root_path, alert: "Não foi possível marcar como concluída!" }
-  format.json { render json: @content.errors, status: :unprocessable_entity }
-  end
-end
-
+  @conclued = current_user.content << @progress  
+  
+  if @conclued  
+  redirect_to curse_path(@progress), notice: " #{@progress.title} foi marcado como concluída!"
+  else 
+    redirect_to curse_path(@progress), alert: "Não foi possível marcar como concluída!"  
+  end 
 
 end
 
-private
 
 
-def set_params
-  params.require(:progress).permit(:progress, :user_id, :content_id )
+
+def set_progress
+
+  @progress = Content.find(params[:id])  
+
 end
 
 end

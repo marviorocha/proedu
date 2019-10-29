@@ -60,7 +60,7 @@
       <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse<%=  licao.id %>"
         aria-expanded="false" aria-controls="collapse<%=  licao.id %>">
         <h5 class="mb-0">
-         # <%= licao.title.strip %> <%= licao.title %> <%= licao.publish? ? fa_icon('angle-down') : "#{fa_icon('lock')} <span class='badge badge-pill badge-info'>Faltam apenas: #{time_ago_in_words(licao.publish_on) } </span>".html_safe %>
+          <%= @get_user.nil? %> <%= licao.title.strip %> <%= licao.title %> <%= licao.publish? ? fa_icon('angle-down') : "#{fa_icon('lock')} <span class='badge badge-pill badge-info'>Faltam apenas: #{time_ago_in_words(licao.publish_on) } </span>".html_safe %>
         </h5>
       </a>
     </div>
@@ -81,7 +81,6 @@
   </div>
    <% end %>
   <!-- Accordion card -->
-  
 
 </div>
 <!-- Accordion wrapper -->

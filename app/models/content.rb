@@ -1,7 +1,7 @@
 class Content < ApplicationRecord
 
 has_rich_text :body    
-has_and_belongs_to_many :progress 
+has_and_belongs_to_many :user 
 
 belongs_to :curse
 
@@ -9,8 +9,6 @@ has_one_attached :picture
  
 scope :unpublished, ->{where("publish_on >= ?", Time.zone.now)}
  
-
-
 # scope :publish,   ->  (user) { where("publish_on > ?", user) if user.present? }
 # scope :unpublish, ->  (user) { where("publish_on >= ?", user) if user.present? }
 # scope :days_lock, ->  (days) { where("publish_on > ?", days) if days.present? }
