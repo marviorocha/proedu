@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   has_many :messager
-  has_and_belongs_to_many :content
   has_and_belongs_to_many :curse
+  has_and_belongs_to_many :content
 
   has_one_attached :avatar
 

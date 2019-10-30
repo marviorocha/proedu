@@ -38,6 +38,8 @@ class CursesController < ApplicationController
 
   def show
     @licao = @curse.contents.order(publish_on: :asc)
+    @progress = current_user.content.where(curse_id: @curse.id)
+    
   end
 
 

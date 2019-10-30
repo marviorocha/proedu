@@ -8,9 +8,9 @@ def edit
   @conclued = current_user.content << @progress  
   
   if @conclued  
-  redirect_to curse_path(@progress), notice: " #{@progress.title} foi marcado como concluída!"
+    redirect_to curse_path(@progress.curse), notice: " #{@progress.title} foi marcado como concluída!"
   else 
-    redirect_to curse_path(@progress), alert: "Não foi possível marcar como concluída!"  
+    redirect_to curse_path(@progress.curse), alert: "Não foi possível marcar como concluída!"  
   end 
 
 end

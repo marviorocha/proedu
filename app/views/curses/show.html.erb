@@ -28,7 +28,15 @@
                     <h5 class="card-title">
                       <a class="text-fiord-blue" href="#"><%= @curse.title %></a>
                     </h5>
-                    <p class="card-text d-inline-block mb-3"> <%= @curse.descricao %></p> <br>
+                    <p class="card-text d-inline-block mb-3"> <%= @curse.descricao %></p>
+
+                    <span class="text-success">Concluído:<%= status_curse %></span>
+
+                    <div class="progress">
+                      
+   <div class="progress-bar" style="width:<%= status_curse %>"></div>
+                    </div>
+                    <br>
                     <span class="text-muted">Esse curso foi atualizado em: <%= @curse.updated_at.strftime('%d/%m/%Y') %></span>
                   </div>
                 </div>
@@ -60,7 +68,7 @@
       <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx1" href="#collapse<%=  licao.id %>"
         aria-expanded="false" aria-controls="collapse<%=  licao.id %>">
         <h5 class="mb-0">
-          <%= @get_user.nil? %> <%= licao.title.strip %> <%= licao.title %> <%= licao.publish? ? fa_icon('angle-down') : "#{fa_icon('lock')} <span class='badge badge-pill badge-info'>Faltam apenas: #{time_ago_in_words(licao.publish_on) } </span>".html_safe %>
+          <%= licao.title.strip %> <%= licao.title %> <%= licao.publish? ? fa_icon('angle-down') : "#{fa_icon('lock')} <span class='badge badge-pill badge-info'>Faltam apenas: #{time_ago_in_words(licao.publish_on) } </span>".html_safe %>
         </h5>
       </a>
     </div>
