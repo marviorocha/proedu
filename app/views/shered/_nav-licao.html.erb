@@ -2,9 +2,10 @@
 
  <div class="btn-group" role="group" aria-label="Exemplo básico">
  
-  <%= link_to fa_icon('chevron-left', text: 'Voltar'), curse_path(@content.curse), class: 'btn btn-secondary' %>
+   <%= link_to fa_icon('chevron-left', text: 'Voltar'), url_for(:back), class: 'btn btn-secondary' %>
   <%= link_to fa_icon('check', text: 'Marcar como Concluída'), edit_progress_path(params[:id]), class: 'btn btn-success' %>
-  <%= link_to fa_icon('chevron-right', text: 'Próxima'), curses_content_path(@content.curse), class: 'btn btn-secondary' %>
+  <%= link_to fa_icon('chevron-right', text: 'Próxima'), content_path(@content), class: 'btn btn-secondary' %>
  
-</div>         
+    
+  </div>         
 </div>

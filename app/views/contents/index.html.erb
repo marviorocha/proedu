@@ -44,7 +44,9 @@
                   <%= link_to fa_icon('list-alt', text: 'Gerenciar Lições'), curses_content_path(licao.id), class: 'mb-2 btn btn-info btn-outline mr-2' %>
                 </td>
               </tr>
-              <% end %>
+              <%= paginate @contents %>
+            <% end %>
+             
             </tbody>
           </table>
         </div>

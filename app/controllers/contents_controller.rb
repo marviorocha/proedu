@@ -3,7 +3,7 @@ class ContentsController < ApplicationController
     before_action :set_params_contents, only: [:edit, :show, :destroy, :update, :duplicar]    
     
     def index
-        @contents = Curse.all
+      @contents = Curse.order(:title).page params[:page]
     end
     
     def curses
@@ -12,8 +12,7 @@ class ContentsController < ApplicationController
     end
     
     
-    def show 
-        
+    def show
     end
     
     def new

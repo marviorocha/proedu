@@ -88,10 +88,22 @@ GEM
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     jquery-datatables (1.10.19.1)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.2.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.3.0)
+    loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -106,9 +118,9 @@ GEM
     mini_magick (4.9.5)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.12.2)
+    minitest (5.13.0)
     nio4r (2.5.2)
-    nokogiri (1.10.4)
+    nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     notify (0.5.2)
     onesignal (0.3.0)
@@ -209,7 +221,7 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    zeitwerk (2.2.0)
+    zeitwerk (2.2.1)
 
 PLATFORMS
   ruby
@@ -223,6 +235,7 @@ DEPENDENCIES
   image_processing
   jbuilder (~> 2.5)
   jquery-datatables
+  kaminari
   meta_request
   mini_magick
   notify
