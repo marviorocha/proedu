@@ -8,11 +8,13 @@ class ContentsController < ApplicationController
     
     def curses
         @curse = Curse.find(params[:id])
-        @contents = @curse.contents
+        @contents = @curse.contents.order(:title).page params[:page]
     end
     
     
     def show
+        @curse = Curse.find(params[:id])
+        @pag = @curse.contents
     end
     
     def new

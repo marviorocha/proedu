@@ -52,11 +52,24 @@
               </tr>
               <% end %>
             </tbody>
-          </table>
+           </table>
+          <%= link_to_prev_page @category, 'Previous Page' %>
+         <%= link_to_next_page @category, 'Next Page' %>
+	
+<div class="clearfix">
+			<div class="float-right">
+        <%= paginate @category %>
+     </div>
+</div>
+
+
         </div>
       </div>
+
     </div>
   </div>
+
+  
   <!-- End Default Light Table -->
   <!-- Default Dark Table -->
   

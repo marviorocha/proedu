@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:edit, :destroy, :show, :update]
   
   def index
-    @category = Category.all
+    @category = Category.order(:name).page(params[:page])
   end
   
   def edit
