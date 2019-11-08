@@ -1,3 +1,0 @@
----
-BUNDLE_WITHOUT: "somerandomstring:test"
-BUNDLE_WITH: "production:development"
