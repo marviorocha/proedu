@@ -227,6 +227,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (>= 2.0.2)
   cancancan
   devise
   faker
