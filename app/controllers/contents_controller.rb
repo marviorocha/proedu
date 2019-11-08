@@ -13,10 +13,12 @@ class ContentsController < ApplicationController
     
     
     def show
-        @curse = Curse.find(params[:id])
-        @pag = @curse.contents
+      @curse = Curse.find(@content.curse_id)
+      @next = @curse.contents.where(["id > ? ", params[:id]]).first    
+      @previus = @curse.contents.where(["id < ? ", params[:id]]).last
     end
-    
+   
+
     def new
         @content = Content.new
     end
