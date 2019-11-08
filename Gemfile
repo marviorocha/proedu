@@ -40,7 +40,7 @@ end
 
 group :production do
  gem 'pg'
- gem 'bundler', '>= 2.0.2'  
+ gem 'bundler', '>= 2.0.1'  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
