@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "~> 2.6.5"
+ruby "~> 2.6.3"
 
 
 
@@ -27,6 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
 gem "webpacker"
+
 
 group :development do
 
