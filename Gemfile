@@ -26,7 +26,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
 gem "webpacker"
-
+gem "pg"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
