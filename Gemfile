@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 ruby "~> 2.6.3"
 
 
-
-# My Gem files
+# My File Settings 
 
 gem 'devise'
 gem 'cancancan'
@@ -30,7 +29,6 @@ gem "webpacker"
 
 
 group :development do
-
   gem 'web-console', '>= 3.3.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
