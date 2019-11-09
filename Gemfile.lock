@@ -125,7 +125,6 @@ GEM
     notify (0.5.2)
     onesignal (0.3.0)
     orm_adapter (0.5.0)
-    pg (1.1.4)
     popper_js (1.14.5)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -227,7 +226,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (>= 2.0.1)
   cancancan
   devise
   faker
@@ -241,7 +239,6 @@ DEPENDENCIES
   mini_magick
   notify
   onesignal
-  pg
   popper_js
   pry
   puma
