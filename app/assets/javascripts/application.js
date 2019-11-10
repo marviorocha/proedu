@@ -4,7 +4,6 @@
 //= require jquery
 //= require rails-ujs
 //= require clipboard/dist/clipboard.min.js
-//= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap.min
 //= require chart.js/dist/Chart.min.js
 //= require extras.1.1.0.min
