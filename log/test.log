@@ -135,3 +135,4 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "821f3276040c1f3843e6e83bcccec38cb13db511"], ["created_at", "2019-10-28 01:40:07.488681"], ["updated_at", "2019-10-28 01:40:07.488681"]]
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11023289.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "proedu_postgres_test"[0m
