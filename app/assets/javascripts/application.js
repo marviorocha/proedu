@@ -2,6 +2,7 @@
 // about supported directives.
 
 //= require clipboard/dist/clipboard.min.js
+//= require rails-ujs
 //= require jquery/dist/jquery.min
 //= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap.min
@@ -12,7 +13,6 @@
 //= require datatables
 //= require form_licao
 //= require select_all.js
-//= require rails-ujs
 
 var clipboard = new ClipboardJS('.btn')
 
