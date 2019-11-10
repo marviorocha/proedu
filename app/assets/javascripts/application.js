@@ -14,11 +14,12 @@
 //= require form_licao
 //= require select_all.js
 
+$(document).on('turbolinks:load', function() {
 var clipboard = new ClipboardJS('.btn')
 
 $("#selectAll").select_all({
 	infinite_scroll_select: true
 });
 
-
+});
 
