@@ -22,6 +22,22 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
+
+  # Settings SendGrid Heroku
+  #
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+  :user_name => 'app152297208@heroku.com',
+  :password => 'zeb2a2tv6393',
+  :domain => 'proedu-lms.herokuapp.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+  }
+
+
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
