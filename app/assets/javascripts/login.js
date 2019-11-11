@@ -1,2 +1,3 @@
- //= require jquery/dist/jquery.min
+//= require jquery
 //= require bootstrap/dist/js/bootstrap.min
+//= require rails-ujs

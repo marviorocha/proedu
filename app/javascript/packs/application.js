@@ -1,3 +1,4 @@
+
 require("trix")
 require("@rails/actiontext")
 require("flatpickr/dist/flatpickr.css")

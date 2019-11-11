@@ -6,6 +6,7 @@ ruby "~> 2.6.3"
 
 gem 'devise'
 gem 'cancancan'
+gem 'jquery-rails'
 gem 'jquery-datatables'
 gem 'onesignal'
 gem 'notify'

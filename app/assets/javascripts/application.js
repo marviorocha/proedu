@@ -1,6 +1,5 @@
-
-
-//= require jquery/dist/jquery
+//= require jquery3
+//= require rails-ujs
 //= require clipboard/dist/clipboard.min.js
 //= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap.min
@@ -11,11 +10,11 @@
 //= require datatables
 //= require form_licao
 //= require select_all.js
-//= require rails-ujs
 
 var clipboard = new ClipboardJS('.btn')
 
 $("#selectAll").select_all({
 	infinite_scroll_select: true
 });
+
 
