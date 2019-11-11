@@ -25,18 +25,17 @@ Rails.application.configure do
 
   # Settings SendGrid Heroku
   
-  config.action_mailer.default_url_options = { :host => "proedu-lms.herokuapp.com" }  
-  
+  config.action_mailer.perform_caching = false
+  config.action_mailer.default_url_options = { host: 'proedu-lms.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    :user_name => ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'proedu-lms.herokuapp.com',
-    :address => 'smtp.sendgrid.net',
-    :port => 587,
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    address: 'proedu-lms.herokuapp.com',
+    port: 587,
+    authentication: :plain,
+    enable_starttls_auto: true,
+    domain: 'proedu-lms.herokuapp.com',
+    user_name: ENV['SENDGRID_USERNAME'],
+    password: ENV['SENDGRID_PASSWORD']
   }
 
 
