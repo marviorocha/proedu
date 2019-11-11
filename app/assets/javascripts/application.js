@@ -1,6 +1,6 @@
 
 
-//= require jquery
+//= require jquery/dist/jquery
 //= require clipboard/dist/clipboard.min.js
 //= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap.min
