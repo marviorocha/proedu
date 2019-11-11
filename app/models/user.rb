@@ -23,7 +23,7 @@ class User < ApplicationRecord
   ROLES = %i[superadmin_role teacher_role studant_role]
 
   after_create :send_email_welcome
- 
+
   def send_email_welcome
     UserMailer.welcome_mail(self).deliver_now
   end
