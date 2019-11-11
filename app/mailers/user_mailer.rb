@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   def welcome_mail(user)
   @user = user
   @url = new_user_session_url
-  mail(to: @user, subject: "Bem-vindo #{@user.name} - ProEdu")
+  mail(to: @user.email, subject: "Bem-vindo #{@user.name} - ProEdu")
   end
 
   #send notifcation user to mail
