@@ -1,9 +1,8 @@
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
 
-//= require jquery
-//= require rails-ujs
+
+//= require jquery/dist/jquery.min
 //= require clipboard/dist/clipboard.min.js
+//= require popper.js/dist/popper
 //= require bootstrap/dist/js/bootstrap.min
 //= require chart.js/dist/Chart.min.js
 //= require extras.1.1.0.min
@@ -12,13 +11,11 @@
 //= require datatables
 //= require form_licao
 //= require select_all.js
+//= require rails-ujs
 
-$(document).on('turbolinks:load', function() {
 var clipboard = new ClipboardJS('.btn')
 
 $("#selectAll").select_all({
 	infinite_scroll_select: true
-});
-
 });
 
