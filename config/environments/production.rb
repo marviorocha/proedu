@@ -38,7 +38,6 @@ Rails.application.configure do
     password: ENV['SENDGRID_PASSWORD']
   }
 
-
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
