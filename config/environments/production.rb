@@ -30,13 +30,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-  :user_name => 'app152297208@heroku.com',
-  :password => 'zeb2a2tv6393',
-  :domain => 'proedu-lms.herokuapp.com',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'proedu-lms.herokuapp.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 
 
