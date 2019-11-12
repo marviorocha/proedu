@@ -24,7 +24,7 @@ Rails.application.configure do
 
 
   # Settings SendGrid Heroku
-  
+  config.action_mailer.default_url_options = { :host => "proedu-lms.herokuapp.com" }
  # Setup the mailer config
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
