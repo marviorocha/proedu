@@ -11,22 +11,22 @@
       </div>
       <!-- End Page Header -->
       <!-- Small Stats Blocks -->
- <div class="row">
-    <div class="col-lg col-md-3 col-sm-6 mb-4">
-      <div class="stats-small stats-small--1 card card-small">
-         <div class="card-header border-bottom ">
-            <div class="mb-3 mx-auto">
+      <div class="row">
+        <div class="col-lg col-md-3 col-sm-6 mb-4">
+          <div class="stats-small stats-small--1 card card-small">
+            <div class="card-header border-bottom ">
+              <div class="mb-3 mx-auto">
 
-               <% if current_user.avatar.attached? %>
-                   <%= image_tag(current_user.avatar.variant(resize: "125x125!", gamma: '1.0'), class: 'user-avatar
+                                <% if current_user.avatar.attached? %>
+                  <%= image_tag(current_user.avatar.variant(resize: "125x125!", gamma: '1.0'), class: 'user-avatar
                              float-left rounded-circle mr-2') %>
-               <% else %>
-   <%= image_tag(gravatar(current_user.email,'125'), class: 'user-avatar rounded-circle float-left mr-2') %>
-                <% end %>
+                         <% else %>
+                           <%= image_tag(gravatar(current_user.email,'125'), class: 'user-avatar rounded-circle float-left mr-2') %>
+                         <% end %>
 
-                </div>
+              </div>
               <h4 class="mb-0"> <%= current_user.name %>, <%= saudacao %> </h4>
-             <div class="status-profile"></div> 
+              <div class="status-profile"></div> 
               0 Certificado <span class="palper"></span>
               0 Gamification <span class="palper"></span>
               0 Concluído 
@@ -53,17 +53,19 @@
             </div>
           </div>
         </div>
- 
+
       </div>
       <!-- End Small Stats Blocks -->
       <div class="row">
         <div class="page-header row no-gutters py-4">
-          <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+          <div class="col-12 col-sm-4 text-center text-sm-left mb-4">
             <span class="text-uppercase page-subtitle">Meus</span>
             <h3 class="page-title">Curso(s)</h3>
           </div>
         </div>
 
+      </div>
+      
 
         <div class="row">
 
@@ -83,8 +85,8 @@
                     <a class="text-fiord-blue" href="#"> <%= curse.title %> </a>
                   </h5>
                   <p class="card-text d-inline-block mb-3"> <%= truncate(curse.descricao, length: 80, omission: '... mais')  %> </p> <%= link_to fa_icon('book', text: 'Acessar Aulas'), curse_path(curse), class: 'btn btn-info btn-block'  %>
-                  
-                    
+
+
                 </div>
               </div>
             </div>
