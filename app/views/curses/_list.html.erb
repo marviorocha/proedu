@@ -5,30 +5,48 @@
   <div class="page-header row no-gutters py-4">
     <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
       <span class="text-uppercase page-subtitle">Dashboard</span>
-       <h3 class="page-title">Cursos</h3>
+       <h3 class="page-title">Meus Cursos</h3>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
 
-      <% @curses.each do |curses| %>
-
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <%= image_tag(curses.picture.variant(resize_to_limit: [300, 300])) %>
-            <div class="card-body">
-              <h5 class="card-title"><%= curses.title %></h5>
-              <p class="card-text"><%= truncate(curses.descricao, length: 150, omission: '...') %></p>
-              <%= link_to fa_icon('book', text: 'Assistir Aulas'), register_curse_path(curses),
-
-                class: 'btn btn-outline-secondary btn-block' %>
+     
+              <div class="col">
+                <div class="card card-small mb-4">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Cursos</h6>
+                  </div>
+                  <div class="card-body p-0 pb-3 text-center">
+                    <table class="table mb-0">
+                      <thead class="bg-light">
+                        <tr>
+                          <th scope="col" class="border-0">#</th>
+                          <th scope="col" class="border-0">Curso</th>
+                          <th scope="col" class="border-0">Titutlo</th>
+                          <th scope="col" class="border-0">Categoria</th>
+                          <th scope="col" class="border-0">Progresso</th>
+                          <th scope="col" class="border-0">Phone</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                    <% current_user.curse.each do |curses| %>
+                        <tr>
+                          <td><%= curses.id %></td>
+                          <td><%= curses.title %></td>
+                          <td><%= image_tag(url_for(curses.picture), :width => 400, :crop => "pad") %></td>
+                         
+                          
+                          
+                        </tr>
+                    <% end %>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-    
-      <% end %>
 
-    </div>
-  </div>
+   </div>
 </div>

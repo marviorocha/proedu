@@ -1,5 +1,5 @@
 class User < ApplicationRecord
- # Include default devise modules. Others available are:
+  # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   has_many :messager
@@ -10,6 +10,15 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
+
+  # Validate users here 
+
+  validates :name, length: { minimum: 3}
+  validates :lastname, length: { minimum: 3}
+
+
+
+
 
   def self.studant_status
     studant_total = User.where(studant_role: true).count
