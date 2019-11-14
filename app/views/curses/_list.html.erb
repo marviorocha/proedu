@@ -15,12 +15,10 @@
 
       <div class="col">
         <div class="card card-small mb-4">
-          <div class="card-header border-bottom">
-            <h6 class="m-0">Cursos</h6>
-          </div>
-          <div class="card-body p-0 pb-3 text-center">
+       
+          <div class="card-body p-0 pb-3 text-center table-responsive">
             <table class="table mb-0">
-              <thead class="bg-light">
+              <thead class="bg-dark thead-dark">
                 <tr>
                   <th scope="col" class="border-0">#</th>
                   <th scope="col" class="border-0">Lição Total</th>
@@ -48,7 +46,7 @@
                     <td>
                       <%= curses.category.name %>
                     </td> 
-                    <td> <%= link_to 'Assistir Aulas', curse_path(curses), class: 'btn btn-primary'  %></td>
+                    <td> <%= link_to fa_icon('book', text: "Assistir Aulas"), curse_path(curses), class: 'btn btn-large btn-primary'  %></td>
                     <td> Não Concluído </td>
                   </tr>
                 <% end %>

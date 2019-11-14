@@ -36,12 +36,14 @@ resources :categories
 resources :curses do
   member do 
     get 'register', to: 'curses#register' 
+    get 'certificate', to: 'curses#certificate'
+    get '/:id/list', to: 'curses#list', as: 'curse_list'
+    get '/:id/home', to: 'curses#home', as: 'curse_home'
+
   end
 end
 
 #studant curseuglifier
-get '/:id/list', to: 'curses#list', as: 'curse_list'
-get '/:id/home', to: 'curses#home', as: 'curse_home'
 
 
 end

@@ -36,6 +36,10 @@ class CursesController < ApplicationController
     redirect_to curses_path, notice: "Você foi cadastrado #{ @curse.title }!"
   end
 
+  def certificate
+    
+  end
+
   def show
     @licao = @curse.contents.order(publish_on: :asc)
     @progress = current_user.content.where(curse_id: @curse.id)
