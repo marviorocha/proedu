@@ -1,5 +1,0 @@
-class AddCategoryRefToCurse < ActiveRecord::Migration[6.0]
-  def change
-    add_reference :curses, :category, null: false, foreign_key: true
-  end
-end
