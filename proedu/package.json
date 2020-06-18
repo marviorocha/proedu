@@ -1,0 +1,40 @@
+{
+  "name": "proedu",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "admin-lte": "^3.0",
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "del": "2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-inject": "4.3.0",
+    "gulp-inject-partials": "^1.0.3",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.8",
+    "merge-stream": "^1.0.1",
+    "minimatch": "^3.0.4",
+    "node-sass": "^4.5.3",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^1.2.2",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
