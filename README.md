@@ -1,24 +1,17 @@
-# README
+# Welcome to ProEdu!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi! I'm Marvio Rocha, development by ProEdu. That is an online LMS **learning management system** for students and instructors. Written in Ruby on Rails, that software has a simple notification with email and onsignal (Push Notification)
 
-Things you may want to cover:
+That is my first project where put my learning in action. I'm happy with that way has any user working with proedu in my official site proedu.marviorocha.com
 
-* Ruby version
+## Screenshot
 
-* System dependencies
+![backend-proedu](/public/logo.png)
 
-* Configuration
+## Follow an contact me
 
-* Database creation
+If you has any opnion or suggestion about ProEdu follow me:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - Twitter: twitter.com/marviorocha
+ - Linkedin: linkedin.com/in/marviorocha
+ - Email:   marviorocha@marviorocha.com
