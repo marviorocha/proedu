@@ -4,12 +4,21 @@
     <title>Proedu</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
-  <body>
+  <body class="app sidebar-mini">
+   <!-- // Navbar // -->
+   <%= render 'partials/navbar' %>
+    <!-- Navbar-->
+  
+    <!-- Sidebar menu-->
+    <%= render "partials/sidebar" %>
+      
+    <main class="app-content">
     <%= yield %>
+    </main> 
+
+     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
