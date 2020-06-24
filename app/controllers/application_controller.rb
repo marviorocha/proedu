@@ -1,15 +1,17 @@
 class ApplicationController < ActionController::Base
 
-before_action :authenticate_user!
+ before_action :authenticate_user!
 
 # layout
-layout "layout_resource"
+layout :layout_resource
 
 # private
+
+private
+
 def layout_resource
 
-    if user_signed_in? == false
-
+    if user_signed_in? == true
     "application"
     else 
      "login"

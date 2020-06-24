@@ -1,22 +1,19 @@
-class PagesController < ActionController::Base
+class PagesController < ApplicationController
 
-    layout "application"
-    ## index pages
     def index
-        
-    end
 
-    ## show pages    
-    def show 
+       @title = "ProEdu - Educação Online"
+
+
     end
 
 
     private
 
     def set_pages
-    
+        
     end
+    
     
 
 end
- 
