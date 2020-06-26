@@ -4928,10 +4928,15 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
-pace-progressbar@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/pace-progressbar/-/pace-progressbar-1.0.9.tgz#e121825a73f3834ebb5211d6d3e25d121f81e54c"
-  integrity sha512-8d2yZixucrXEgxdEQbFykuwCbPE+rcmVI+aQuXoEMB+Uj7d+l2aS+4C3IgD1m8Yk4WrTLhyBOH31+Mn2ZPKMDw==
+pace-js-amd-fix@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/pace-js-amd-fix/-/pace-js-amd-fix-1.0.5.tgz#938ee8fd52eb5be34deff1e92389ebc5ab0934b9"
+  integrity sha512-Ak4NWQlO/vsjGZ1ciIrWq0X7e9QZuMtzeVwN/ExI/FfKBG/PMcWJt908jVCy+LqYZUap0Re9UgCHS0bKvAmImw==
+
+pace-js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/pace-js/-/pace-js-1.0.2.tgz#673a717f833ccb4f4315531b75ee4788376600f7"
+  integrity sha1-Zzpxf4M8y09DFVMbde5HiDdmAPc=
 
 pako@~1.0.5:
   version "1.0.11"

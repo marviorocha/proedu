@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',() => {
        
             const notify = new Toastify({
                 text: messager,
-                duration: 3000, 
+                duration: 4000, 
                 newWindow: true,
                 close: true,
                 gravity: "top", // `top` or `bottom`

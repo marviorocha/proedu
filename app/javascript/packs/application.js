@@ -4,14 +4,17 @@
 // that code so it'll be compiled.
 import "bootstrap";
 
-import 'pace-progressbar/themes/blue/pace-theme-minimal.css';
-
-require('pace-progressbar');
+// rails
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels");
+
+// custom scripts
 require("../scripts/main");
 require("../scripts/toastity");
 require ("font-awesome/css/font-awesome.min");
+require("../scripts/pace");
+
+// libary
 require("chart.js/dist/Chart.min");
 require("../stylesheet/application");
