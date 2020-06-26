@@ -9,7 +9,7 @@
     "bootstrap": "^4.5.0",
     "chart.js": "^2.9.3",
     "font-awesome": "^4.7.0",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "pace-js": "^1.0.2",
     "pace-js-amd-fix": "^1.0.5",
     "popper.js": "^1.16.1",
