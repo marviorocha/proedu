@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
-  <body class="app sidebar-mini">
+  <body data-flash-mensagers="<%= JSON.dump(flash.to_a) %>" class="app sidebar-mini">
    <!-- // Navbar // -->
    <%= render 'partials/navbar' %>
     <!-- Navbar-->
