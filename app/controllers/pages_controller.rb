@@ -2,8 +2,8 @@ class PagesController < ApplicationController
 
     def index
 
-       @title = "ProEdu - Educação Online"
-
+       @title = t('title_dashboard') + ' ' + t('system_name')
+         
 
     end
 
