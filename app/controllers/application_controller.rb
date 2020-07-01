@@ -7,6 +7,8 @@ layout :layout_resource
 
 # private
 
+helper :all
+
 private
 
 def layout_resource

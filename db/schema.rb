@@ -10,10 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_19_211003) do
+ActiveRecord::Schema.define(version: 2020_06_29_212514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "subject"
+    t.text "description"
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "contents", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.string "image"
+    t.string "video"
+    t.string "audio"
+    t.string "file"
+    t.bigint "curse_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["curse_id"], name: "index_contents_on_curse_id"
+  end
+
+  create_table "curses", force: :cascade do |t|
+    t.string "name"
+    t.string "photo"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "enrollments", force: :cascade do |t|
+    t.integer "sid"
+    t.bigint "curse_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["curse_id"], name: "index_enrollments_on_curse_id"
+    t.index ["user_id"], name: "index_enrollments_on_user_id"
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.bigint "curse_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["curse_id"], name: "index_groups_on_curse_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +70,18 @@ ActiveRecord::Schema.define(version: 2020_06_19_211003) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "fname"
+    t.string "lname"
+    t.string "avatar"
+    t.boolean "admin"
+    t.boolean "teacher"
+    t.boolean "student"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contents", "curses"
+  add_foreign_key "enrollments", "curses"
+  add_foreign_key "enrollments", "users"
+  add_foreign_key "groups", "curses"
 end

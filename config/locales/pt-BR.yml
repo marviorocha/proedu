@@ -34,4 +34,7 @@ pt-BR:
   title_dashboard: "Dashboard"
   system_name: "ProEdu - Educação Online"  
   logout: "Sair"
-
+# user
+  admin: "Diretor!"
+  teacher: "Instrutor!"
+  student: "Estudante!"
