@@ -2,10 +2,10 @@
 
 one:
   subject: MyString
-  description: MyText
-  name: MyString
+  body: MyString
+  content: one
 
 two:
   subject: MyString
-  description: MyText
-  name: MyString
+  body: MyString
+  content: two
