@@ -38,3 +38,8 @@ pt-BR:
   admin: "Diretor!"
   teacher: "Instrutor!"
   student: "Estudante!"
+# Welcome 
+  morning: "Bom dia"
+  afternoon: "Boa tarde"
+  night: "Boa noite"
+

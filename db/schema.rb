@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_01_234625) do
+ActiveRecord::Schema.define(version: 2020_07_01_210545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,8 +18,10 @@ ActiveRecord::Schema.define(version: 2020_07_01_234625) do
   create_table "comments", force: :cascade do |t|
     t.string "subject"
     t.string "body"
+    t.bigint "content_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["content_id"], name: "index_comments_on_content_id"
   end
 
   create_table "contents", force: :cascade do |t|
@@ -32,8 +34,6 @@ ActiveRecord::Schema.define(version: 2020_07_01_234625) do
     t.bigint "curse_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "comment_id", null: false
-    t.index ["comment_id"], name: "index_contents_on_comment_id"
     t.index ["curse_id"], name: "index_contents_on_curse_id"
   end
 
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2020_07_01_234625) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "contents", "comments"
+  add_foreign_key "comments", "contents"
   add_foreign_key "contents", "curses"
   add_foreign_key "enrollments", "curses"
   add_foreign_key "enrollments", "users"
