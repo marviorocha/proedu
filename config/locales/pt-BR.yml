@@ -35,6 +35,8 @@ pt-BR:
   site_name: "Pro Edu"
   system_name: "ProEdu - Educação Online"  
   logout: "Sair"
+  profile: "Perfil"
+  password_blank: "Deixe em branco caso você não queira alterar isso"
 # user
   admin: "Diretor!"
   teacher: "Instrutor!"

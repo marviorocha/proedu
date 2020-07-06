@@ -57,3 +57,5 @@ gem "devise", "~> 4.7"
 gem "rails-i18n", "~> 6.0"
 
 gem "faker", "~> 2.13"
+
+gem "cancancan", "~> 3.1"

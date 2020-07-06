@@ -15,7 +15,7 @@
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
     
-    <title><%= yield :title  %></title>
+    <title><%= content_for(:title) ? content_for(:title) : t('site_name')  %></title>
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,8 +26,9 @@
   </head>
 
   <body data-flash-mensagers="<%= JSON.dump(flash.to_a) %>" class="app sidebar-mini">
-   <!-- // Navbar // -->
-   <%= render 'partials/navbar' %>
+   
+    <!-- // Navbar // -->
+    <%= render 'partials/navbar' %>
     <!-- Navbar-->
   
     <!-- Sidebar menu-->
