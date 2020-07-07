@@ -32,7 +32,7 @@ module ApplicationHelper
     when 18..23
        
        t("night")
-    
+      
     else
        
        "Hello!"

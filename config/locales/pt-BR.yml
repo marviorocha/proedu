@@ -37,6 +37,9 @@ pt-BR:
   logout: "Sair"
   profile: "Perfil"
   password_blank: "Deixe em branco caso você não queira alterar isso"
+  dashboard:
+    students: "Estudantes"
+    teacher: "Instrutor"
 # user
   admin: "Diretor!"
   teacher: "Instrutor!"
@@ -45,4 +48,3 @@ pt-BR:
   morning: "Bom dia"
   afternoon: "Boa tarde"
   night: "Boa noite"
-

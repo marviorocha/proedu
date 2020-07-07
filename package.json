@@ -8,6 +8,7 @@
     "@rails/webpacker": "4.2.2",
     "bootstrap": "^4.5.0",
     "chart.js": "^2.9.3",
+    "flatpickr": "^4.6.3",
     "font-awesome": "^4.7.0",
     "jquery": "3.5.0",
     "pace-js": "^1.0.2",

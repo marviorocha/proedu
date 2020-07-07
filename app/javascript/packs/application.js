@@ -14,7 +14,7 @@ require("../scripts/main");
 require("../scripts/toastity");
 require ("font-awesome/css/font-awesome.min");
 require("../scripts/pace");
-
+require('../scripts/flatpickr.js')
 // libary
 require("chart.js/dist/Chart.min");
 require("../stylesheet/application");
