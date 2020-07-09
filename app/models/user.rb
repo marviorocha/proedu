@@ -12,17 +12,12 @@ class User < ApplicationRecord
 
 
 # Define show dashbaord teacher stats
-  def self.user_total
 
-    User.where(student: true).count
+  scope :teacher_total, -> { where teacher: 'true' }
+  scope :student_total, -> { where student: 'true' }
 
-  end
-
-  def self.teacher_total
-
-    User.where(teacher: true).count
-    
-  end
+  
+ 
   
 
 end

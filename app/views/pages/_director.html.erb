@@ -12,7 +12,7 @@
           <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
             <div class="info">
               <h4><%= t('dashboard.students') %></h4>
-              <p><b>Total: <%= User.user_total %></b></p>
+              <p><b>Total: <%= User.student_total.count %></b></p>
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@
           <div class="widget-small info coloured-icon"><i class="icon fa fa-graduation-cap fa-3x"></i>
             <div class="info">
               <h4><%= t('dashboard.teacher') %></h4>
-              <p><b>Total: <%= User.teacher_total %></b></p>
+              <p><b>Total: <%= User.teacher_total.count %></b></p>
             </div>
           </div>
         </div>

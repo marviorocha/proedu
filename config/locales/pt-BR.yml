@@ -40,6 +40,8 @@ pt-BR:
   dashboard:
     students: "Estudantes"
     teacher: "Instrutor"
+  curses:
+    title: "Todos os cursos"
 # user
   admin: "Diretor!"
   teacher: "Instrutor!"
