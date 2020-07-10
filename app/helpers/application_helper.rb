@@ -1,5 +1,6 @@
 module ApplicationHelper
-
+   
+require 'digest/md5'
 
 
 # Define full name the users
@@ -16,18 +17,26 @@ module ApplicationHelper
  end
 
  
- # User Avatar images
+ # User Avatar and images
 
- def user_avatar(user_photo)
+ def user_avatar(user_photo, user_size)
 
 
+hash = Digest::MD5.hexdigest(user_photo.email.downcase)
+gravatar = "https://www.gravatar.com/avatar/#{hash}?s=#{user_size}&d=robohash"
+
+  if current_user.avatar_user.attached? == false
+    image_tag(gravatar, class: "app-sidebar__user-avatar")
+  else
+    image_tag(user_photo.avatar_user.variant(resize_to_limit: [user_size, user_size]), class: "app-sidebar__user-avatar")
+  end
     
- end
+end
  
 
  # Define time for welcome
 
- def welcome_time(time_here)
+def welcome_time(time_here)
     
     case time_here.to_i
 
@@ -47,7 +56,7 @@ module ApplicationHelper
        
        "Hello!"
     end
- end
+end
 
 
 end

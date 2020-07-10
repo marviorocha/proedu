@@ -6,13 +6,8 @@
            <div class="info">
            
 
+         <%= user_avatar(current_user, 200) %>
  
-          
- 
- 
-            
-
-           <%#= image_tag(current_user.avatar_user, class: "app-sidebar__user-avatar") if current_user.avatar_user.atteched? %>
        
              <h4><%= full_name %></h4>
              <p><%= user_type %></p>
@@ -76,7 +71,7 @@
                    <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
                    <% if @minimum_password_length %>
                    <br />
-                   <em><%= @minimum_password_length %> characters minimum</em>
+                   <em><%= @minimum_password_length %> characters no mínimo</em>
                    <% end %>
 
                  </div>
@@ -86,7 +81,7 @@
                  </div>
                  <div class="clearfix"></div>
                  <div class="col-md-8 mb-4">
-                   <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                   <%= f.label :current_password %> <i>(<%= t('edit.password_change') %>)</i><br />
                    <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
                  </div>
 

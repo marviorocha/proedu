@@ -16,8 +16,6 @@ class User < ApplicationRecord
   scope :teacher_total, -> { where teacher: 'true' }
   scope :student_total, -> { where student: 'true' }
 
-  
- 
-  
+
 
 end

@@ -6,9 +6,9 @@ const flatpickr = require("flatpickr");
 // datapicker to application
 flatpickr(".datepicker",
 {
-    altInput: true,
-    altFormat: "j, F, Y",
-    dateFormat: "d-m-Y",
+    
+    
+    
     locale: Portuguese
 }
 );
