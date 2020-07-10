@@ -8,9 +8,9 @@ local:
 
 cloudinary:      
   service: Cloudinary
-  cloud_name: "sample"
-  api_key: "874837483274837"
-  api_secret: "a676b67565c6767a6767d6767f676fe1"
+  cloud_name: "delqcamot"
+  api_key: "555413816999314"
+  api_secret: "Uh9uLYSE8zX1PcjDzZILgILAZI0"
   secure: true
   cdn_subdomain: true
 

@@ -59,3 +59,5 @@ gem "rails-i18n", "~> 6.0"
 gem "faker", "~> 2.13"
 
 gem "cancancan", "~> 3.1"
+
+gem "image_processing", "~> 1.11"

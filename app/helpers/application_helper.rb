@@ -14,7 +14,17 @@ module ApplicationHelper
     current_user.teacher ? t('teacher') :
     current_user.student ? t('student') : ''
  end
+
  
+ # User Avatar images
+
+ def user_avatar(user_photo)
+
+
+    
+ end
+ 
+
  # Define time for welcome
 
  def welcome_time(time_here)

@@ -8,15 +8,15 @@
 
 # add Admin, Teacher, Student, Account
 user =  User.create([
-    {fname: "Administrator", lname: "Pro",  avatar: "https://api.adorable.io/avatars/200/nose1/mouth1/abott@adorable.io.png", email: "admin@proedu.com", password: "102030br", admin: 1, teacher: 0, student: 0 },
-    {fname: "Teacher", lname: "Pro",  avatar: "https://api.adorable.io/avatars/200/nose3/mouth3/abott@adorable.io.png", email: "teacher@proedu.com", password: "102030br", admin: 0, teacher: 1, student: 0 },
-    {fname: "Student", lname: "Pro", avatar: "https://api.adorable.io/avatars/200/nose2/mouth1/abott@adorable.io.png", email: "student@proedu.com", password: "102030br", admin: 0, teacher: 0, student: 1 },
+    {fname: "Administrator", lname: "Pro",  avatar: Faker::Avatar.image, email: "admin@proedu.com", password: "102030br", admin: 1, teacher: 0, student: 0 },
+    {fname: "Teacher", lname: "Pro",  avatar: Faker::Avatar.image, email: "teacher@proedu.com", password: "102030br", admin: 0, teacher: 1, student: 0 },
+    {fname: "Student", lname: "Pro", avatar: Faker::Avatar.image, email: "student@proedu.com", password: "102030br", admin: 0, teacher: 0, student: 1 },
 ])
 
 # create facker Student
 
 10.times {
-    User.create(fname: Faker::Name.first_name,  avatar: "https://api.adorable.io/avatars/200/nose4/mouth4/abott@adorable.io.png", lname: Faker::Name.last_name, email: Faker::Internet.email, password: "102030", student: 1 )
+    User.create(fname: Faker::Name.first_name,  avatar: Faker::Avatar.image, lname: Faker::Name.last_name, email: Faker::Internet.email, password: "102030", student: 1 )
 }
 
 5.times {
