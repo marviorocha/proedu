@@ -5,22 +5,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import Welcome from './components/common/welcome'
+import Dashboard from './components/dashboard'
 
-const Hello = props => (
-  <div>Now we build this app with React is Ready! {props.name}!</div>
-)
-
-Hello.defaultProps = {
-  name: 'David'
-}
-
-Hello.propTypes = {
-  name: PropTypes.string
-}
+ 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const Dash = document.getElementById("dash")
+ 
   ReactDOM.render(
-    <Hello name="React" />,
-    document.getElementById("app")
+    <Dashboard name="Salers" />,
+    
+     Dash
   )
 })
