@@ -1,1 +1,30 @@
 <%= content_for :title do @title end %>
+ <div>
+    <h1><i class="fa fa-search"></i> <%= yield :title %></h1>
+          <p>A free and open source Bootstrap 4 admin template</p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item"><a href="<%= root_path %>">Dashboard</a></li>
+          <li class="breadcrumb-item">Curses</a></li>
+        </ul>
+      </div>
+
+<div class="row">
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Monthly Sales</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Support Requests</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+

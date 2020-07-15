@@ -50,3 +50,9 @@ pt-BR:
   morning: "Bom dia"
   afternoon: "Boa tarde"
   night: "Boa noite"
+
+# Menu sitebar
+  sidebar: 
+    dashboard: "Painel Principal"
+    curse: "Meu Curso"
+

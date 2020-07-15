@@ -35,7 +35,9 @@
     <%= render "partials/sidebar" %>
       
     <main class="app-content">
+    <div id="app" class="app-title">
     <%= yield %>
+    </div>
     </main> 
 
      <%= javascript_pack_tag 'application' %>

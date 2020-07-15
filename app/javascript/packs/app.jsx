@@ -8,15 +8,16 @@ import PropTypes from 'prop-types'
 import Welcome from './components/common/welcome'
 import Dashboard from './components/dashboard'
 
+
  
+
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  const Dash = document.getElementById("dash")
- 
+   
+  
   ReactDOM.render(
-    <Dashboard name="Salers" />,
+    <App/>,
+    document.getElementById("dash")
     
-     Dash
   )
 })
