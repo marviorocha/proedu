@@ -7,17 +7,16 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import Welcome from './components/common/welcome'
 import Dashboard from './components/dashboard'
-
+import Curses from './components/curses'
 
  
 
 
 document.addEventListener('DOMContentLoaded', () => {
-   
-  
+    
   ReactDOM.render(
-    <App/>,
-    document.getElementById("dash")
+    <Curses />,
+    document.getElementById("component")
     
   )
 })
