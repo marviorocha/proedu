@@ -11,11 +11,10 @@
 </ul>
 </div>
  
-<%= content_tag :div, 
-    id: "curse_data",
-    data: @curses.to_json do %>
-<% end %>
  
+ 
+ <div id="curse_data" data-curse="<%= @curses.to_json %>" ></div>
+
  <div id="component">
  lorem ipsom dolor sit amet, consect
  </div>

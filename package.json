@@ -1,6 +1,8 @@
 {
   "name": "proedu",
   "private": true,
+  "author": "Marvio Rocha",
+  "email": "marviorocha@marviorocha.com",
   "license": "MIT",
   "dependencies": {
     "@babel/preset-react": "^7.10.4",
