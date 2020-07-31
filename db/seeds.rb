@@ -20,10 +20,9 @@ user = User.create([
 }
 
 
-10.times { 
+10.times {
        Curse.create( name: Faker::ProgrammingLanguage.name, photo: "https://picsum.photos/seed/picsum/1080/720", description: Faker::Lorem.sentence)
    }
-
 
 puts "Total de usuários adicionado: #{User.count}"
 puts "Curse adicionado: #{Curse.count}"
